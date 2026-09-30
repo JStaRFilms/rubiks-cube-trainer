@@ -16,8 +16,16 @@ export function storageMessage(error: unknown): string {
   if (error instanceof DOMException && error.name === 'VersionError') return 'This browser has a newer database. Open the newer app; do not clear storage.';
   return error instanceof Error ? `${error.message} Nothing was saved or replaced.` : 'Local storage failed. Nothing was saved or replaced.';
 }
+export interface AttemptUndo {
+  before: AttemptRecord;
+  after: AttemptRecord | null;
+  beforeRun: RunRecord | null;
+  afterRun: RunRecord | null;
+  revision: number;
+}
 export class Repository {
   private connection: Promise<IDBPDatabase<PersonalDatabase>> | null = null;
+  private latestUndo: AttemptUndo | null = null;
   constructor(private readonly name = 'cube-trainer', private readonly notify: (message: string) => void = () => {}, private readonly validator?: SemanticValidator) {}
   private db(): Promise<IDBPDatabase<PersonalDatabase>> {
     this.connection ??= openDB<PersonalDatabase>(this.name, DATABASE_VERSION, {
@@ -91,6 +99,52 @@ export class Repository {
       const existing = await tx.objectStore('attempts').get(attempt.id);
       if (existing && JSON.stringify(existing) !== JSON.stringify(attempt)) throw new DataError('This attempt ID already has a different record. Historical challenges cannot be overwritten.');
       await tx.objectStore('attempts').put(attempt);
+      if (run) await tx.objectStore('runs').put(run);
+      await this.bump(tx.objectStore('settings')); await tx.done;
+    } catch (error) { try { tx.abort(); } catch { /* Already aborted. */ } await tx.done.catch(() => {}); throw error; }
+  }
+  async editAttempt(id: string, kind: AttemptRecord['penalty']['kind'], expectedRevision: number): Promise<AttemptUndo> {
+    return this.mutateAttempt(id, kind, expectedRevision);
+  }
+  async deleteAttempt(id: string, expectedRevision: number): Promise<AttemptUndo> {
+    return this.mutateAttempt(id, null, expectedRevision);
+  }
+  private async mutateAttempt(id: string, kind: AttemptRecord['penalty']['kind'] | null, expectedRevision: number): Promise<AttemptUndo> {
+    const { backup, revision } = await this.read();
+    if (revision !== expectedRevision) throw new DataError('Local data changed. Refresh history before editing.');
+    const before = backup.attempts.find((a) => a.id === id);
+    if (!before) throw new DataError('Attempt no longer exists. Refresh history.');
+    const after: AttemptRecord | null = kind === null ? null : { ...before, penalty: { kind, source: kind === 'none' ? 'none' : 'manual' } };
+    const beforeRun = before.runId ? backup.runs.find((r) => r.id === before.runId) ?? null : null;
+    if (before.runId && !beforeRun) throw new DataError('Attempt run is missing. No history was changed.');
+    const afterRun: RunRecord | null = beforeRun && kind === null ? { ...beforeRun, status: 'interrupted',
+      outcomes: beforeRun.outcomes.map((outcome) => outcome.kind !== 'skipped' && outcome.attemptId === id
+        ? { kind: 'interrupted', repIndex: outcome.repIndex, attemptId: null } : outcome) } : beforeRun;
+    await decodeBackup({ ...backup, attempts: backup.attempts.filter((a) => a.id !== id).concat(after ? [after] : []),
+      runs: backup.runs.map((r) => r.id === afterRun?.id ? afterRun : r) }, this.validator);
+    await this.writeAttemptChange(before.id, after, afterRun, expectedRevision);
+    const undo = { before: structuredClone(before), after: structuredClone(after), beforeRun: structuredClone(beforeRun), afterRun: structuredClone(afterRun), revision: revision + 1 };
+    this.latestUndo = structuredClone(undo); return undo;
+  }
+  async undoAttempt(token: AttemptUndo): Promise<void> {
+    if (!this.latestUndo || JSON.stringify(token) !== JSON.stringify(this.latestUndo)) throw new DataError('This undo has expired or changed.');
+    const undo = structuredClone(this.latestUndo);
+    const { backup, revision } = await this.read();
+    if (revision !== undo.revision) throw new DataError('Local data changed. This undo has expired.');
+    const current = backup.attempts.find((a) => a.id === undo.before.id) ?? null;
+    const currentRun = undo.afterRun ? backup.runs.find((r) => r.id === undo.afterRun?.id) ?? null : null;
+    if (JSON.stringify(current) !== JSON.stringify(undo.after) || JSON.stringify(currentRun) !== JSON.stringify(undo.afterRun)) throw new DataError('History changed. This undo has expired.');
+    await decodeBackup({ ...backup, attempts: backup.attempts.filter((a) => a.id !== undo.before.id).concat(undo.before),
+      runs: backup.runs.map((r) => r.id === undo.beforeRun?.id ? undo.beforeRun : r) }, this.validator);
+    await this.writeAttemptChange(undo.before.id, undo.before, undo.beforeRun, undo.revision);
+    this.latestUndo = null;
+  }
+  private async writeAttemptChange(id: string, attempt: AttemptRecord | null, run: RunRecord | null, expectedRevision: number): Promise<void> {
+    const db = await this.db(), tx = db.transaction(['settings', 'attempts', 'runs'], 'readwrite');
+    try {
+      const metadata = await tx.objectStore('settings').get('revision');
+      if ((metadata && 'value' in metadata ? metadata.value : 0) !== expectedRevision) throw new DataError('Local data changed before editing. Refresh history.');
+      if (attempt) await tx.objectStore('attempts').put(attempt); else await tx.objectStore('attempts').delete(id);
       if (run) await tx.objectStore('runs').put(run);
       await this.bump(tx.objectStore('settings')); await tx.done;
     } catch (error) { try { tx.abort(); } catch { /* Already aborted. */ } await tx.done.catch(() => {}); throw error; }

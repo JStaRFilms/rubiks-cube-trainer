@@ -1,6 +1,6 @@
 # Delivery task index
 
-Session: `orch-20260930-021158`. G01/G02/D01/B01/B02 are complete. The app uses the interim A-desktop/B-mobile layout; further polish is deferred. The other 21 tasks remain pending, with B03 timing/statistics next. Research remains separately gated. Use stable task IDs as the board moves packets between status folders.
+Session: `orch-20260930-021158`. G01/G02/D01/B01/B02/B03 are complete. The app uses the interim A-desktop/B-mobile layout; further polish is deferred. The other 20 tasks remain pending, with B04 Cross integration next. B03 components are verified; production timing requires B04's real challenges. Research remains separately gated. Use stable task IDs as the board moves packets between status folders.
 
 | ID | Authored packet | Stage | Dependencies |
 | --- | --- | --- | --- |
@@ -9,7 +9,7 @@ Session: `orch-20260930-021158`. G01/G02/D01/B01/B02 are complete. The app uses 
 | d01 | [Design phone first training interactions](completed/d01_design_phone_first_training_interactions.task.md) | design | g02 |
 | b01 | [Scaffold PWA and durable local records](completed/b01_scaffold_pwa_and_durable_local_records.task.md) | build | d01 |
 | b02 | [Integrate cube engine and offline 3D player](completed/b02_integrate_cube_engine_and_offline_3d_player.task.md) | build | b01 |
-| b03 | [Implement timer and shared statistics](pending/b03_implement_timer_and_shared_statistics.task.md) | build | b02 |
+| b03 | [Implement timer and shared statistics](completed/b03_implement_timer_and_shared_statistics.task.md) | build | b02 |
 | b04 | [Deliver the complete Cross training loop](pending/b04_deliver_the_complete_cross_training_loop.task.md) | build | b03 |
 | q01 | [Review the first usable offline increment](pending/q01_review_the_first_usable_offline_increment.task.md) | build | b04 |
 | b05 | [Prove Cross plus one generation bounds](pending/b05_prove_cross_plus_one_generation_bounds.task.md) | build | q01 |

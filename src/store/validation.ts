@@ -113,7 +113,11 @@ export async function decodeBackup(input: unknown, validator?: SemanticValidator
   return { format: 'cube-trainer-backup', version: 1, cubeContract: 'cube3-facelets-v1', exportedAt: date(v.exportedAt), settings, sessions, attempts, ...training };
 }
 export function validateAttemptDurations(input: unknown): void {
-  const v = object(input), timing = object(v.timing), penalty = object(v.penalty);
+  const v = object(input), timing = object(v.timing), penalty = object(v.penalty), settings = object(v.settingsSnapshot);
+  keys(settings, ['inspectionMode', 'audibleWarnings']);
+  const mode = choice(settings.inspectionMode, ['untimed', '15s']); bool(settings.audibleWarnings);
+  if (mode === 'untimed' && timing.inspectionMs !== null) throw new DataError('Untimed attempts cannot have inspection durations.');
+  if (mode === '15s' && timing.status === 'completed' && timing.inspectionMs === null) throw new DataError('Completed strict attempts require inspection duration.');
   text(v.id); text(v.sessionId); integer(v.preparationMs); date(v.presentedAt); date(v.endedAt);
   if (Date.parse(String(v.endedAt)) < Date.parse(String(v.presentedAt))) throw new DataError('Attempt ends before presentation.');
   choice(timing.status, ['completed', 'interrupted']);

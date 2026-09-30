@@ -80,3 +80,20 @@ input[type=file] { width: 100%; }
 .notation, .wire-state { font-family: Consolas, Menlo, monospace; overflow-wrap: anywhere; }
 .wire-state { display: block; font-size: 13px; margin: 8px 0; }
 .dialog-body a { color: var(--action); text-decoration: underline; }
+.timer-input { display: block; width: 100%; border: 2px solid transparent; background: transparent; padding: 8px 0; touch-action: none; user-select: none; }
+.timer-input:hover { background: transparent; }
+.timer-input:disabled { opacity: 1; }
+.timer-input.armed { border-color: var(--action); }
+.timer-input .clock { display: block; }
+.clock.long-clock { font-size: clamp(62px, 11vw, 160px); }
+.timer-announcement { margin: 4px 0; }
+.timer-canvas:has(.attempt-result) { overflow-y: auto; justify-content: flex-start; }
+.attempt-result { width: 100%; font-size: 14px; }
+.attempt-result h2 { font-size: 18px; }
+.attempt-result button { margin: 4px; }
+.statistics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; font-variant-numeric: tabular-nums; }
+.statistics-grid dd { margin: 0; text-align: right; }
+.attempt-list { padding-left: 20px; }
+.attempt-list li { border-bottom: 1px solid var(--divider); padding: 8px 0; }
+.attempt-list summary { min-height: 44px; padding: 8px 0; cursor: pointer; font-variant-numeric: tabular-nums; }
+@media (max-width: 900px) { .clock.long-clock { font-size: clamp(62px, 20vw, 90px); } }

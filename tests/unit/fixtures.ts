@@ -5,6 +5,7 @@ export function backup(): TrainerBackupV1 {
     settings: [structuredClone(defaultSettings)], sessions: [{ ...session }], attempts: [], personalAlgorithms: [], practiceSets: [], runs: [] };
 }
 export const attempt: AttemptRecord = {
+  settingsSnapshot: { inspectionMode: 'untimed', audibleWarnings: false },
   id: 'attempt-fixture', sessionId: session.id, trainer: 'cross', presentedAt: session.createdAt, endedAt: '2026-09-30T00:00:10.000Z', preparationMs: 5000,
   timing: { status: 'completed', executionMs: 1000, inspectionMs: null }, penalty: { kind: 'none', source: 'none' },
   challenge: { challengeId: 'challenge-fixture', requestId: 'request-fixture', epoch: 0,

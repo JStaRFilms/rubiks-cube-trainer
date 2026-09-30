@@ -42,7 +42,9 @@ export type Timing =
   | { status: 'completed'; executionMs: number; inspectionMs: number | null }
   | { status: 'interrupted'; executionMs: number | null; inspectionMs: number | null;
       phase: 'preparation' | 'inspection' | 'arming' | 'execution'; reason: 'background' | 'restart' | 'cancelled' };
+export type TimingSettings = Pick<SettingsRecord, 'inspectionMode' | 'audibleWarnings'>;
 export interface AttemptRecord {
+  settingsSnapshot: TimingSettings;
   id: string; sessionId: string; trainer: Trainer; challenge: Challenge; presentedAt: string; endedAt: string;
   preparationMs: number; timing: Timing; penalty: { kind: 'none' | 'plus2' | 'dnf'; source: 'inspection' | 'manual' | 'none' };
   runId?: string; repIndex?: number; selfReport?: { executedSlots: Slot[] };
