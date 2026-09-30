@@ -1,6 +1,6 @@
 # Training experience
 
-D01 design review, session `orch-20260930-021158`. Working name: Cube Trainer. This is a proposed visual direction for owner review, not permission to Build. [PLAN](../imports/PLAN.md), [Core architecture](../architecture/Core_Architecture.md) and [Trainer foundation](../features/Trainer_Foundation.md) control behavior and data. Layouts are in [Training screens](../mockups/Training_Screens.md); open [Training review](../mockups/Training_Review.html) locally to inspect phone and desktop compositions.
+D01 design review, session `orch-20260930-021158`. Working name: Cube Trainer. The owner selected A desktop plus B mobile as an interim baseline and asked to proceed. Further visual polish is deferred. The current Build foundation handoff controls execution scope. [PLAN](../imports/PLAN.md), [Core architecture](../architecture/Core_Architecture.md) and [Trainer foundation](../features/Trainer_Foundation.md) control behavior and data. Layouts are in [Training screens](../mockups/Training_Screens.md); open [Training review](../mockups/Training_Review.html) locally to inspect phone and desktop compositions.
 
 ## Users and structure
 
@@ -22,11 +22,11 @@ Screen inventory:
 
 Navigation uses the trainer toolbar, Session access and Help/Settings drawers. History and Local data open from session/help rather than a permanent three-button navigation bar above the clock. OLL/PLL Time Attack is one trainer navigation entry with two explicitly separate set types. This makes six trainer families, with separate OLL and PLL compositions in the review. Conditional Cross+2 remains visible as unavailable until its gate passes; early releases must label undelivered trainers rather than suggesting all six already work.
 
-## Workspace system and candidate profiles
+## Workspace system and selected baseline
 
-[Design system](Design_System.md) is the visual/component authority for this rework. The rejected lime-on-near-black form stack, small 48/64 px timer, document-style phone/desktop specimens and permanent form grid are retired. No profile is owner-approved yet.
+[Design system](Design_System.md) is the visual/component authority for this rework. The rejected lime-on-near-black form stack, small 48/64 px timer, document-style phone/desktop specimens and permanent form grid are retired. Use A above 900 CSS px and B at 900 px and below. The owner accepted this combination to move forward, not as final visual quality approval.
 
-A, session dock, has a 248 px dense desktop log beside a large mono clock. B, focus shelf, has a full-width centered sans-serif clock and a 126 px bottom session shelf. Both use compact toolbar options, a readable top scramble rail and secondary settings/help/review drawers. On phones A's log becomes a Session drawer; B's shelf contracts to 72 px. Neither puts settings forms above the clock. The canvas fills the available viewport without a page scroll to find the timer.
+A, session dock, has a 248 px dense desktop log beside a large mono clock. B, focus shelf, has a full-width centered sans-serif clock and a 126 px bottom session shelf. Both use compact toolbar options, a readable top scramble rail and secondary settings/help/review drawers. The original A phone proposal used a Session drawer. The selected phone layout uses B's 86 px shelf. Neither puts settings forms above the clock. The canvas fills the available viewport without a page scroll to find the timer.
 
 Type, color, chrome dimensions, long-time sizing, contrast and component contracts come from Design_System.md, not this document. Prototype `?variant=dock` and `?variant=focus` are two proposals with the same behavior. Static HTML samples Cross, Cross+1 and OLL recognition to test the visual system, rather than generating every trainer/state combination. All six trainer families remain specified below and in Training_Screens.md.
 
@@ -113,11 +113,6 @@ FR-001 setup/offline/update; FR-002 post-attempt text/player; FR-003 phase table
 
 No product question blocks Design. Build still owns engine fixtures, measured supported caps, sourced manifest/numbering/rights, browser behavior and atomic/offline validation. Schematic review is not evidence for any of these.
 
-## Owner review questions
+## Deferred visual review
 
-- Do you prefer the persistent session dock or the centered canvas with a bottom shelf?
-- Are mono or light sans clock digits easier to read at your practice distance?
-- Does the short phone shelf earn its space, or would you rather open session data only on demand?
-- Are the base-reset confirmations clear when using a physical cube, especially OLL versus PLL/ZBLL?
-
-These are review preferences, not blockers. Stop after Design for owner feedback; do not begin B01.
+A desktop dock and B mobile shelf are the working combination. Keep their respective numeric treatments for now. Revisit visual polish after working functionality exists; do not block B01 on another preference round. Validate physical-cube reset clarity during the relevant trainer builds. The owner has not authorized video, sync or teaching research.

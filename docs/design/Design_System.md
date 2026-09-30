@@ -1,6 +1,6 @@
 # Cube Trainer workspace system
 
-D01 rework proposal on `design/solver-workspace-v2`. Neither profile is owner-approved. This replaces the rejected form-first visual system, including its lime palette and 48/64 px clock caps. [Training experience](Training_Experience.md) owns behavior; [PLAN](../imports/PLAN.md) and [G02](../architecture/Core_Architecture.md) take precedence. [Live prototype](../mockups/Training_Review.html?variant=dock) is static presentation, not an app.
+The owner selected A's desktop and B's mobile as an interim implementation baseline and asked to move on. Visual polish is deferred; this is not an endorsement of the current aesthetics. The comparison prototypes remain on `design/solver-workspace-v2`. Build starts on `build/foundation`. This replaces the rejected form-first system, including its lime palette and 48/64 px clock caps. [Training experience](Training_Experience.md) owns behavior; [PLAN](../imports/PLAN.md) and [G02](../architecture/Core_Architecture.md) take precedence. [Live prototype](../mockups/Training_Review.html?variant=dock) is static presentation, not an app.
 
 ## Reference judgment
 
@@ -8,7 +8,13 @@ Read both owner-supplied PNGs in the rework brief. The customized csTimer image 
 
 The frontend-ui search's Webinar Registration result is a false match. No registration form, marketing sections, conversion CTA, animated pattern, Google Font or 48 px landing-page gaps belong here. Keep its contrast/focus advice, discard its anatomy. AGY's Rail & Canvas and Monolith & Shelf distinction is useful; document-wide timing clicks, hidden inspection scrambles, dim metadata and gesture-only penalty edits are not.
 
-## Page profiles, both candidates
+## Selected responsive baseline
+
+Above 900 CSS px, use A's 248 px desktop session dock, slate tokens and mono clock. At 900 px and below, use B's centered sans clock, graphite tokens and compact 86 px mobile session shelf. Keep Session drawers and the existing input/recognition contracts. Implement one responsive workspace, not a production variant switcher. Further font, color and visual refinements are deferred until working functionality exists.
+
+## Original proposal profiles
+
+These describe the comparison prototypes. The selected combination above takes precedence over either proposal's unchosen desktop/mobile composition.
 
 ### A · session dock
 
@@ -110,6 +116,6 @@ Recognition hides case identity, algorithm, identifying family, thumbnail captio
 
 Native controls keep their keyboard behavior. Timer-focused Space only; ignore repeats and stop-release. Drawer/dialog focus is contained and returns to opener. Announce phase changes once, never each frame. Timer/context visible name states current action. Touch targets at least 44 px. No low-contrast secret labels, no sound-only warning. Platform behavior still needs Build/browser tests.
 
-## Acceptance and owner choice
+## Owner decision
 
-This pass asks which workspace feels better during real-cube practice: A's always-visible compatible log, or B's unobstructed center with compact shelf. It also asks whether mono or light sans digits are easier to read at distance. No optional preference blocks this proposal. Functional behavior does not change between profiles. Parent reviews, owner chooses or mixes parts, Build remains paused. Rendered checks and self-critique are recorded in [Training screens](../mockups/Training_Screens.md).
+The owner chose A desktop plus B mobile to proceed, while explicitly deferring dissatisfaction with the visuals. D01 is closed for this interim baseline. Do not reopen style interviews or add another proposal round during B01. Rendered proposal evidence remains in [Training screens](../mockups/Training_Screens.md). Build authorization and its current limits are recorded in the session's Build foundation handoff.

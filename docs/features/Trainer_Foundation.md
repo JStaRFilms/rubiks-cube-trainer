@@ -1,6 +1,6 @@
 # Trainer foundation
 
-Status: G02 feature blueprint, session `orch-20260930-021158`. No implementation exists. Scope comes from [PLAN §§3, 5–7](../imports/PLAN.md). Read [Core architecture](../architecture/Core_Architecture.md) first for state, goals, worker messages and reconstruction interchange, then [Tool decision](../architecture/Cube_Tools_Decision.md) for reuse evidence.
+Status: B01 implementation blueprint, session `orch-20260930-021158`. The Build foundation handoff authorizes this slice; older Build-paused notes below are historical. Scope comes from [PLAN §§3, 5–7](../imports/PLAN.md). Read [Core architecture](../architecture/Core_Architecture.md) first for state, goals, worker messages and reconstruction interchange, then [Tool decision](../architecture/Cube_Tools_Decision.md) for reuse evidence.
 
 ## Goal and scope
 
@@ -122,6 +122,22 @@ Readiness requires all of the following for the active release:
 Evicted assets or tables downgrade readiness and identify missing work. Offline missing work cannot be "repaired" through a hidden remote dependency. Reconstruction model readiness is separate only after that feature is approved, never part of current trainer setup.
 
 Download an update into a separate release cache. A waiting service worker cannot automatically skipWaiting/reload. Prompt only; active preparation/inspection/arming/execution and save-pending block activation. Preserve saved history and persist run interruption/recovery state before a user-confirmed idle update. Other open tabs must also acknowledge idle/close; if they cannot, leave the update waiting. New worker, table and dataset versions initialize together under the new release. Old clients retain their coherent old cache until closed, not a mixture of chunks. Cleanup old caches only when no controlled client needs them, and never delete personal databases. B01 tests the chosen service-worker lifecycle, including multi-tab blocking, rather than assuming plugin defaults provide it.
+
+## B01 implementation boundary
+
+B01 creates `src/app`, `src/store` and `src/pwa`. The React workspace uses A's 248 px desktop dock above 900 px and B's 86 px mobile shelf at or below 900 px. Native dialogs contain settings, sessions/help and local data. The clock and scramble are unavailable placeholders, not a timing or generation implementation. Zustand holds only the update activity lock; IndexedDB remains authoritative.
+
+The six personal stores and separate solver table database use the v1 names/keys/indexes above. Settings `lastOptions` is a partial trainer-to-GoalOptions map, initially empty. There are no historical application schemas to migrate. The supported migration fixture is an empty database at version 0 upgrading transactionally to version 1; unknown newer databases fail without reset. A `revision` record in settings is transaction metadata, excluded from backups, and increments on every personal write. Restore compares this revision inside its replacement transaction, rejecting a stale preview across tabs.
+
+The repository exposes acknowledged settings/session/attempt writes. Attempt writes require a supplied compatible semantic validator, including scramble/state and proof checks. No such cube validator is bundled in B01. Backups with attempts, overrides, sets or runs therefore report a missing compatible engine/dataset validator before any mutation. B02 and subsequent case slices must supply those checks before enabling these records. Empty groups and settings/sessions round-trip now. This is a prerequisite failure, not discarded data or claimed cube validation. The attempt API awaits validation and transaction completion; failed attempts remain the caller's responsibility until B03 implements its unsaved-record UI. No emergency export is needed for the inactive B01 clock.
+
+Normal file imports are limited to 20 MiB, 100,000 records per group, 10,000 moves per list and 64 KiB per string. Validation precedes preview and mutation. The UI offers current backup and requires a separate checked replacement confirmation. Personal clearing uses the same confirmed atomic replacement path. A persistent-storage request reports the browser's answer. Connection/versionchange and storage errors stay visible.
+
+The build emits `release-assets.json` with release ID, cube contract, null absent engine/dataset/table versions, SHA-256 and byte length for every emitted shell asset. `vite-plugin-pwa` builds a custom service worker with no automatic activation. The worker verifies and retains assets in a release-specific cache; setup verifies those bytes again, navigation fallback, and the IndexedDB probe. The foundation says only "Offline shell ready" and states player/training assets are absent. B02 must include every lazy player/model/worker dependency and initialization task in this same complete-release manifest, set compatible versions, and add cache-only unopened-player/initialization probes before claiming trainer readiness.
+
+Update application is an explicit all-tab handshake. The waiting worker asks every window to acquire its synchronous activity lock. Preparation, inspection, arming, execution, save-pending, save-failed and editing/restore block the lock. A locked tab cannot start an attempt or edit until activation/reload or cancellation. Missing replies, changed client membership or a busy tab cancel activation. Recheck all locked clients immediately before `skipWaiting`; reload only clients holding that activation token. A newly opened tab during the handshake cancels it. Old release caches are retained so old clients never lose their chunks. Cache cleanup is deferred, with no database deletion during update.
+
+Actual setup/check commands and platform evidence belong in README and the implementer's handoff, not the old G02 validation record.
 
 ## Implementation plan and gates
 

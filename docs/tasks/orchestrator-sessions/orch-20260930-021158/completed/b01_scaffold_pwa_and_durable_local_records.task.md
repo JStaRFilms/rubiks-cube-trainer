@@ -8,6 +8,8 @@ vibe-build. Role: coder. Suggested route at session creation: `openai-codex/gpt-
 
 ### Prime agent context
 
+- `docs/tasks/orchestrator-sessions/orch-20260930-021158/Build_Foundation_Handoff.md` first: owner accepted an interim A-desktop/B-mobile baseline and asked to proceed; B01 is authorized, further visual polish deferred.
+- `docs/design/Design_System.md`
 - `docs/imports/PLAN.md`
 - `docs/Project_Requirements.md`
 - `docs/audits/import-audit.md`
@@ -38,7 +40,7 @@ Create the runnable foundation, honest offline setup, and safe local persistence
 
 ## Context
 
-This is a fresh implementation. The previous code is unavailable and historical milestone/test claims are not evidence. The owner approved the product direction and session creation, not automatic execution. PLAN remains authoritative over old TECHNICAL/AGENTS conflicts. All levels are supported; normal trainer controls target modern iPhone/Android browsers and desktop.
+This is a fresh implementation. The previous code is unavailable and historical milestone/test claims are not evidence. The owner has now chosen the interim responsive baseline and asked to move past Design. B01 foundation and its focused review are the current authorized slice. Later Build tasks and research are not included in this run. PLAN remains authoritative over old TECHNICAL/AGENTS conflicts. All levels are supported; normal trainer controls target modern iPhone/Android browsers and desktop.
 
 ## Dependencies
 

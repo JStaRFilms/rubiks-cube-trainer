@@ -1,6 +1,6 @@
 # Workspace proposals and training screens
 
-D01 rework, session `orch-20260930-021158`, local exploration branch `design/solver-workspace-v2`. Owner rejected the initial visual proposal. This replaces its phone/desktop specimen page and form-first hierarchy. [Design system](../design/Design_System.md) owns proposed visuals and component contracts. [Training experience](../design/Training_Experience.md) preserves the full behavioral specification. PLAN/G02 remain authoritative. Build stays paused.
+D01 rework, session `orch-20260930-021158`, local exploration branch `design/solver-workspace-v2`. Owner rejected the initial visual proposal. This replaces its phone/desktop specimen page and form-first hierarchy. [Design system](../design/Design_System.md) owns proposed visuals and component contracts. [Training experience](../design/Training_Experience.md) preserves the full behavioral specification. PLAN/G02 remain authoritative. The owner subsequently chose A desktop plus B mobile as an interim baseline and asked to proceed. Build starts with B01; further style work is deferred. The comparison HTML remains an archived design prototype.
 
 ## Open the two proposals
 
@@ -84,4 +84,4 @@ Python checked 16 relative design links, Markdown fences and whitespace across t
 
 Not run: physical iOS Safari/Android Chrome, Firefox/desktop Safari, screen readers, touch hardware, platform font comparison, zoom/device safe-area testing, real timer/solver/player fixtures, storage/restore/offline/update behavior or application tests/build. Headless Windows Chrome viewport checks do not prove mobile-platform support.
 
-Owner choices are dock versus shelf, mono versus light sans numeric treatment, and how often session history should remain visible. No genuine Design blocker found. Parent visual/interaction review and owner feedback come next; these are polished proposals, not approved final Design. Build remains paused.
+The owner chose A's desktop dock and B's mobile shelf to move forward. Apply the selected breakpoint and numeric treatment in Design_System.md. The owner still dislikes the visuals, so further polish remains deferred work, not a new gate. The comparison screenshots above are proposal evidence, not working-application tests. B01 is the next authorized slice.

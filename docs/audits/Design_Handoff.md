@@ -1,10 +1,10 @@
 # Genesis and Design handoff
 
-Session: `orch-20260930-021158`. The owner authorized Genesis and Design only. Build and research have not started.
+Session: `orch-20260930-021158`. The owner subsequently chose A desktop plus B mobile as an interim baseline and asked to proceed. B01 foundation is now authorized under the session's Build foundation handoff. Visual polish is deferred; research remains unauthorized.
 
 ## Current handoff: revised visual proposals
 
-**D01 remains in progress. Ready for owner direction, not visual acceptance or Build.** The owner rejected the initial form-heavy proposal. Its contract PASS did not establish visual quality and must not be used as visual approval.
+**D01 is closed for an interim implementation baseline, not final aesthetic approval.** The owner chose A desktop plus B mobile, still dislikes the visuals, and wants to defer that work. The first form-heavy proposal remains rejected. Its contract PASS must not be treated as visual quality evidence.
 
 The rework is on local exploration branch `design/solver-workspace-v2`. G01/G02 remain valid. The authoritative product plan and architecture were not changed.
 
@@ -25,9 +25,9 @@ The focused review confirmed the improved timer/scramble hierarchy and genuine d
 - Strict UTF-8 decoding of ten changed text artifacts, 64 local Markdown links, inline JavaScript syntax and `git diff --check` passed. No remote HTML resources were found.
 - Parent visually inspected desktop/phone compositions; persisted PNGs come from the final rendered source. HTML remains self-contained and presentation-only. Times, history scopes, counts, notation and schematic cubes are illustrative, not feasibility evidence or verified challenges.
 
-No application exists yet. Real iPhone/Android Safari/Chrome, assistive technology, timer/solver/storage/offline behavior and app build/tests remain unrun. A phone Space badge is a disclosed refinement choice, not a claim of touch-device testing.
+At this Design checkpoint no application existed. Real iPhone/Android Safari/Chrome, assistive technology, timer/solver/storage/offline behavior and app build/tests remain unrun. A phone Space badge is a disclosed refinement choice, not a claim of touch-device testing.
 
-Next: owner chooses dock versus shelf and numeric treatment, or specifies a blend/rejection. Finish the chosen all-trainer presentation within Design; obtain explicit authorization before Build. No push or history rewrite.
+Next: implement one responsive workspace using A above 900 CSS px and B at 900 px and below, as part of B01 foundation. No more style interviews in this run. Later visual work remains deferred. No push or history rewrite.
 
 ## Historical initial handoff (`e5adfae`)
 

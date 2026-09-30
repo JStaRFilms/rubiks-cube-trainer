@@ -5,10 +5,10 @@
 - Session: `orch-20260930-021158`
 - Project: Personal Rubiks Cube Trainer, working name.
 - Mission: deliver the approved offline trainer plan through working increments, with detailed coverage for all six trainers and an independent video research track.
-- Current phase: Design rework. G01/G02 remain complete; D01 is reopened after the owner rejected the initial visual proposal. Two revised solver-workspace proposals are checked and awaiting owner direction. Build and research remain pending.
+- Current phase: B01 foundation complete and verified. G01/G02/D01/B01 are complete; A desktop plus B mobile remains the interim layout. Visual polish is deferred. B02 cube/player integration is next and remains pending; research is separately gated.
 - Previous session: `orch-20260930-005449`, the completed takeover audit and interview. This is a new delivery session, not a duplicate of that planning session.
 
-The owner authorized G01, G02 and D01 through Design, then requested this visual rework. G01/G02 handoffs remain valid. The first D01 contract review was not visual acceptance. Revised proposals live on local exploration branch `design/solver-workspace-v2`, with the first checkpoint preserved in Git history. This run does not authorize Build, new worktrees, external content scraping, accounts, deployment, or research launches.
+The owner initially authorized work through Design, rejected the first visuals, then chose A desktop plus B mobile and asked to move past Design. That closes the interim layout gate and starts B01 on `build/foundation`. The owner still dislikes the aesthetics; defer further polish. Comparison prototypes remain on `design/solver-workspace-v2`. This run does not authorize further Build slices, new worktrees, external content scraping, accounts, deployment or research launches.
 
 ## Context intake
 
@@ -140,8 +140,10 @@ When executing later, set required capabilities accurately. Reviewers return fin
 - [x] Complete and review G02 architecture.
 - [x] Review the initial D01 contracts; record the owner's visual rejection rather than treating that review as acceptance.
 - [x] Author a real design system, two revised compositions and desktop/phone visual evidence.
-- [ ] Obtain owner direction and finish D01's chosen trainer/state presentation.
-- [ ] Obtain explicit Build authorization before B01.
+- [x] Record the owner's interim A-desktop/B-mobile choice and defer further visual polish.
+- [x] Interpret the owner's request to move past Design as authorization for B01 foundation.
+- [x] Implement, verify and review B01; 28 unit and 11 browser tests plus lint/typecheck/build passed.
+- [ ] Revisit visual polish after working functionality exists, without blocking this foundation.
 - [ ] Deliver and verify usable increments.
 - [ ] Authorize and evaluate video research separately.
 - [ ] Expand teaching/sync/video integration after their actual decisions.
@@ -152,6 +154,6 @@ Preparation time includes scrambling; never subtract an invented estimate. Cross
 
 Use one implementation pass and one focused review per increment, fixing confirmed blocking defects. Do not loop for speculative perfection. Record unavailable manual browser checks rather than claiming they passed. A blocked dataset source or failed feasibility result is a real task outcome, not permission to fabricate data or change semantics.
 
-G01/G02 are complete. D01 remains in progress pending owner visual choice and its chosen presentation rollout. The rework brief is `docs/design/D01_Visual_Rework.md`, the system is `docs/design/Design_System.md`, and current evidence is `docs/audits/Design_Handoff.md`. The browser-viewable proposals are `docs/mockups/Training_Review.html?variant=dock` and `?variant=focus`. Next: owner chooses or mixes dock/shelf and numeric type; refine D01 within the already-authorized Design scope. B01 remains pending and needs explicit Build authorization. All research remains separately gated.
+G01/G02/D01/B01 are complete. Preserve the interim owner choice in `docs/design/Design_System.md`. B01 implementation, review recovery and actual evidence are in `docs/audits/B01_Foundation_Handoff.md`; run instructions are in README. B02 is the next pending slice, followed by timing/statistics and Cross generation. The foundation is not a delivered trainer. This run did not start later slices or research. Do not reopen style questions before working functionality.
 
 The owner requested stage-sized local commits. Parent owns scoped Git integration after review, preserving unrelated staged work. No automatic push, amend, rebase, history rewrite or external mutation is authorized. Commit proposed Design as a review artifact, not as implicit acceptance of its visual direction.
