@@ -1,0 +1,128 @@
+@John Sax
+but after like 20 solves I get my cadence and what not
+yes sir!
+I'm working on a Cube timer and trainer
+Wanna hop on?
+E dey happen. 
+I’m honestly excited to make the video now than before cause I can actually see the good stuff now.
+SOFTTT let's get this party started!!!
+What exactly are you solving though?
+you just want to own one that we can play with and iterate on yeah?
+GUY I forked CS timer the other time lmao 
+those nigas are using php and some old ahh shit mehn😭😂😂
+Latter
+I'm making a personal trainer
+And making it available offline
+And also you can install it as a pwa
+ok neat!
+let's put AI inside😂😂😂
+and then call it state of the art!
+😁😁😁
+ZBLL, cross+1 cross+2 trainer with variable cross difficulty
+1 move cross to 8 move cross difficulty
+Fair tho. That’s the basic stuff for forms, such as inputting times and storing it in the server for actions. Simple yet works perfectly, so if it ain’t broke, don’t fix it I guess🤷‍♂️
++ 3D cube visualizers
+And also f2l pair visualizers in all slots
+That's the base
+But I think there are stuff that already do what you want to do.
+solved.no
+cuberoot.me
+ohhhh nice shittt, guy this is what I was trying to do then on top of cs time but omo tule I think it's better to have a speraete stuff and then port over logic from cs timer for some things like the library/engine of custom scrambles
+ohhh yeahh 
+and then the killer feature if having your solves reconrcuted from a video🙂
+Offline mode is my goal
+so no need for a 3d cube
+Hmmm
+Oh sharp. That’d be insane.
+this is shte killer feature if you ask me🙂
+Using CV
+Computer vision
+Copying the best features of each one, making it better, and then making it offline would be a killer.
+Yurpp
+I saw one like that and it actually works. It even generates the scramble for you.
+But then the website itself was pretty trash.
+Yikes
+I mean honestly
+It's hard hard to implement
+You need a good quality video
+Yeah definitely. But I trust you guys can do a better job together.
+Good fps
+And stuff like that
+Smart cubes are honestly the best
+It said 60 frames preferably, but still accepted 720p 30 frames.
+Yeah tbh.
+At that point oll pll will be a blurr
+Cost will go down as the years go by sha.
+Because anything above 20TPS will just look like flash
+Plus you need good lacking
+Yeah.
+You guys will handle it just fine.
+yahhh
+yeahhh frrrr
+kinda like classic porting to rust lmao 😂😂😂
+/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHQkdCXY1YZ1hYZ1iNfZd7c3uXfeCwnJyw4P/Zztn////////////////CABEIABQAPAMBIgACEQEDEQH/xAAsAAEAAwEBAAAAAAAAAAAAAAAAAQIDBAUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAADydsVm0ZJdq0gjk7eMvkKCAKh//8QAIRAAAgEEAgIDAAAAAAAAAAAAAAIBEyNRYQMREjEyQXH/2gAIAQEAAT8A4/r8O4yp2uVO1zB2uVGaIwTJy+xYXwiZLey3st7LWy3st7Ob5DsyqvUlRslRslRslRslRslRskzM+z//xAAVEQEBAAAAAAAAAAAAAAAAAAABMP/aAAgBAgEBPwBh/8QAFhEAAwAAAAAAAAAAAAAAAAAAASAx/9oACAEDAQE/ABENT//Z
+yeah but omo if we can get it working with good enough phone then lowkey we throw anyone that's using a phone worse than an s10+ out lao cuz that's the phone I am using😂😂😂
+60 should be enough tbh
+i mean nobody is doing 60 turns per second lao
+Fr
+Ummm John
+Imma send you the technical documents
+yeah but I DON"T HAVE MONEY FOR THAT YET!
+OPENAI Is taking my money🙂
+exactly!!!
+Or should I just upload it to GitHub fully
+and then it's going to have a nice algorithm for infering where pieces are from just knowing what's on the UFR faces...
+or at leat 3 faces at a time.
+Make I turn beta tester.
+esspecially if it know shte scramble too
+lmaoo
+yeah please do that, then Ill fork it and then wen can start seeing what we are gonna work on etc
+no be lie lmao
+Why fork when you can be a contributor
+Like claude
+how dare you all igore my glaze😭😭
+I'm building the base with GLM 5.3 flash
+😭😭😭😭
+Wetin be dis
+someone dmed me on snap and reminded me of how I raced them back in the day lmao
+Lol
+smiles!
+hafa who has the link to this group?
+Can you use Astra to go over the documents?
+You could ask @🎀💞Kasi💖💕🌸 to send the one he was sent since that’s the recent one. Or you could ask @Dada Ayooluwa🎲 but you might have to wait 5 business days.
+LMAOOO
+Perfect
+have you started the project on the hub yet?
+so ill jsut do everything in one folder or should I create the project here?
+then send yout he hub link?
+Refine the documents
+I initially built the base with GLM 5.3 flash
+But idk if i should use deepseek v4.1?
+Hmm interesting well I guess once sol enters the base and it sees any slop it can refine and guide the other models like 5.3 and the likes.
+So i should upload as is?
+yeahh I guess so, how much if it is working rn?
+have you gone far or are you open to an over night rebuild ?🙂
+I have tokens to burn🙂
+LOL
+Not far actually
+there are 8 milestones
+and its on the 1.5 milestones
+but Abeg
+just burn it
+LMAOOOOO!!!
+oya naw I should create a new repo yeah and do my shit or you are giving me the old one?
+Bro
+That shit took like 2.5 hours lol
+hahahaha
+what do you wanna name the stuff sef?
+opencode inferance is slowwwwwwwwwww
+PRT
+Personal Rubiks cube trainer
+Well, technically, I guess, but they use OpenRouter in the backend, and OpenRouter auto-routes to the best providers at any time. So it might not exactly be their fault.
+NO way😂😂😂
+We need a better name, that's the premise but then OK sha well work that out later
+oya naw ill get to work sir!
+LOL
+Have it go through the documentation
+and then add me as a contributor or just let me fork haha
+so i could work on it as well
