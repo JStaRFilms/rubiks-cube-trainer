@@ -4,7 +4,7 @@
 
 ### Workflow to follow
 
-vibe-build. Role: coder. Suggested route at session creation: `openai-codex/gpt-6-sol`, high thinking. Recheck the active registry and routing policy before launch. This packet is not a launch authorization.
+vibe-build. Role: coder. Current implementation route: `openai-codex/gpt-6.1-sol`, high thinking. The owner requested continued implementation after B01 and the pnpm migration. The parent accepted the verified B01 dependency and authorizes B02 execution. Research, deployment and accounts remain outside this authorization.
 
 ### Prime agent context
 
@@ -17,6 +17,11 @@ vibe-build. Role: coder. Suggested route at session creation: `openai-codex/gpt-
 - `docs/design/Training_Experience.md`
 - `docs/features/Trainer_Foundation.md`
 - `package.json`
+- `README.md`
+- `docs/audits/B01_Foundation_Handoff.md`
+- `docs/design/Design_System.md`
+- `src/app/App.tsx`, `src/pwa/client.ts`, `src/pwa/manifest.ts`, `src/pwa/sw.ts`, `vite.config.ts`
+- Existing unit/browser tests and `src/store/validation.ts`
 
 Read PLAN sections 4, 5, 6, 7, 8. Coverage: FR-001, FR-002, FR-012, FR-014. Paths produced by predecessors become available only after those tasks complete. If a required predecessor output is missing, report it rather than improvising its contract. Inspect actual existing code/types/tests before edits.
 
@@ -40,7 +45,11 @@ Prove the selected reusable cube tools and expose one tested logical contract fo
 
 ## Context
 
-This is a fresh implementation. The previous code is unavailable and historical milestone/test claims are not evidence. The owner approved the product direction and session creation, not automatic execution. PLAN remains authoritative over old TECHNICAL/AGENTS conflicts. All levels are supported; normal trainer controls target modern iPhone/Android browsers and desktop.
+B01 now supplies the running application and tests. There was no inherited application code; historical milestone/test claims are not evidence. The owner has asked to continue implementation. Keep the interim A-desktop/B-mobile layout and defer visual polish.
+
+On 2026-09-30 the parent queried the npm registry with pnpm. Released `cubing@0.63.8` reports `MPL-2.0 OR GPL-3.0-or-later`, source revision `d02c02fc90f3410e612315141072a47af03feb97`, integrity `sha512-suliTEg6p+PgyFcGtp3Y2NLd8gHnZFKYa5+Wd2HK7ciKuQOIuvRiM/on6HTVQuAxz2cNB/7WedgfUjQ1kR0kcA==` and Node >=22.3.0. Inspect the actual installed artifact, exported types and matching covered source before selecting it. Use the documented provisional MPL route with notices and source access; return any real rights conflict to the parent.
+
+Provide a usable move-review tool for an entered setup and algorithm without pretending generated challenges, timer controls or trainer statistics already exist. Keep the text result available on initialization/WebGL failure or reduced motion. Do not enable nonempty trainer backup imports with a partial semantic validator; optimality tables and case manifests are not present yet. PLAN remains authoritative over old TECHNICAL/AGENTS conflicts. All levels are supported; normal trainer controls target modern iPhone/Android browsers and desktop.
 
 ## Dependencies
 
@@ -67,6 +76,10 @@ A completed dependency is not enough if its review verdict has unresolved confir
 - Preserve unrelated work and the approved product scope. No speculative refactoring, new puzzle types, automatic coaching, or silent metric changes.
 - Main-checkout writing is single-threaded. Only R01 may use a separately authorized isolated worktree; resolve the exact cwd before its launch.
 - No deployments, accounts, production data changes, or unapproved external effects. Never fabricate sources, datasets, benchmarks, or browser checks.
+- Use pnpm 10.33.2 and its lockfile. Install only justified cube-tool dependencies; do not rework unrelated tooling or update unrelated packages.
+- The parent owns Git integration and task status. Do not commit, push, change branches or mark this task complete.
+- Write actual changed paths, commands/results, measurements and limitations into `docs/audits/Cube_Tools_Integration.md` before your final response. Previous subagent report delivery was unreliable; the audit must preserve the evidence.
+- Keep worker scaffolding honest: missing generator/table support returns an explicit failure, not a fake success. Reconstruction fixtures are synthetic interchange tests, not video-recovery evidence.
 - Review personas are read-only. They return evidence/verdicts, and the parent records documents and task state.
 - For substantial implementation, update the relevant feature blueprint with components, data flow and schema before changing those contracts.
 - Use one focused implementation/review pass per increment; route confirmed defects to the same conversation. Stop on blocked, cancelled, or review-gated launches.

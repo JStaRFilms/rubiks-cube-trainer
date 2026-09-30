@@ -1,0 +1,28 @@
+Cube Trainer move-review integration
+
+This integration's code, fixtures and documentation were prepared with an LLM. No contribution to cubing.js is submitted. Its contribution/LLM policy is retained in the matching source README.
+
+cubing 0.63.8, js.cubing.net team, primarily Lucas Garron and Tom Rokicki.
+Used under Mozilla Public License 2.0, not the alternative GPL route.
+Unmodified covered source revision d02c02fc90f3410e612315141072a47af03feb97.
+MPL text: cubing-MPL-2.0.md beside this notice.
+Matching source: cubing-0.63.8-source.tgz beside this notice.
+Online source: https://github.com/cubing/cubing.js/tree/d02c02fc90f3410e612315141072a47af03feb97
+The source archive retains original copyright, license and vendored-source notices. Bundling/minification does not change these files' license. App adapters do not modify cubing source.
+
+three.js 0.170.0
+Copyright 2010-2024 three.js authors
+MIT license, reproduced in three-MIT.txt.
+The emitted cubing renderer also includes the vendored stats module by mrdoob, with ESM conversion by Lucas Garron, 2021-12-21, under MIT. See stats-MIT.txt.
+
+@cubing/lazy-promise 0.1.1
+Author Lucas Garron <code@garron.net>. Manifest license MIT.
+License text in lazy-promise-MIT.txt. Matching source src/index.ts is retained in lazy-promise-0.1.1.ts.txt.
+
+The package contains optional solver code with GPL notices despite its vendor directory names. The review does not import search, scramble, bluetooth or those solvers. No algorithm dataset is used. Any later solver integration requires a new rights check; the root package's dual license alone is not sufficient evidence for those files.
+
+Foundation runtime notices are retained below and in foundation-MIT.txt.
+React / React DOM: Copyright Meta Platforms, Inc. and affiliates. MIT.
+Scheduler 0.28.0: Copyright Meta Platforms, Inc. and affiliates. MIT, text in scheduler-MIT.txt.
+idb: Copyright Jake Archibald. ISC, text in idb-ISC.txt.
+Zustand: Copyright 2019 Paul Henschel. MIT.

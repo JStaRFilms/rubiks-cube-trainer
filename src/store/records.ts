@@ -1,3 +1,4 @@
+import type { CubeStateV1 } from '../cube/engine';
 export const trainers = ['cross', 'cross1', 'f2l', 'oll', 'pll', 'zbll', 'cross2'] as const;
 export type Trainer = typeof trainers[number];
 export const colors = ['white', 'yellow', 'green', 'blue', 'red', 'orange'] as const;
@@ -13,14 +14,14 @@ export type GoalOptions =
   | { trainer: 'f2l'; caseId: string; slot: Slot; hint: boolean; mode: 'execution' | 'recognition' }
   | { trainer: 'oll' | 'pll' | 'zbll'; caseId: string; preAuf: 0 | 1 | 2 | 3; yaw: 0 | 1 | 2 | 3; mode: 'execution' | 'recognition' };
 export interface Versions { contract: 1; engine: string; dataset: string | null; tables: string }
-export interface TrainingFrame { colorOfFace: Record<Face, Color>; crossColor: Color }
+export interface TrainingFrame { colorOfFace: Readonly<Record<Face, Color>>; crossColor: Color }
 export type Proof =
   | { kind: 'cross-optimal'; depth: CrossDepth; solution: Move[] }
   | { kind: 'combined-bound'; crossDepth: number; cap: number; witness: Move[]; solvedSlots: Slot[] }
   | { kind: 'case'; caseId: string; identityKey: string; setup: Move[]; solution: Move[]; finalAuf: 0 | 1 | 2 | 3; representative: boolean };
 interface ChallengeCommon {
   challengeId: string; requestId: string; epoch: number; versions: Versions;
-  frame: TrainingFrame; scramble: Move[]; start: { format: 'cube3-facelets-v1'; facelets: string };
+  frame: TrainingFrame; scramble: Move[]; start: CubeStateV1;
 }
 export type Challenge = ChallengeCommon & (
   | { options: Extract<GoalOptions, { trainer: 'cross' }>; proof: Extract<Proof, { kind: 'cross-optimal' }> }

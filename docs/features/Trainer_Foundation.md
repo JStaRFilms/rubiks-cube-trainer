@@ -123,6 +123,16 @@ Evicted assets or tables downgrade readiness and identify missing work. Offline 
 
 Download an update into a separate release cache. A waiting service worker cannot automatically skipWaiting/reload. Prompt only; active preparation/inspection/arming/execution and save-pending block activation. Preserve saved history and persist run interruption/recovery state before a user-confirmed idle update. Other open tabs must also acknowledge idle/close; if they cannot, leave the update waiting. New worker, table and dataset versions initialize together under the new release. Old clients retain their coherent old cache until closed, not a mixture of chunks. Cleanup old caches only when no controlled client needs them, and never delete personal databases. B01 tests the chosen service-worker lifecycle, including multi-tab blocking, rather than assuming plugin defaults provide it.
 
+## B02 implementation contract
+
+B02 adds an entered-move review drawer, not a trainer. `src/cube` owns the restricted expanded notation and cube3-facelets-v1 conversion to the pinned cubing 0.63.8 KPuzzle. Six proper physical frames, center normalization, slot conjugation and the explicit OLL sticker projection follow Core architecture. Imported state legality is separate from trainer optimality validation. Nonempty trainer backups remain gated until complete semantic validators and datasets exist.
+
+The review validates setup and moves before replacing its current immutable review. Text and step state remain available without WebGL and under reduced motion. The locally bundled TwistyPlayer owns rendering and animation. A source-backed material adapter supplies physical colors because its default scheme differs from the contract. The drawer holds the existing editing activity gate throughout input, initialization and playback. Its events never enter the timer context.
+
+The release manifest scope becomes `move-review`, pins the engine, includes every emitted chunk and local notice/source asset, and requires `cube-model-v1`, `player-module-v1` and `generation-scaffold-v1` initialization. Setup verifies cached bytes first, then initializes the model and player module without opening a player. Cache-only rechecks and real cold-offline browser tests remain distinct evidence. No solver tables or dataset are claimed.
+
+`src/workers` implements the G02 request/reply and cancellation boundary. Missing generators/tables fail explicitly. Setup probes the worker's explicit initialization failure, not generator readiness. `src/reconstruction` supplies runtime-validated synthetic JSON interchange only, outside IndexedDB. Neither component enables training record imports or claims video recognition. No personal database/schema change is needed.
+
 ## B01 implementation boundary
 
 B01 creates `src/app`, `src/store` and `src/pwa`. The React workspace uses A's 248 px desktop dock above 900 px and B's 86 px mobile shelf at or below 900 px. Native dialogs contain settings, sessions/help and local data. The clock and scramble are unavailable placeholders, not a timing or generation implementation. Zustand holds only the update activity lock; IndexedDB remains authoritative.

@@ -1,0 +1,24 @@
+{
+  "format": "cube-reconstruction",
+  "version": 1,
+  "cubeContract": "cube3-facelets-v1",
+  "engineVersion": "cubing@0.63.8",
+  "initial": {
+    "scramble": [],
+    "state": { "format": "cube3-facelets-v1", "facelets": "UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB" },
+    "frame": { "crossColor": "white", "colorOfFace": { "U": "yellow", "R": "red", "F": "green", "D": "white", "L": "orange", "B": "blue" } }
+  },
+  "media": { "durationMs": 1500, "timeOrigin": "video-start", "sourceId": "synthetic-no-video" },
+  "events": [
+    { "kind": "move", "id": "e1", "move": { "family": "Rw", "amount": 1 }, "time": { "earliestMs": 100, "latestMs": 350 }, "origin": "detected", "supersedes": [], "score": { "value": 0.7, "model": "synthetic-fixture", "calibrated": false } },
+    { "kind": "move", "id": "e2", "move": { "family": "Rw", "amount": -1 }, "time": null, "origin": "manual", "supersedes": ["removed-gap"], "score": null },
+    { "kind": "move", "id": "e3", "move": { "family": "M", "amount": 2 }, "time": { "earliestMs": 300, "latestMs": 800 }, "origin": "manual", "supersedes": [], "score": null },
+    { "kind": "move", "id": "e4", "move": { "family": "M", "amount": 2 }, "time": { "earliestMs": 700, "latestMs": 1000 }, "origin": "manual", "supersedes": [], "score": null },
+    { "kind": "move", "id": "e5", "move": { "family": "x", "amount": 1 }, "time": { "earliestMs": 950, "latestMs": 1200 }, "origin": "manual", "supersedes": [], "score": null },
+    { "kind": "move", "id": "e6", "move": { "family": "x", "amount": -1 }, "time": { "earliestMs": 1150, "latestMs": 1400 }, "origin": "manual", "supersedes": [], "score": null }
+  ],
+  "revisions": [
+    { "id": "revision1", "action": "replace", "removed": [{ "kind": "gap", "id": "removed-gap", "time": { "earliestMs": 200, "latestMs": 500 }, "reason": "occlusion" }], "addedIds": ["e2"] }
+  ],
+  "validation": { "transitions": "valid", "finalState": { "format": "cube3-facelets-v1", "facelets": "UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB" }, "solved": true, "exactSequence": "unchecked", "groundTruthId": null, "issues": [] }
+}

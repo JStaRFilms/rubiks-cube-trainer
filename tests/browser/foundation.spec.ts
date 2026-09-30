@@ -7,10 +7,10 @@ async function dataPanel(page: Page) {
 }
 async function setup(page: Page) {
   await page.goto('/'); await dataPanel(page);
-  await page.getByRole('button', { name: 'Set up / retry shell' }).click();
+  await page.getByRole('button', { name: 'Set up / retry review' }).click();
   await expect(page.getByRole('button', { name: 'Reload to finish setup' })).toBeVisible({ timeout: 30000 });
   await page.getByRole('button', { name: 'Reload to finish setup' }).click();
-  await expect(page.getByRole('button', { name: /Offline shell ready/ })).toBeVisible({ timeout: 30000 });
+  await expect(page.getByRole('button', { name: /Offline review ready/ })).toBeVisible({ timeout: 30000 });
 }
 async function createSession(page: Page, label: string) {
   await page.getByRole('button', { name: 'Session / history', exact: true }).click();
@@ -63,32 +63,32 @@ test('cold offline shell loads a never-opened settings view, then detects evicti
   console.log(`Browser ${browser.version()}, platform ${process.platform}`);
   await setup(page); await createSession(page, 'Offline retained');
   await context.setOffline(true); await page.close(); const cold = await context.newPage(); await cold.goto('/offline-route');
-  await expect(cold.getByRole('button', { name: /Offline shell ready/ })).toBeVisible({ timeout: 30000 });
+  await expect(cold.getByRole('button', { name: /Offline review ready/ })).toBeVisible({ timeout: 30000 });
   await expect(cold.locator('.session-dock')).toContainText('Offline retained'); await cold.getByRole('button', { name: 'Settings', exact: true }).click(); await expect(cold.getByRole('combobox', { name: 'Cross color', exact: true })).toBeVisible(); await cold.getByRole('button', { name: 'Close dialog' }).click();
   await cold.evaluate(async () => { const names = await caches.keys(); const cache = await caches.open(names.find((name) => name.startsWith('cube-trainer-assets-')) ?? ''); await cache.delete('/icon-512.png'); });
-  await dataPanel(cold); await cold.getByRole('button', { name: 'Recheck cached shell' }).click(); await expect(cold.getByRole('status').filter({ hasText: 'Offline shell incomplete' })).toBeVisible();
-  await context.setOffline(false); await cold.getByRole('button', { name: 'Set up / retry shell' }).click(); await expect(cold.getByRole('status').filter({ hasText: 'Offline shell ready' })).toBeVisible();
+  await dataPanel(cold); await cold.getByRole('button', { name: 'Recheck cached review' }).click(); await expect(cold.getByRole('status').filter({ hasText: 'Offline shell incomplete' })).toBeVisible();
+  await context.setOffline(false); await cold.getByRole('button', { name: 'Set up / retry review' }).click(); await expect(cold.getByRole('status').filter({ hasText: 'Offline review ready' })).toBeVisible();
 });
 test('cache corruption is not declared ready and storage failures are separate', async ({ page }) => {
   await setup(page);
   await page.evaluate(async () => { const name = (await caches.keys()).find((value) => value.startsWith('cube-trainer-assets-')); if (!name) throw new Error('Missing cache'); const cache = await caches.open(name); await cache.put('/icon.svg', new Response('broken icon')); });
-  await dataPanel(page); await page.getByRole('button', { name: 'Recheck cached shell' }).click(); await expect(page.getByRole('status').filter({ hasText: 'Offline shell incomplete' })).toBeVisible();
-  await page.getByRole('button', { name: 'Set up / retry shell' }).click(); await expect(page.getByRole('status').filter({ hasText: 'Offline shell ready' })).toBeVisible();
+  await dataPanel(page); await page.getByRole('button', { name: 'Recheck cached review' }).click(); await expect(page.getByRole('status').filter({ hasText: 'Offline shell incomplete' })).toBeVisible();
+  await page.getByRole('button', { name: 'Set up / retry review' }).click(); await expect(page.getByRole('status').filter({ hasText: 'Offline review ready' })).toBeVisible();
   await page.evaluate(async () => { const names = await caches.keys(); const cache = await caches.open(names.find((name) => name.startsWith('cube-trainer-assets-')) ?? ''); await cache.delete('/release-assets.json'); });
-  await page.getByRole('button', { name: 'Recheck cached shell' }).click(); await expect(page.getByRole('status').filter({ hasText: 'Offline shell incomplete: release manifest' })).toBeVisible();
-  await page.getByRole('button', { name: 'Set up / retry shell' }).click(); await expect(page.getByRole('status').filter({ hasText: 'Offline shell ready' })).toBeVisible();
+  await page.getByRole('button', { name: 'Recheck cached review' }).click(); await expect(page.getByRole('status').filter({ hasText: 'Offline shell incomplete: release manifest' })).toBeVisible();
+  await page.getByRole('button', { name: 'Set up / retry review' }).click(); await expect(page.getByRole('status').filter({ hasText: 'Offline review ready' })).toBeVisible();
   await page.evaluate(() => { IDBObjectStore.prototype.put = function () { throw new DOMException('Probe quota', 'QuotaExceededError'); }; });
-  await page.getByRole('button', { name: 'Recheck cached shell' }).click(); await expect(page.getByRole('status').filter({ hasText: 'Probe quota' })).toBeVisible(); await expect(page.getByRole('status').filter({ hasText: 'Offline shell ready' })).not.toBeVisible();
+  await page.getByRole('button', { name: 'Recheck cached review' }).click(); await expect(page.getByRole('status').filter({ hasText: 'Probe quota' })).toBeVisible(); await expect(page.getByRole('status').filter({ hasText: 'Offline review ready' })).not.toBeVisible();
 });
 test('interrupted initial shell installation fails honestly, retains work, and retries', async ({ page, context }) => {
   await context.route('**/icon-512.png', (route) => route.abort());
-  await page.goto('/'); await dataPanel(page); await page.getByRole('button', { name: 'Set up / retry shell' }).click();
+  await page.goto('/'); await dataPanel(page); await page.getByRole('button', { name: 'Set up / retry review' }).click();
   await expect(page.getByRole('status').filter({ hasText: /installation was interrupted|installation did not complete/ })).toBeVisible({ timeout: 30000 });
-  await expect(page.getByRole('status').filter({ hasText: 'Offline shell ready' })).not.toBeVisible();
+  await expect(page.getByRole('status').filter({ hasText: 'Offline review ready' })).not.toBeVisible();
   expect(await page.evaluate(async () => { const names = await caches.keys(); const cache = await caches.open(names.find((name) => name.startsWith('cube-trainer-assets-')) ?? ''); return (await cache.keys()).length; })).toBeGreaterThan(1);
-  await context.unroute('**/icon-512.png'); await page.getByRole('button', { name: 'Set up / retry shell' }).click();
+  await context.unroute('**/icon-512.png'); await page.getByRole('button', { name: 'Set up / retry review' }).click();
   await expect(page.getByRole('button', { name: 'Reload to finish setup' })).toBeVisible({ timeout: 30000 }); await page.getByRole('button', { name: 'Reload to finish setup' }).click();
-  await expect(page.getByRole('button', { name: /Offline shell ready/ })).toBeVisible({ timeout: 30000 });
+  await expect(page.getByRole('button', { name: /Offline review ready/ })).toBeVisible({ timeout: 30000 });
 });
 test('stale restore preview cannot overwrite another tab\'s saved session', async ({ page, context }) => {
   await page.goto('/'); await createSession(page, 'Original'); await dataPanel(page);
@@ -111,13 +111,17 @@ test('responsive desktop dock/mobile shelf fit and native dialog focus returns',
 });
 test('downloaded update waits for every tab to close editing, then preserves history', async ({ page, context }) => {
   await setup(page); await createSession(page, 'Update retained'); const other = await context.newPage(); await other.goto('/');
-  await other.getByRole('button', { name: 'Settings', exact: true }).click();
+  await other.getByRole('button', { name: 'Move review', exact: true }).click();
+  await other.getByLabel('Moves', { exact: true }).fill('(R U)20'); await other.getByRole('button', { name: 'Validate and review' }).click();
+  await expect(other.getByRole('button', { name: 'Play', exact: true })).toBeEnabled({ timeout: 20000 });
+  await other.getByRole('button', { name: 'Play', exact: true }).click();
   execSync('pnpm build', { env: { ...process.env, RELEASE_ID: `browser-update-${Date.now()}` }, stdio: 'pipe' });
   await dataPanel(page); await page.getByRole('button', { name: 'Check for update' }).click(); await page.getByRole('button', { name: 'Close dialog' }).click();
   await expect(page.getByRole('button', { name: 'Apply update' })).toBeVisible({ timeout: 30000 });
   page.on('dialog', (dialog) => void dialog.accept());
   await page.getByRole('button', { name: 'Apply update' }).click(); await expect(page.locator('.practice [role=alert]')).toContainText('other tabs');
-  await expect(other.getByRole('dialog')).toBeVisible(); await other.getByRole('button', { name: 'Close dialog' }).click();
-  await page.getByRole('button', { name: 'Apply update' }).click(); await expect(page.getByRole('button', { name: /Offline shell ready/ })).toBeVisible({ timeout: 30000 });
+  await expect(other.getByRole('dialog')).toBeVisible(); await expect(other.locator('twisty-player')).toHaveCount(1);
+  await expect(other.getByTestId('review-step')).not.toHaveText('0'); await other.getByRole('button', { name: 'Close dialog' }).click();
+  await page.getByRole('button', { name: 'Apply update' }).click(); await expect(page.getByRole('button', { name: /Offline review ready/ })).toBeVisible({ timeout: 30000 });
   await expect(page.getByRole('button', { name: 'Apply update' })).not.toBeVisible(); await expect(page.locator('.session-dock')).toContainText('Update retained');
 });

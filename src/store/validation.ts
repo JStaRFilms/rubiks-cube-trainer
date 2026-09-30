@@ -30,7 +30,7 @@ export function integer(value: unknown, min = 0, max = Number.MAX_SAFE_INTEGER):
   return value;
 }
 const slots = ['FR', 'FL', 'BR', 'BL'] as const;
-function options(input: unknown): GoalOptions {
+export function decodeGoalOptions(input: unknown): GoalOptions {
   const v = object(input);
   const trainer = choice(v.trainer, trainers);
   if (trainer === 'cross' || trainer === 'cross1' || trainer === 'cross2') {
@@ -58,7 +58,7 @@ export function decodeSettings(input: unknown): SettingsRecord {
   keys(v, ['key', 'theme', 'defaultTrainer', 'crossColor', 'inspectionMode', 'audibleWarnings', 'reducedMotion', 'lastOptions']);
   const lastOptions: Partial<Record<Trainer, GoalOptions>> = {};
   for (const [key, value] of Object.entries(object(v.lastOptions))) {
-    const trainer = choice(key, trainers), option = options(value);
+    const trainer = choice(key, trainers), option = decodeGoalOptions(value);
     if (trainer !== option.trainer) throw new DataError('Trainer options do not match their key.');
     lastOptions[trainer] = option;
   }

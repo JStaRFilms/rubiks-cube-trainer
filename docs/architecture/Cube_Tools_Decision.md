@@ -1,6 +1,6 @@
 # Cube tools decision
 
-Status: G02 architecture proposal for session `orch-20260930-021158`. No package has been installed or tested. [PLAN](../imports/PLAN.md) remains authoritative. Read alongside [Core architecture](Core_Architecture.md) and [Trainer foundation](../features/Trainer_Foundation.md).
+Status: B02 integration tested in session `orch-20260930-021158`. cubing 0.63.8 is pinned and used for the shared model, parser and move-review player. The G02 alternatives below remain historical evidence. [PLAN](../imports/PLAN.md) remains authoritative. Read alongside [Core architecture](Core_Architecture.md) and [Trainer foundation](../features/Trainer_Foundation.md).
 
 ## Recommendation
 
@@ -9,6 +9,16 @@ Provisionally use the npm package `cubing` for notation, the 3×3 KPuzzle model,
 This choice avoids writing a renderer and a second notation parser. It also keeps playback and validation on the same model. The cost is an experimental setup interface, dynamic loading, a Three.js dependency, and version-sensitive browser/build behavior. B02 must prove those costs are acceptable before the choice becomes final. Use the MPL route provisionally, retain notices and provide access to the distributed covered source. Audit the pinned artifact and its included third-party licenses before redistribution. This is not approval to copy every dataset in the repository.
 
 Do not switch to custom rendering if an integration check fails. First record the failure, evaluate a narrower adapter or the fallback below, and bring any significant requirement or licensing change to the owner.
+
+## B02 reuse result
+
+Use `cubing@0.63.8`, source revision `d02c02fc90f3410e612315141072a47af03feb97`, package integrity `sha512-suliTEg6p+PgyFcGtp3Y2NLd8gHnZFKYa5+Wd2HK7ciKuQOIuvRiM/on6HTVQuAxz2cNB/7WedgfUjQ1kR0kcA==`. Its Node >=22.3.0 requirement fits this project's >=22.12.0 requirement. The selected source package manifest matches the released artifact. Parser, Alg, cube definition and Cube3D source-map contents match the archived revision byte for byte.
+
+The exported parser and KPuzzle APIs pass independent Cartesian outer/wide/slice/rotation fixtures. TwistyPlayer passes actual step-state, six-frame material-color, controls, Chrome touch-emulation and never-opened cold-offline checks. A small adapter clones its sticker materials because the vendor's U-white scheme differs from the contract's physical frames. Camera changes do not change logical state. No custom renderer, solver or algorithm dataset was added.
+
+The selected emitted path uses MPL cubing code and MIT Three.js/stats/lazy-promise code. The source archive contains optional solver files with GPL notices despite MIT/MPL directory names. They are not in the emitted review path. Do not extend this rights verdict to search/scramble APIs or cases. Local notices retain the relevant terms and source access. The upstream contribution/LLM policy is retained and this app discloses its LLM assistance; no upstream contribution is submitted.
+
+Actual final-byte/chunk/source inspection, browser measurements, failures corrected during integration and remaining platform gaps are in [Cube tools integration](../audits/Cube_Tools_Integration.md). Physical iOS/Android and OS-installed restart are not verified. The browser evidence supports this review increment, not roadmap trainer readiness.
 
 ## Evidence and alternatives
 

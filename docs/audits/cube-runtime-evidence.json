@@ -1,0 +1,346 @@
+{
+  "browser": "154.0.8037.59",
+  "platform": "win32",
+  "coldShellMs": 1173,
+  "coldPlayerMs": 1015,
+  "warmPlayerMs": 398,
+  "baseline": {
+    "metrics": [
+      {
+        "name": "Timestamp",
+        "value": 31957.409778
+      },
+      {
+        "name": "AudioHandlers",
+        "value": 0
+      },
+      {
+        "name": "AudioWorkletProcessors",
+        "value": 0
+      },
+      {
+        "name": "Documents",
+        "value": 6
+      },
+      {
+        "name": "Frames",
+        "value": 5
+      },
+      {
+        "name": "JSEventListeners",
+        "value": 291
+      },
+      {
+        "name": "LayoutObjects",
+        "value": 78
+      },
+      {
+        "name": "MediaKeySessions",
+        "value": 0
+      },
+      {
+        "name": "MediaKeys",
+        "value": 0
+      },
+      {
+        "name": "Nodes",
+        "value": 271
+      },
+      {
+        "name": "Resources",
+        "value": 7
+      },
+      {
+        "name": "ContextLifecycleStateObservers",
+        "value": 19
+      },
+      {
+        "name": "V8PerContextDatas",
+        "value": 4
+      },
+      {
+        "name": "WorkerGlobalScopes",
+        "value": 0
+      },
+      {
+        "name": "UACSSResources",
+        "value": 0
+      },
+      {
+        "name": "RTCPeerConnections",
+        "value": 0
+      },
+      {
+        "name": "ResourceFetchers",
+        "value": 6
+      },
+      {
+        "name": "AdSubframes",
+        "value": 0
+      },
+      {
+        "name": "DetachedScriptStates",
+        "value": 2
+      },
+      {
+        "name": "ArrayBufferContents",
+        "value": 1
+      },
+      {
+        "name": "LayoutCount",
+        "value": 4
+      },
+      {
+        "name": "RecalcStyleCount",
+        "value": 7
+      },
+      {
+        "name": "LayoutDuration",
+        "value": 0.051613
+      },
+      {
+        "name": "RecalcStyleDuration",
+        "value": 0.010906
+      },
+      {
+        "name": "DevToolsCommandDuration",
+        "value": 0.104745
+      },
+      {
+        "name": "ScriptDuration",
+        "value": 0.072615
+      },
+      {
+        "name": "V8CompileDuration",
+        "value": 0
+      },
+      {
+        "name": "TaskDuration",
+        "value": 0.369523
+      },
+      {
+        "name": "TaskOtherDuration",
+        "value": 0.129644
+      },
+      {
+        "name": "ThreadTime",
+        "value": 0.37808
+      },
+      {
+        "name": "ProcessTime",
+        "value": 0.57978
+      },
+      {
+        "name": "JSHeapUsedSize",
+        "value": 4543796
+      },
+      {
+        "name": "JSHeapTotalSize",
+        "value": 9760768
+      },
+      {
+        "name": "FirstMeaningfulPaint",
+        "value": 31956.489457
+      },
+      {
+        "name": "DomContentLoaded",
+        "value": 31956.330863
+      },
+      {
+        "name": "NavigationStart",
+        "value": 31956.252113
+      }
+    ]
+  },
+  "metrics": {
+    "metrics": [
+      {
+        "name": "Timestamp",
+        "value": 31958.867093
+      },
+      {
+        "name": "AudioHandlers",
+        "value": 0
+      },
+      {
+        "name": "AudioWorkletProcessors",
+        "value": 0
+      },
+      {
+        "name": "Documents",
+        "value": 6
+      },
+      {
+        "name": "Frames",
+        "value": 5
+      },
+      {
+        "name": "JSEventListeners",
+        "value": 376
+      },
+      {
+        "name": "LayoutObjects",
+        "value": 202
+      },
+      {
+        "name": "MediaKeySessions",
+        "value": 0
+      },
+      {
+        "name": "MediaKeys",
+        "value": 0
+      },
+      {
+        "name": "Nodes",
+        "value": 529
+      },
+      {
+        "name": "Resources",
+        "value": 9
+      },
+      {
+        "name": "ContextLifecycleStateObservers",
+        "value": 22
+      },
+      {
+        "name": "V8PerContextDatas",
+        "value": 4
+      },
+      {
+        "name": "WorkerGlobalScopes",
+        "value": 0
+      },
+      {
+        "name": "UACSSResources",
+        "value": 0
+      },
+      {
+        "name": "RTCPeerConnections",
+        "value": 0
+      },
+      {
+        "name": "ResourceFetchers",
+        "value": 6
+      },
+      {
+        "name": "AdSubframes",
+        "value": 0
+      },
+      {
+        "name": "DetachedScriptStates",
+        "value": 2
+      },
+      {
+        "name": "ArrayBufferContents",
+        "value": 25
+      },
+      {
+        "name": "LayoutCount",
+        "value": 30
+      },
+      {
+        "name": "RecalcStyleCount",
+        "value": 68
+      },
+      {
+        "name": "LayoutDuration",
+        "value": 0.079469
+      },
+      {
+        "name": "RecalcStyleDuration",
+        "value": 0.029437
+      },
+      {
+        "name": "DevToolsCommandDuration",
+        "value": 0.236166
+      },
+      {
+        "name": "ScriptDuration",
+        "value": 0.139586
+      },
+      {
+        "name": "V8CompileDuration",
+        "value": 0
+      },
+      {
+        "name": "TaskDuration",
+        "value": 1.058291
+      },
+      {
+        "name": "TaskOtherDuration",
+        "value": 0.573633
+      },
+      {
+        "name": "ThreadTime",
+        "value": 0.767589
+      },
+      {
+        "name": "ProcessTime",
+        "value": 1.146636
+      },
+      {
+        "name": "JSHeapUsedSize",
+        "value": 10685212
+      },
+      {
+        "name": "JSHeapTotalSize",
+        "value": 15790080
+      },
+      {
+        "name": "FirstMeaningfulPaint",
+        "value": 31956.489457
+      },
+      {
+        "name": "DomContentLoaded",
+        "value": 31956.330863
+      },
+      {
+        "name": "NavigationStart",
+        "value": 31956.252113
+      }
+    ]
+  },
+  "requests": [
+    "http://127.0.0.1:4173/",
+    "http://127.0.0.1:4173/assets/index-C1yJ9XVr.js",
+    "http://127.0.0.1:4173/assets/index-DgvEnC6A.css",
+    "http://127.0.0.1:4173/icon.svg",
+    "http://127.0.0.1:4173/sw.js",
+    "http://127.0.0.1:4173/release-assets.json",
+    "http://127.0.0.1:4173/assets/MoveReview-BDiZTxvU.js",
+    "http://127.0.0.1:4173/assets/initialize-C7AZfoRv.js",
+    "http://127.0.0.1:4173/assets/engine-CxK_JCqK.js",
+    "http://127.0.0.1:4173/assets/player-COtTyAhf.js",
+    "http://127.0.0.1:4173/assets/puzzles-dynamic-side-events-IMYJ533P-uM0XY_nj.js",
+    "http://127.0.0.1:4173/assets/puzzles-dynamic-4x4x4-AIGABOAR-Cr8v4tqZ.js",
+    "http://127.0.0.1:4173/assets/puzzles-dynamic-unofficial-P3TW433I-cOWAxRTA.js",
+    "http://127.0.0.1:4173/assets/puzzles-dynamic-megaminx-2LVHIDL4-Cm8jQJ-N.js",
+    "http://127.0.0.1:4173/assets/index-DbR32avi.js",
+    "http://127.0.0.1:4173/assets/big-puzzle-orientation-ADWIOX6S-BxvPh386.js",
+    "http://127.0.0.1:4173/assets/puzzles-dynamic-3x3x3-FYXD7SIU-BAAKgtmM.js",
+    "http://127.0.0.1:4173/assets/client-YsznLCdm.js",
+    "http://127.0.0.1:4173/assets/twisty-dynamic-3d-4BEQ76PB-B8BnKkYZ.js",
+    "http://127.0.0.1:4173/assets/puzzles-dynamic-side-events-IMYJ533P-CDePOl55.js",
+    "http://127.0.0.1:4173/assets/puzzles-dynamic-unofficial-P3TW433I-Qmz-kdAk.js",
+    "http://127.0.0.1:4173/assets/index-CF5Rjx6B.js",
+    "http://127.0.0.1:4173/assets/big-puzzle-orientation-ADWIOX6S-XZNB-e0Q.js",
+    "http://127.0.0.1:4173/assets/generation.worker-qyKtUB9Z.js",
+    "http://127.0.0.1:4173/index.html",
+    "http://127.0.0.1:4173/icon-192.png",
+    "http://127.0.0.1:4173/icon-512.png",
+    "http://127.0.0.1:4173/apple-touch-icon.png",
+    "http://127.0.0.1:4173/manifest.webmanifest",
+    "http://127.0.0.1:4173/licenses/cubing-0.63.8-source.tgz",
+    "http://127.0.0.1:4173/licenses/cubing-MPL-2.0.md",
+    "http://127.0.0.1:4173/licenses/foundation-MIT.txt",
+    "http://127.0.0.1:4173/licenses/idb-ISC.txt",
+    "http://127.0.0.1:4173/licenses/lazy-promise-0.1.1.ts.txt",
+    "http://127.0.0.1:4173/licenses/lazy-promise-MIT.txt",
+    "http://127.0.0.1:4173/licenses/scheduler-MIT.txt",
+    "http://127.0.0.1:4173/licenses/stats-MIT.txt",
+    "http://127.0.0.1:4173/licenses/THIRD-PARTY-NOTICES.txt",
+    "http://127.0.0.1:4173/licenses/three-MIT.txt",
+    "http://127.0.0.1:4173/never-opened-review"
+  ],
+  "failures": []
+}

@@ -5,14 +5,14 @@
 - Session: `orch-20260930-021158`
 - Project: Personal Rubiks Cube Trainer, working name.
 - Mission: deliver the approved offline trainer plan through working increments, with detailed coverage for all six trainers and an independent video research track.
-- Current phase: B01 foundation complete and verified. G01/G02/D01/B01 are complete; A desktop plus B mobile remains the interim layout. Visual polish is deferred. B02 cube/player integration is next and remains pending; research is separately gated.
+- Current phase: Build, B02 cube/player integration complete and verified. G01/G02/D01/B01/B02 are complete. A desktop plus B mobile remains the interim layout, and further visual polish is deferred. B01 and the pnpm migration were pushed. B03 timing/statistics is next, followed by Cross generation. Research remains separately gated.
 - Previous session: `orch-20260930-005449`, the completed takeover audit and interview. This is a new delivery session, not a duplicate of that planning session.
 
-The owner initially authorized work through Design, rejected the first visuals, then chose A desktop plus B mobile and asked to move past Design. That closes the interim layout gate and starts B01 on `build/foundation`. The owner still dislikes the aesthetics; defer further polish. Comparison prototypes remain on `design/solver-workspace-v2`. This run does not authorize further Build slices, new worktrees, external content scraping, accounts, deployment or research launches.
+The owner initially authorized work through Design, rejected the first visuals, then chose A desktop plus B mobile and asked to move past Design. That closes the interim layout gate and starts B01 on `build/foundation`. The owner still dislikes the aesthetics; defer further polish. Comparison prototypes remain on `design/solver-workspace-v2`. The owner subsequently asked to continue implementation. The next active slice is B02, cube tools and offline interactive playback, followed by the authored timing and Cross tasks. This authorization does not extend to new worktrees, external case-content scraping, accounts, deployment or research launches.
 
 ## Context intake
 
-`docs/imports/PLAN.md` is the product source of truth. `docs/Project_Requirements.md` is an index. `docs/audits/import-audit.md` records why the inherited promises were revised. The old code is unavailable. `src/` is empty and no package manifest or test toolchain exists. Earlier milestone/test claims must not be carried forward as evidence.
+`docs/imports/PLAN.md` is the product source of truth. `docs/Project_Requirements.md` is an index. `docs/audits/import-audit.md` records why the inherited promises were revised. The inherited application code was unavailable at intake. B01 has since added the React/Vite application, persistent local records, PWA shell and unit/browser checks. The project now uses pnpm 10.33.2. Earlier imported milestone/test claims must not be carried forward as evidence.
 
 The imported `TECHNICAL.md` and `AGENTS.md` are historical. Read them only with the supersession rules in PLAN section 1. Do not restore exact-K difficulty, desktop-first UI, random-cube F2L placement, late backup, or first-use-only offline caching.
 
@@ -144,7 +144,8 @@ When executing later, set required capabilities accurately. Reviewers return fin
 - [x] Interpret the owner's request to move past Design as authorization for B01 foundation.
 - [x] Implement, verify and review B01; 28 unit and 11 browser tests plus lint/typecheck/build passed.
 - [ ] Revisit visual polish after working functionality exists, without blocking this foundation.
-- [ ] Deliver and verify usable increments.
+- [x] Implement B02 entered-move review, shared cube contracts and first-use-offline player setup. Correct both focused-review blockers; parent checks pass with 59 unit and 17 Chrome tests.
+- [ ] Deliver and verify the first complete trainer increment through B03/B04/Q01.
 - [ ] Authorize and evaluate video research separately.
 - [ ] Expand teaching/sync/video integration after their actual decisions.
 
@@ -154,6 +155,6 @@ Preparation time includes scrambling; never subtract an invented estimate. Cross
 
 Use one implementation pass and one focused review per increment, fixing confirmed blocking defects. Do not loop for speculative perfection. Record unavailable manual browser checks rather than claiming they passed. A blocked dataset source or failed feasibility result is a real task outcome, not permission to fabricate data or change semantics.
 
-G01/G02/D01/B01 are complete. Preserve the interim owner choice in `docs/design/Design_System.md`. B01 implementation, review recovery and actual evidence are in `docs/audits/B01_Foundation_Handoff.md`; run instructions are in README. B02 is the next pending slice, followed by timing/statistics and Cross generation. The foundation is not a delivered trainer. This run did not start later slices or research. Do not reopen style questions before working functionality.
+G01/G02/D01/B01/B02 are complete. Preserve the interim owner choice in `docs/design/Design_System.md`. B01 implementation, review recovery and actual evidence are in `docs/audits/B01_Foundation_Handoff.md`; run instructions are in README. B02 evidence is in `docs/audits/Cube_Tools_Integration.md`. The entered-move review tool is delivered, with shared cube contracts and cold-offline player checks. The owner's follow-up authorizes continued implementation. B03 timing/statistics and B04 Cross generation are next. No live timer or generated trainer is delivered yet. Research has not started and remains separately gated. Do not reopen style questions before working functionality.
 
 The owner requested stage-sized local commits. Parent owns scoped Git integration after review, preserving unrelated staged work. No automatic push, amend, rebase, history rewrite or external mutation is authorized. Commit proposed Design as a review artifact, not as implicit acceptance of its visual direction.

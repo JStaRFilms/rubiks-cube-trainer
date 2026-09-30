@@ -57,12 +57,12 @@ export class PwaController {
       observe();
       registration.waiting?.postMessage({ kind: 'HELLO' });
       if (navigator.serviceWorker.controller) await this.verify(false);
-      else this.set({ message: 'Set up the offline shell. Player and training assets are not included yet.' });
+      else this.set({ message: 'Set up offline move review, including the cube model and player.' });
     } catch (error) { this.set({ phase: 'failed', message: error instanceof Error ? error.message : 'Shell setup failed.' }); }
   }
   async verify(download: boolean): Promise<void> {
     try {
-      this.set({ phase: download ? 'downloading' : 'verifying', message: download ? 'Checking and downloading missing shell assets…' : 'Verifying cached shell assets…' });
+      this.set({ phase: download ? 'downloading' : 'verifying', message: download ? 'Checking and downloading missing review assets…' : 'Verifying cached review assets…' });
       let registration = this.registration;
       if (download && !registration?.active) registration = await navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' });
       if (!registration) throw new Error('No shell worker is installed. Set up the offline shell first.');
@@ -77,7 +77,10 @@ export class PwaController {
         if (download && activityStore.getState().phase === 'idle' && !activityStore.getState().updateToken) location.reload();
         return;
       }
-      this.set({ phase: 'ready', message: `Offline shell ready · ${String(result.releaseId)}. Player/training assets not included.` });
+      this.set({ phase: 'initializing', message: 'Initializing cached cube model and player module…' });
+      const { initializeReview } = await import('../cube/initialize');
+      await initializeReview();
+      this.set({ phase: 'ready', message: `Offline review ready · ${String(result.releaseId)}. No trainers or solver tables included.` });
     } catch (error) { this.set({ phase: 'failed', message: error instanceof Error ? error.message : 'Shell setup failed. Retry.' }); }
   }
   async checkUpdate(): Promise<void> { await this.registration?.update(); this.set({ waiting: !!this.registration?.waiting }); }

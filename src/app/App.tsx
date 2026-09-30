@@ -1,4 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
+const MoveReview = lazy(() => import('./MoveReview').then((module) => ({ default: module.MoveReview })).catch(() => ({
+  default: function ReviewLoadError() {
+    return <p role="alert" className="error">Move review could not load. Check offline setup or reconnect, then reload to retry. <button onClick={() => location.reload()}>Reload to retry</button></p>;
+  },
+})));
 import { colors, defaultSettings, personalStores, trainers, type TrainerBackupV1 } from '../store/records';
 import { Repository, storageMessage } from '../store/repository';
 import { MAX_FILE_BYTES, parseBackup } from '../store/validation';
@@ -6,7 +11,7 @@ import { enterActivity } from '../pwa/activity';
 import { PwaController, type OfflineState } from '../pwa/client';
 
 const labels = { cross: 'Cross', cross1: 'Cross+1', f2l: 'F2L', oll: 'Time Attack · OLL', pll: 'Time Attack · PLL', zbll: 'ZBLL', cross2: 'Cross+2' };
-type Panel = 'settings' | 'session' | 'help' | 'data';
+type Panel = 'settings' | 'session' | 'help' | 'data' | 'review';
 function downloadBackup(backup: TrainerBackupV1) {
   const url = URL.createObjectURL(new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' }));
   const link = document.createElement('a'); link.href = url; link.download = `cube-trainer-${new Date().toISOString().slice(0, 10)}.json`; link.click();
@@ -19,6 +24,11 @@ export function App() {
   const [data, setData] = useState<TrainerBackupV1 | null>(null);
   const [offline, setOffline] = useState<OfflineState>({ phase: 'not-started', message: 'Offline shell not checked.', waiting: false });
   const [pwa] = useState(() => new PwaController(setOffline, () => repository.probe()));
+  const [systemReduced, setSystemReduced] = useState(() => matchMedia('(prefers-reduced-motion: reduce)').matches);
+  useEffect(() => {
+    const media = matchMedia('(prefers-reduced-motion: reduce)'), changed = () => setSystemReduced(media.matches);
+    media.addEventListener('change', changed); return () => media.removeEventListener('change', changed);
+  }, []);
   const [panel, setPanel] = useState<Panel | null>(null), [busy, setBusy] = useState(false);
   const [sessionLabel, setSessionLabel] = useState(''), [renameId, setRenameId] = useState<string | null>(null);
   const [selectedSessionId, setSelectedSessionId] = useState<string | null>(null);
@@ -72,10 +82,10 @@ export function App() {
       <section className="scramble-rail" aria-label="Challenge status">
         <span>{labels[settings.defaultTrainer]} · Not delivered yet</span>
         <p>No verified scramble available</p>
-        <button className="status-button" onClick={() => open('data')}>{offline.phase === 'ready' ? 'Offline shell ready' : 'Offline shell setup'} · {data ? 'Local storage available' : 'Storage not checked'}</button>
+        <button className="status-button" onClick={() => open('data')}>{offline.phase === 'ready' ? 'Offline review ready' : 'Offline review setup'} · {data ? 'Local storage available' : 'Storage not checked'}</button>
       </section>
       <section className="timer-canvas" aria-label="Timer unavailable">
-        <div className="clock" aria-hidden="true">--.--</div><h1>Timer not connected</h1><p>Sessions, settings and file backup are available.</p>
+        <div className="clock" aria-hidden="true">--.--</div><h1>Timer not connected</h1><p>Sessions, settings and file backup are available.</p><button data-timer-input="isolated" onClick={() => open('review')}>Move review</button>
       </section>
       {offline.waiting && <div className="update-bar" role="status"><span>Update downloaded. Apply when idle.</span><button disabled={busy || panel !== null} onClick={() => {
         if (window.confirm('Apply the downloaded update? Idle Cube Trainer tabs will reload.')) void perform(() => pwa.applyUpdate());
@@ -84,8 +94,9 @@ export function App() {
     </main>
     <footer className="session-shelf"><div>{sessionSummary}</div><button onClick={() => open('session')}>Session</button></footer>
     <dialog ref={dialog} aria-labelledby="panel-title" onCancel={(event) => { event.preventDefault(); close(); }}>
-      <div className="dialog-heading"><h2 id="panel-title">{panel === 'settings' ? 'Settings' : panel === 'session' ? 'Session and history' : panel === 'data' ? 'Local data' : 'Help'}</h2><button disabled={busy} onClick={close} aria-label="Close dialog">Close</button></div>
+      <div className="dialog-heading"><h2 id="panel-title">{panel === 'settings' ? 'Settings' : panel === 'session' ? 'Session and history' : panel === 'data' ? 'Local data' : panel === 'review' ? 'Move review' : 'Help'}</h2><button disabled={busy} onClick={close} aria-label="Close dialog">Close</button></div>
       <div className="dialog-body" aria-busy={busy}>
+        {panel === 'review' && <Suspense fallback={<p role="status">Loading move review…</p>}><MoveReview color={settings.crossColor} reduceMotion={settings.reducedMotion === 'on' || systemReduced} /></Suspense>}
         {panel === 'settings' && <form onSubmit={(event) => { event.preventDefault(); void perform(async () => { await repository.saveSettings(draft); await refresh(); setNotice('Settings saved on this device.'); }); }}>
           <label>Theme<select value={draft.theme} onChange={(event) => { const theme = event.target.value; if (theme === 'dark' || theme === 'light' || theme === 'system') setDraft({ ...draft, theme }); }}><option>dark</option><option>light</option><option>system</option></select></label>
           <label>Cross color<select value={draft.crossColor} onChange={(event) => { const color = colors.find((value) => value === event.target.value); if (color) setDraft({ ...draft, crossColor: color }); }}>{colors.map((color) => <option key={color}>{color}</option>)}</select></label>
@@ -104,12 +115,12 @@ export function App() {
           </form><p>No saved attempts for this trainer.</p><button onClick={() => { setPanel('data'); setPreview(null); }}>Local data</button>
         </>}
         {panel === 'help' && <>
-          <p>This release is the local-data foundation. No trainer, timer, solver or player is delivered yet.</p><p>Cross will use a maximum optimal depth, not an exact depth. A half turn counts as one move.</p><p>Use Settings for preferences and Session for trainer-specific sessions.</p><p>Install from your browser's install menu. On iPhone, use Share, then Add to Home Screen. Offline setup covers this shell only.</p><button onClick={() => setPanel('data')}>Local data and offline setup</button>
+          <p>Move review plays an entered setup and moves. No trainer, timer, solver or case library is delivered yet.</p><p>Cross will use a maximum optimal depth, not an exact depth. A half turn counts as one move.</p><p>Use Settings for preferences and Session for trainer-specific sessions.</p><p>Install from your browser's install menu. On iPhone, use Share, then Add to Home Screen. Offline setup includes the cube model and never-opened move-review player.</p><button onClick={() => setPanel('data')}>Local data and offline setup</button>
         </>}
         {panel === 'data' && <>
           <p>Stored in this browser. Clearing storage or losing this device can remove it. Keep a file backup.</p>
-          <h3>Offline shell</h3><p role="status">{offline.message}</p><p>Player, training libraries, workers and solver tables are not included in this release.</p>
-          <button disabled={busy} onClick={() => void perform(() => pwa.verify(true))}>Set up / retry shell</button>{offline.message === 'Shell downloaded. Reload to finish setup.' && <button disabled={busy} onClick={() => { close(); location.reload(); }}>Reload to finish setup</button>}<button disabled={busy} onClick={() => void perform(() => pwa.verify(false))}>Recheck cached shell</button><button disabled={busy} onClick={() => void perform(() => pwa.checkUpdate())}>Check for update</button>
+          <h3>Offline move review</h3><p role="status">{offline.message}</p><p>Includes the cube model and 3D player. Training libraries and solver tables are not included.</p><p><a href="/licenses/THIRD-PARTY-NOTICES.txt" target="_blank" rel="noreferrer">Third-party notices</a> · <a href="/licenses/cubing-0.63.8-source.tgz">Covered cube-tool source</a></p>
+          <button disabled={busy} onClick={() => void perform(() => pwa.verify(true))}>Set up / retry review</button>{offline.message === 'Shell downloaded. Reload to finish setup.' && <button disabled={busy} onClick={() => { close(); location.reload(); }}>Reload to finish setup</button>}<button disabled={busy} onClick={() => void perform(() => pwa.verify(false))}>Recheck cached review</button><button disabled={busy} onClick={() => void perform(() => pwa.checkUpdate())}>Check for update</button>
           <h3>Storage</h3><p>Persistent storage: {persistence}. This does not replace a backup.</p><button disabled={busy} onClick={() => void perform(async () => {
             if (!navigator.storage?.persist) { setPersistence('Unavailable in this browser'); return; }
             setPersistence(await navigator.storage.persist() ? 'Granted by browser' : 'Not granted by browser');

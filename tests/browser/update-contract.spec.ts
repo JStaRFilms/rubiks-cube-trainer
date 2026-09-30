@@ -15,8 +15,8 @@ test.beforeEach(async ({ context }) => {
 });
 async function install(page: Page) {
   await page.goto('/'); await page.getByRole('button', { name: 'Help', exact: true }).click(); await page.getByRole('button', { name: 'Local data and offline setup' }).click();
-  await page.getByRole('button', { name: 'Set up / retry shell' }).click(); await expect(page.getByRole('button', { name: 'Reload to finish setup' })).toBeVisible({ timeout: 30000 }); await page.getByRole('button', { name: 'Reload to finish setup' }).click();
-  await expect(page.getByRole('button', { name: /Offline shell ready/ })).toBeVisible({ timeout: 30000 });
+  await page.getByRole('button', { name: 'Set up / retry review' }).click(); await expect(page.getByRole('button', { name: 'Reload to finish setup' })).toBeVisible({ timeout: 30000 }); await page.getByRole('button', { name: 'Reload to finish setup' }).click();
+  await expect(page.getByRole('button', { name: /Offline review ready/ })).toBeVisible({ timeout: 30000 });
 }
 async function fixture(page: Page) {
   // Replace only this isolated document. The fixture bundles the real PWA/activity
@@ -50,7 +50,7 @@ test('real browser activity phases and all-tab worker handshake block unsafe act
   }
   await other.evaluate(() => window.foundationContract.enterActivity('idle'));
   const waitReload = page.waitForNavigation(); await page.evaluate(() => window.foundationContract.controller.applyUpdate()).catch(() => {}); await waitReload;
-  await expect(page.getByRole('button', { name: /Offline shell ready/ })).toBeVisible({ timeout: 30000 });
+  await expect(page.getByRole('button', { name: /Offline review ready/ })).toBeVisible({ timeout: 30000 });
 });
 test('a deferred attempt cannot start after the browser update lock is acquired', async ({ page }) => {
   await install(page); await fixture(page);
