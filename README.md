@@ -6,18 +6,18 @@ The workspace uses the 248 px slate/mono desktop dock above 900 CSS px and the g
 
 ## Local setup
 
-Use Node 22.12 or newer. Development here uses Node 24.16.0 and npm 11.13.0.
+Use Node 22.12 or newer and pnpm 10.33.2, pinned in package.json. Development here uses Node 24.16.0. Keep pnpm-lock.yaml as the only dependency lockfile. Dependency build scripts are allowed only for esbuild and Tailwind's native oxide package.
 
 ```sh
-npm ci
-npm run dev
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
 Vite serves development on localhost. PWA checks use the production build, not the development server.
 
 ```sh
-npm run build
-npm run preview -- --port 4173
+pnpm build
+pnpm preview --port 4173
 ```
 
 Open `http://127.0.0.1:4173`. In Help, open Local data, choose Set up / retry shell, then Reload to finish setup. Readiness checks cached bytes and a local database write/read/delete probe. "Offline shell ready" does not mean player or training assets are available. Install through the browser's install menu, or Share and Add to Home Screen on iPhone. A secure origin is required outside localhost. No hosting or deployment is configured.
@@ -25,16 +25,16 @@ Open `http://127.0.0.1:4173`. In Help, open Local data, choose Set up / retry sh
 ## Checks
 
 ```sh
-npm run lint
-npm run typecheck
-npm test
-npm run build
-npm run test:browser
+pnpm lint
+pnpm typecheck
+pnpm test
+pnpm build
+pnpm test:browser
 ```
 
 Typecheck covers both browser and service-worker TypeScript. Vitest tests persistence, file validation, rollback/migration fixtures and update activity locks. Playwright uses installed Google Chrome through `channel: 'chrome'`; no browser download is required. Install Chrome if it is unavailable.
 
-The browser script starts production preview on 4173 and a test-only contract server on 4174. Both ports must be free. Each test uses an isolated browser context, not a personal Chrome profile. Update tests rebuild only generated `dist/` assets with a new release ID. The contract fixture bundles the real PWA/activity modules to exercise future attempt phases without implementing a pretend timer. It is not shipped in the production build. Run `npm run build` again after browser tests if you want a fresh preview release. Traces from failures are in ignored `test-results/`.
+The browser script starts production preview on 4173 and a test-only contract server on 4174. Both ports must be free. Each test uses an isolated browser context, not a personal Chrome profile. Update tests rebuild only generated `dist/` assets with a new release ID. The contract fixture bundles the real PWA/activity modules to exercise future attempt phases without implementing a pretend timer. It is not shipped in the production build. Run `pnpm build` again after browser tests if you want a fresh preview release. Traces from failures are in ignored `test-results/`.
 
 ## Personal data
 

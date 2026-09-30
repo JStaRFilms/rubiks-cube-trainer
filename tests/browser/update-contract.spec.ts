@@ -31,7 +31,7 @@ async function fixture(page: Page) {
   await page.evaluate(() => window.foundationContract.ready);
 }
 async function waitingUpdate(page: Page) {
-  execSync('npm run build', { env: { ...process.env, RELEASE_ID: `contract-update-${Date.now()}` }, stdio: 'pipe' });
+  execSync('pnpm build', { env: { ...process.env, RELEASE_ID: `contract-update-${Date.now()}` }, stdio: 'pipe' });
   await page.evaluate(() => window.foundationContract.controller.checkUpdate());
   await expect.poll(() => page.evaluate(async () => {
     const registration = await navigator.serviceWorker.getRegistration('/');

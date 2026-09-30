@@ -112,7 +112,7 @@ test('responsive desktop dock/mobile shelf fit and native dialog focus returns',
 test('downloaded update waits for every tab to close editing, then preserves history', async ({ page, context }) => {
   await setup(page); await createSession(page, 'Update retained'); const other = await context.newPage(); await other.goto('/');
   await other.getByRole('button', { name: 'Settings', exact: true }).click();
-  execSync('npm run build', { env: { ...process.env, RELEASE_ID: `browser-update-${Date.now()}` }, stdio: 'pipe' });
+  execSync('pnpm build', { env: { ...process.env, RELEASE_ID: `browser-update-${Date.now()}` }, stdio: 'pipe' });
   await dataPanel(page); await page.getByRole('button', { name: 'Check for update' }).click(); await page.getByRole('button', { name: 'Close dialog' }).click();
   await expect(page.getByRole('button', { name: 'Apply update' })).toBeVisible({ timeout: 30000 });
   page.on('dialog', (dialog) => void dialog.accept());

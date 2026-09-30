@@ -43,6 +43,6 @@ Training records cannot be imported or saved without a compatible semantic valid
 
 Windows desktop Chrome 154 was tested. Physical iPhone/Android, Safari/Firefox, screen readers, touch hardware and an actual OS-installed PWA restart remain unrun. No remote hosting, production data or deployment was touched.
 
-Run `npm ci`, then `npm run dev` for local development. For offline-shell testing use `npm run build` and `npm run preview -- --port 4173`; setup steps are in README.
+The owner switched the project to pnpm 10.33.2 after B01. Importing the npm lock preserved all 21 direct resolved dependency versions. Frozen-lockfile installation, lint, typecheck, production build, 28 unit tests and 11 Chrome browser tests passed again through pnpm. The npm commands above record the original checks, not current tooling. Run `pnpm install --frozen-lockfile`, then `pnpm dev` for local development. For offline-shell testing use `pnpm build` and `pnpm preview --port 4173`; setup steps are in README.
 
 Next implementation slice is B02 cube/model/notation/player integration and complete player-inclusive offline evidence. Do not call the foundation's ready shell a ready trainer. Further design polish stays deferred.

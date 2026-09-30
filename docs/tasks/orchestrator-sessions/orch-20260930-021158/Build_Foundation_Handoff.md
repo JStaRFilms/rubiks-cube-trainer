@@ -25,7 +25,7 @@ PLAN remains the product source of truth. Imported TECHNICAL/AGENTS documents ar
 
 ## Implement B01
 
-Follow the authored packet. Create a Vite/React/strict-TypeScript static PWA with focused scripts and the useful approved tools. Use npm and a lockfile; local environment is Node 24.16.0/npm 11.13.0. Normal local dependency installation is within this task. Do not publish packages or configure hosting. Prefer installed Chrome for browser validation instead of downloading another browser unnecessarily.
+Follow the authored packet. Create a Vite/React/strict-TypeScript static PWA with focused scripts and the useful approved tools. Use pnpm and pnpm-lock.yaml; the owner switched tooling after B01. The current local environment is Node 24.16.0/pnpm 10.33.2. The original B01 verification used npm, as recorded in its audit. Normal local dependency installation is within this task. Do not publish packages or configure hosting. Prefer installed Chrome for browser validation instead of downloading another browser unnecessarily.
 
 Implement the documented current local stores, immediate acknowledged attempt writes, settings and sessions, safe versioned backup/restore with preview and explicit replacement confirmation, and honest visible storage failures. Validate before any destructive transaction; rejected or failed imports must preserve existing records. Do not invent unsupported historical schemas or silently drop data. Keep migration evidence proportional to the actual supported schema.
 

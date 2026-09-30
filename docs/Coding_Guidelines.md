@@ -4,6 +4,8 @@ These guidelines apply when implementation is authorized. The current product co
 
 ## Current implementation direction
 
+Use pnpm, pinned by package.json, and commit pnpm-lock.yaml. Install with `pnpm install --frozen-lockfile` for reproducible checks. Do not add npm or Yarn lockfiles. Run project scripts through pnpm.
+
 Use Vite, React and strict TypeScript for a static PWA. Retain Tailwind, Zustand, `idb` and `vite-plugin-pwa` only where they serve the implementation. Evaluate existing cube models, notation, solvers and players before writing replacements. Record package identity, license, notation support, offline dependencies, accessibility limits and measured bundle/performance evidence. Review source and redistribution rights before reusing datasets or algorithms.
 
 Keep cube state and notation consistent across generation, validation, 2D views and the 3D player. Generation belongs in a Web Worker where bounded search could block interaction. Requests need identity and cancellation; stale responses cannot replace a challenge made under newer settings. Timeouts and search failure must be visible, never silently return a weaker challenge.
