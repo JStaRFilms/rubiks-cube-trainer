@@ -5,6 +5,7 @@ Thumbs.db
 
 # --- CreativeOS ---
 .project_meta.json
+.pi/
 *_old
 *_backup
 
