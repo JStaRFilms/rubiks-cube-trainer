@@ -29,6 +29,8 @@ Read PLAN sections 3, 4, 5, 7. Coverage: FR-001 through FR-013. Paths produced b
 
 Specify an implementable phone-first experience across all trainers, not only the earliest screen.
 
+The owner rejected the initial visual design. Reopen this task under `docs/design/D01_Visual_Rework.md`: build a real solver-first design system and two structurally different full-viewport workspace prototypes before expanding states. Dedicated `frontend-ui` sub-skills are required. Preserve valid behavioral contracts, not the rejected form layout or timer-size caps. Build stays paused.
+
 ## Scope
 
 - Design untimed and strict inspection journeys with the distinct initial tap, 300 ms arming hold, release start, stop, penalties, hidden preparation clock, and recovery states.
@@ -55,6 +57,7 @@ A completed dependency is not enough if its review verdict has unresolved confir
 
 ## Expected artifacts
 
+- docs/design/Design_System.md
 - docs/design/Training_Experience.md
 - docs/mockups/Training_Screens.md
 - docs/mockups/Training_Review.html

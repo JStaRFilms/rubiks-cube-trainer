@@ -20,29 +20,17 @@ Screen inventory:
 | History | Sessions per trainer, attempts and compatible statistics, separate preparation trends and run summaries. |
 | Local data | Backup, validated confirmed replacement restore, persistent-storage status, cache cleanup and confirmed personal-data deletion. |
 
-Navigation uses Practice, History and Local data. Trainer choice sits above practice, not in a second permanent sidebar on phones. OLL/PLL Time Attack is one trainer navigation entry with two explicitly separate set types. This makes six trainer families, with separate OLL and PLL compositions in the review. Conditional Cross+2 remains visible as unavailable until its gate passes; early releases must label undelivered trainers rather than suggesting all six already work.
+Navigation uses the trainer toolbar, Session access and Help/Settings drawers. History and Local data open from session/help rather than a permanent three-button navigation bar above the clock. OLL/PLL Time Attack is one trainer navigation entry with two explicitly separate set types. This makes six trainer families, with separate OLL and PLL compositions in the review. Conditional Cross+2 remains visible as unavailable until its gate passes; early releases must label undelivered trainers rather than suggesting all six already work.
 
-## Visual system
+## Workspace system and candidate profiles
 
-Use dark by default, flat regions divided by thin borders, and a warm lime primary action. Color is not a state label. Avoid nested cards and decorative cube backgrounds.
+[Design system](Design_System.md) is the visual/component authority for this rework. The rejected lime-on-near-black form stack, small 48/64 px timer, document-style phone/desktop specimens and permanent form grid are retired. No profile is owner-approved yet.
 
-| Token | Value / use |
-| --- | --- |
-| Background | `#101416` |
-| Panel | `#192024`, for controls/timer and review only where grouping helps |
-| Text | `#f2f5f3` |
-| Secondary text | `#b6c2c6` |
-| Border | `#64757b`, interactive outlines and dividers |
-| Primary | `#d6ed84`, with `#101416` text |
-| Warning | `#ffd18a`, with written +2/inspection warning |
-| Error | `#ffb4b4`, with written DNF/failure |
-| Focus | `#8cdaff`, 3 px outside with 2 px offset |
+A, session dock, has a 248 px dense desktop log beside a large mono clock. B, focus shelf, has a full-width centered sans-serif clock and a 126 px bottom session shelf. Both use compact toolbar options, a readable top scramble rail and secondary settings/help/review drawers. On phones A's log becomes a Session drawer; B's shelf contracts to 72 px. Neither puts settings forms above the clock. The canvas fills the available viewport without a page scroll to find the timer.
 
-Use local system sans-serif. Body 16 px/1.45, supporting text no smaller than 14 px/1.4, labels 14 px, headings 20–24 px. Scramble and timer use system monospace and tabular numerals. Timer 48 px on phone, 64 px desktop; avoid oversized marketing type. Use a 4 px spacing base, 8 px between related controls, 12–16 px section padding and 20–24 px major separation. Radius 6 px controls, 10 px timer. No decorative shadow or gradient.
+Type, color, chrome dimensions, long-time sizing, contrast and component contracts come from Design_System.md, not this document. Prototype `?variant=dock` and `?variant=focus` are two proposals with the same behavior. Static HTML samples Cross, Cross+1 and OLL recognition to test the visual system, rather than generating every trainer/state combination. All six trainer families remain specified below and in Training_Screens.md.
 
-Phone controls are at least 44×44 CSS px; timer hit region is at least 144 px high. Wrap scramble tokens as whole tokens without clipping or horizontal page scrolling. Color selectors say the color and holding frame in text. In the approved default frame, white cross says "Hold white down, green front". Other colors use the stored frame mapping, never camera orientation. FR/FL/BR/BL have expanded labels in help and are relative to the training frame.
-
-At widths below 800 px, use one column and 12–16 px outer padding. Primary timer stays in normal document flow so it cannot cover scramble or system safe areas. At 800 px and above, use a 2:1 practice/review-or-history split, with a maximum content width of 1180 px. At 320 px the controls stack. No interaction depends on hover or landscape orientation. Player stays collapsed/absent before reveal, then below result on phone and in the secondary column on desktop.
+The trainer toolbar exposes selected trainer and a concise configuration summary. Details open Settings; case selection/editor are drawers outside active recognition. Required goal/base and holding frame stay on the scramble rail. History, preparation and run results belong in session drawers/dock/shelf, not floating panels scattered around the clock. Player and algorithm reveal remain post-attempt drawers. In-app offline readiness and storage health are distinct; the prototype's short sample status makes no readiness claim.
 
 ## Timer state contract
 
@@ -119,7 +107,7 @@ Update banner says "Update downloaded. Apply when idle." Preparation, inspection
 
 ## Builder handoff and coverage
 
-After owner acceptance, use this document for interaction/copy and [Training screens](../mockups/Training_Screens.md) for layout. HTML is the visual review reference, with schematic imagery and sample data only. Architecture/PLAN win in a conflict; report it rather than copy mock data into production. These documents update builder guidance without editing the staged Builder_Prompt or authorizing application work.
+After owner acceptance, use this document for interaction/copy and [Training screens](../mockups/Training_Screens.md) for layout. Design_System.md and HTML are the two candidate visual references, with schematic imagery and sample data only. Neither is selected yet. Architecture/PLAN win in a conflict; report it rather than copy mock data into production. These documents update builder guidance without editing the staged Builder_Prompt or authorizing application work.
 
 FR-001 setup/offline/update; FR-002 post-attempt text/player; FR-003 phase table and strict boundaries; FR-004 compatible history/run metrics; FR-005 backup/restore/storage; FR-006 Cross; FR-007 Cross+1; FR-008 isolated F2L; FR-009 OLL/PLL; FR-010 ZBLL; FR-011 gated Cross+2; FR-012 selection/overrides; FR-013 responsive/input/accessibility are covered above. Video, accounts and lessons are not new screens here.
 
@@ -127,9 +115,9 @@ No product question blocks Design. Build still owns engine fixtures, measured su
 
 ## Owner review questions
 
-- Does the lime action color and compact split layout feel right for long practice sessions?
-- Is the timer instruction legible enough on your usual phone, with the scramble still visible?
-- Would you prefer history collapsed by default on desktop, or the proposed secondary column?
+- Do you prefer the persistent session dock or the centered canvas with a bottom shelf?
+- Are mono or light sans clock digits easier to read at your practice distance?
+- Does the short phone shelf earn its space, or would you rather open session data only on demand?
 - Are the base-reset confirmations clear when using a physical cube, especially OLL versus PLL/ZBLL?
 
 These are review preferences, not blockers. Stop after Design for owner feedback; do not begin B01.

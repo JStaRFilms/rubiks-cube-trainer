@@ -1,8 +1,39 @@
 # Genesis and Design handoff
 
-Session: `orch-20260930-021158`. The owner authorized G01, G02 and D01, then a pause for feedback. Build and research have not started.
+Session: `orch-20260930-021158`. The owner authorized Genesis and Design only. Build and research have not started.
 
-## Completed work
+## Current handoff: revised visual proposals
+
+**D01 remains in progress. Ready for owner direction, not visual acceptance or Build.** The owner rejected the initial form-heavy proposal. Its contract PASS did not establish visual quality and must not be used as visual approval.
+
+The rework is on local exploration branch `design/solver-workspace-v2`. G01/G02 remain valid. The authoritative product plan and architecture were not changed.
+
+- [Design system](../design/Design_System.md): workspace proportions, numeric hierarchy, semantic tokens, component anatomy and interaction boundaries. It replaces the old form layout and 48/64 px clock caps.
+- [A: session dock](../mockups/Training_Review.html?variant=dock): [desktop](../mockups/Training_Review-desktop.png), [phone](../mockups/Training_Review-phone.png).
+- [B: focus shelf](../mockups/Training_Review.html?variant=focus): [desktop](../mockups/Training_Review-focus-desktop.png), [phone](../mockups/Training_Review-focus-phone.png).
+- [Rework brief](../design/D01_Visual_Rework.md), [interaction specification](../design/Training_Experience.md), [all-trainer screen contracts](../mockups/Training_Screens.md).
+
+Designer `designer-d01` used GPT-6.1 Sol high and the dedicated frontend-ui design/prototype subskills. AGY supplied read-only structural exploration, not a replacement for contract judgment. The search helper's webinar-pattern false match was rejected. Reviewer `reviewer-design-handoff` used GPT-6.1 Sol high and inspected the actual references and rendered desktop/phone images, rather than accepting a token table.
+
+The focused review confirmed the improved timer/scramble hierarchy and genuine dock/shelf distinction, but found execution statistics mislabeled as preparation and absent focus-shelf comparison scope. GPT-6 Luna medium repaired those labels in the same designer conversation. Parent made the history examples explicit: a saved illustrative cap/pool/frame, not a pending current challenge. The temporary checker's stale `L pending` expectation was corrected to verify a concrete history cap while preserving the pending current-challenge label. Final parent checks passed after that correction.
+
+### Current verification
+
+- Parent reran local Chrome `154.0.8037.59` rendering: 20 ready/long layouts across 320×640, 390×844, 768×1024, 1440×900 and 1920×1080, plus 24 narrow-phone Cross+1/OLL state layouts. No page overflow, clipped toolbar controls, clock-text overflow or undersized tested toolbar/switcher targets.
+- Checked history-scope fit at 320/390, separate preparation-only metrics in seconds, recognition secrecy, arrow-key isolation inside Settings, focus return, and inert background under the representative OLL review drawer.
+- Calculated 42 semantic token/surface combinations. Normal/state text minimum 6.45:1; interactive border/focus minimum 3.77:1. These are token checks, not an assistive-technology certification.
+- Strict UTF-8 decoding of ten changed text artifacts, 64 local Markdown links, inline JavaScript syntax and `git diff --check` passed. No remote HTML resources were found.
+- Parent visually inspected desktop/phone compositions; persisted PNGs come from the final rendered source. HTML remains self-contained and presentation-only. Times, history scopes, counts, notation and schematic cubes are illustrative, not feasibility evidence or verified challenges.
+
+No application exists yet. Real iPhone/Android Safari/Chrome, assistive technology, timer/solver/storage/offline behavior and app build/tests remain unrun. A phone Space badge is a disclosed refinement choice, not a claim of touch-device testing.
+
+Next: owner chooses dock versus shelf and numeric treatment, or specifies a blend/rejection. Finish the chosen all-trainer presentation within Design; obtain explicit authorization before Build. No push or history rewrite.
+
+## Historical initial handoff (`e5adfae`)
+
+The following records the first proposal's evidence, not current visual acceptance. Its 308-state check does not describe the revised two-direction prototype. Paths reused below now open current artifacts; original contents are preserved in commit `e5adfae`.
+
+### Completed work
 
 - G01, worker on GPT-6 Luna medium: all sixteen FR issue packets, requirements index, coding guidance and builder guidance.
 - G02, architect on GPT-6.1 Sol medium: reusable-tool comparison, cube/frame/case/worker/local-data contracts and the foundation feature blueprint.

@@ -5,10 +5,10 @@
 - Session: `orch-20260930-021158`
 - Project: Personal Rubiks Cube Trainer, working name.
 - Mission: deliver the approved offline trainer plan through working increments, with detailed coverage for all six trainers and an independent video research track.
-- Current phase: Genesis and Design artifacts complete and reviewed. Paused for owner visual feedback; Build and research remain pending.
+- Current phase: Design rework. G01/G02 remain complete; D01 is reopened after the owner rejected the initial visual proposal. Two revised solver-workspace proposals are checked and awaiting owner direction. Build and research remain pending.
 - Previous session: `orch-20260930-005449`, the completed takeover audit and interview. This is a new delivery session, not a duplicate of that planning session.
 
-The owner subsequently authorized G01, G02 and D01 through Design, with an earlier pause for any genuine blocking question. Those handoffs are now complete. This run does not authorize Build, new worktrees, external content scraping, accounts, deployment, or research launches.
+The owner authorized G01, G02 and D01 through Design, then requested this visual rework. G01/G02 handoffs remain valid. The first D01 contract review was not visual acceptance. Revised proposals live on local exploration branch `design/solver-workspace-v2`, with the first checkpoint preserved in Git history. This run does not authorize Build, new worktrees, external content scraping, accounts, deployment, or research launches.
 
 ## Context intake
 
@@ -70,6 +70,7 @@ G01 should distinguish the early MUS slice, committed later trainer roadmap, and
 ## Skills registry
 
 - `unslop` applies to every user-facing document, label, lesson, and report.
+- D01 rework uses `frontend-ui` with `frontend-design`, `ui-ux-pro-max`, and the UI branch of `prototyping-variants`. The design system must govern screen hierarchy, numeric typography and concrete components, not only colors. Discard the search helper's irrelevant webinar layout. AGY's structural exploration is advisory; approved timer/accessibility contracts prevail.
 - `grill-me` was used for intake. Use it again only when a new load-bearing decision genuinely needs the owner, not to repeat settled questions.
 - Relevant implementation/testing skills can be discovered at dispatch time. Missing optional skills are not blockers.
 
@@ -88,7 +89,7 @@ Every packet is under `pending/` initially. Task IDs remain stable when the boar
 | --- | --- | --- | --- | --- |
 | g01 | Map requirements and refresh build guidance | Genesis / worker | None | First executable task |
 | g02 | Define architecture and reusable cube tools | Genesis / architect | g01 | Decisions documented, not claimed benchmarks |
-| d01 | Design phone-first training interactions | Design / designer | g02 | Mockup/state contract before screens |
+| d01 | Design phone-first training interactions | Design / designer | g02 | Owner-selected solver-first system and full trainer/state handoff before Build |
 | b01 | Scaffold PWA and durable local records | Build / coder | d01 | Actual scripts, restore, offline baseline |
 | b02 | Integrate cube engine and offline 3D player | Build / coder | b01 | Shared contracts and player consistency |
 | b03 | Implement timer and shared statistics | Build / coder | b02 | Exact phase boundaries and failure handling |
@@ -136,8 +137,11 @@ When executing later, set required capabilities accurately. Reviewers return fin
 - [x] Author this master plan and detailed pending task packets.
 - [x] Register and validate all 26 tasks, authored packets, dependency order, and task-index links.
 - [x] Execute and review G01 requirements and guidance.
-- [x] Complete and review G02 architecture and D01 Design artifacts.
-- [ ] Obtain owner visual feedback or explicit Build authorization before B01.
+- [x] Complete and review G02 architecture.
+- [x] Review the initial D01 contracts; record the owner's visual rejection rather than treating that review as acceptance.
+- [x] Author a real design system, two revised compositions and desktop/phone visual evidence.
+- [ ] Obtain owner direction and finish D01's chosen trainer/state presentation.
+- [ ] Obtain explicit Build authorization before B01.
 - [ ] Deliver and verify usable increments.
 - [ ] Authorize and evaluate video research separately.
 - [ ] Expand teaching/sync/video integration after their actual decisions.
@@ -148,6 +152,6 @@ Preparation time includes scrambling; never subtract an invented estimate. Cross
 
 Use one implementation pass and one focused review per increment, fixing confirmed blocking defects. Do not loop for speculative perfection. Record unavailable manual browser checks rather than claiming they passed. A blocked dataset source or failed feasibility result is a real task outcome, not permission to fabricate data or change semantics.
 
-G01, G02 and D01 are complete. The current handoff is `docs/audits/Design_Handoff.md`; the browser-viewable proposal is `docs/mockups/Training_Review.html`. B01 remains pending until the owner responds to the Design or explicitly authorizes Build. All research remains separately gated.
+G01/G02 are complete. D01 remains in progress pending owner visual choice and its chosen presentation rollout. The rework brief is `docs/design/D01_Visual_Rework.md`, the system is `docs/design/Design_System.md`, and current evidence is `docs/audits/Design_Handoff.md`. The browser-viewable proposals are `docs/mockups/Training_Review.html?variant=dock` and `?variant=focus`. Next: owner chooses or mixes dock/shelf and numeric type; refine D01 within the already-authorized Design scope. B01 remains pending and needs explicit Build authorization. All research remains separately gated.
 
 The owner requested stage-sized local commits. Parent owns scoped Git integration after review, preserving unrelated staged work. No automatic push, amend, rebase, history rewrite or external mutation is authorized. Commit proposed Design as a review artifact, not as implicit acceptance of its visual direction.

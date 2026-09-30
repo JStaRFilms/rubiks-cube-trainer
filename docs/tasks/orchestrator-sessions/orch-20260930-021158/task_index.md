@@ -1,12 +1,12 @@
 # Delivery task index
 
-Session: `orch-20260930-021158`. G01, G02 and D01 are complete; the other 23 tasks remain pending. Paused for owner Design feedback before Build. Use stable task IDs as the board moves packets between status folders.
+Session: `orch-20260930-021158`. G01/G02 are complete. D01 is reopened for visual rework; two checked workspace proposals await owner direction. The other 23 tasks remain pending. Build and research are not authorized. Use stable task IDs as the board moves packets between status folders.
 
 | ID | Authored packet | Stage | Dependencies |
 | --- | --- | --- | --- |
 | g01 | [Map requirements and refresh build guidance](completed/g01_map_requirements_and_refresh_build_guidance.task.md) | genesis | None |
 | g02 | [Define architecture and reusable cube tools](completed/g02_define_architecture_and_reusable_cube_tools.task.md) | genesis | g01 |
-| d01 | [Design phone first training interactions](completed/d01_design_phone_first_training_interactions.task.md) | design | g02 |
+| d01 | [Design phone first training interactions](in-progress/d01_design_phone_first_training_interactions.task.md) | design | g02 |
 | b01 | [Scaffold PWA and durable local records](pending/b01_scaffold_pwa_and_durable_local_records.task.md) | build | d01 |
 | b02 | [Integrate cube engine and offline 3D player](pending/b02_integrate_cube_engine_and_offline_3d_player.task.md) | build | b01 |
 | b03 | [Implement timer and shared statistics](pending/b03_implement_timer_and_shared_statistics.task.md) | build | b02 |
