@@ -1,6 +1,6 @@
 # Delivery task index
 
-Session: `orch-20260930-021158`. G01/G02/D01/B01/B02/B03/B04 are complete. Q01 returned PASS; eight tasks are complete and 18 remain pending. Stop for the owner's hands-on review. Cross now has verified challenges, live timing, saved history, backups and offline optimal review. The interim A-desktop/B-mobile layout remains; polish and research are deferred. Further trainer work waits for the owner's next instruction.
+Session: `orch-20260930-021158`. G01/G02/D01/B01/B02/B03/B04 are complete. Q01 returned PASS; nine tasks are complete and 17 remain pending. B05 bounds are accepted; B06 integration is next. The owner authorized the next step after the input repair and push to `origin/main` at `973a879`. Cross now has verified challenges, live timing, saved history, backups and offline optimal review. The interim A-desktop/B-mobile layout remains; polish and research are deferred. B06 uses the accepted provisional ranges and fully solved base, then Q02 reviews the integrated loop. Research remains separately gated.
 
 | ID | Authored packet | Stage | Dependencies |
 | --- | --- | --- | --- |
@@ -12,7 +12,7 @@ Session: `orch-20260930-021158`. G01/G02/D01/B01/B02/B03/B04 are complete. Q01 r
 | b03 | [Implement timer and shared statistics](completed/b03_implement_timer_and_shared_statistics.task.md) | build | b02 |
 | b04 | [Deliver the complete Cross training loop](completed/b04_deliver_the_complete_cross_training_loop.task.md) | build | b03 |
 | q01 | [Review the first usable offline increment](completed/q01_review_the_first_usable_offline_increment.task.md) | build | b04 |
-| b05 | [Prove Cross plus one generation bounds](pending/b05_prove_cross_plus_one_generation_bounds.task.md) | build | q01 |
+| b05 | [Prove Cross plus one generation bounds](completed/b05_prove_cross_plus_one_generation_bounds.task.md) | build | q01 |
 | b06 | [Deliver Cross plus one any pair and slot drills](pending/b06_deliver_cross_plus_one_any_pair_and_slot_drills.task.md) | build | b05 |
 | q02 | [Review Cross plus one correctness and interactions](pending/q02_review_cross_plus_one_correctness_and_interactions.task.md) | build | b06 |
 | b07 | [Curate verified F2L OLL and PLL libraries](pending/b07_curate_verified_f2l_oll_and_pll_libraries.task.md) | build | q02 |
