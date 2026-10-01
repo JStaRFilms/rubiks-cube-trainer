@@ -1,0 +1,62 @@
+{
+  "sources": [
+    {
+      "id": "speeden-mit-3aaf127",
+      "repository": "https://github.com/Blaxzter/speeden-and-cuben",
+      "revision": "3aaf127b0013cbbfd16d12b397d8c0ff8c912c65",
+      "license": "MIT",
+      "attribution": "Copyright (c) 2026 Frederic Abraham"
+    },
+    {
+      "id": "lieberkind-mit-76fcfcc",
+      "repository": "https://github.com/lieberkind/f2l-trainer",
+      "revision": "76fcfccf522f12822db8699209a6a934c4d28421",
+      "license": "MIT",
+      "attribution": "Copyright (c) 2020 Tomas Lieberkind"
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "speeden-LICENSE.txt",
+      "sourceId": "speeden-mit-3aaf127",
+      "url": "https://raw.githubusercontent.com/Blaxzter/speeden-and-cuben/3aaf127b0013cbbfd16d12b397d8c0ff8c912c65/LICENSE",
+      "bytes": 1073,
+      "sha256": "d914d96c915513f9e6b33d8d77de314730286a264bf1de55ba057d12c37b13ff"
+    },
+    {
+      "file": "speeden-f2l.ts.txt",
+      "sourceId": "speeden-mit-3aaf127",
+      "url": "https://raw.githubusercontent.com/Blaxzter/speeden-and-cuben/3aaf127b0013cbbfd16d12b397d8c0ff8c912c65/src/data/f2l.ts",
+      "bytes": 14764,
+      "sha256": "aa6ba2d806acc4b8d0f43b5c1b94eaf42703080afd200663fd7824317af69863"
+    },
+    {
+      "file": "speeden-oll.ts.txt",
+      "sourceId": "speeden-mit-3aaf127",
+      "url": "https://raw.githubusercontent.com/Blaxzter/speeden-and-cuben/3aaf127b0013cbbfd16d12b397d8c0ff8c912c65/src/data/oll.ts",
+      "bytes": 9071,
+      "sha256": "751e5c803655b7858f2d90093123aed9688aa7e770484655a121e87f74c4fdac"
+    },
+    {
+      "file": "speeden-pll.ts.txt",
+      "sourceId": "speeden-mit-3aaf127",
+      "url": "https://raw.githubusercontent.com/Blaxzter/speeden-and-cuben/3aaf127b0013cbbfd16d12b397d8c0ff8c912c65/src/data/pll.ts",
+      "bytes": 4129,
+      "sha256": "386e41d9d913da5718980c7edfac0cd722db6c4ea77fa375b27e941c6c8a6376"
+    },
+    {
+      "file": "lieberkind-LICENSE.md.txt",
+      "sourceId": "lieberkind-mit-76fcfcc",
+      "url": "https://raw.githubusercontent.com/lieberkind/f2l-trainer/76fcfccf522f12822db8699209a6a934c4d28421/LICENSE.md",
+      "bytes": 1060,
+      "sha256": "91a5d1c8d45907d3f7037573ef3a69cd4d6d6445248e4086c79f50ba91ba7890"
+    },
+    {
+      "file": "lieberkind-algs.ts.txt",
+      "sourceId": "lieberkind-mit-76fcfcc",
+      "url": "https://raw.githubusercontent.com/lieberkind/f2l-trainer/76fcfccf522f12822db8699209a6a934c4d28421/src/algs.ts",
+      "bytes": 9162,
+      "sha256": "4c3165dd8127377ad2e914c869b4def8e41b6ef24e6e46834187e554a0d82625"
+    }
+  ]
+}

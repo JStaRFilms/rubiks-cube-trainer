@@ -1,0 +1,958 @@
+[
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:013",
+    "sourceLabel": "1",
+    "numberingLabel": "13",
+    "oracleKey": "0=F,36=R,47=D|5=R,10=F",
+    "numberingSetup": "L' U L y'",
+    "numberingSlot": "FL",
+    "numberingState": "RUURUUUUFRBBURRURRFFDFFRFFRDDBDDDDDDFFLLLLLLLLLUBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:009",
+    "sourceLabel": "2",
+    "numberingLabel": "9",
+    "oracleKey": "0=R,36=D,47=F|7=F,19=R",
+    "numberingSetup": "R U' R'",
+    "numberingSlot": "FR",
+    "numberingState": "FFUUUUUURDRRFRRFRRLLFFFUFFUDDLDDDDDDUBBLLLLLLBRRBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:017",
+    "sourceLabel": "3",
+    "numberingLabel": "17",
+    "oracleKey": "0=R,36=D,47=F|1=R,46=F",
+    "numberingSetup": "L' U' L U y'",
+    "numberingSlot": "FL",
+    "numberingState": "UUUUUUBRRDRRURRRRRUFFFFLFFUDDFDDDDDDFFLLLLLLLBBLBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:021",
+    "sourceLabel": "4",
+    "numberingLabel": "21",
+    "oracleKey": "0=F,36=R,47=D|3=F,37=R",
+    "numberingSetup": "R U R' U'",
+    "numberingSlot": "FR",
+    "numberingState": "UULUUFUUFRRUBRRURRFFDFFUFFFDDRDDDDDDBLLLLLLLLBRRBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:015",
+    "sourceLabel": "5",
+    "numberingLabel": "15",
+    "oracleKey": "0=F,36=R,47=D|3=R,37=F",
+    "numberingSetup": "L U L2 U L2 U2 L' y'",
+    "numberingSlot": "FL",
+    "numberingState": "UULUURFUFRFFURRURRUFDFFBFFBDDLDDDDDDBLRLLLLLLURRBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:020",
+    "sourceLabel": "6",
+    "numberingLabel": "20",
+    "oracleKey": "0=F,36=R,47=D|1=F,46=R",
+    "numberingSetup": "R U R' U' R' D' R U R' D R",
+    "numberingSlot": "FR",
+    "numberingState": "UUUUUUUFFRRRBRRLRRRRDFFUFFUDDBDDDDDDFFFLLLLLLBLLBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:008",
+    "sourceLabel": "7",
+    "numberingLabel": "8",
+    "oracleKey": "0=D,36=F,47=R|1=R,46=F",
+    "numberingSetup": "L' U L U' L' U2 L y'",
+    "numberingSlot": "FL",
+    "numberingState": "UUFUUURRDFLUURRURRFFRFFBFFBDDLDDDDDDBFULLLLLLLRRBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:022",
+    "sourceLabel": "8",
+    "numberingLabel": "22",
+    "oracleKey": "0=F,36=R,47=D|5=F,10=R",
+    "numberingSetup": "R U R' U2 R U2 R' U",
+    "numberingSlot": "FR",
+    "numberingState": "LUFFUUBUFRLRRRRBRRRFDFFUFFLDDUDDDDDDURULLLLLLUBFBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:024",
+    "sourceLabel": "9",
+    "numberingLabel": "24",
+    "oracleKey": "0=R,36=D,47=F|3=R,37=F",
+    "numberingSetup": "L' U L y' U2 R U R'",
+    "numberingSlot": "FL",
+    "numberingState": "UUUUURRRRDFLFRRRRRUUFFFUFFUDDFDDDDDDLLBLLLLLLFBBBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:001",
+    "sourceLabel": "10",
+    "numberingLabel": "1",
+    "oracleKey": "0=D,36=F,47=R|5=F,10=R",
+    "numberingSetup": "R U R' U' R U' R' U2",
+    "numberingSlot": "FR",
+    "numberingState": "UUUFUULUDFRRFRRFRRBBRFFUFFUDDLDDDDDDRRULLLLLLBLFBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:004",
+    "sourceLabel": "11",
+    "numberingLabel": "4",
+    "oracleKey": "0=D,36=F,47=R|3=F,37=R",
+    "numberingSetup": "R U' R' U R U2 R'",
+    "numberingSlot": "FR",
+    "numberingState": "UUFUUFRUDFRRLRRLRRUBRFFUFFUDDBDDDDDDFFBLLLLLLURLBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:011",
+    "sourceLabel": "12",
+    "numberingLabel": "11",
+    "oracleKey": "0=R,36=D,47=F|1=F,46=R",
+    "numberingSetup": "R' U' R2 U' R2 U2 R",
+    "numberingSlot": "FR",
+    "numberingState": "UURUUUBFRDRULRRLRRRRFFFUFFUDDBDDDDDDFFULLLLLLFBLBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:018",
+    "sourceLabel": "13",
+    "numberingLabel": "18",
+    "oracleKey": "0=R,36=D,47=F|7=R,19=F",
+    "numberingSetup": "L' U' L U2 L' U2 L U' y'",
+    "numberingSlot": "FL",
+    "numberingState": "BRLUUURURDRFURRBRRFBFFFFFFLDDUDDDDDDRLULLLLLLUFUBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:002",
+    "sourceLabel": "14",
+    "numberingLabel": "2",
+    "oracleKey": "0=D,36=F,47=R|7=F,19=R",
+    "numberingSetup": "R U R' U' R U2 R' U'",
+    "numberingSlot": "FR",
+    "numberingState": "LFFUUUFUDFRULRRBRRUBRFFUFFUDDRDDDDDDBFRLLLLLLLRUBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:006",
+    "sourceLabel": "15",
+    "numberingLabel": "6",
+    "oracleKey": "0=D,36=F,47=R|5=R,10=F",
+    "numberingSetup": "L' U' L U L' U2 L U y'",
+    "numberingSlot": "FL",
+    "numberingState": "BURRUURUDFLUURRURRUFRFFBFFLDDFDDDDDDUFBLLLLLLFRLBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:005",
+    "sourceLabel": "16",
+    "numberingLabel": "5",
+    "oracleKey": "0=D,36=F,47=R|7=R,19=F",
+    "numberingSetup": "L' U' L U L' U L U2 y'",
+    "numberingSlot": "FL",
+    "numberingState": "URBUUUUUDFLLURRURRFFRFFRFFRDDBDDDDDDRBLLLLLLLUFFBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:016",
+    "sourceLabel": "17",
+    "numberingLabel": "16",
+    "oracleKey": "0=F,36=R,47=D|1=R,46=F",
+    "numberingSetup": "L' U L U L' U' L U' y'",
+    "numberingSlot": "FL",
+    "numberingState": "UULUUURRFRBFURRLRRFFDFFFFFUDDBDDDDDDBLULLLLLLURRBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:023",
+    "sourceLabel": "18",
+    "numberingLabel": "23",
+    "oracleKey": "0=R,36=D,47=F|5=R,10=F",
+    "numberingSetup": "L' U' L U2 L' U L U' y'",
+    "numberingSlot": "FL",
+    "numberingState": "BUURUUBURDRFURRURRRLFFFBFFLDDFDDDDDDUFULLLLLLRFLBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:014",
+    "sourceLabel": "19",
+    "numberingLabel": "14",
+    "oracleKey": "0=F,36=R,47=D|7=R,19=F",
+    "numberingSetup": "L' U L U L' U L U' y'",
+    "numberingSlot": "FL",
+    "numberingState": "URRUUULUFRBBURRRRRBRDFFLFFUDDFDDDDDDFFULLLLLLUFLBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:019",
+    "sourceLabel": "20",
+    "numberingLabel": "19",
+    "oracleKey": "0=F,36=R,47=D|7=F,19=R",
+    "numberingSetup": "R U R' U2 R U' R' U",
+    "numberingSlot": "FR",
+    "numberingState": "LFLUUUUUFRBFLRRBRRRFDFFUFFUDDRDDDDDDBRFLLLLLLURUBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:007",
+    "sourceLabel": "21",
+    "numberingLabel": "7",
+    "oracleKey": "0=D,36=F,47=R|3=R,37=F",
+    "numberingSetup": "R U R' F R U R' U' F'",
+    "numberingSlot": "FR",
+    "numberingState": "UUFUURLLDFFUBRRURRBURFFUFFFDDRDDDDDDBFULLLLLLLRRBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:010",
+    "sourceLabel": "22",
+    "numberingLabel": "10",
+    "oracleKey": "0=R,36=D,47=F|5=F,10=R",
+    "numberingSetup": "R U' R' U' R U' R' U",
+    "numberingSlot": "FR",
+    "numberingState": "UUBFUUFURDFLBRRURRLLFFFUFFFDDRDDDDDDBRULLLLLLURRBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:012",
+    "sourceLabel": "23",
+    "numberingLabel": "12",
+    "oracleKey": "0=R,36=D,47=F|3=F,37=R",
+    "numberingSetup": "R U' R' U' R U R' U",
+    "numberingSlot": "FR",
+    "numberingState": "UUFUUFBURDRRRRRURRRLFFFUFFBDDLDDDDDDFFULLLLLLUBLBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:003",
+    "sourceLabel": "24",
+    "numberingLabel": "3",
+    "oracleKey": "0=D,36=F,47=R|1=F,46=R",
+    "numberingSetup": "R' D' R U2 R' D R2 U R'",
+    "numberingSlot": "FR",
+    "numberingState": "UUUUUUBFDFLLFRRURRURRFFUFFFDDRDDDDDDBBLLLLLLLFRRBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:035",
+    "sourceLabel": "25",
+    "numberingLabel": "35",
+    "oracleKey": "15=D,26=R,29=F|1=R,46=F",
+    "numberingSetup": "L' U' L U L' U' L y'",
+    "numberingSlot": "FL",
+    "numberingState": "UURUUUBRLULUURRDRRUFFFFFFFRDDFDDDDDDBBLLLLLLLFRRBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:033",
+    "sourceLabel": "26",
+    "numberingLabel": "33",
+    "oracleKey": "15=R,26=F,29=D|1=F,46=R",
+    "numberingSetup": "R U' R' F R' F' R U",
+    "numberingSlot": "FR",
+    "numberingState": "RUFRUFUUBURRURRRRRFFLFFLFFFDDDDDDDDDUULLLLLLLUBBBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:031",
+    "sourceLabel": "27",
+    "numberingLabel": "31",
+    "oracleKey": "15=D,26=R,29=F|1=F,46=R",
+    "numberingSetup": "R U' R' U R U' R'",
+    "numberingSlot": "FR",
+    "numberingState": "RUFUUFUUFLRRRRRDRRLLUFFUFFRDDFDDDDDDUBBLLLLLLUFBBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:032",
+    "sourceLabel": "28",
+    "numberingLabel": "32",
+    "oracleKey": "15=F,26=D,29=R|1=F,46=R",
+    "numberingSetup": "R U R' U' R U R'",
+    "numberingSlot": "FR",
+    "numberingState": "UULUUFFUBRRURRRFRRUBUFFUFFDDDRDDDDDDFFRLLLLLLBLLBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:034",
+    "sourceLabel": "29",
+    "numberingLabel": "34",
+    "oracleKey": "15=F,26=D,29=R|1=R,46=F",
+    "numberingSetup": "L' U L U' L' U L y'",
+    "numberingSlot": "FL",
+    "numberingState": "FUUUUURRRUBBURRFRRFFBFFFFFDDDRDDDDDDLRULLLLLLLLUBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:036",
+    "sourceLabel": "30",
+    "numberingLabel": "36",
+    "oracleKey": "15=R,26=F,29=D|1=R,46=F",
+    "numberingSetup": "L' U' L y' U R U R' U'",
+    "numberingSlot": "FL",
+    "numberingState": "UUFUULBRURUUBRRRRRUFFFFUFFFDDDDDDDDDBFLLLLLLLLRRBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:030",
+    "sourceLabel": "31",
+    "numberingLabel": "30",
+    "oracleKey": "0=D,36=F,47=R|12=F,23=R",
+    "numberingSetup": "R U R' F R' F' R U",
+    "numberingSlot": "FR",
+    "numberingState": "RUURUUFUDFLLFRRLRRUBRFFRFFUDDBDDDDDDUURLLLLLLFFBBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:027",
+    "sourceLabel": "32",
+    "numberingLabel": "27",
+    "oracleKey": "0=D,36=F,47=R|12=R,23=F",
+    "numberingSetup": "(U R U' R') (U R U' R') (U R U' R')",
+    "numberingSlot": "FR",
+    "numberingState": "BUBUUUUUDFRLRRRFRRFFRFFFFFRDDUDDDDDDRLLLLLLLLUBUBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:028",
+    "sourceLabel": "33",
+    "numberingLabel": "28",
+    "oracleKey": "0=R,36=D,47=F|12=F,23=R",
+    "numberingSetup": "R U' R' U F' U F U'",
+    "numberingSlot": "FR",
+    "numberingState": "UUUUUUBFRDRLFRRFRRRUFFFRFFRDDUDDDDDDLLULLLLLLFBBBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:025",
+    "sourceLabel": "34",
+    "numberingLabel": "25",
+    "oracleKey": "0=R,36=D,47=F|12=R,23=F",
+    "numberingSetup": "R U' R' U2 R U' R' U'",
+    "numberingSlot": "FR",
+    "numberingState": "UUFUUURURDRURRRBRRFLFFFFFFUDDRDDDDDDLFULLLLLLLBBBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:026",
+    "sourceLabel": "35",
+    "numberingLabel": "26",
+    "oracleKey": "0=F,36=R,47=D|12=R,23=F",
+    "numberingSetup": "R U R' U2 R U R' U",
+    "numberingSlot": "FR",
+    "numberingState": "FUUUUUBUFRRRRRRURRUFDFFFFFLDDFDDDDDDUBLLLLLLLBLRBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:029",
+    "sourceLabel": "36",
+    "numberingLabel": "29",
+    "oracleKey": "0=F,36=R,47=D|12=F,23=R",
+    "numberingSetup": "L' U L y' U' R U' R' U",
+    "numberingSlot": "FL",
+    "numberingState": "UULUURUUFRUFFRRFRRBFDFFRFFRDDUDDDDDDLLRLLLLLLUBBBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:041",
+    "sourceLabel": "37",
+    "numberingLabel": "41",
+    "oracleKey": "15=F,26=D,29=R|12=F,23=R",
+    "numberingSetup": "R U' R' r U' r' U2 r U r'",
+    "numberingSlot": "FR",
+    "numberingState": "UFFUULURLUURFRRFRRLUFFFRFFDDDRDDDDDDBBBLLLLLLUURBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:040",
+    "sourceLabel": "38",
+    "numberingLabel": "40",
+    "oracleKey": "15=D,26=R,29=F|12=F,23=R",
+    "numberingSetup": "r U' r' U2 r U r' R U R'",
+    "numberingSlot": "FR",
+    "numberingState": "UUURUFRBBRUBFRRDRRFUUFFRFFRDDFDDDDDDFUULLLLLLLLLBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:039",
+    "sourceLabel": "39",
+    "numberingLabel": "39",
+    "oracleKey": "15=R,26=F,29=D|12=F,23=R",
+    "numberingSetup": "F' U F U' R U2 R' U' R U2 R'",
+    "numberingSlot": "FR",
+    "numberingState": "URFUUUFUUBBRFRRRRRLFRFFRFFFDDDDDDDDDLLULLLLLLUUBBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:037",
+    "sourceLabel": "40",
+    "numberingLabel": "37",
+    "oracleKey": "15=D,26=R,29=F|12=R,23=F",
+    "numberingSetup": "R U R' U' R U2 R' U' R U R'",
+    "numberingSlot": "FR",
+    "numberingState": "FUFUUUUUBURURRRDRRBLLFFFFFRDDFDDDDDDUBRLLLLLLLFRBBBBBB"
+  },
+  {
+    "trainer": "f2l",
+    "id": "f2l:lieberkind-v1:038",
+    "sourceLabel": "41",
+    "numberingLabel": "38",
+    "oracleKey": "15=F,26=D,29=R|12=R,23=F",
+    "numberingSetup": "R U R' U2 R U' R' U R U R'",
+    "numberingSlot": "FR",
+    "numberingState": "UULUUUUUBUBFRRRFRRBLLFFFFFDDDRDDDDDDRFRLLLLLLURFBBBBBB"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:001",
+    "sourceLabel": "1",
+    "numberingLabel": "1",
+    "oracleKey": "00000000010111010111"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:002",
+    "sourceLabel": "2",
+    "numberingLabel": "2",
+    "oracleKey": "00000000010011111110"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:003",
+    "sourceLabel": "3",
+    "numberingLabel": "3",
+    "oracleKey": "00000001011010011011"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:004",
+    "sourceLabel": "4",
+    "numberingLabel": "4",
+    "oracleKey": "00000001010110110110"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:005",
+    "sourceLabel": "5",
+    "numberingLabel": "5",
+    "oracleKey": "00001011001000011011"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:006",
+    "sourceLabel": "6",
+    "numberingLabel": "6",
+    "oracleKey": "00001011000100110110"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:007",
+    "sourceLabel": "7",
+    "numberingLabel": "7",
+    "oracleKey": "00010011011000001011"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:008",
+    "sourceLabel": "8",
+    "numberingLabel": "8",
+    "oracleKey": "00001110100000110110"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:009",
+    "sourceLabel": "9",
+    "numberingLabel": "9",
+    "oracleKey": "00110010110100100010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:010",
+    "sourceLabel": "10",
+    "numberingLabel": "10",
+    "oracleKey": "00110010010001001011"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:011",
+    "sourceLabel": "11",
+    "numberingLabel": "11",
+    "oracleKey": "00001110001001010011"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:012",
+    "sourceLabel": "12",
+    "numberingLabel": "12",
+    "oracleKey": "00010011010100100110"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:013",
+    "sourceLabel": "13",
+    "numberingLabel": "13",
+    "oracleKey": "00011100001011000011"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:014",
+    "sourceLabel": "14",
+    "numberingLabel": "14",
+    "oracleKey": "00011001000110100110"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:015",
+    "sourceLabel": "15",
+    "numberingLabel": "15",
+    "oracleKey": "00011001001010001011"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:016",
+    "sourceLabel": "16",
+    "numberingLabel": "16",
+    "oracleKey": "00011100100010100110"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:017",
+    "sourceLabel": "17",
+    "numberingLabel": "17",
+    "oracleKey": "00100100010011110010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:018",
+    "sourceLabel": "18",
+    "numberingLabel": "18",
+    "oracleKey": "00000101010010010111"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:019",
+    "sourceLabel": "19",
+    "numberingLabel": "19",
+    "oracleKey": "00000101011010110010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:020",
+    "sourceLabel": "20",
+    "numberingLabel": "20",
+    "oracleKey": "10100101010010010010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:021",
+    "sourceLabel": "21",
+    "numberingLabel": "21",
+    "oracleKey": "01011010000101000101"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:022",
+    "sourceLabel": "22",
+    "numberingLabel": "22",
+    "oracleKey": "01011010000001101100"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:023",
+    "sourceLabel": "23",
+    "numberingLabel": "23",
+    "oracleKey": "01011111000000000101"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:024",
+    "sourceLabel": "24",
+    "numberingLabel": "24",
+    "oracleKey": "01011111001000100000"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:025",
+    "sourceLabel": "25",
+    "numberingLabel": "25",
+    "oracleKey": "01111110000001100000"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:026",
+    "sourceLabel": "26",
+    "numberingLabel": "26",
+    "oracleKey": "01011011000100100100"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:027",
+    "sourceLabel": "27",
+    "numberingLabel": "27",
+    "oracleKey": "01011011001000001001"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:028",
+    "sourceLabel": "28",
+    "numberingLabel": "28",
+    "oracleKey": "10101111000000010010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:029",
+    "sourceLabel": "29",
+    "numberingLabel": "29",
+    "oracleKey": "01001101001010110000"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:030",
+    "sourceLabel": "30",
+    "numberingLabel": "30",
+    "oracleKey": "00110011010100000011"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:031",
+    "sourceLabel": "31",
+    "numberingLabel": "31",
+    "oracleKey": "00001111001000110010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:032",
+    "sourceLabel": "32",
+    "numberingLabel": "32",
+    "oracleKey": "00010111011000100010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:033",
+    "sourceLabel": "33",
+    "numberingLabel": "33",
+    "oracleKey": "00111001000110000011"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:034",
+    "sourceLabel": "34",
+    "numberingLabel": "34",
+    "oracleKey": "00011101001010100010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:035",
+    "sourceLabel": "35",
+    "numberingLabel": "35",
+    "oracleKey": "00110110010001100010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:036",
+    "sourceLabel": "36",
+    "numberingLabel": "36",
+    "oracleKey": "00101110100000010011"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:037",
+    "sourceLabel": "37",
+    "numberingLabel": "37",
+    "oracleKey": "00110110110000000011"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:038",
+    "sourceLabel": "38",
+    "numberingLabel": "38",
+    "oracleKey": "00101110000001110010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:039",
+    "sourceLabel": "39",
+    "numberingLabel": "39",
+    "oracleKey": "00111100000011100010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:040",
+    "sourceLabel": "40",
+    "numberingLabel": "40",
+    "oracleKey": "01100110010001110000"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:041",
+    "sourceLabel": "41",
+    "numberingLabel": "41",
+    "oracleKey": "00110011010000101010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:042",
+    "sourceLabel": "42",
+    "numberingLabel": "42",
+    "oracleKey": "01001101000010010101"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:043",
+    "sourceLabel": "43",
+    "numberingLabel": "43",
+    "oracleKey": "00001111000000010111"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:044",
+    "sourceLabel": "44",
+    "numberingLabel": "44",
+    "oracleKey": "00010111010000000111"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:045",
+    "sourceLabel": "45",
+    "numberingLabel": "45",
+    "oracleKey": "00111001000010101010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:046",
+    "sourceLabel": "46",
+    "numberingLabel": "46",
+    "oracleKey": "00011101000010000111"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:047",
+    "sourceLabel": "47",
+    "numberingLabel": "47",
+    "oracleKey": "00001010001101110010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:048",
+    "sourceLabel": "48",
+    "numberingLabel": "48",
+    "oracleKey": "00001010101100010011"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:049",
+    "sourceLabel": "49",
+    "numberingLabel": "49",
+    "oracleKey": "00001010100000011111"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:050",
+    "sourceLabel": "50",
+    "numberingLabel": "50",
+    "oracleKey": "00001010000001111110"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:051",
+    "sourceLabel": "51",
+    "numberingLabel": "51",
+    "oracleKey": "00011000000011101110"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:052",
+    "sourceLabel": "52",
+    "numberingLabel": "52",
+    "oracleKey": "00011000001111100010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:053",
+    "sourceLabel": "53",
+    "numberingLabel": "53",
+    "oracleKey": "00001010101000111010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:054",
+    "sourceLabel": "54",
+    "numberingLabel": "54",
+    "oracleKey": "00001010000101010111"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:055",
+    "sourceLabel": "55",
+    "numberingLabel": "55",
+    "oracleKey": "00011000000111000111"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:056",
+    "sourceLabel": "56",
+    "numberingLabel": "56",
+    "oracleKey": "00011000101010101010"
+  },
+  {
+    "trainer": "oll",
+    "id": "oll:speeden-v1:057",
+    "sourceLabel": "57",
+    "numberingLabel": "57",
+    "oracleKey": "10111101000010000010"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:0aa",
+    "sourceLabel": "Aa",
+    "numberingLabel": "Aa",
+    "oracleKey": "UUUUUUUUBBFFRRLFLRLB"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:0ab",
+    "sourceLabel": "Ab",
+    "numberingLabel": "Ab",
+    "oracleKey": "UUUUUUUUBBLLRRRFBFLF"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:00e",
+    "sourceLabel": "E",
+    "numberingLabel": "E",
+    "oracleKey": "UUUUUUUUBLFLBRFRBRFL"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:00f",
+    "sourceLabel": "F",
+    "numberingLabel": "F",
+    "oracleKey": "UUUUUUUUBBBFLRRFLLRF"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:0ga",
+    "sourceLabel": "Ga",
+    "numberingLabel": "Ga",
+    "oracleKey": "UUUUUUUUBLFFRRLBLRFB"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:0gb",
+    "sourceLabel": "Gb",
+    "numberingLabel": "Gb",
+    "oracleKey": "UUUUUUUUBFBFBRRLLLRF"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:0gc",
+    "sourceLabel": "Gc",
+    "numberingLabel": "Gc",
+    "oracleKey": "UUUUUUUUBBLLFRRLBFRF"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:0gd",
+    "sourceLabel": "Gd",
+    "numberingLabel": "Gd",
+    "oracleKey": "UUUUUUUUBBFFLRLRLRFB"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:00h",
+    "sourceLabel": "H",
+    "numberingLabel": "H",
+    "oracleKey": "UUUUUUUUBFBRLRFBFLRL"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:0ja",
+    "sourceLabel": "Ja",
+    "numberingLabel": "Ja",
+    "oracleKey": "UUUUUUUUBBBFFRRRLLLF"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:0jb",
+    "sourceLabel": "Jb",
+    "numberingLabel": "Jb",
+    "oracleKey": "UUUUUUUUBBBFRRRLLLFF"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:0na",
+    "sourceLabel": "Na",
+    "numberingLabel": "Na",
+    "oracleKey": "UUUUUUUUBFFLRRFBBRLL"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:0nb",
+    "sourceLabel": "Nb",
+    "numberingLabel": "Nb",
+    "oracleKey": "UUUUUUUUBBFLLRFFBRRL"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:0ra",
+    "sourceLabel": "Ra",
+    "numberingLabel": "Ra",
+    "oracleKey": "UUUUUUUUBBLRFRLRFFLB"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:0rb",
+    "sourceLabel": "Rb",
+    "numberingLabel": "Rb",
+    "oracleKey": "UUUUUUUUBLBFRRRFLLBF"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:00t",
+    "sourceLabel": "T",
+    "numberingLabel": "T",
+    "oracleKey": "UUUUUUUUBBLRLRLFFFRB"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:0ua",
+    "sourceLabel": "Ua",
+    "numberingLabel": "Ua",
+    "oracleKey": "UUUUUUUUBBBRLRFRFLFL"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:0ub",
+    "sourceLabel": "Ub",
+    "numberingLabel": "Ub",
+    "oracleKey": "UUUUUUUUBBBRFRFLFLRL"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:00v",
+    "sourceLabel": "V",
+    "numberingLabel": "V",
+    "oracleKey": "UUUUUUUUBBFLRRFLBRFL"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:00y",
+    "sourceLabel": "Y",
+    "numberingLabel": "Y",
+    "oracleKey": "UUUUUUUUBBFLFRFRBRLL"
+  },
+  {
+    "trainer": "pll",
+    "id": "pll:speeden-v1:00z",
+    "sourceLabel": "Z",
+    "numberingLabel": "Z",
+    "oracleKey": "UUUUUUUUBLBRFRFRFLBL"
+  }
+]

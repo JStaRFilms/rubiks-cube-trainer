@@ -81,6 +81,30 @@ export class CubeEngine {
     return pattern;
   }
   apply(state: CubeStateV1, moves: readonly Move[]): CubeStateV1 { return this.toState(this.fromState(state).applyAlg(canonicalText(moves))); }
+  // Source sticker at each destination, for proofs that ignore unrelated piece identities.
+  stickerPermutation(moves: readonly Move[]): number[] {
+    let pattern = this.puzzle.defaultPattern().applyAlg(canonicalText(moves));
+    const rotation = this.orientations.find((o) => o.centers === this.centerKey(this.toState(pattern)));
+    if (!rotation) throw new Error('Invalid center frame.');
+    pattern = pattern.applyAlg(canonicalText(invertMoves(rotation.moves)));
+    const result = Array<number>(54);
+    for (const [orbit, names] of Object.entries(orbits)) {
+      const data = pattern.patternData[orbit];
+      if (!data) throw new Error('Engine orbit mismatch.');
+      names.forEach((name, location) => {
+        const piece = data.pieces[location], orientation = data.orientation[location];
+        const source = piece === undefined ? undefined : names[piece];
+        if (!source || orientation === undefined) throw new Error('Invalid engine pattern.');
+        const indices = pieceIndices(source);
+        pieceIndices(name).forEach((index, sticker) => {
+          const from = indices[(sticker + orientation) % name.length];
+          if (from === undefined) throw new Error('Invalid sticker permutation.');
+          result[index] = from;
+        });
+      });
+    }
+    return result;
+  }
   normalize(state: CubeStateV1): CubeStateV1 {
     const pattern = this.fromState(state), rotation = this.orientations.find((o) => o.centers === this.centerKey(state));
     if (!rotation) throw new Error('Invalid center frame.');

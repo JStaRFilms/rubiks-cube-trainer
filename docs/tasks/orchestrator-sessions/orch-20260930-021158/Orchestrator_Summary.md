@@ -1,21 +1,13 @@
-# Cross+1 checkpoint handoff
+# Case-library checkpoint
 
-Session `orch-20260930-021158`, branch `build/foundation`. Eleven tasks are complete through Q02; fifteen remain pending. Stop for hands-on feedback before case libraries. The full roadmap is in `master_plan.md`.
+Session `orch-20260930-021158`, branch `build/foundation`. Twelve tasks are complete through B07; B08 F2L is next, followed by B09 OLL/PLL Time Attack and Q03. The owner authorized continued work after the done/not-done recap. Full roadmap is in `master_plan.md`.
 
-## Delivered and pushed input repair
+Cross and Cross+1 remain implemented and accepted through Q01/Q02. Remote `origin/main` is the explicit input-fix push `973a879`; local Cross+1 checkpoints are `716fec5` and `a4380e0`. This continuation does not automatically push or deploy new work.
 
-The owner reported that Space required a timer click and pointer arming looked selected, then authorized push and the next step. Background Space now works for an active practice challenge without stealing native input/control/dialog/player keys. Pointer arming changes the clock color rather than drawing a large rectangle. Pointer focus does not leave a selection-like outline, timer text is not selected, and Tab focus stays visible. Lint/typecheck/build, 31 focused unit tests and all 32 Chrome browser tests passed. Accepted cube/timer/Cross commits and input fix were pushed to `origin/main` through `973a879`, without force or history rewrite.
+B07 adds complete 41 F2L, 57 OLL and 21 PLL libraries, independent stable identities, exact coverage manifests, pure presentation/override validation and a source-number map. Source data comes from two pinned MIT repositories, with notices retained in documentation and offline assets. Parent read both grants and independently matched all six pinned upstream artifacts by SHA-256 and byte length. No unlicensed site scraping, algorithm transcription from memory, GPL dataset or new solver dependency was used.
 
-## Cross+1
+Independent Cartesian fixtures establish all 41/57/21 equivalence classes, 656 F2L default slot/angle presentations, 262,656 OLL permutation/angle combinations and 336 PLL presentations. OLL permits changed LL permutation, unlike PLL's solved/final-AUF goal. Personal algorithms cannot change identity/setup. Source and proof evidence are in `docs/data/Case_Sources.md` and `docs/audits/Case_Libraries_Verification.md`.
 
-B05 proved project-owned construction/filtering, comparison search and independently replayed witnesses. Parent accepted provisional K1..8/L1..12 for any pair or FR/FL/BR/BL, with 5,000 ms and 10,000 charged construction nodes. B05 is local commit `716fec5`. Its measured hardest Chrome group p50/p95 was 85.1/346.0 ms; all 235 benchmark witnesses were independently replayed. These are desktop observations, not phone tiers.
+Parent inspected the new engine permutation/identity/override methods and independently passed lint/typecheck, 168 unit tests with one intentionally skipped explicit curation generator, build, eight actual Cross/Cross+1 Chrome flows, final rebuild and whitespace. This accepts library data, not new trainer UI. Existing case attempt/backup gates remain closed pending compatible integration.
 
-B06 integrates those ranges into actual practice, with a fully solved physical cube confirmation before every scramble. Cross-only keeps its solved-Cross base. Cross+1 hides any-pair witness identity until stopping and labels a found upper-bound solution, not a global optimum or observed executed pair. It reuses the fixed timer, acknowledged saves, history/statistics, backups/confirmed restore and player. A genuine Cross/Cross+1 validator and actual model/asset initialization provide semantic storage and cold-offline readiness. Unsupported trainers/sets/runs/algorithms still fail closed.
-
-Parent independently passed lint/typecheck, all 152 unit tests, production build, all 37 Chrome browser tests, final rebuild and whitespace. Fresh read-only Q02 returned PASS with no confirmed blocker or optional suggestion. It ran 60 unit tests, five Cross+1 browser cases, four input/cache regressions and final 41-asset/source inspection. Its verdict is preserved in `docs/audits/Q02_Cross_One_Acceptance.md`. Integration failures and final evidence remain in `Cross_One_Integration.md`; they were not hidden or relabeled as passes.
-
-## Limits and Git
-
-Physical phones, Firefox/Safari, OS-installed PWA, screen readers, audibility, GPU/process peaks, battery/thermal behavior and long-session leaks remain unverified. Desktop/touch emulation is not phone certification. Stop remains self-reported physical completion.
-
-The initial requested push is complete through `973a879`. B05/B06 are subsequent local checkpoints, not automatically pushed. Parent owns scoped Git integration. No dataset curation, other trainer, research, deployment, account, external service or new worktree starts automatically. Visual polish remains deferred. The owner can now choose Cross+1, confirm a fully solved base, practice any-pair or a target and inspect its saved found-solution review.
+B08 must build isolated F2L case/slot/hint/execution/recognition practice with verified personal overrides, preserved lower context, honest representative LL view, statistics, backup and cold-offline review. B09 then adds OLL/PLL sets with distinct physical bases and run recovery. Q03 independently reviews those loops before ZBLL. Physical-phone, installed-PWA, accessibility, audio and GPU/leak checks remain unverified. Research, sync, teaching, worktrees and hosting remain separately gated.

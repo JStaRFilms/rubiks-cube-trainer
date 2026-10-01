@@ -21,6 +21,8 @@ License text in lazy-promise-MIT.txt. Matching source src/index.ts is retained i
 
 The package contains optional solver code with GPL notices despite its vendor directory names. The review does not import search, scramble, bluetooth or those solvers. No algorithm dataset is used. Any later solver integration requires a new rights check; the root package's dual license alone is not sufficient evidence for those files.
 
+The B07 source-only CFOP case libraries derive default algorithms and family labels from Speeden & Cuben, revision 3aaf127b0013cbbfd16d12b397d8c0ff8c912c65, Copyright (c) 2026 Frederic Abraham, MIT. F2L numbering maps to F2L trainer, revision 76fcfccf522f12822db8699209a6a934c4d28421, Copyright (c) 2020 Tomas Lieberkind, MIT. Full notices are in cases-Speeden-MIT.txt and cases-Lieberkind-MIT.txt. Exact source URLs, hashes and mappings are in docs/data/Case_Sources.md in the project source. These libraries do not enable a case trainer in this release.
+
 Foundation runtime notices are retained below and in foundation-MIT.txt.
 React / React DOM: Copyright Meta Platforms, Inc. and affiliates. MIT.
 Scheduler 0.28.0: Copyright Meta Platforms, Inc. and affiliates. MIT, text in scheduler-MIT.txt.
