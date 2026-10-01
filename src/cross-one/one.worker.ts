@@ -6,7 +6,7 @@ import { generateOne } from './generate';
 import { ONE_VERSIONS, OneModel } from './model';
 import type { OneReply, OneRequest } from './protocol';
 import { OneFailure, WorkBudget } from './search';
-import { checkRequest } from './validation';
+import { checkRequest, validateOne, validateOneAttempt } from './validation';
 
 let model: OneModel | undefined;
 let workerInstance: string | null = null;
@@ -33,6 +33,14 @@ self.onmessage = (event: MessageEvent<OneRequest>) => {
           outerBudget.check();
           reply({ ...base, kind: 'ready', versions: ONE_VERSIONS, elapsedMs: performance.now() - received, pairInitMs: performance.now() - pairStart, workingBytes: model.byteLength, cache: initialized.cache }); return;
         }
+      }
+      if (message.kind === 'attempt' || message.kind === 'challenge') {
+        if (message.kind === 'attempt') {
+          const value = validateOneAttempt(message.value, engine, model); outerBudget.check(); reply({ ...base, kind: 'attempt', value });
+        } else {
+          const value = validateOne(message.value, engine, model); outerBudget.check(); reply({ ...base, kind: 'challenge', value });
+        }
+        return;
       }
       if (message.kind !== 'generate') throw new OneFailure('invalid-result', 'Invalid Cross+1 operation.');
       const request = decodeWorkerRequest(message.request, engine);

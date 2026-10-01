@@ -1,6 +1,7 @@
 import { SOLVED, type CubeEngine } from '../cube/engine';
 import { decodeFrame, decodeVersions } from '../cube/validation';
-import { decodeGoalOptions, boundedInput, DataError, integer, object, text, validateAttemptDurations } from '../store/validation';
+import { decodeGoalOptions, boundedInput, DataError, integer, object, text } from '../store/validation';
+import { attemptFields, decodeAttemptTiming } from '../store/attempt-timing';
 import type { AttemptRecord, Challenge, CrossDepth, Move, SemanticValidator } from '../store/records';
 import { CROSS_VERSIONS, OUTER_MOVES, type CrossTable } from './table';
 
@@ -39,37 +40,9 @@ export function validateChallenge(input: unknown, engine: CubeEngine, table: Cro
 export function crossValidator(engine: CubeEngine, table: CrossTable): SemanticValidator {
   return {
     async validateAttempt(input): Promise<AttemptRecord> {
-      boundedInput(input);
-      const v = exact(input, ['id', 'sessionId', 'trainer', 'challenge', 'settingsSnapshot', 'presentedAt', 'endedAt', 'preparationMs', 'timing', 'penalty']);
+      const v = attemptFields(input);
       if (v.trainer !== 'cross') throw new DataError('Only Cross attempts are supported.');
-      validateAttemptDurations(v);
-      const settings = exact(v.settingsSnapshot, ['inspectionMode', 'audibleWarnings']);
-      if (settings.inspectionMode !== 'untimed' && settings.inspectionMode !== '15s') throw new DataError('Unsupported inspection.');
-      if (typeof settings.audibleWarnings !== 'boolean') throw new DataError('Invalid audible-warning setting.');
-      const t = object(v.timing), p = exact(v.penalty, ['kind', 'source']);
-      exact(t, t.status === 'completed' ? ['status', 'executionMs', 'inspectionMs'] : ['status', 'executionMs', 'inspectionMs', 'phase', 'reason']);
-      const inspectionMs = t.inspectionMs === null ? null : integer(t.inspectionMs);
-      const executionMs = t.executionMs === null ? null : integer(t.executionMs);
-      const preparationMs = integer(v.preparationMs);
-      if (inspectionMs !== null && inspectionMs > preparationMs) throw new DataError('Inspection cannot exceed preparation.');
-      let timing: AttemptRecord['timing'];
-      if (t.status === 'completed') { if (executionMs === null) throw new DataError('Completed Cross needs execution duration.'); timing = { status: 'completed', executionMs, inspectionMs }; }
-      else {
-        if (t.phase !== 'preparation' && t.phase !== 'inspection' && t.phase !== 'arming' && t.phase !== 'execution') throw new DataError('Invalid interrupted phase.');
-        if (t.reason !== 'background' && t.reason !== 'restart' && t.reason !== 'cancelled') throw new DataError('Invalid interruption reason.');
-        if ((t.phase === 'execution') !== (executionMs !== null) || (t.phase === 'preparation' && inspectionMs !== null) || ((t.phase === 'inspection' || (t.phase === 'arming' && settings.inspectionMode === '15s')) && inspectionMs === null)) throw new DataError('Interrupted durations do not match phase.');
-        timing = { status: 'interrupted', executionMs, inspectionMs, phase: t.phase, reason: t.reason };
-      }
-      if (p.kind !== 'none' && p.kind !== 'plus2' && p.kind !== 'dnf') throw new DataError('Invalid penalty.');
-      if (p.source !== 'none' && p.source !== 'inspection' && p.source !== 'manual') throw new DataError('Invalid penalty source.');
-      // Rounded 15000/17000 each straddle the threshold. Never overwrite the unrounded decision.
-      if (p.source !== 'manual' && (timing.status === 'completed' || timing.phase === 'execution') && inspectionMs !== null) {
-        const valid = p.kind === 'none' ? inspectionMs <= 15000 : p.kind === 'plus2' ? inspectionMs >= 15000 && inspectionMs <= 17000 : inspectionMs >= 17000;
-        if (!valid || (p.kind !== 'none' && p.source !== 'inspection')) throw new DataError('Inspection penalty is inconsistent with duration.');
-      }
-      if (p.source === 'inspection' && (timing.status === 'interrupted' && timing.phase !== 'execution')) throw new DataError('Inspection penalty requires execution start.');
-      return { id: text(v.id), sessionId: text(v.sessionId), trainer: 'cross', challenge: validateChallenge(v.challenge, engine, table),
-        settingsSnapshot: { inspectionMode: settings.inspectionMode, audibleWarnings: settings.audibleWarnings }, presentedAt: text(v.presentedAt), endedAt: text(v.endedAt), preparationMs, timing, penalty: { kind: p.kind, source: p.source } };
+      return { ...decodeAttemptTiming(v), trainer: 'cross', challenge: validateChallenge(v.challenge, engine, table) };
     },
     async validateTrainingData(data) {
       if (Object.values(data).some((records) => records.length)) throw new DataError('Cases, algorithms, sets and runs require an unavailable compatible dataset validator.');

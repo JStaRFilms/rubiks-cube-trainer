@@ -115,7 +115,7 @@ export function TimerPractice({ controller, presentation, onSaved, onNext, onRev
   }
   return <>
     <section className="scramble-rail" aria-label="Presented challenge">
-      <span>Solve only Cross · Base: solved, aligned Cross · Hold {snapshot.challenge.frame.colorOfFace.D} down, {snapshot.challenge.frame.colorOfFace.F} front</span>
+      <span>{snapshot.challenge.options.trainer === 'cross1' ? `Solve Cross and ${snapshot.challenge.options.pair.kind === 'any' ? 'any one pair' : `the ${snapshot.challenge.options.pair.slot} pair`} · Base: fully solved cube before each scramble` : 'Solve only Cross · Base: solved, aligned Cross'} · Hold {snapshot.challenge.frame.colorOfFace.D} down, {snapshot.challenge.frame.colorOfFace.F} front</span>
       <p>{canonicalText(snapshot.challenge.scramble)}</p>
     </section>
     <section className="timer-canvas" aria-label="Practice timer">
@@ -151,6 +151,7 @@ export function TimerPractice({ controller, presentation, onSaved, onNext, onRev
         <h2 ref={result} tabIndex={-1}>{record.timing.status === 'interrupted' ? 'Interrupted. Excluded from successful times' : record.penalty.kind === 'dnf' ? 'DNF' : `${formatMs(effectiveExecution(record))}${record.penalty.kind === 'plus2' ? ' +2' : ''}`}</h2>
         <p>Raw execution: {formatMs(record.timing.executionMs)} · Preparation, includes scrambling: {formatMs(record.preparationMs)}</p>
         <p>Inspection: {record.timing.inspectionMs === null ? snapshot.settings.inspectionMode === 'untimed' ? 'Not used' : 'Not started' : formatMs(record.timing.inspectionMs)}</p>
+        {record.challenge.proof.kind === 'combined-bound' && <p>Found solution: {record.challenge.proof.witness.length} HTM · cap {record.challenge.proof.cap} · generator solved slots {record.challenge.proof.solvedSlots.join('/')}. Not a global optimum. Pair you executed: not recorded. Reset the entire cube to fully solved before Next.</p>}
         {record.timing.status === 'interrupted' && <p>{record.timing.phase} · {record.timing.reason}. Start fresh, never resume.</p>}
         {state.phase === 'save-failed' && <div role="alert"><p>{state.error}</p><button onClick={() => void controller.retry()}>Retry save</button><button onClick={() => {
           const url = URL.createObjectURL(new Blob([JSON.stringify(emergencyExport(record), null, 2)], { type: 'application/json' }));

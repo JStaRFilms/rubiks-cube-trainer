@@ -15,7 +15,7 @@ export function MoveReview({ color, reduceMotion, challenge }: { color: Color; r
   const host = useRef<HTMLDivElement>(null), player = useRef<ReviewPlayer | null>(null), currentStep = useRef(0);
   useEffect(() => {
     let active = true;
-    void loadEngine().then((value) => { if (active) { setEngine(value); setLoading(false); setError(''); if (challenge?.proof.kind === 'cross-optimal') { setReview({ setup: challenge.scramble, moves: challenge.proof.solution, start: challenge.start, frame: challenge.frame }); setState(challenge.start); } } }).catch((reason: unknown) => { if (active) { setError(reason instanceof Error ? reason.message : 'Cube model initialization failed.'); setLoading(false); } });
+    void loadEngine().then((value) => { if (active) { setEngine(value); setLoading(false); setError(''); if (challenge && (challenge.proof.kind === 'cross-optimal' || challenge.proof.kind === 'combined-bound')) { setReview({ setup: challenge.scramble, moves: challenge.proof.kind === 'cross-optimal' ? challenge.proof.solution : challenge.proof.witness, start: challenge.start, frame: challenge.frame }); setState(challenge.start); } } }).catch((reason: unknown) => { if (active) { setError(reason instanceof Error ? reason.message : 'Cube model initialization failed.'); setLoading(false); } });
     return () => { active = false; };
   }, [retry, challenge]);
   useEffect(() => {
@@ -50,7 +50,7 @@ export function MoveReview({ color, reduceMotion, challenge }: { color: Color; r
     setStep(index); setState(engine.apply(review.start, review.moves.slice(0, index)));
   }
   return <section className="move-review" data-timer-input="isolated" onKeyDown={(event) => event.stopPropagation()} onKeyUp={(event) => event.stopPropagation()} onPointerDown={(event) => event.stopPropagation()} onPointerUp={(event) => event.stopPropagation()}>
-    {challenge?.proof.kind === 'cross-optimal' ? <><h3>Optimal Cross · {challenge.proof.depth} HTM</h3><p>Maximum requested depth {challenge.options.trainer === 'cross' ? challenge.options.K : ''}. Other pieces are representative unless you began with a fully solved cube. The app did not observe your physical completion.</p></> : <p>Review your own setup and moves. This is not a generated challenge or a timed attempt.</p>}
+    {challenge?.proof.kind === 'cross-optimal' ? <><h3>Optimal Cross · {challenge.proof.depth} HTM</h3><p>Maximum requested depth {challenge.options.trainer === 'cross' ? challenge.options.K : ''}. Other pieces are representative unless you began with a fully solved cube. The app did not observe your physical completion.</p></> : challenge?.proof.kind === 'combined-bound' ? <><h3>Found solution · {challenge.proof.witness.length} HTM</h3><p>Combined cap {challenge.proof.cap}, independent Cross depth {challenge.proof.crossDepth}. Generator solved slots: {challenge.proof.solvedSlots.join('/')}. Verified upper bound, not a globally shortest solution. Pair you executed: not recorded. Begin every scramble from a fully solved cube in the saved frame. The app did not observe physical completion.</p></> : <p>Review your own setup and moves. This is not a generated challenge or a timed attempt.</p>}
     {!challenge && <form onSubmit={(event) => {
       event.preventDefault(); if (!engine) return;
       try {

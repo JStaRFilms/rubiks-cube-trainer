@@ -36,7 +36,7 @@ export function decodeGoalOptions(input: unknown): GoalOptions {
   if (trainer === 'cross' || trainer === 'cross1' || trainer === 'cross2') {
     const K = integer(v.K, 1, 8) as 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
     if (trainer === 'cross') { keys(v, ['trainer', 'K']); return { trainer, K }; }
-    const L = integer(v.L, 1);
+    const L = integer(v.L, 1, trainer === 'cross1' ? 12 : Number.MAX_SAFE_INTEGER);
     if (trainer === 'cross2') { keys(v, ['trainer', 'K', 'L']); return { trainer, K, L }; }
     keys(v, ['trainer', 'K', 'L', 'pair']);
     const pair = object(v.pair);

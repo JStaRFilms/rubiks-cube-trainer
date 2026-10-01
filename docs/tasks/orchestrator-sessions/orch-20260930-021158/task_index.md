@@ -1,6 +1,6 @@
 # Delivery task index
 
-Session: `orch-20260930-021158`. G01/G02/D01/B01/B02/B03/B04 are complete. Q01 returned PASS; nine tasks are complete and 17 remain pending. B05 bounds are accepted; B06 integration is next. The owner authorized the next step after the input repair and push to `origin/main` at `973a879`. Cross now has verified challenges, live timing, saved history, backups and offline optimal review. The interim A-desktop/B-mobile layout remains; polish and research are deferred. B06 uses the accepted provisional ranges and fully solved base, then Q02 reviews the integrated loop. Research remains separately gated.
+Session: `orch-20260930-021158`. G01/G02/D01/B01/B02/B03/B04 are complete. Q01 returned PASS; eleven tasks are complete through Q02 and 15 remain pending. Cross+1 is accepted; stop for hands-on feedback before case libraries. B05 bounds are accepted. The owner authorized the next step after the input repair and push to `origin/main` at `973a879`. Cross now has verified challenges, live timing, saved history, backups and offline optimal review. The interim A-desktop/B-mobile layout remains; polish and research are deferred. B06 uses the accepted provisional ranges and fully solved base, then Q02 reviews the integrated loop. Research remains separately gated.
 
 | ID | Authored packet | Stage | Dependencies |
 | --- | --- | --- | --- |
@@ -13,8 +13,8 @@ Session: `orch-20260930-021158`. G01/G02/D01/B01/B02/B03/B04 are complete. Q01 r
 | b04 | [Deliver the complete Cross training loop](completed/b04_deliver_the_complete_cross_training_loop.task.md) | build | b03 |
 | q01 | [Review the first usable offline increment](completed/q01_review_the_first_usable_offline_increment.task.md) | build | b04 |
 | b05 | [Prove Cross plus one generation bounds](completed/b05_prove_cross_plus_one_generation_bounds.task.md) | build | q01 |
-| b06 | [Deliver Cross plus one any pair and slot drills](pending/b06_deliver_cross_plus_one_any_pair_and_slot_drills.task.md) | build | b05 |
-| q02 | [Review Cross plus one correctness and interactions](pending/q02_review_cross_plus_one_correctness_and_interactions.task.md) | build | b06 |
+| b06 | [Deliver Cross plus one any pair and slot drills](completed/b06_deliver_cross_plus_one_any_pair_and_slot_drills.task.md) | build | b05 |
+| q02 | [Review Cross plus one correctness and interactions](completed/q02_review_cross_plus_one_correctness_and_interactions.task.md) | build | b06 |
 | b07 | [Curate verified F2L OLL and PLL libraries](pending/b07_curate_verified_f2l_oll_and_pll_libraries.task.md) | build | q02 |
 | b08 | [Deliver F2L case and slot practice](pending/b08_deliver_f2l_case_and_slot_practice.task.md) | build | b07 |
 | b09 | [Deliver OLL and PLL Time Attack](pending/b09_deliver_oll_and_pll_time_attack.task.md) | build | b08 |

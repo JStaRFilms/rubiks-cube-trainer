@@ -1,8 +1,10 @@
 # Cube Trainer
 
-Cross practice works with maximum optimal depth 1 through 8 HTM, all six colors, untimed or 15-second inspection, local history/statistics, backup/confirmed restore and optimal notation/3D review. Other trainers remain unavailable. The separate Move review tool still accepts an entered setup and moves.
+Cross and Cross+1 practice work for all six colors, with untimed or 15-second inspection, local history/statistics, backup/confirmed restore and notation/3D review. Cross uses maximum optimal depth 1 through 8 HTM. Cross+1 uses a Cross ceiling K1..8 and witnessed combined cap L1..12, with any pair or FR/FL/BR/BL targeting. Cross+1 support is provisional for desktop/touch emulation, not certified phone tiers. Other trainers remain unavailable. Move review still accepts an entered setup and moves.
 
 Choose Settings for color, maximum depth and inspection. Start Cross practice creates a real Cross session if needed. Begin each scramble with that Cross solved and aligned to its side centers. A fully solved cube also works. Hold the displayed down/front colors, apply the scramble, then solve only the Cross. If unsure after stopping, restore the Cross before Next. Other pieces in 3D are representative unless your base was fully solved. Stopping is self-reported completion, not physical solve detection.
+
+For Cross+1, select that trainer and confirm a fully solved physical cube before every scramble. Next returns to reset/confirmation. Use the displayed down/front frame. Any-pair witness identity stays hidden until stopping. Review shows a found upper-bound solution and its solved slots, not a globally optimal solution or an observed executed pair. K3/L8 is the initial preset.
 
 Maximum depth is a ceiling, not exact depth. Half turns count once. These are legal practice scrambles, not uniform competition scrambles or full-cube optimal solves. The solution is revealed only after the attempt. Preparation includes scrambling and thinking, not pure planning.
 
@@ -24,7 +26,7 @@ pnpm build
 pnpm preview --port 4173
 ```
 
-Open `http://127.0.0.1:4173`. Help → Local data → Set up / retry review downloads all Cross and player assets, initializes and checks the trusted table, and probes personal storage. Reload to finish setup. The ready label includes both review and Cross. Recheck cached review also rechecks the Cross table; missing/corrupt tables fail readiness. Setup rebuilds only disposable solver data, including while offline when the required code is cached. It never deletes history.
+Open `http://127.0.0.1:4173`. Help → Local data → Set up / retry review downloads all Cross and player assets, initializes and checks the trusted table, and probes personal storage. Reload to finish setup. The ready label includes review, Cross and Cross+1, including actual Cross+1 model/pair initialization before first use. Recheck cached review also rechecks the Cross table; missing/corrupt tables fail readiness. Setup rebuilds only disposable solver data, including while offline when the required code is cached. It never deletes history.
 
 Install through the browser's install menu, or Share → Add to Home Screen on iPhone. HTTPS is required outside localhost. No hosting or deployment is configured.
 
@@ -47,7 +49,7 @@ Test-only timing fixtures, client mocks and benchmark code are not app entries o
 
 `cube-trainer`, database version 1, contains settings, sessions, attempts, personalAlgorithms, practiceSets and runs. The separate `cube-trainer-solver` database contains disposable tables. Neither normal setup nor updates delete personal data.
 
-The real Cross-only semantic validator exists before App creates its Repository. It checks every saved/read/restored attempt's fields, supported versions, physical frame, legal state, scramble equality, exact optimal distance and outer-turn solution. It does not trust imported proof flags. Nonempty algorithms, sets, runs and other trainer records fail closed because their validators/datasets are unavailable. Empty future groups remain part of backup version 1.
+The real Cross/Cross+1 semantic validator exists before App creates its Repository. It checks every saved/read/restored attempt's fields, versions, physical frame, legal state, scramble equality and timing. Cross validates exact optimal distance and solution. Cross+1 validates independent Cross depth and a simultaneous permitted-pair witness within L, without claiming global optimality. It does not trust imported proof flags. Nonempty algorithms, sets, runs and other trainer records fail closed because their validators/datasets are unavailable. Empty future groups remain part of backup version 1.
 
 Repository writes acknowledge transaction completion. +2/DNF/No penalty edits change only explicit penalty metadata, preserving raw durations. Removing a penalty records a manual correction. Rounded inspection times at 15/17-second boundaries do not override the timer's unrounded penalty decision. History supports confirmed deletion and latest undo. Saved result/review uses current repository records after edits/deletion/undo; confirmed restore invalidates the old presentation.
 
@@ -67,4 +69,4 @@ Cubing 0.63.8 remains pinned for parser/model/player only, under the selected MP
 
 Windows desktop Chrome 154.0.8037.59 is tested, including touch emulation, production offline flows and Node/Vite development. Physical iPhone Safari, Android Chrome, Firefox, desktop Safari, assistive technology, real audio audibility and OS-installed PWA lifecycle remain unrun. Desktop heap/event-loop samples are not a phone memory, heat, battery or latency guarantee. No deployment or production data was touched.
 
-Feature contracts are in [Cross trainer](docs/features/Cross_Trainer.md) and [Trainer foundation](docs/features/Trainer_Foundation.md). Cases, other trainers, video, accounts and sync remain undelivered and separately gated. Q01 accepted the first Cross increment. Cross+1 generation-bound proof is the next authorized step.
+Feature contracts are in [Cross trainer](docs/features/Cross_Trainer.md), [Cross+1 trainer](docs/features/Cross_One_Trainer.md) and [Trainer foundation](docs/features/Trainer_Foundation.md). Cases, other trainers, video, accounts and sync remain undelivered and separately gated. Q01 accepted Cross and Q02 accepted Cross+1. The next planned slice is case curation, subject to the next delivery instruction. See [Cross+1 acceptance](docs/audits/Q02_Cross_One_Acceptance.md).

@@ -33,6 +33,7 @@ export interface SettingsRecord {
   inspectionMode: 'untimed' | '15s'; audibleWarnings: boolean; reducedMotion: 'system' | 'on';
   lastOptions: Partial<Record<Trainer, GoalOptions>>;
 }
+export const defaultOneOptions: Extract<GoalOptions, { trainer: 'cross1' }> = { trainer: 'cross1', K: 3, L: 8, pair: { kind: 'any' } };
 export const defaultSettings: SettingsRecord = {
   key: 'preferences', theme: 'dark', defaultTrainer: 'cross', crossColor: 'white', inspectionMode: 'untimed',
   audibleWarnings: false, reducedMotion: 'system', lastOptions: {},

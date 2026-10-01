@@ -4,7 +4,7 @@
 
 ### Workflow to follow
 
-vibe-build. Role: reviewer. Suggested route at session creation: `openai-codex/gpt-6-sol`, medium thinking. Recheck the active registry and routing policy before launch. This packet is not a launch authorization.
+vibe-build. Role: reviewer. Current dispatch uses `openai-codex/gpt-6.1-sol`, high thinking, in fresh read-only context. The owner authorized the next trainer step; parent accepted B05 caps and B06 checks.
 
 ### Prime agent context
 
@@ -14,6 +14,14 @@ vibe-build. Role: reviewer. Suggested route at session creation: `openai-codex/g
 - `docs/tasks/orchestrator-sessions/orch-20260930-021158/master_plan.md`
 - `docs/audits/Cross_One_Feasibility.md`
 - `docs/features/Cross_One_Trainer.md`
+- `docs/audits/Cross_One_Integration.md`
+- `docs/audits/cross-one-integration-assets.json`
+- `docs/audits/Timer_Statistics_Integration.md`, including the post-Q01 input repair
+- `src/cross-one/model.ts`, `src/cross-one/search.ts`, `src/cross-one/generate.ts`, `src/cross-one/client.ts`, `src/cross-one/one.worker.ts`, `src/cross-one/validation.ts`
+- `src/app/App.tsx`, `src/app/CrossPractice.tsx`, `src/app/TimerPractice.tsx`, `src/app/AttemptHistory.tsx`, `src/app/MoveReview.tsx`
+- `src/store/attempt-timing.ts`, `src/store/trainer-validator.ts`, `src/store/validation.ts`, `src/store/repository.ts`
+- `src/pwa/client.ts`, `src/pwa/manifest.ts`, `vite.config.ts`
+- `tests/unit/cross-one-storage.test.ts`, `tests/unit/cross-one.test.ts`, `tests/browser/cross-one.spec.ts`
 - `package.json`
 
 Read PLAN sections 4.2, 6.2, 11. Coverage: FR-007. Paths produced by predecessors become available only after those tasks complete. If a required predecessor output is missing, report it rather than improvising its contract. Inspect actual existing code/types/tests before edits.
@@ -37,7 +45,7 @@ Accept or reject the Cross+1 difficulty, slot and review contract through focuse
 
 ## Context
 
-This is a fresh implementation. The previous code is unavailable and historical milestone/test claims are not evidence. The owner approved the product direction and session creation, not automatic execution. PLAN remains authoritative over old TECHNICAL/AGENTS conflicts. All levels are supported; normal trainer controls target modern iPhone/Android browsers and desktop.
+Q01 accepted Cross. Input repair and prior Cross commits are pushed through `973a879`; B05 proof is local `716fec5`. B06 integrates the provisional K1..8/L1..12 any/target range with fully solved base and found-solution review. Parent independently passed lint/typecheck/full 152 unit/build/full 37 Chrome/final rebuild/whitespace on the final B06 snapshot. Implementer independently reported those checks plus Node/Vite smoke and source/41-asset proof. No independent B06 verdict has been claimed yet. Parent owns Git and documents. PLAN remains authoritative over old TECHNICAL/AGENTS conflicts. All levels are supported; normal trainer controls target modern iPhone/Android browsers and desktop.
 
 ## Dependencies
 
@@ -65,7 +73,7 @@ A completed dependency is not enough if its review verdict has unresolved confir
 
 ## Verification
 
-Replay sampled witnesses with the full cube model and exercise slot/configuration/error flows.
+Replay witnesses with independent Cartesian helpers as appropriate and exercise slot/configuration/error/offline flows. Confirm the stronger fully solved base before every scramble, hidden any-pair witness/ARIA, self-reported completion versus generated slots, true independent Cross cap and simultaneous final Cross+pair witness. Inspect semantic read/save/history/confirmed atomic backup restore and unsupported-field/group rejection, shared unrounded 15/17-second timing, background Space/native/pointer focus ownership, cancellation/settings/session/restore/update/worker-ID races and separate validation/generation workers. Verify readiness includes a never-opened Cross+1 worker/model/player and does not delete personal data. Parent's actual 152/37 results are reported evidence unless you rerun them. Use proportionate checks, not a new testing campaign. No source/document/task/Git changes. Ignored build/test artifacts are permitted. Physical-phone/PWA/assistive/audio/GPU/leak conditions remain unrun; desktop/emulation is provisional.
 
 ## Review checkpoint and handoff
 

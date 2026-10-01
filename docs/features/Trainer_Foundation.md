@@ -123,6 +123,16 @@ Evicted assets or tables downgrade readiness and identify missing work. Offline 
 
 Download an update into a separate release cache. A waiting service worker cannot automatically skipWaiting/reload. Prompt only; active preparation/inspection/arming/execution and save-pending block activation. Preserve saved history and persist run interruption/recovery state before a user-confirmed idle update. Other open tabs must also acknowledge idle/close; if they cannot, leave the update waiting. New worker, table and dataset versions initialize together under the new release. Old clients retain their coherent old cache until closed, not a mixture of chunks. Cleanup old caches only when no controlled client needs them, and never delete personal databases. B01 tests the chosen service-worker lifecycle, including multi-tab blocking, rather than assuming plugin defaults provide it.
 
+## B06 current Cross and Cross+1 integration
+
+Cross and Cross+1 now share the practice timer/history/review loop. A genuine singleton `trainerValidator` is supplied before Repository construction. It dispatches strict Cross or Cross+1 semantic validation; the Cross+1 validation worker is separate from cancellable generation. Unsupported case/combined-Cross+2 attempts and nonempty future algorithm/set/run groups still fail closed. Database and backup versions remain 1.
+
+Cross+1 requires a fully solved cube confirmation before each scramble; Cross-only retains its solved, aligned Cross base. Provisional K1..8/L1..12 supports any-pair or targeted slots. Found-solution metadata remains hidden during any-pair practice and is not observed user execution or global optimality. Pending generation suspends before timing/player work. The shared timer accepts background Space without a timer click while preserving native/dialog/player ownership, pointer selection prevention and visible keyboard focus.
+
+Release scope is `cross-cross1-practice`. Setup verifies all emitted assets and actual Cross+1 model/memory-pair initialization, with the independently checksummed Cross cache remaining separate from personal data. Cold offline never-opened worker/player flows, real saves/history and confirmed restore are tested. Parent passed 152 unit and 37 Chrome cases; Q02 independently returned PASS. Physical-mobile and installed-PWA checks remain unrun.
+
+See `Cross_One_Trainer.md`, `../audits/Cross_One_Integration.md` and `../audits/Q02_Cross_One_Acceptance.md`. Earlier implementation snapshots below retain their historical boundaries and evidence.
+
 ## B04 Cross integration
 
 Cross practice is now connected through `CrossPractice`, a single surviving TimerController, the project-owned Cross worker and its Cross-only SemanticValidator facade. The facade exists before App creates its Repository. Table initialization, generation and semantic checks run in the worker. The frame-v1 color maps are shared static proper rotations, independently checked by the existing cube fixtures.

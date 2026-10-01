@@ -62,9 +62,9 @@ input[type=file] { width: 100%; }
   .toolbar button { padding: 8px; font-size: 14px; }
   .session-dock { display: none; }
   .scramble-rail { min-height: 100px; padding: 8px 12px; }
-  .timer-canvas[aria-label="Start Cross practice"] .clock { font-size: 64px; }
-  .timer-canvas[aria-label="Start Cross practice"] p { margin: 4px 0; }
-  .timer-canvas[aria-label="Start Cross practice"] { overflow-y: auto; }
+  .timer-canvas:is([aria-label="Start Cross practice"], [aria-label="Start Cross+1 practice"]) .clock { font-size: 64px; }
+  .timer-canvas:is([aria-label="Start Cross practice"], [aria-label="Start Cross+1 practice"]) p { margin: 4px 0; }
+  .timer-canvas:is([aria-label="Start Cross practice"], [aria-label="Start Cross+1 practice"]) { overflow-y: auto; }
   .scramble-rail p { font-size: 16px; line-height: 1.4; }
   .clock { font-family: "Segoe UI", system-ui, sans-serif; font-size: clamp(90px, 30.7vw, 180px); font-weight: 300; }
   .timer-canvas { padding: 8px 12px; }

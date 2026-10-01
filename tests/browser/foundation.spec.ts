@@ -1,5 +1,7 @@
-import { test, expect, type Page } from '@playwright/test';
-import { execSync } from 'node:child_process';
+import { expect, type Page } from '@playwright/test';
+import { test } from '../helpers/update-release';
+import { cp } from 'node:fs/promises';
+import { resolve } from 'node:path';
 import { readFileSync } from 'node:fs';
 async function dataPanel(page: Page) {
   await page.getByRole('button', { name: 'Help', exact: true }).click();
@@ -109,13 +111,13 @@ test('responsive desktop dock/mobile shelf fit and native dialog focus returns',
   }
   await page.getByRole('button', { name: 'Settings', exact: true }).click(); await expect(page.getByRole('dialog')).toBeVisible(); await page.keyboard.press('Escape'); await expect(page.getByRole('button', { name: 'Settings', exact: true })).toBeFocused();
 });
-test('downloaded update waits for every tab to close editing, then preserves history', async ({ page, context }) => {
+test('downloaded update waits for every tab to close editing, then preserves history', async ({ page, context, preparedRelease }) => {
   await setup(page); await createSession(page, 'Update retained'); const other = await context.newPage(); await other.goto('/');
   await other.getByRole('button', { name: 'Move review', exact: true }).click();
   await other.getByLabel('Moves', { exact: true }).fill('(R U)20'); await other.getByRole('button', { name: 'Validate and review' }).click();
   await expect(other.getByRole('button', { name: 'Play', exact: true })).toBeEnabled({ timeout: 20000 });
   await other.getByRole('button', { name: 'Play', exact: true }).click();
-  execSync('pnpm build', { env: { ...process.env, RELEASE_ID: `browser-update-${Date.now()}` }, stdio: 'pipe' });
+  await cp(preparedRelease, resolve('dist'), { recursive: true });
   await dataPanel(page); await page.getByRole('button', { name: 'Check for update' }).click(); await page.getByRole('button', { name: 'Close dialog' }).click();
   await expect(page.getByRole('button', { name: 'Apply update' })).toBeVisible({ timeout: 30000 });
   page.on('dialog', (dialog) => void dialog.accept());

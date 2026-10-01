@@ -1,7 +1,7 @@
 import { afterEach, expect, it } from 'vitest';
 import { activityStore, enterActivity, lockUpdate, releaseUpdate, type Activity } from '../../src/pwa/activity';
 import { decodeManifest, verifyAsset } from '../../src/pwa/manifest';
-import { TABLE_VERSION } from '../../src/cross/table';
+import { ONE_VERSIONS } from '../../src/cross-one/model';
 import { ENGINE_VERSION, ENGINE_SOURCE, ENGINE_INTEGRITY, INITIALIZATION } from '../../src/cube/version';
 afterEach(() => activityStore.setState({ phase: 'idle', updateToken: null }));
 it.each<Activity>(['preparation', 'inspection', 'arming', 'execution', 'save-pending', 'save-failed', 'editing'])('blocks update activation during %s', (phase) => {
@@ -15,7 +15,7 @@ it('guards a deferred attempt start after update confirmation', async () => {
 });
 it('does not let a second activation replace the first token', () => { expect(lockUpdate('first')).toBe(true); expect(lockUpdate('second')).toBe(false); });
 it('validates the pinned review manifest and required initialization without weakening evidence', () => {
-  const value = { releaseId: 'test', cubeContract: 'cube3-facelets-v1', scope: 'cross-practice', engine: ENGINE_VERSION, engineSource: ENGINE_SOURCE, engineIntegrity: ENGINE_INTEGRITY, dataset: null, tables: TABLE_VERSION, initialization: [...INITIALIZATION], assets: [{ url: '/index.html', byteLength: 1, sha256: 'a'.repeat(64) }] };
+  const value = { releaseId: 'test', cubeContract: 'cube3-facelets-v1', scope: 'cross-cross1-practice', engine: ENGINE_VERSION, engineSource: ENGINE_SOURCE, engineIntegrity: ENGINE_INTEGRITY, dataset: null, tables: ONE_VERSIONS.tables, initialization: [...INITIALIZATION], assets: [{ url: '/index.html', byteLength: 1, sha256: 'a'.repeat(64) }] };
   expect(decodeManifest(value).assets).toHaveLength(1); expect(() => decodeManifest({ ...value, assets: [] })).toThrow(); expect(() => decodeManifest({ ...value, engine: 'not-integrated' })).toThrow();
   expect(() => decodeManifest({ ...value, initialization: [] })).toThrow();
   expect(() => decodeManifest({ ...value, engineSource: 'wrong-revision' })).toThrow();

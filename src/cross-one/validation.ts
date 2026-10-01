@@ -1,6 +1,7 @@
 import { SOLVED, type CubeEngine } from '../cube/engine';
 import { decodeFrame, decodeVersions } from '../cube/validation';
-import type { Challenge, GoalOptions, Move, Slot } from '../store/records';
+import { attemptFields, decodeAttemptTiming } from '../store/attempt-timing';
+import type { AttemptRecord, Challenge, GoalOptions, Move, Slot } from '../store/records';
 import { boundedInput, decodeGoalOptions, integer, object, text } from '../store/validation';
 import { OUTER_MOVES } from '../cross/table';
 import type { GenerateRequest } from '../workers/protocol';
@@ -11,11 +12,11 @@ export type OneOptions = Extract<GoalOptions, { trainer: 'cross1' }>;
 export type OneChallenge = Extract<Challenge, { proof: { kind: 'combined-bound' } }> & { options: OneOptions };
 export const MAX_L = 12;
 export function supportedOptions(options: GoalOptions): asserts options is OneOptions {
-  if (options.trainer !== 'cross1' || !Number.isInteger(options.K) || options.K < 1 || options.K > 8 || !Number.isInteger(options.L) || options.L < 1 || options.L > MAX_L || (options.pair.kind !== 'any' && (options.pair.kind !== 'slot' || !SLOTS.includes(options.pair.slot)))) throw new OneFailure('unsupported-options', 'Prototype supports Cross+1 K1..8 and L1..12 only. No options were changed.');
+  if (options.trainer !== 'cross1' || !Number.isInteger(options.K) || options.K < 1 || options.K > 8 || !Number.isInteger(options.L) || options.L < 1 || options.L > MAX_L || (options.pair.kind !== 'any' && (options.pair.kind !== 'slot' || !SLOTS.includes(options.pair.slot)))) throw new OneFailure('unsupported-options', 'Cross+1 supports K1..8 and L1..12 only. No options were changed.');
 }
 export function checkRequest(request: GenerateRequest): void {
   supportedOptions(request.options);
-  if (JSON.stringify(request.versions) !== JSON.stringify(ONE_VERSIONS)) throw new OneFailure('version-mismatch', 'Cross+1 prototype versions do not match.');
+  if (JSON.stringify(request.versions) !== JSON.stringify(ONE_VERSIONS)) throw new OneFailure('version-mismatch', 'Cross+1 versions do not match.');
 }
 function exact(input: unknown, fields: string[]): Record<string, unknown> {
   const v = object(input);
@@ -33,9 +34,11 @@ function moves(input: unknown): Move[] {
 export function validateOne(input: unknown, engine: CubeEngine, model: OneModel): OneChallenge {
   boundedInput(input);
   const v = exact(input, ['challengeId', 'requestId', 'epoch', 'versions', 'frame', 'scramble', 'start', 'options', 'proof']);
+  exact(v.versions, ['contract', 'engine', 'dataset', 'tables']);
+  exact(v.frame, ['crossColor', 'colorOfFace']);
   const versions = decodeVersions(v.versions), frame = decodeFrame(v.frame, engine), options = decodeGoalOptions(v.options);
   supportedOptions(options);
-  if (JSON.stringify(versions) !== JSON.stringify(ONE_VERSIONS)) throw new Error('Unsupported Cross+1 prototype versions.');
+  if (JSON.stringify(versions) !== JSON.stringify(ONE_VERSIONS)) throw new Error('Unsupported Cross+1 versions.');
   const startValue = exact(v.start, ['format', 'facelets']); engine.fromState(startValue);
   const start = { format: SOLVED.format, facelets: text(startValue.facelets) }, scramble = moves(v.scramble);
   if (engine.centerKey(start) !== engine.centerKey(SOLVED) || engine.apply(SOLVED, scramble).facelets !== start.facelets) throw new Error('Cross+1 scramble/state/frame mismatch. Fully solved base required.');
@@ -49,6 +52,11 @@ export function validateOne(input: unknown, engine: CubeEngine, model: OneModel)
   if (!engine.crossSolved(final) || !permitted.some((slot) => actual.includes(slot)) || !Array.isArray(p.solvedSlots) || JSON.stringify(p.solvedSlots) !== JSON.stringify(actual)) throw new Error('Cross+1 full-state final goal or slots are invalid.');
   return { challengeId: text(v.challengeId), requestId: text(v.requestId), epoch: integer(v.epoch), versions, frame, options, scramble, start,
     proof: { kind: 'combined-bound', cap: options.L, crossDepth, witness, solvedSlots: actual } };
+}
+export function validateOneAttempt(input: unknown, engine: CubeEngine, model: OneModel): AttemptRecord {
+  const v = attemptFields(input);
+  if (v.trainer !== 'cross1') throw new Error('Only Cross+1 attempts are supported.');
+  return { ...decodeAttemptTiming(v), trainer: 'cross1', challenge: validateOne(v.challenge, engine, model) };
 }
 export function verifyWitnessSlot(challenge: OneChallenge, slot: Slot): void {
   if (!challenge.proof.solvedSlots.includes(slot) || (challenge.options.pair.kind === 'slot' && challenge.options.pair.slot !== slot)) throw new Error('Cross+1 witness slot does not match the requested goal.');
