@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { loadEngine, SOLVED, type CubeEngine, type CubeStateV1 } from '../cube/engine';
 import { canonicalText, parseNotation } from '../cube/notation';
-import type { Color, Move, TrainingFrame } from '../store/records';
+import type { Challenge, Color, Move, TrainingFrame } from '../store/records';
 import type { ReviewPlayer } from '../cube/player';
 interface Review { setup: Move[]; moves: Move[]; start: CubeStateV1; frame: TrainingFrame }
-export function MoveReview({ color, reduceMotion }: { color: Color; reduceMotion: boolean }) {
+export function MoveReview({ color, reduceMotion, challenge }: { color: Color; reduceMotion: boolean; challenge?: Challenge }) {
   const [engine, setEngine] = useState<CubeEngine | null>(null);
   const [setup, setSetup] = useState(''), [moves, setMoves] = useState('');
   const [review, setReview] = useState<Review | null>(null), [step, setStep] = useState(0);
@@ -15,9 +15,9 @@ export function MoveReview({ color, reduceMotion }: { color: Color; reduceMotion
   const host = useRef<HTMLDivElement>(null), player = useRef<ReviewPlayer | null>(null), currentStep = useRef(0);
   useEffect(() => {
     let active = true;
-    void loadEngine().then((value) => { if (active) { setEngine(value); setLoading(false); setError(''); } }).catch((reason: unknown) => { if (active) { setError(reason instanceof Error ? reason.message : 'Cube model initialization failed.'); setLoading(false); } });
+    void loadEngine().then((value) => { if (active) { setEngine(value); setLoading(false); setError(''); if (challenge?.proof.kind === 'cross-optimal') { setReview({ setup: challenge.scramble, moves: challenge.proof.solution, start: challenge.start, frame: challenge.frame }); setState(challenge.start); } } }).catch((reason: unknown) => { if (active) { setError(reason instanceof Error ? reason.message : 'Cube model initialization failed.'); setLoading(false); } });
     return () => { active = false; };
-  }, [retry]);
+  }, [retry, challenge]);
   useEffect(() => {
     if (!review || !engine || !show3D || !host.current) return;
     const container = host.current;
@@ -50,8 +50,8 @@ export function MoveReview({ color, reduceMotion }: { color: Color; reduceMotion
     setStep(index); setState(engine.apply(review.start, review.moves.slice(0, index)));
   }
   return <section className="move-review" data-timer-input="isolated" onKeyDown={(event) => event.stopPropagation()} onKeyUp={(event) => event.stopPropagation()} onPointerDown={(event) => event.stopPropagation()} onPointerUp={(event) => event.stopPropagation()}>
-    <p>Review your own setup and moves. This is not a generated challenge or a timed attempt.</p>
-    <form onSubmit={(event) => {
+    {challenge?.proof.kind === 'cross-optimal' ? <><h3>Optimal Cross · {challenge.proof.depth} HTM</h3><p>Maximum requested depth {challenge.options.trainer === 'cross' ? challenge.options.K : ''}. Other pieces are representative unless you began with a fully solved cube. The app did not observe your physical completion.</p></> : <p>Review your own setup and moves. This is not a generated challenge or a timed attempt.</p>}
+    {!challenge && <form onSubmit={(event) => {
       event.preventDefault(); if (!engine) return;
       try {
         const parsedSetup = parseNotation(setup), parsedMoves = parseNotation(moves);
@@ -64,7 +64,7 @@ export function MoveReview({ color, reduceMotion }: { color: Color; reduceMotion
       <label>Moves<textarea aria-label="Moves" value={moves} maxLength={65536} onChange={(event) => setMoves(event.target.value)} placeholder="For example, R U R' U'" /></label>
       <p>Outer, wide, M/E/S and x/y/z moves. Groups and commutators expand before review.</p>
       <button disabled={!engine}>Validate and review</button>
-    </form>
+    </form>}
     {loading && <p role="status">Initializing cube model…</p>}
     {error && <p role="alert" className="error">{error}</p>}
     {!engine && !loading && <button onClick={() => { setLoading(true); setRetry((v) => v + 1); }}>Retry model</button>}

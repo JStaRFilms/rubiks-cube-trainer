@@ -1,26 +1,32 @@
-# Cube Trainer move review
+# Cube Trainer
 
-Settings, named sessions, local backup/restore and offline move review work. Open Move review, enter an optional setup from solved and a move sequence, then choose Validate and review. The tool expands groups and commutators into canonical text. Invalid input leaves the current review unchanged. Play/pause, forward/back, speed, replay, drag orbit and pinch/scroll zoom use the locally bundled player. Reduced motion starts with text-only steps and disables playback. Shared timer, save recovery and configuration-compatible history/statistics components are implemented, but production practice stays gated until B04 supplies verified challenges and a compatible semantic validator. No generated challenges, practice records or case library are supplied.
+Cross practice works with maximum optimal depth 1 through 8 HTM, all six colors, untimed or 15-second inspection, local history/statistics, backup/confirmed restore and optimal notation/3D review. Other trainers remain unavailable. The separate Move review tool still accepts an entered setup and moves.
 
-The workspace uses the 248 px slate/mono desktop dock above 900 CSS px and the graphite/sans mobile layout with an 86 px session shelf at or below 900 px. The archived HTML prototypes are not imported.
+Choose Settings for color, maximum depth and inspection. Start Cross practice creates a real Cross session if needed. Begin each scramble with that Cross solved and aligned to its side centers. A fully solved cube also works. Hold the displayed down/front colors, apply the scramble, then solve only the Cross. If unsure after stopping, restore the Cross before Next. Other pieces in 3D are representative unless your base was fully solved. Stopping is self-reported completion, not physical solve detection.
+
+Maximum depth is a ceiling, not exact depth. Half turns count once. These are legal practice scrambles, not uniform competition scrambles or full-cube optimal solves. The solution is revealed only after the attempt. Preparation includes scrambling and thinking, not pure planning.
+
+Untimed timing uses a 300 ms hold and release. Strict inspection starts with a separate first action, then a later hold/release starts execution. Start at 15 seconds adds +2; at 17 seconds it is DNF. The dedicated timer accepts touch or focused Space. Settings, dialogs and player gestures do not time an attempt. Losing foreground visibility records interruption. Save failures retain the exact unsaved record for retry or clearly labeled emergency export.
 
 ## Local setup
 
-Use Node 22.12 or newer and pnpm 10.33.2, pinned in package.json. Development here uses Node 24.16.0. Keep pnpm-lock.yaml as the only dependency lockfile. Dependency build scripts are allowed only for esbuild and Tailwind's native oxide package.
+Use Node 22.12 or newer and pnpm 10.33.2. Tested Node is 24.16.0. Keep pnpm-lock.yaml as the only dependency lockfile. No new dependencies were added for Cross.
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Vite serves development on localhost. PWA checks use the production build, not the development server.
+For PWA checks:
 
 ```sh
 pnpm build
 pnpm preview --port 4173
 ```
 
-Open `http://127.0.0.1:4173`. In Help, open Local data, choose Set up / retry review, then Reload to finish setup. Readiness checks cached bytes and a local database write/read/delete probe. "Offline review ready" covers the cube model, player chunks and a worker scaffold that explicitly reports unsupported generation. It does not claim a ready trainer or solver. Install through the browser's install menu, or Share and Add to Home Screen on iPhone. A secure origin is required outside localhost. No hosting or deployment is configured.
+Open `http://127.0.0.1:4173`. Help → Local data → Set up / retry review downloads all Cross and player assets, initializes and checks the trusted table, and probes personal storage. Reload to finish setup. The ready label includes both review and Cross. Recheck cached review also rechecks the Cross table; missing/corrupt tables fail readiness. Setup rebuilds only disposable solver data, including while offline when the required code is cached. It never deletes history.
+
+Install through the browser's install menu, or Share → Add to Home Screen on iPhone. HTTPS is required outside localhost. No hosting or deployment is configured.
 
 ## Checks
 
@@ -30,36 +36,35 @@ pnpm typecheck
 pnpm test
 pnpm build
 pnpm test:browser
+node tests/helpers/cross-benchmark.mjs
 ```
 
-Typecheck covers both browser and service-worker TypeScript. Vitest tests persistence, file validation, rollback/migration fixtures and update activity locks. Playwright uses installed Google Chrome through `channel: 'chrome'`; no browser download is required. Install Chrome if it is unavailable.
+Typecheck includes app/tests and service worker. Playwright uses installed Google Chrome, not a downloaded browser. Production preview uses port 4173; the separate contract/timer fixture server uses 4174. Benchmark preview/development checks use 4185/4186. These ports must be free. Browser tests use isolated contexts, never a personal Chrome profile. Update tests rebuild generated dist assets, so rerun build for a new preview release.
 
-The browser script starts production preview on 4173 and a test-only contract server on 4174. Both ports must be free. Each test uses an isolated browser context, not a personal Chrome profile. Update tests rebuild only generated `dist/` assets with a new release ID. The contract fixture bundles the real PWA/activity modules. `/timer.html` on the contract server mounts the real TimerPractice and history components with an explicitly test-only challenge/validator, real monotonic time and acknowledged IndexedDB writes. Neither fixture ships in the production build. Run `pnpm build` again after browser tests if you want a fresh preview release. Traces from failures are in ignored `test-results/`.
+Test-only timing fixtures, client mocks and benchmark code are not app entries or emitted app assets. Cross tests independently rotate stickers in Cartesian coordinates, check every coordinate/transition and the complete distance graph, and validate generated full states/reveals across colors and ceilings. The benchmark records actual worker/table bytes, sampled Chrome heap/backing storage, initialization, warm generation and main-thread event-loop intervals. See [Cross integration](docs/audits/Cross_Trainer_Integration.md) for actual results and limitations.
 
-## Personal data
+## Personal data and recovery
 
-`cube-trainer`, database version 1, has settings, sessions, attempts, personalAlgorithms, practiceSets and runs. `cube-trainer-solver`, version 1, holds only disposable tables. Opening or updating the shell never deletes either database. Zustand holds only transient activity/update locks.
+`cube-trainer`, database version 1, contains settings, sessions, attempts, personalAlgorithms, practiceSets and runs. The separate `cube-trainer-solver` database contains disposable tables. Neither normal setup nor updates delete personal data.
 
-Repository writes resolve only after the IndexedDB transaction commits. Settings/session UI reports saved only after acknowledgement. An attempt write requires a compatible semantic validator and can atomically write its run outcome. B01 deliberately does not bundle that cube validator. Backups with nonempty attempts, algorithms, sets or runs fail with a prerequisite error before replacement. B04 and later case slices must supply actual compatible engine/dataset validation, not trust imported validation flags. The attempt tests use an explicit storage fixture validator; they are not cube correctness evidence.
+The real Cross-only semantic validator exists before App creates its Repository. It checks every saved/read/restored attempt's fields, supported versions, physical frame, legal state, scramble equality, exact optimal distance and outer-turn solution. It does not trust imported proof flags. Nonempty algorithms, sets, runs and other trainer records fail closed because their validators/datasets are unavailable. Empty future groups remain part of backup version 1.
 
-Backup format version 1 is separate from the database version. Export reads all six personal stores in one transaction and excludes revision metadata, disposable tables and application caches. Restore validates the whole file, previews all group counts, offers a current backup and requires explicit replacement confirmation. It rechecks the transaction revision across tabs, then clears and inserts the six stores atomically. A failure aborts replacement. Clear personal data uses the same confirmed path. No automatic merge is supported.
+Repository writes acknowledge transaction completion. +2/DNF/No penalty edits change only explicit penalty metadata, preserving raw durations. Removing a penalty records a manual correction. Rounded inspection times at 15/17-second boundaries do not override the timer's unrounded penalty decision. History supports confirmed deletion and latest undo. Saved result/review uses current repository records after edits/deletion/undo; confirmed restore invalidates the old presentation.
 
-File limits are 20 MiB, 100,000 records per group, 10,000 moves per list, nesting depth 32 and 64 KiB per string. These are bounded validation limits, not a phone-performance guarantee. Current migration evidence covers the only real predecessor, version 0, upgrading to v1, an aborted forward-upgrade fixture retaining old records, and rejection of newer databases without reset. There is no invented historical application schema.
+Normal backups export all six personal groups, excluding revision metadata, caches and unsaved attempts. Restore validates everything before preview, requires explicit replacement confirmation, rechecks the cross-tab revision and replaces all groups atomically. A failed/stale restore leaves old data intact. Emergency unsaved-attempt files are separately labeled and are not complete backups or normal restore inputs.
 
-Browser storage can be evicted or cleared. Keep file backups. Persistent-storage requests display the browser's grant or denial, not a durability promise. Quota/write errors leave the prior saved state intact and visible. If another tab blocks an upgrade, close that Cube Trainer tab and retry. Do not clear storage to bypass a version error.
+Limits remain 20 MiB per backup, 100,000 records per group, 10,000 moves per list, depth 32 and 64 KiB per string. These are validation limits, not mobile performance guarantees. Browser storage can be evicted or cleared. Keep file backups. Persistent-storage requests report actual grant/denial, not promised durability. Close another tab if it blocks an upgrade; never clear data to bypass a version error.
 
 ## Offline releases and updates
 
-Every build emits `release-assets.json` with a release ID, cube contract, pinned cubing engine/version/source/integrity, absent dataset/table versions and each required asset's SHA-256 and byte length. This includes all lazy model/player/worker chunks and local notices/source access. Manifest hashes describe final emitted bytes after Vite import rewriting. The custom service worker retains completed downloads in a release-specific cache, verifies every required asset and the navigation fallback, and allows retry after interruption. Verification is cache-only. Actual connectivity is never proof of readiness. The app checks that its embedded release ID matches the controlling worker.
+Each release manifest pins the cube contract, cubing engine/source/integrity, Cross table/HTM/frame identity and every required asset's SHA-256/length. It includes all emitted lazy model/player/worker dependencies and local notices/source. Setup verifies bytes, actual table readiness and storage without opening a renderer. A never-opened 3D review works after disconnected cold navigation in tested Chrome.
 
-Updates download into a separate cache. There is no automatic `skipWaiting`, client claiming or reload during practice. User-confirmed activation asks every open tab to acquire an idle lock and verifies the same client membership before activation. Preparation, inspection, arming, execution, save-pending, save-failed and editing block activation. Every future timer or editing controller must use `enterActivity`, including deferred starts; it rejects starts while an update token is held. Missing replies or changed tabs cancel activation. Only locked idle clients reload. Old release caches are retained so old tabs do not lose their chunks; cache cleanup is deferred.
+Updates download into a separate cache. User-confirmed activation asks every tab to acquire an idle lock. Preparation, inspection, arming, execution, save-pending, save-failed and dialogs block activation. Deferred presentations cannot adopt an update-locked result. Only locked idle clients reload; old caches are retained for coherent old clients. No automatic activation or database deletion.
 
-Setup verifies cache contents, storage, the real cube model, player module registration and the worker's unsupported-generation boundary. It never opens a renderer to claim readiness. Installed-Chrome tests open a never-used renderer after disconnecting and navigating in a new page. Source archive and notices are linked in Local data and retained offline under `public/licenses`. The selected cubing MPL route covers the emitted review code only. Optional solvers need another rights check.
-
-Run `node tests/helpers/bundle-evidence.mjs` to rebuild, verify final manifest bytes and chunk reachability, compare covered sources with the pinned artifact's source maps, and record raw/gzip/Brotli sizes in `docs/audits/cube-bundle-evidence.json`. Browser timings, sampled memory, source constraints and manual-device gaps are recorded in [Cube tools integration](docs/audits/Cube_Tools_Integration.md).
+Cubing 0.63.8 remains pinned for parser/model/player only, under the selected MPL route with local notices and covered source. Cross coordinates/search are project-owned. No cubing search/scramble or optional GPL solver imports were added. This is downstream LLM-assisted work, not an upstream cubing.js contribution.
 
 ## Verification limits
 
-Checks run on Windows with installed desktop Chrome 154.0.8037.59. Responsive viewports include 320, 390, 768, 900, 901, 1440 and 1920 CSS px. Desktop browser coverage does not prove iOS/Android behavior. Physical iPhone Safari, Android Chrome, Firefox, desktop Safari, screen readers, touch hardware and an actual OS-installed PWA restart remain unrun. Cold offline navigation and a new browser tab in the same isolated context are tested. No deployment or production data was touched.
+Windows desktop Chrome 154.0.8037.59 is tested, including touch emulation, production offline flows and Node/Vite development. Physical iPhone Safari, Android Chrome, Firefox, desktop Safari, assistive technology, real audio audibility and OS-installed PWA lifecycle remain unrun. Desktop heap/event-loop samples are not a phone memory, heat, battery or latency guarantee. No deployment or production data was touched.
 
-The feature/data contract is in [Trainer foundation](docs/features/Trainer_Foundation.md). The exact timer API and checks are in [Timer and statistics integration](docs/audits/Timer_Statistics_Integration.md). Generation, a public practice loop, complete trainer backup semantics, datasets and video recognition remain undelivered. Synthetic reconstruction fixtures prove interchange only. This integration was prepared with LLM assistance; it is not an upstream cubing.js contribution.
+Feature contracts are in [Cross trainer](docs/features/Cross_Trainer.md) and [Trainer foundation](docs/features/Trainer_Foundation.md). Cases, other trainers, video, accounts and sync remain undelivered and separately gated. Q01 is the next acceptance review.

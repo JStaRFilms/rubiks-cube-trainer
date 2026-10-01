@@ -6,6 +6,7 @@ import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
 import { ENGINE_VERSION, ENGINE_SOURCE, ENGINE_INTEGRITY, INITIALIZATION } from './src/cube/version';
 
+import { TABLE_VERSION } from './src/cross/table';
 const releaseId = process.env.RELEASE_ID ?? `review-${Date.now()}`;
 function assetManifest(): Plugin {
   return {
@@ -20,8 +21,8 @@ function assetManifest(): Plugin {
         assets.push({ url: `/${file}`, byteLength: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') });
       }
       this.emitFile({ type: 'asset', fileName: 'release-assets.json', source: JSON.stringify({
-        releaseId, cubeContract: 'cube3-facelets-v1', engine: ENGINE_VERSION, engineSource: ENGINE_SOURCE, engineIntegrity: ENGINE_INTEGRITY, dataset: null, tables: null,
-        scope: 'move-review', initialization: [...INITIALIZATION], assets,
+        releaseId, cubeContract: 'cube3-facelets-v1', engine: ENGINE_VERSION, engineSource: ENGINE_SOURCE, engineIntegrity: ENGINE_INTEGRITY, dataset: null, tables: TABLE_VERSION,
+        scope: 'cross-practice', initialization: [...INITIALIZATION], assets,
       }) });
     } },
   };

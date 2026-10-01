@@ -1,7 +1,8 @@
 import { KPattern, type KPatternData, type KPuzzle } from 'cubing/kpuzzle';
 import { cube3x3x3 } from 'cubing/puzzles';
-import type { Color, Face, Move, Slot, TrainingFrame } from '../store/records';
+import type { Color, Move, Slot, TrainingFrame } from '../store/records';
 import { canonicalText, invertMoves, parseNotation } from './notation';
+import { TRAINING_FRAMES } from './frame';
 import { faces, pieceIndices, OLL_STICKER_INDICES } from './geometry';
 export { ENGINE_VERSION } from './version';
 export interface CubeStateV1 { format: 'cube3-facelets-v1'; facelets: string }
@@ -105,18 +106,7 @@ export class CubeEngine {
   private pieceSolved(state: CubeStateV1, name: string): boolean { return pieceIndices(name).every((i) => state.facelets[i] === SOLVED.facelets[i]); }
   ollMask(state: CubeStateV1): string { const normalized = this.normalize(state); return OLL_STICKER_INDICES.map((i) => normalized.facelets[i] === 'U' ? '1' : '0').join(''); }
   frame(crossColor: Color): TrainingFrame {
-    const physical: Record<Face, Color> = { U: 'yellow', R: 'red', F: 'green', D: 'white', L: 'orange', B: 'blue' };
-    const front: Record<Color, Color> = { white: 'green', yellow: 'green', green: 'yellow', blue: 'yellow', red: 'green', orange: 'green' };
-    for (const rotation of this.orientations) {
-      const labels = faces.map((_, i) => rotation.centers[i]);
-      const colors = labels.map((label) => { const face = faces.find((f) => f === label); if (!face) throw new Error('Invalid orientation.'); return physical[face]; });
-      if (colors[3] === crossColor && colors[2] === front[crossColor]) {
-        const [U, R, F, D, L, B] = colors;
-        if (!U || !R || !F || !D || !L || !B) throw new Error('Invalid frame.');
-        return { crossColor, colorOfFace: { U, R, F, D, L, B } };
-      }
-    }
-    throw new Error('Unsupported physical frame.');
+    return { crossColor, colorOfFace: { ...TRAINING_FRAMES[crossColor] } };
   }
 }
 let enginePromise: Promise<CubeEngine> | undefined;

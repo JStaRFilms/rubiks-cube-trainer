@@ -10,8 +10,10 @@ export interface TimerPracticeProps {
   onSaved?: (attempt: AttemptRecord) => void;
   onNext: () => void;
   onReview?: (attempt: AttemptRecord) => void;
+  savedRecord?: AttemptRecord | null;
+  onPresentationRejected?: () => void;
 }
-export function TimerPractice({ controller, presentation, onSaved, onNext, onReview }: TimerPracticeProps) {
+export function TimerPractice({ controller, presentation, onSaved, onNext, onReview, savedRecord, onPresentationRejected }: TimerPracticeProps) {
   // One mounted component represents one presentation. Later settings cannot rewrite it.
   const [snapshot] = useState(() => ({ ...presentation, challenge: freezeSnapshot(structuredClone(presentation.challenge)),
     settings: freezeSnapshot(structuredClone(presentation.settings)), session: freezeSnapshot(structuredClone(presentation.session)) }));
@@ -26,8 +28,9 @@ export function TimerPractice({ controller, presentation, onSaved, onNext, onRev
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setCommitted(accepted);
     if (accepted && document.visibilityState === 'hidden') controller.interrupt();
+    if (!accepted) onPresentationRejected?.();
     return () => { controller.interrupt('cancelled'); };
-  }, [controller, snapshot]);
+  }, [controller, snapshot, onPresentationRejected]);
   useEffect(() => {
     let frame = 0;
     function draw() { controller.tick(); redraw((n) => n + 1); frame = requestAnimationFrame(draw); }
@@ -59,16 +62,17 @@ export function TimerPractice({ controller, presentation, onSaved, onNext, onRev
     if (!snapshot.settings.audibleWarnings) return;
     try { audio.current ??= new AudioContext(); void audio.current.resume().catch(() => {}); } catch { /* Visual warnings remain available. */ }
   }
-  const elapsed = controller.elapsed(), record = state.record;
+  const elapsed = controller.elapsed(), record = state.phase === 'saved' && savedRecord !== undefined ? savedRecord : state.record;
+  const deleted = state.phase === 'saved' && savedRecord === null;
   const inspecting = state.phase === 'inspection' || (state.phase === 'arming' && snapshot.settings.inspectionMode === '15s');
   const late = elapsed.inspection >= 17000 ? 'DNF on start' : elapsed.inspection >= 15000 ? '+2 on start' : '';
-  const instruction = state.phase === 'preparation' ? snapshot.settings.inspectionMode === '15s' ? 'Scramble, then tap to inspect' : 'Scramble, then hold to arm'
+  const instruction = deleted ? 'This attempt is no longer in saved history' : state.phase === 'preparation' ? snapshot.settings.inspectionMode === '15s' ? 'Scramble, then tap to inspect' : 'Scramble, then hold to arm'
     : state.phase === 'arming' ? state.armed ? 'Armed. Release to start' : 'Keep holding'
     : state.phase === 'inspection' ? 'Hold, then release to start'
     : state.phase === 'execution' ? 'Tap to stop'
     : state.phase === 'save-pending' ? 'Saving attempt…'
     : state.phase === 'save-failed' ? 'Not saved. Keep this tab open.' : state.phase === 'saved' ? 'Saved on this device' : 'Attempt discarded';
-  const display = record ? record.timing.status === 'interrupted' ? 'Interrupted' : record.penalty.kind === 'dnf' ? 'DNF' : formatMs(effectiveExecution(record))
+  const display = deleted ? 'Removed' : record ? record.timing.status === 'interrupted' ? 'Interrupted' : record.penalty.kind === 'dnf' ? 'DNF' : formatMs(effectiveExecution(record))
     : state.phase === 'execution' ? formatMs(elapsed.execution)
     : inspecting ? formatMs(late ? elapsed.inspection - 15000 : 15000 - elapsed.inspection) : '0.000';
   const canNext = state.phase === 'saved' && controller.canPresent;
@@ -77,7 +81,7 @@ export function TimerPractice({ controller, presentation, onSaved, onNext, onRev
   }
   return <>
     <section className="scramble-rail" aria-label="Presented challenge">
-      <span>{snapshot.session.trainer} · Hold {snapshot.challenge.frame.colorOfFace.D} down, {snapshot.challenge.frame.colorOfFace.F} front</span>
+      <span>Solve only Cross · Base: solved, aligned Cross · Hold {snapshot.challenge.frame.colorOfFace.D} down, {snapshot.challenge.frame.colorOfFace.F} front</span>
       <p>{canonicalText(snapshot.challenge.scramble)}</p>
     </section>
     <section className="timer-canvas" aria-label="Practice timer">
@@ -112,7 +116,7 @@ export function TimerPractice({ controller, presentation, onSaved, onNext, onRev
         }}
         onBlur={() => { controller.cancelInput(); release.current.space = false; release.current.pointer = null; }}
         onClick={(event) => { if (event.detail === 0) { unlockSound(); controller.action(); } }}>
-        <span className={`clock ${display.length > 7 ? 'long-clock' : ''}`} aria-hidden="true">{display}</span>
+        <span className={`clock ${deleted || display.length > 7 ? 'long-clock' : ''}`} aria-hidden="true">{display}</span>
         <span aria-hidden="true">{instruction}</span>
       </button>
       <p className="timer-announcement" role="status">{instruction}{inspecting && state.warning ? `. ${state.warning} seconds of inspection` : ''}</p>
@@ -131,6 +135,7 @@ export function TimerPractice({ controller, presentation, onSaved, onNext, onRev
         }}>Discard unsaved attempt…</button></div>}
         {state.phase === 'saved' && <><button disabled={!canNext} onClick={onNext}>Next challenge</button>{onReview && <button onClick={() => onReview(record)}>Review attempt</button>}</>}
       </div>}
+      {deleted && <button disabled={!canNext} onClick={onNext}>Next challenge</button>}
       {state.phase === 'idle' && committed && <button disabled={!controller.canPresent} onClick={onNext}>New challenge</button>}
     </section>
   </>;

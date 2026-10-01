@@ -57,7 +57,7 @@ type RepOutcome =
   | { kind: 'interrupted'; repIndex: number; attemptId: string | null };
 ```
 
-`inspectionMs` is null only in untimed mode or when inspection never began. No absent duration becomes zero. Penalty source is none exactly when kind is none. Inspection penalties are permitted only for a started strict inspection; manual edits change the source to manual. Raw execution survives +2/DNF. Interrupted timing never contributes a successful time even if penalty is edited. SelfReport is optional and explicitly distinct from proof.solvedSlots. No actual physical pair order or solved state is inferred.
+`inspectionMs` is null only in untimed mode or when inspection never began. No absent duration becomes zero. Automatic no-penalty decisions have source none. Manual edits, including removing a penalty, use source manual and preserve raw durations. Inspection penalties are permitted only for a started strict inspection; kind none cannot have source inspection. Raw execution survives +2/DNF. Interrupted timing never contributes a successful time even if penalty is edited. SelfReport is optional and explicitly distinct from proof.solvedSlots. No actual physical pair order or solved state is inferred.
 
 When stopping a rep, write attempt and corresponding run outcome/cursor in one transaction. A transaction abort cannot leave a run pointing at a nonexistent attempt. A save failure keeps the unsaved attempt in memory, blocks automatic advance, offers retry/export of that unsaved record, and never displays "saved". An unsaved record is explicitly tagged in an emergency export and must pass normal validation before later restore. Do not invent durable history when IndexedDB is unavailable.
 
@@ -122,6 +122,16 @@ Readiness requires all of the following for the active release:
 Evicted assets or tables downgrade readiness and identify missing work. Offline missing work cannot be "repaired" through a hidden remote dependency. Reconstruction model readiness is separate only after that feature is approved, never part of current trainer setup.
 
 Download an update into a separate release cache. A waiting service worker cannot automatically skipWaiting/reload. Prompt only; active preparation/inspection/arming/execution and save-pending block activation. Preserve saved history and persist run interruption/recovery state before a user-confirmed idle update. Other open tabs must also acknowledge idle/close; if they cannot, leave the update waiting. New worker, table and dataset versions initialize together under the new release. Old clients retain their coherent old cache until closed, not a mixture of chunks. Cleanup old caches only when no controlled client needs them, and never delete personal databases. B01 tests the chosen service-worker lifecycle, including multi-tab blocking, rather than assuming plugin defaults provide it.
+
+## B04 Cross integration
+
+Cross practice is now connected through `CrossPractice`, a single surviving TimerController, the project-owned Cross worker and its Cross-only SemanticValidator facade. The facade exists before App creates its Repository. Table initialization, generation and semantic checks run in the worker. The frame-v1 color maps are shared static proper rotations, independently checked by the existing cube fixtures.
+
+The release scope is `cross-practice`; its manifest pins `cross-four-labeled-edges-v1-HTM18-frame-v1` and requires actual table readiness as well as all review assets. Missing/corrupt disposable data fails a cache-only check and is rebuilt by setup without touching history. First setup builds the table before requesting the control reload.
+
+Start/Next requires a solved, aligned Cross base, not a fully solved cube. Scrambles map all such bases to the same four-edge target. Other pieces in review are representative unless the physical base was fully solved. Timer stops remain self-reported. Cross results reconcile with current repository records after history changes; restore invalidates the previous presentation. History remains mounted but hidden across dialog closure so latest Undo is not lost merely by closing the drawer.
+
+See `Cross_Trainer.md` for the flow and `../audits/Cross_Trainer_Integration.md` for independent proof, commands, benchmarks and device gaps. The B01/B02/B03 delivered-boundary descriptions below remain historical.
 
 ## B03 implementation contract
 

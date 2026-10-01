@@ -4,7 +4,7 @@
 
 ### Workflow to follow
 
-vibe-build. Role: reviewer. Suggested route at session creation: `openai-codex/gpt-6-sol`, medium thinking. Recheck the active registry and routing policy before launch. This packet is not a launch authorization.
+vibe-build. Role: reviewer. Current dispatch uses `openai-codex/gpt-6.1-sol`, high thinking, from the active registry and routing policy. The owner authorized this first usable-increment review.
 
 ### Prime agent context
 
@@ -14,6 +14,9 @@ vibe-build. Role: reviewer. Suggested route at session creation: `openai-codex/g
 - `docs/tasks/orchestrator-sessions/orch-20260930-021158/master_plan.md`
 - `docs/features/Cross_Trainer.md`
 - `docs/audits/Cube_Tools_Integration.md`
+- `docs/audits/Timer_Statistics_Integration.md`
+- `docs/audits/Cross_Trainer_Integration.md`
+- `docs/audits/cross-runtime-evidence.json`
 - `docs/design/Training_Experience.md`
 - `package.json`
 
@@ -66,7 +69,9 @@ A completed dependency is not enough if its review verdict has unresolved confir
 
 ## Verification
 
-Check existing targeted fixtures and a complete offline attempt. Do not invent iOS/Android test coverage.
+Check existing targeted fixtures and a complete offline attempt. Parent passed lint, typecheck, all 103 unit tests and build. Its first browser run passed 30 of 31; the Cross update case exhausted 45 seconds after a 35.774-second synchronous release build. The original coder moved real alternate-release compilation into a worker fixture, without changing the test limit or assertions, and reported a completed 31-test full-suite pass. Parent inspected that repair and repeated lint, typecheck, the real Cross update/history-retention case and whitespace checks; all passed. Dist contains the last test release, so build before browser inspection. Treat reported commands as reported, not your own results. Inspect source/proofs as well as tests. Do not invent iOS/Android coverage.
+
+The implementation agent's final response was unavailable. Parent recovered its audit/source and ran actual checks; no independent B04 PASS has been claimed. Return a clear PASS, FAIL or BLOCKED in your response with exact source locations, actual commands, reproducible confirmed blockers and remaining manual-check limits. Keep the main checkout read-only. Tool-generated test/build files under ignored dist/test-results are permitted; do not write audits, task state or source.
 
 ## Review checkpoint and handoff
 

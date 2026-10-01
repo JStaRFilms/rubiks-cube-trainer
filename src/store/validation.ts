@@ -125,7 +125,7 @@ export function validateAttemptDurations(input: unknown): void {
   if (timing.inspectionMs !== null) integer(timing.inspectionMs);
   if (timing.status === 'interrupted') { choice(timing.phase, ['preparation', 'inspection', 'arming', 'execution']); choice(timing.reason, ['background', 'restart', 'cancelled']); }
   const kind = choice(penalty.kind, ['none', 'plus2', 'dnf']), source = choice(penalty.source, ['inspection', 'manual', 'none']);
-  if ((kind === 'none') !== (source === 'none') || (source === 'inspection' && timing.inspectionMs === null)) throw new DataError('Penalty and inspection metadata do not match.');
+  if ((kind !== 'none' && source === 'none') || (kind === 'none' && source === 'inspection') || (source === 'inspection' && timing.inspectionMs === null)) throw new DataError('Penalty and inspection metadata do not match.');
 }
 export async function parseBackup(textInput: string, validator?: SemanticValidator): Promise<TrainerBackupV1> {
   if (new TextEncoder().encode(textInput).byteLength > MAX_FILE_BYTES) throw new DataError('Backup exceeds 20 MiB. Choose a smaller backup.');

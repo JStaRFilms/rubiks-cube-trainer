@@ -114,7 +114,7 @@ export class Repository {
     if (revision !== expectedRevision) throw new DataError('Local data changed. Refresh history before editing.');
     const before = backup.attempts.find((a) => a.id === id);
     if (!before) throw new DataError('Attempt no longer exists. Refresh history.');
-    const after: AttemptRecord | null = kind === null ? null : { ...before, penalty: { kind, source: kind === 'none' ? 'none' : 'manual' } };
+    const after: AttemptRecord | null = kind === null ? null : { ...before, penalty: { kind, source: 'manual' } };
     const beforeRun = before.runId ? backup.runs.find((r) => r.id === before.runId) ?? null : null;
     if (before.runId && !beforeRun) throw new DataError('Attempt run is missing. No history was changed.');
     const afterRun: RunRecord | null = beforeRun && kind === null ? { ...beforeRun, status: 'interrupted',

@@ -38,7 +38,7 @@ describe('acknowledged attempt edits/delete/undo', () => {
     const r = repo(); await r.saveSession(session);
     const interrupted: AttemptRecord = { ...structuredClone(attempt), timing: { status: 'interrupted', executionMs: 1234, inspectionMs: null, phase: 'execution', reason: 'background' }, penalty: { kind: 'dnf', source: 'manual' } };
     await r.saveAttempt(interrupted); await r.editAttempt(attempt.id, 'none', (await r.read()).revision);
-    expect((await r.read()).backup.attempts[0]).toEqual({ ...interrupted, penalty: { kind: 'none', source: 'none' } });
+    expect((await r.read()).backup.attempts[0]).toEqual({ ...interrupted, penalty: { kind: 'none', source: 'manual' } });
     await expect(r.saveAttempt({ ...interrupted, timing: { status: 'completed', executionMs: 1234, inspectionMs: null } })).rejects.toThrow('different record');
   });
   it('does not acknowledge quota-failed mutations and leaves the previous record intact', async () => {

@@ -21,15 +21,16 @@ export function AttemptStatistics({ attempts }: { attempts: readonly AttemptReco
     </>}
   </section>;
 }
-export function AttemptHistory({ repository, sessionId, onChanged, onBusyChange }: { repository: Repository; sessionId: string | undefined; onChanged?: () => void; onBusyChange?: (busy: boolean) => void }) {
+export function AttemptHistory({ repository, sessionId, onChanged, onBusyChange, visible = true }: { repository: Repository; sessionId: string | undefined; onChanged?: () => void; onBusyChange?: (busy: boolean) => void; visible?: boolean }) {
   const [records, setRecords] = useState<AttemptRecord[]>([]), [revision, setRevision] = useState(0);
   const [filter, setFilter] = useState('all'), [error, setError] = useState(''), [busy, setBusy] = useState(false);
   const [undo, setUndo] = useState<AttemptUndo | null>(null);
   useEffect(() => {
+    if (!visible) return;
     let current = true;
     void repository.read().then((data) => { if (current) { setRecords(data.backup.attempts.filter((a) => a.sessionId === sessionId)); setRevision(data.revision); } }).catch((reason: unknown) => { if (current) setError(storageMessage(reason)); });
     return () => { current = false; };
-  }, [repository, sessionId]);
+  }, [repository, sessionId, visible]);
   async function refresh() {
     const data = await repository.read(); setRecords(data.backup.attempts.filter((a) => a.sessionId === sessionId)); setRevision(data.revision);
   }
@@ -52,7 +53,7 @@ export function AttemptHistory({ repository, sessionId, onChanged, onBusyChange 
     {!selected.length && <p>No saved attempts for these filters.</p>}
     <ol className="attempt-list">{chronological(selected).reverse().map((attempt) => <li key={attempt.id}>
       <details><summary>{attempt.timing.status === 'interrupted' ? 'Interrupted' : attempt.penalty.kind === 'dnf' ? 'DNF' : formatMs(effectiveExecution(attempt))} · {attempt.penalty.kind === 'plus2' ? '+2 · ' : ''}{new Date(attempt.endedAt).toLocaleString()}</summary>
-        <p>{configurationLabel(attempt)}</p><p>Raw execution: {formatMs(attempt.timing.executionMs)}</p><p>Preparation, includes scrambling: {formatMs(attempt.preparationMs)}</p><p>Inspection: {attempt.timing.inspectionMs === null ? attempt.settingsSnapshot.inspectionMode === 'untimed' ? 'Not used' : 'Not started' : formatMs(attempt.timing.inspectionMs)}</p>
+        <p>{configurationLabel(attempt)}</p><p>Penalty: {attempt.penalty.kind === 'none' ? 'None' : attempt.penalty.kind === 'plus2' ? '+2' : 'DNF'}{attempt.penalty.source === 'manual' ? ' · manual correction' : attempt.penalty.source === 'inspection' ? ' · inspection' : ''}</p><p>Raw execution: {formatMs(attempt.timing.executionMs)}</p><p>Preparation, includes scrambling: {formatMs(attempt.preparationMs)}</p><p>Inspection: {attempt.timing.inspectionMs === null ? attempt.settingsSnapshot.inspectionMode === 'untimed' ? 'Not used' : 'Not started' : formatMs(attempt.timing.inspectionMs)}</p>
         {attempt.timing.status === 'interrupted' && <p>Interrupted in {attempt.timing.phase}. Penalty edits cannot make this successful.</p>}
         {(['none', 'plus2', 'dnf'] as const).map((kind) => <button key={kind} disabled={busy || attempt.penalty.kind === kind} onClick={() => void change(async () => { const token = await repository.editAttempt(attempt.id, kind, revision); setUndo(token); })}>{kind === 'none' ? 'No penalty' : kind === 'plus2' ? 'Set +2' : 'Set DNF'}</button>)}
         <button className="danger" disabled={busy} onClick={() => {
