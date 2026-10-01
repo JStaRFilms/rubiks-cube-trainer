@@ -33,9 +33,22 @@ test('real Space hold, repeat/early release, native input isolation, guard and a
   await page.getByRole('button', { name: 'Undo latest history change' }).click(); await expect(page.locator('summary')).toHaveCount(1);
   await page.getByRole('button', { name: 'Preparation statistics' }).click(); await expect(page.getByText('Preparation includes scrambling and thinking, not pure planning.', { exact: false })).toBeVisible();
 });
+test('Space works without clicking the timer and native focus cancels a pending hold', async ({ page }) => {
+  await open(page); await expect(timer(page)).not.toBeFocused();
+  await page.keyboard.down('Space'); await page.getByRole('textbox', { name: 'Isolated input' }).focus(); await page.waitForTimeout(330); await page.keyboard.up('Space');
+  await expect(timer(page)).toContainText('Scramble, then hold');
+  await page.getByRole('textbox', { name: 'Isolated input' }).fill('text'); await page.keyboard.press('Space');
+  await expect(page.getByRole('textbox', { name: 'Isolated input' })).toHaveValue('text ');
+  await page.getByRole('button', { name: 'Toggle history' }).focus(); await page.keyboard.press('Space');
+  await expect(timer(page)).toContainText('Scramble, then hold');
+  await page.keyboard.press('Tab'); await expect(timer(page)).toBeFocused(); await expect(timer(page)).toHaveCSS('outline-style', 'solid');
+  await page.getByText('TEST ONLY timer fixture', { exact: true }).click();
+  await page.keyboard.down('Space'); await page.waitForTimeout(330); await page.keyboard.up('Space');
+  await expect(timer(page)).toContainText('Tap to stop'); await stop(page);
+});
 test('strict first Space gesture only inspects, later hold/release executes; Enter cannot bypass arming', async ({ page }) => {
-  await open(page, '15s'); await timer(page).focus(); await page.keyboard.down('Space'); await page.waitForTimeout(350);
-  await expect(timer(page)).toContainText('Hold, then release'); await page.keyboard.up('Space'); await page.keyboard.press('Enter');
+  await open(page, '15s'); await page.keyboard.down('Space'); await page.waitForTimeout(350);
+  await expect(timer(page)).toContainText('Hold, then release'); await page.keyboard.up('Space'); await timer(page).focus(); await page.keyboard.press('Enter');
   expect(await page.evaluate(() => window.timerHarness.controller.getSnapshot().phase)).toBe('inspection');
   await start(page); await stop(page); const record = await page.evaluate(async () => (await window.timerHarness.repository.read()).backup.attempts[0]);
   expect(record?.timing.inspectionMs).toBeGreaterThanOrEqual(650); expect(record?.settingsSnapshot.inspectionMode).toBe('15s'); expect(record?.penalty.kind).toBe('none');
@@ -47,7 +60,11 @@ test('pointer hold cancels on exit/capture loss/cancel, ignores extra pointer, a
   await timer(page).dispatchEvent('pointerdown', { pointerId: 18, pointerType: 'touch', isPrimary: false, button: 0 });
   await timer(page).dispatchEvent('pointerup', { pointerId: 18, pointerType: 'touch', isPrimary: false });
   await timer(page).dispatchEvent('pointercancel', { pointerId: 1 }); await page.mouse.up(); await expect(timer(page)).toContainText('Scramble, then hold');
-  await page.mouse.move(bounds.x + bounds.width / 2, bounds.y + 50); await page.mouse.down(); await page.waitForTimeout(330); await page.mouse.move(0, 0); await page.mouse.up(); await expect(timer(page)).toContainText('Scramble, then hold');
+  await page.mouse.move(bounds.x + bounds.width / 2, bounds.y + 50); await page.mouse.down(); await page.waitForTimeout(330);
+  await expect(timer(page)).toHaveCSS('border-top-color', 'rgba(0, 0, 0, 0)'); await expect(timer(page)).toHaveCSS('outline-style', 'none');
+  await page.mouse.move(bounds.x + bounds.width / 2 + 30, bounds.y + 50);
+  expect(await page.evaluate(() => getSelection()?.toString())).toBe('');
+  await page.mouse.move(0, 0); await page.mouse.up(); await expect(timer(page)).toContainText('Scramble, then hold');
   await page.mouse.move(bounds.x + bounds.width / 2, bounds.y + 50); await page.mouse.down(); await page.waitForTimeout(330); await timer(page).dispatchEvent('lostpointercapture', { pointerId: 1 }); await page.mouse.up(); await expect(timer(page)).toContainText('Scramble, then hold');
   // CDP dispatches real touch events with browser pointer capture, not JS-only pointerup.
   const cdp = await context.newCDPSession(page), point = { x: bounds.x + bounds.width / 2, y: bounds.y + 50 };

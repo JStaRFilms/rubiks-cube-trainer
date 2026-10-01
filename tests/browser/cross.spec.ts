@@ -10,7 +10,7 @@ async function setup(page: Page) {
   await expect(page.getByRole('button', { name: /Offline review ready.*Cross ready/ })).toBeVisible({ timeout: 30000 });
 }
 async function saveWithSpace(page: Page) {
-  const timer = page.getByRole('button', { name: /Untimed timer/ }); await timer.focus(); await page.keyboard.down('Space'); await page.waitForTimeout(330); await page.keyboard.up('Space');
+  const timer = page.getByRole('button', { name: /Untimed timer/ }); await expect(timer).toBeEnabled(); await page.keyboard.down('Space'); await page.waitForTimeout(330); await page.keyboard.up('Space');
   await expect(page.getByRole('status').filter({ hasText: 'Tap to stop' })).toBeVisible(); await page.keyboard.press('Space');
   await expect(page.getByRole('status').filter({ hasText: 'Saved on this device' })).toBeVisible();
 }

@@ -6,7 +6,7 @@ Choose Settings for color, maximum depth and inspection. Start Cross practice cr
 
 Maximum depth is a ceiling, not exact depth. Half turns count once. These are legal practice scrambles, not uniform competition scrambles or full-cube optimal solves. The solution is revealed only after the attempt. Preparation includes scrambling and thinking, not pure planning.
 
-Untimed timing uses a 300 ms hold and release. Strict inspection starts with a separate first action, then a later hold/release starts execution. Start at 15 seconds adds +2; at 17 seconds it is DNF. The dedicated timer accepts touch or focused Space. Settings, dialogs and player gestures do not time an attempt. Losing foreground visibility records interruption. Save failures retain the exact unsaved record for retry or clearly labeled emergency export.
+Untimed timing uses a 300 ms hold and release. Strict inspection starts with a separate first action, then a later hold/release starts execution. Start at 15 seconds adds +2; at 17 seconds it is DNF. The dedicated timer accepts touch. Space works from the active practice screen without first clicking the timer; focused inputs and other controls retain their own keys. Pointer arming changes the clock color, not a large selection-like border. Tab focus remains visible. Settings, dialogs and player gestures do not time an attempt. Losing foreground visibility records interruption. Save failures retain the exact unsaved record for retry or clearly labeled emergency export.
 
 ## Local setup
 
@@ -67,4 +67,4 @@ Cubing 0.63.8 remains pinned for parser/model/player only, under the selected MP
 
 Windows desktop Chrome 154.0.8037.59 is tested, including touch emulation, production offline flows and Node/Vite development. Physical iPhone Safari, Android Chrome, Firefox, desktop Safari, assistive technology, real audio audibility and OS-installed PWA lifecycle remain unrun. Desktop heap/event-loop samples are not a phone memory, heat, battery or latency guarantee. No deployment or production data was touched.
 
-Feature contracts are in [Cross trainer](docs/features/Cross_Trainer.md) and [Trainer foundation](docs/features/Trainer_Foundation.md). Cases, other trainers, video, accounts and sync remain undelivered and separately gated. Q01 is the next acceptance review.
+Feature contracts are in [Cross trainer](docs/features/Cross_Trainer.md) and [Trainer foundation](docs/features/Trainer_Foundation.md). Cases, other trainers, video, accounts and sync remain undelivered and separately gated. Q01 accepted the first Cross increment. Cross+1 generation-bound proof is the next authorized step.

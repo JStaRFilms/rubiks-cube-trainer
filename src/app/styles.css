@@ -84,10 +84,11 @@ input[type=file] { width: 100%; }
 .notation, .wire-state { font-family: Consolas, Menlo, monospace; overflow-wrap: anywhere; }
 .wire-state { display: block; font-size: 13px; margin: 8px 0; }
 .dialog-body a { color: var(--action); text-decoration: underline; }
-.timer-input { display: block; width: 100%; border: 2px solid transparent; background: transparent; padding: 8px 0; touch-action: none; user-select: none; }
+.timer-input { display: block; width: 100%; border: 2px solid transparent; background: transparent; padding: 8px 0; touch-action: none; -webkit-user-select: none; user-select: none; }
 .timer-input:hover { background: transparent; }
+.timer-input[data-pointer-focus] { outline: none; }
 .timer-input:disabled { opacity: 1; }
-.timer-input.armed { border-color: var(--action); }
+.timer-input.armed .clock { color: var(--action); }
 .timer-input .clock { display: block; }
 .clock.long-clock { font-size: clamp(62px, 11vw, 160px); }
 .timer-announcement { margin: 4px 0; }

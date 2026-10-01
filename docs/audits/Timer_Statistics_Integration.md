@@ -1,5 +1,7 @@
 # Timer and statistics integration
 
+This is the historical B03 integration record. B04 and Q01 subsequently delivered and accepted the Cross loop. The post-Q01 input repair is recorded at the end.
+
 B03 implementation for `orch-20260930-021158`, starting code baseline `dd59b22`. PLAN sections 3.2, 3.3, 3.4 and 11 control behavior. The feature blueprint was updated before component/data-flow changes. No package/lockfile changes, generator, manual-timer record type, fake production attempts, deployment, Git mutation or task-board change was made. The parent's existing task relocation and summary/master-plan changes were left alone.
 
 ## Delivered boundary
@@ -142,3 +144,15 @@ B04 is the next implementation dependency. It must supply real Cross challenges,
 Emergency JSON export is delivered, but no dedicated emergency-import UI is delivered. A later recovery path must preserve its unsaved label, validate normally and resolve the session reference rather than pretend the file is a complete backup.
 
 Physical iPhone Safari, Android Chrome, Firefox, desktop Safari, assistive technology, actual audible output, OS-installed PWA restart, abrupt OS kill and real storage pressure remain unrun. Chrome emulation checks event ordering, not device ergonomics or audio audibility. No timer benchmark, mobile latency budget, peak memory or battery claim is made. The existing cold-offline entered-move/player and update checks were rerun; their historical evidence files were not rewritten as new B03 benchmark claims.
+
+## Post-Q01 input repair
+
+The owner reported that Space required clicking the timer and supplied an inspection screenshot showing a large blue rectangle. Keyboard handlers were attached only to the timer. The rectangle included the armed border; prevented pointer defaults also made programmatic pointer focus match Chrome's `:focus-visible`.
+
+The mounted practice component now owns background Space only during an active challenge. Native controls, editable content, dialogs, players, hidden tabs and update locks retain their isolation. Key repeats and competing pointer/Space owners remain guarded. Moving a held Space to a native control or losing window focus cancels the hold. Execution timing, strict first inspection action, unrounded penalties and persistence are unchanged.
+
+Pointer focus is marked explicitly because Chrome may retain `:focus-visible` after prevented pointer defaults. Pointer interaction hides that outline; keyboard input or blur clears the marker. Tab navigation still shows focus. Arming changes clock color with the existing armed text instead of a rectangle. Standard and WebKit-prefixed selection prevention stays local to the timer.
+
+The production offline Cross helper no longer focuses the timer before Space. A new browser regression covers background Space, focus-loss cancellation, native input/button ownership and visible Tab focus. Existing strict-mode coverage begins inspection without timer focus and still tests Enter on the focused timer. Pointer coverage checks no border/outline or selected text while dragging, retaining cancellation and real touch-start/stop assertions.
+
+Initial focused run passed 13 of 14; the new outline assertion caught the programmatic-pointer-focus issue. After the explicit pointer marker, parent `pnpm lint`, `pnpm typecheck`, `pnpm build`, all 31 focused timer/statistics/history unit tests and the complete 32-test Chrome browser suite passed. Parent rebuilt after update tests. No assertion or timeout was weakened. Parent reviewed the narrow diff; no dependency, schema, solver, timing-controller or unrelated layout change was made. Physical-device and assistive-technology gaps remain.

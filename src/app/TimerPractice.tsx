@@ -1,4 +1,5 @@
-import { useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react';
+import { activityStore } from '../pwa/activity';
 import { canonicalText } from '../cube/notation';
 import { effectiveExecution, formatMs } from '../statistics/attempts';
 import { emergencyExport, freezeSnapshot, type Presentation, type TimerController } from '../timer/controller';
@@ -22,6 +23,43 @@ export function TimerPractice({ controller, presentation, onSaved, onNext, onRev
   const timer = useRef<HTMLButtonElement>(null), result = useRef<HTMLHeadingElement>(null);
   const audio = useRef<AudioContext | null>(null), notified = useRef<string | null>(null);
   const release = useRef<{ pointer: number | null; space: boolean }>({ pointer: null, space: false });
+  const unlockSound = useCallback(() => {
+    if (!snapshot.settings.audibleWarnings) return;
+    try { audio.current ??= new AudioContext(); void audio.current.resume().catch(() => {}); } catch { /* Visual warnings remain available. */ }
+  }, [snapshot.settings.audibleWarnings]);
+  useEffect(() => {
+    function ownsSpace(target: EventTarget | null) {
+      const activity = activityStore.getState();
+      if (document.hidden || document.querySelector('dialog[open]') || activity.phase === 'editing' || activity.updateToken) return false;
+      return !(target instanceof Element) || timer.current?.contains(target) || !target.closest('input, textarea, select, button, a, summary, [contenteditable]:not([contenteditable="false"]), [role="button"], [role="textbox"], twisty-player');
+    }
+    function down(event: KeyboardEvent) {
+      if (timer.current && event.target instanceof Node && timer.current.contains(event.target)) delete timer.current.dataset.pointerFocus;
+      if (event.code !== 'Space' || event.defaultPrevented || event.isComposing || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || !controller.active || !ownsSpace(event.target)) return;
+      event.preventDefault();
+      if (event.repeat || release.current.space || release.current.pointer !== null) return;
+      unlockSound(); if (controller.press('space')) release.current.space = true;
+    }
+    function up(event: KeyboardEvent) {
+      if (event.code !== 'Space' || !release.current.space) return;
+      event.preventDefault(); release.current.space = false;
+      if (ownsSpace(event.target)) controller.release('space'); else controller.cancelInput('space');
+    }
+    function cancelSpace() {
+      if (!release.current.space) return;
+      release.current.space = false; controller.cancelInput('space');
+    }
+    function focusChanged(event: FocusEvent) {
+      if (!ownsSpace(event.target)) cancelSpace();
+    }
+    document.addEventListener('keydown', down); document.addEventListener('keyup', up);
+    document.addEventListener('focusin', focusChanged); window.addEventListener('blur', cancelSpace);
+    return () => {
+      document.removeEventListener('keydown', down); document.removeEventListener('keyup', up);
+      document.removeEventListener('focusin', focusChanged); window.removeEventListener('blur', cancelSpace);
+      cancelSpace();
+    };
+  }, [controller, unlockSound]);
   useLayoutEffect(() => {
     const accepted = controller.present(snapshot);
     // Presentation must follow the DOM commit, not render or worker completion.
@@ -58,10 +96,6 @@ export function TimerPractice({ controller, presentation, onSaved, onNext, onRev
     oscillator.onended = () => { oscillator.disconnect(); gain.disconnect(); };
   }, [state.warning, snapshot.settings.audibleWarnings]);
   useEffect(() => () => { void audio.current?.close(); }, []);
-  function unlockSound() {
-    if (!snapshot.settings.audibleWarnings) return;
-    try { audio.current ??= new AudioContext(); void audio.current.resume().catch(() => {}); } catch { /* Visual warnings remain available. */ }
-  }
   const elapsed = controller.elapsed(), record = state.phase === 'saved' && savedRecord !== undefined ? savedRecord : state.record;
   const deleted = state.phase === 'saved' && savedRecord === null;
   const inspecting = state.phase === 'inspection' || (state.phase === 'arming' && snapshot.settings.inspectionMode === '15s');
@@ -90,7 +124,8 @@ export function TimerPractice({ controller, presentation, onSaved, onNext, onRev
         aria-label={`${snapshot.settings.inspectionMode === '15s' ? '15 second inspection' : 'Untimed'} timer. ${instruction}`}
         onPointerDown={(event) => {
           if (!event.isPrimary || event.button !== 0 || release.current.pointer !== null || release.current.space) return;
-          event.preventDefault(); event.currentTarget.focus(); unlockSound();
+          // Prevented pointer defaults can leave programmatic focus matching :focus-visible.
+          event.preventDefault(); event.currentTarget.dataset.pointerFocus = 'true'; event.currentTarget.focus(); unlockSound();
           if (controller.press(`pointer:${event.pointerId}`)) { release.current.pointer = event.pointerId; event.currentTarget.setPointerCapture(event.pointerId); }
         }}
         onPointerUp={(event) => {
@@ -104,17 +139,7 @@ export function TimerPractice({ controller, presentation, onSaved, onNext, onRev
           const bounds = event.currentTarget.getBoundingClientRect();
           if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) cancelPointer(event.pointerId);
         }}
-        onKeyDown={(event) => {
-          if (event.code !== 'Space' || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
-          event.preventDefault(); if (event.repeat || release.current.space || release.current.pointer !== null) return;
-          unlockSound(); if (controller.press('space')) release.current.space = true;
-        }}
-        onKeyUp={(event) => {
-          if (event.code !== 'Space') return;
-          event.preventDefault(); if (!release.current.space) return;
-          release.current.space = false; controller.release('space');
-        }}
-        onBlur={() => { controller.cancelInput(); release.current.space = false; release.current.pointer = null; }}
+        onBlur={(event) => { delete event.currentTarget.dataset.pointerFocus; controller.cancelInput(); release.current.space = false; release.current.pointer = null; }}
         onClick={(event) => { if (event.detail === 0) { unlockSound(); controller.action(); } }}>
         <span className={`clock ${deleted || display.length > 7 ? 'long-clock' : ''}`} aria-hidden="true">{display}</span>
         <span aria-hidden="true">{instruction}</span>
