@@ -7,7 +7,11 @@ import { WorkBudget } from '../../src/cross-one/search';
 import { validateOneAttempt } from '../../src/cross-one/validation';
 import { crossValidator } from '../../src/cross/validation';
 import { Repository } from '../../src/store/repository';
-import { decodeBackup } from '../../src/store/validation';
+import { decodeBackup, object } from '../../src/store/validation';
+import { generateCross } from '../../src/cross/generate';
+import { CROSS_VERSIONS } from '../../src/cross/table';
+import { createF2L } from '../../src/f2l/model';
+import { validateF2LAttempt, validateF2LTraining } from '../../src/f2l/validation';
 import { freezeSnapshot, TimerController } from '../../src/timer/controller';
 import { attemptStatistics, comparisonKey } from '../../src/statistics/attempts';
 import type { AttemptRecord, SemanticValidator, TrainerBackupV1 } from '../../src/store/records';
@@ -72,6 +76,27 @@ it.each([14999.6, 15000, 16999.6, 17000])('times a real immutable Cross+1 at the
   expect(stopped.penalty.kind).toBe(boundary >= 17000 ? 'dnf' : boundary >= 15000 ? 'plus2' : 'none'); expect(stopped.timing.inspectionMs).toBe(Math.round(boundary));
   expect(Object.isFrozen(stopped.challenge.options)).toBe(true); expect(controller.canPresent).toBe(false);
   await validator.validateAttempt(stopped);
+});
+it('keeps old valid Cross/Cross+1 backups compatible with real F2L integration and closes future attempts', async () => {
+  const engine = model.engine, cross = crossValidator(engine, model.cross);
+  const integrated: SemanticValidator = {
+    validateAttempt: async (value) => {
+      const trainer = object(value).trainer;
+      if (trainer === 'cross') return cross.validateAttempt(value);
+      if (trainer === 'cross1') return validateOneAttempt(value, engine, model);
+      return validateF2LAttempt(value, engine);
+    }, validateTrainingData: async (data) => validateF2LTraining(engine, data),
+  };
+  expect((await decodeBackup(backup, integrated)).attempts).toEqual([record]);
+  const crossChallenge = await generateCross({ kind: 'generate', protocol: 1, requestId: 'old-cross', epoch: 1, workerInstance: 'actual', versions: CROSS_VERSIONS, frame: engine.frame('white'), options: { trainer: 'cross', K: 3 }, seed: 'old-backup', budget: { timeMs: 5000, maxNodes: 10000 } }, engine, model.cross, () => {});
+  const oldCross: AttemptRecord = { ...record, id: 'old-cross', sessionId: 'cross-session', trainer: 'cross', challenge: crossChallenge };
+  const f2l: AttemptRecord = { ...record, id: 'new-f2l', sessionId: 'f2l-session', trainer: 'f2l', challenge: createF2L(engine, { requestId: 'new-f2l', epoch: 1, caseId: 'f2l:lieberkind-v1:001', slot: 'FL', hint: true, mode: 'execution', preAuf: 1, frame: engine.frame('green') }) };
+  const mixed = { ...backup, sessions: [...backup.sessions, { id: 'cross-session', trainer: 'cross' as const, label: 'Old Cross', createdAt: record.presentedAt }, { id: 'f2l-session', trainer: 'f2l' as const, label: 'New F2L', createdAt: record.presentedAt }], attempts: [oldCross, record, f2l] };
+  const repository = new Repository('backward-f2l-real', undefined, integrated);
+  await repository.replace(mixed, 0); expect((await repository.read()).backup.attempts).toEqual([...mixed.attempts].sort((a, b) => a.id.localeCompare(b.id)));
+  const before = await repository.read();
+  for (const trainer of ['oll', 'pll', 'zbll', 'cross2'] as const) await expect(repository.replace({ ...mixed, attempts: [{ ...f2l, trainer }] }, before.revision)).rejects.toThrow();
+  expect((await repository.read()).revision).toBe(before.revision); await repository.close();
 });
 it('keeps unsupported training groups closed and comparison scopes based on actual metadata', async () => {
   for (const group of ['personalAlgorithms', 'practiceSets', 'runs']) await expect(decodeBackup({ ...backup, [group]: [{}] }, validator)).rejects.toThrow();

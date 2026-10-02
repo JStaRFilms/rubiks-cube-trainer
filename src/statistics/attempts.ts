@@ -11,6 +11,8 @@ export function comparisonKey(record: AttemptRecord): string {
   const metadata = p.kind === 'combined-bound' ? [p.crossDepth, p.cap, [...p.solvedSlots].sort(), p.witness.length]
     : p.kind === 'case' ? [p.caseId, p.identityKey, p.finalAuf, p.representative] : [];
   return JSON.stringify([1, record.trainer, f.crossColor, [f.colorOfFace.U, f.colorOfFace.R, f.colorOfFace.F, f.colorOfFace.D, f.colorOfFace.L, f.colorOfFace.B], s.inspectionMode, options, metadata,
+    [record.challenge.versions.contract, record.challenge.versions.engine, record.challenge.versions.dataset, record.challenge.versions.tables],
+    o.trainer === 'f2l' && p.kind === 'case' ? [p.setup.map((m) => [m.family, m.amount]), p.solution.map((m) => [m.family, m.amount])] : null,
     // Guidance snapshots are conservative comparison classes, not observed moves.
     record.review ? [record.review.moves.map((m) => [m.family, m.amount]), record.review.preAuf, record.review.validatedDatasetVersion, record.review.validatedEngineVersion] : null]);
 }

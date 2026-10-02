@@ -1,4 +1,5 @@
-import { colors, trainers, type GoalOptions, type SemanticValidator, type SessionRecord, type SettingsRecord, type Trainer, type TrainerBackupV1 } from './records';
+import { F2L_CASES } from '../data/f2l';
+import { colors, trainers, type F2LPreferences, type GoalOptions, type SemanticValidator, type SessionRecord, type SettingsRecord, type Trainer, type TrainerBackupV1 } from './records';
 export const MAX_FILE_BYTES = 20 * 1024 * 1024;
 export class DataError extends Error {}
 export function object(value: unknown): Record<string, unknown> {
@@ -53,9 +54,22 @@ export function decodeGoalOptions(input: unknown): GoalOptions {
   keys(v, ['trainer', 'caseId', 'preAuf', 'yaw', 'mode']);
   return { trainer, caseId, mode, preAuf: integer(v.preAuf, 0, 3) as 0 | 1 | 2 | 3, yaw: integer(v.yaw, 0, 3) as 0 | 1 | 2 | 3 };
 }
+export function decodeF2LPreferences(input: unknown): F2LPreferences {
+  const value = object(input); keys(value, ['caseIds', 'slotMode', 'hint', 'mode', 'preAuf']);
+  if (!Array.isArray(value.caseIds) || !value.caseIds.length || value.caseIds.length > 41) throw new DataError('Select at least one of the 41 F2L cases.');
+  const caseIds = value.caseIds.map((id: unknown) => {
+    const entry = F2L_CASES.find((entry) => entry.id === id);
+    if (!entry) throw new DataError('Unknown F2L selection ID.');
+    return entry.id;
+  });
+  if (new Set(caseIds).size !== caseIds.length) throw new DataError('Duplicate F2L selection IDs.');
+  const preAuf = value.preAuf === 'random' ? 'random' : ([0, 1, 2, 3] as const).find((angle) => angle === value.preAuf);
+  if (preAuf === undefined) throw new DataError('Invalid F2L pre-U policy.');
+  return { caseIds, slotMode: choice(value.slotMode, ['FR', 'random']), hint: bool(value.hint), mode: choice(value.mode, ['execution', 'recognition']), preAuf };
+}
 export function decodeSettings(input: unknown): SettingsRecord {
   const v = object(input);
-  keys(v, ['key', 'theme', 'defaultTrainer', 'crossColor', 'inspectionMode', 'audibleWarnings', 'reducedMotion', 'lastOptions']);
+  keys(v, ['key', 'theme', 'defaultTrainer', 'crossColor', 'inspectionMode', 'audibleWarnings', 'reducedMotion', 'lastOptions'], ['f2lPractice']);
   const lastOptions: Partial<Record<Trainer, GoalOptions>> = {};
   for (const [key, value] of Object.entries(object(v.lastOptions))) {
     const trainer = choice(key, trainers), option = decodeGoalOptions(value);
@@ -65,7 +79,7 @@ export function decodeSettings(input: unknown): SettingsRecord {
   return { key: choice(v.key, ['preferences']), theme: choice(v.theme, ['dark', 'light', 'system']),
     defaultTrainer: choice(v.defaultTrainer, trainers), crossColor: choice(v.crossColor, colors),
     inspectionMode: choice(v.inspectionMode, ['untimed', '15s']), audibleWarnings: bool(v.audibleWarnings),
-    reducedMotion: choice(v.reducedMotion, ['system', 'on']), lastOptions };
+    reducedMotion: choice(v.reducedMotion, ['system', 'on']), lastOptions, ...('f2lPractice' in v ? { f2lPractice: decodeF2LPreferences(v.f2lPractice) } : {}) };
 }
 export function decodeSession(input: unknown): SessionRecord {
   const v = object(input); keys(v, ['id', 'trainer', 'label', 'createdAt']);

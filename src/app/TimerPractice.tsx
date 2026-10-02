@@ -1,9 +1,11 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { activityStore } from '../pwa/activity';
-import { canonicalText } from '../cube/notation';
+import { canonicalText, invertMoves } from '../cube/notation';
 import { effectiveExecution, formatMs } from '../statistics/attempts';
 import { emergencyExport, freezeSnapshot, type Presentation, type TimerController } from '../timer/controller';
 import type { AttemptRecord } from '../store/records';
+import { f2lEntry, SLOT_YAWS } from '../f2l/model';
+import { F2LCaseView } from './F2LCaseView';
 
 export interface TimerPracticeProps {
   controller: TimerController;
@@ -110,13 +112,21 @@ export function TimerPractice({ controller, presentation, onSaved, onNext, onRev
     : state.phase === 'execution' ? formatMs(elapsed.execution)
     : inspecting ? formatMs(late ? elapsed.inspection - 15000 : 15000 - elapsed.inspection) : '0.000';
   const canNext = state.phase === 'saved' && controller.canPresent;
+  const f2lOptions = snapshot.challenge.options.trainer === 'f2l' ? snapshot.challenge.options : null;
+  const f2l = f2lOptions ? f2lEntry(f2lOptions.caseId) : null;
+  const revealF2L = f2lOptions?.mode === 'execution' ? state.phase !== 'execution' : record?.timing.status === 'completed';
+  const hint = f2lOptions ? ({ 0: 'No rotation needed for FR view', 1: "Requested FR view: y'", 2: 'Requested FR view: y2', 3: 'Requested FR view: y' } as const)[SLOT_YAWS[f2lOptions.slot]] : '';
   function cancelPointer(id: number) {
     controller.cancelInput(`pointer:${id}`); if (release.current.pointer === id) release.current.pointer = null;
   }
   return <>
     <section className="scramble-rail" aria-label="Presented challenge">
-      <span>{snapshot.challenge.options.trainer === 'cross1' ? `Solve Cross and ${snapshot.challenge.options.pair.kind === 'any' ? 'any one pair' : `the ${snapshot.challenge.options.pair.slot} pair`} · Base: fully solved cube before each scramble` : 'Solve only Cross · Base: solved, aligned Cross'} · Hold {snapshot.challenge.frame.colorOfFace.D} down, {snapshot.challenge.frame.colorOfFace.F} front</span>
+      <span>{f2lOptions ? `Solve the isolated ${f2lOptions.slot} pair · Base: Cross and all four pairs solved and aligned before each setup` : snapshot.challenge.options.trainer === 'cross1' ? `Solve Cross and ${snapshot.challenge.options.pair.kind === 'any' ? 'any one pair' : `the ${snapshot.challenge.options.pair.slot} pair`} · Base: fully solved cube before each scramble` : 'Solve only Cross · Base: solved, aligned Cross'} · Hold {snapshot.challenge.frame.colorOfFace.D} down, {snapshot.challenge.frame.colorOfFace.F} front</span>
       <p>{canonicalText(snapshot.challenge.scramble)}</p>
+      {f2lOptions && <><F2LCaseView state={snapshot.challenge.start} frame={snapshot.challenge.frame} />
+        <span>Representative LL, not observed physical pieces. {f2lOptions.hint && `${hint}. View hint requested, no physical turn recorded. Not an extra setup move; guidance starts in the displayed frame.`}</span>
+        {f2l && revealF2L && snapshot.challenge.proof.kind === 'case' && <div className="f2l-guidance"><span>F2L {f2l.label} · {f2l.family} · Lieberkind numbering, Speeden default source {f2l.sourceLabel}</span><span>{JSON.stringify(snapshot.challenge.proof.solution) === JSON.stringify(invertMoves(snapshot.challenge.scramble)) ? 'Shown guidance matches the sourced default.' : 'Validated alternate guidance, frozen at presentation.'}</span><p>Guidance: {canonicalText(snapshot.challenge.proof.solution)}</p></div>}
+      </>}
     </section>
     <section className="timer-canvas" aria-label="Practice timer">
       {!committed && <p role="alert">This challenge cannot start while another attempt, unsaved record or update is active.</p>}
@@ -152,6 +162,7 @@ export function TimerPractice({ controller, presentation, onSaved, onNext, onRev
         <p>Raw execution: {formatMs(record.timing.executionMs)} · Preparation, includes scrambling: {formatMs(record.preparationMs)}</p>
         <p>Inspection: {record.timing.inspectionMs === null ? snapshot.settings.inspectionMode === 'untimed' ? 'Not used' : 'Not started' : formatMs(record.timing.inspectionMs)}</p>
         {record.challenge.proof.kind === 'combined-bound' && <p>Found solution: {record.challenge.proof.witness.length} HTM · cap {record.challenge.proof.cap} · generator solved slots {record.challenge.proof.solvedSlots.join('/')}. Not a global optimum. Pair you executed: not recorded. Reset the entire cube to fully solved before Next.</p>}
+        {record.challenge.options.trainer === 'f2l' && <p>Restore Cross and all four pairs before Next. LL may vary. Requested view hint: {record.challenge.options.hint ? 'shown' : 'hidden'}. Physical rotation: not observed.</p>}
         {record.timing.status === 'interrupted' && <p>{record.timing.phase} · {record.timing.reason}. Start fresh, never resume.</p>}
         {state.phase === 'save-failed' && <div role="alert"><p>{state.error}</p><button onClick={() => void controller.retry()}>Retry save</button><button onClick={() => {
           const url = URL.createObjectURL(new Blob([JSON.stringify(emergencyExport(record), null, 2)], { type: 'application/json' }));

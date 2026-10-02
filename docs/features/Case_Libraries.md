@@ -1,6 +1,6 @@
 # Case libraries
 
-B07 implementation contract. PLAN §§4.3, 4.4 and 6.3 and Core architecture control the behavior. This library does not enable F2L or Time Attack UI, attempts, sets, runs or backup imports. B08/B09 require parent review of B07 first.
+B07 library contract. PLAN §§4.3, 4.4 and 6.3 and Core architecture control the behavior. B07 itself added data and pure validators, not trainer UI. Parent accepted B07 and the subsequent [B08 F2L integration](F2L_Trainer.md). Genuine F2L attempts and personal algorithms now persist through strict validation. Time Attack attempts/sets/runs remain closed until B09.
 
 ## Sources and rights
 

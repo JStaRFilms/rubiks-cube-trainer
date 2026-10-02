@@ -81,6 +81,30 @@ export class Repository {
     }
     catch (error) { try { tx.abort(); } catch { /* Already aborted. */ } await tx.done.catch(() => {}); throw error; }
   }
+  async savePersonalAlgorithm(input: PersonalAlgorithmRecord, expectedRevision: number): Promise<void> {
+    await this.changePersonalAlgorithm(input.caseId, input.slot, input, expectedRevision);
+  }
+  async resetPersonalAlgorithm(caseId: string, slot: PersonalAlgorithmRecord['slot'], expectedRevision: number): Promise<void> {
+    await this.changePersonalAlgorithm(caseId, slot, null, expectedRevision);
+  }
+  private async changePersonalAlgorithm(caseId: string, slot: PersonalAlgorithmRecord['slot'], input: PersonalAlgorithmRecord | null, expectedRevision: number): Promise<void> {
+    if (!this.validator) throw new DataError('Personal algorithms need the compatible case validator.');
+    const current = await this.read();
+    if (current.revision !== expectedRevision) throw new DataError('Local data changed. Reload the editor before saving.');
+    const previous = current.backup.personalAlgorithms.find((record) => record.caseId === caseId && record.slot === slot);
+    if (!input && !previous) throw new DataError('There is no compatible override to reset.');
+    const proposed = current.backup.personalAlgorithms.filter((record) => record.caseId !== caseId || record.slot !== slot).concat(input ? [input] : []);
+    const validated = await this.validator.validateTrainingData({ personalAlgorithms: proposed, practiceSets: current.backup.practiceSets, runs: current.backup.runs }, current.backup.attempts, current.backup.sessions);
+    const record = validated.personalAlgorithms.find((value) => value.caseId === caseId && value.slot === slot);
+    if (input && !record) throw new DataError('The proposed algorithm was not validated.');
+    const db = await this.db(), tx = db.transaction(['settings', 'personalAlgorithms'], 'readwrite');
+    try {
+      const metadata = await tx.objectStore('settings').get('revision');
+      if ((metadata && 'value' in metadata ? metadata.value : 0) !== expectedRevision) throw new DataError('Local data changed before algorithm saving. Reload the editor.');
+      if (record) await tx.objectStore('personalAlgorithms').put(record); else await tx.objectStore('personalAlgorithms').delete([caseId, slot]);
+      await this.bump(tx.objectStore('settings')); await tx.done;
+    } catch (error) { try { tx.abort(); } catch { /* Already aborted. */ } await tx.done.catch(() => {}); throw error; }
+  }
   async saveAttempt(input: unknown, run?: RunRecord): Promise<void> {
     if (!this.validator) throw new DataError('Attempt saving needs the compatible cube validator. Training is not yet available.');
     boundedInput(input);

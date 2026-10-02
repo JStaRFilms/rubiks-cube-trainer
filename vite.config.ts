@@ -21,8 +21,8 @@ function assetManifest(): Plugin {
         assets.push({ url: `/${file}`, byteLength: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') });
       }
       this.emitFile({ type: 'asset', fileName: 'release-assets.json', source: JSON.stringify({
-        releaseId, cubeContract: 'cube3-facelets-v1', engine: ENGINE_VERSION, engineSource: ENGINE_SOURCE, engineIntegrity: ENGINE_INTEGRITY, dataset: null, tables: ONE_VERSIONS.tables,
-        scope: 'cross-cross1-practice', initialization: [...INITIALIZATION], assets,
+        releaseId, cubeContract: 'cube3-facelets-v1', engine: ENGINE_VERSION, engineSource: ENGINE_SOURCE, engineIntegrity: ENGINE_INTEGRITY, dataset: 'cfop-libraries-v1', tables: ONE_VERSIONS.tables,
+        scope: 'cross-cross1-f2l-practice', initialization: [...INITIALIZATION], assets,
       }) });
     } },
   };

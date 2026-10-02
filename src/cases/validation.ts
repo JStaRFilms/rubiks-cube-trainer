@@ -8,7 +8,7 @@ import { auf, caseIdentity, f2lSolved, IDENTITY_POLICIES, isolatedContext, orien
 const lower = stickers.filter((s) => (s.position[1] === 0 || s.position[1] === -1) && s.position.filter((v) => v !== 0).length >= 2).map((s) => s.index);
 function llStickers(state: CubeStateV1): Set<number> {
   const result = new Set<number>();
-  for (const name of ['UF', 'UR', 'UB', 'UL', 'FR', 'UFR', 'URB', 'UBL', 'ULF', 'DRF']) {
+  for (const name of ['UF', 'UR', 'UB', 'UL', 'DF', 'DR', 'DB', 'DL', 'FR', 'FL', 'BR', 'BL', 'UFR', 'URB', 'UBL', 'ULF', 'DRF', 'DFL', 'DLB', 'DBR']) {
     const indices = pieceIndices(name);
     if (indices.some((i) => state.facelets[i] === 'U')) indices.forEach((i) => result.add(i));
   }
@@ -20,6 +20,10 @@ function fixedLowerProof(engine: CubeEngine, state: CubeStateV1, moves: readonly
     const source = permutation[destination];
     if (source === undefined || unrelated.has(source) || state.facelets[source] !== SOLVED.facelets[destination]) throw Error('Algorithm does not preserve and solve F2L independently of LL arrangement.');
   }
+}
+export function validatePresentedF2LGuidance(engine: CubeEngine, state: CubeStateV1, moves: readonly Move[]): void {
+  fixedLowerProof(engine, state, moves);
+  if (!f2lSolved(engine, engine.apply(state, moves))) throw Error('Guidance does not solve the actual presented F2L state.');
 }
 export function validateCase(engine: CubeEngine, entry: CaseEntry): void {
   engine.fromState(entry.representative);

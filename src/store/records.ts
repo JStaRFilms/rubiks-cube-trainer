@@ -28,10 +28,14 @@ export type Challenge = ChallengeCommon & (
   | { options: Extract<GoalOptions, { trainer: 'cross1' | 'cross2' }>; proof: Extract<Proof, { kind: 'combined-bound' }> }
   | { options: Extract<GoalOptions, { trainer: 'f2l' | 'oll' | 'pll' | 'zbll' }>; proof: Extract<Proof, { kind: 'case' }> }
 );
+export interface F2LPreferences {
+  caseIds: string[]; slotMode: 'FR' | 'random'; hint: boolean; mode: 'execution' | 'recognition'; preAuf: 0 | 1 | 2 | 3 | 'random';
+}
 export interface SettingsRecord {
   key: 'preferences'; theme: 'dark' | 'light' | 'system'; defaultTrainer: Trainer; crossColor: Color;
   inspectionMode: 'untimed' | '15s'; audibleWarnings: boolean; reducedMotion: 'system' | 'on';
   lastOptions: Partial<Record<Trainer, GoalOptions>>;
+  f2lPractice?: F2LPreferences;
 }
 export const defaultOneOptions: Extract<GoalOptions, { trainer: 'cross1' }> = { trainer: 'cross1', K: 3, L: 8, pair: { kind: 'any' } };
 export const defaultSettings: SettingsRecord = {

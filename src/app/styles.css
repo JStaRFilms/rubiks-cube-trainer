@@ -77,7 +77,12 @@ input[type=file] { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
 :root[data-motion=on] * { scroll-behavior: auto; }
-.move-review textarea { min-height: 76px; width: 100%; resize: vertical; font: 16px/1.5 Consolas, Menlo, monospace; color: var(--text); border: 1px solid var(--border); border-radius: 5px; background: var(--chrome); padding: 8px; }
+.f2l-case-view { display: block; width: 120px; height: 90px; margin: 4px auto; }
+.f2l-guidance p { font-size: 14px; line-height: 1.4; }
+.timer-canvas[aria-label="Start F2L practice"] { overflow-y: auto; }
+.timer-canvas[aria-label="Start F2L practice"] .clock { font-size: 64px; }
+.timer-canvas[aria-label="Start F2L practice"] p { margin: 4px 0; }
+.move-review textarea, .algorithm-editor textarea { min-height: 76px; width: 100%; resize: vertical; font: 16px/1.5 Consolas, Menlo, monospace; color: var(--text); border: 1px solid var(--border); border-radius: 5px; background: var(--chrome); padding: 8px; }
 .player-host { width: 100%; height: 280px; touch-action: none; }
 .player-host twisty-player { width: 100%; height: 100%; }
 .review-controls { display: flex; flex-wrap: wrap; align-items: center; }

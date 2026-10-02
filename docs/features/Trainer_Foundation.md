@@ -123,7 +123,17 @@ Evicted assets or tables downgrade readiness and identify missing work. Offline 
 
 Download an update into a separate release cache. A waiting service worker cannot automatically skipWaiting/reload. Prompt only; active preparation/inspection/arming/execution and save-pending block activation. Preserve saved history and persist run interruption/recovery state before a user-confirmed idle update. Other open tabs must also acknowledge idle/close; if they cannot, leave the update waiting. New worker, table and dataset versions initialize together under the new release. Old clients retain their coherent old cache until closed, not a mixture of chunks. Cleanup old caches only when no controlled client needs them, and never delete personal databases. B01 tests the chosen service-worker lifecycle, including multi-tab blocking, rather than assuming plugin defaults provide it.
 
-## B06 current Cross and Cross+1 integration
+## B08 current F2L integration
+
+B08 adds the complete 41-case F2L practice loop using the accepted B07 library. F2LPractice owns a focused request-correlated worker; actual library/model initialization replaces any placeholder readiness claim for F2L. Generation is sourced slot/pre-U construction, not search. Cross and all four pairs must be solved and aligned before every setup; LL may vary. Next requires fresh confirmation. Recognition hides current identity/family/guidance until intended stop or deliberate post-interruption review. Hints describe requested view, never observed physical rotation.
+
+The genuine trainerValidator now routes F2L attempts before Repository construction. It checks legality, exact sourced setup/start/scramble, actual slot/identity/isolated context, frame/versions and guidance against the presented state. The existing case proof stores the complete frozen selected solution. Default versus alternate guidance is labeled without claiming which physical algorithm was executed. A separate validation worker survives generation suspension.
+
+Repository supports revision-checked, transaction-acknowledged F2L algorithm save/reset through the accepted complete override validator. Canonical and slot records retain their existing version-1 shape; slot guidance wins over canonical fallback. Old attempt guidance remains frozen after edits/reset. The only settings addition is optional precisely decoded `f2lPractice`; it stores the case pool, FR/random slot policy, requested hint/mode and fixed/random pre-U. Actual GoalOptions slot remains generated metadata. Database/export versions stay 1; old Cross/Cross+1 backups remain compatible. Future attempts, OLL/PLL algorithms, sets and runs stay closed.
+
+Release scope is `cross-cross1-f2l-practice`, dataset `cfop-libraries-v1`, with actual 41-case initialization and both retained MIT notices in offline setup. Never-opened cold offline F2L/player, real history/restore, cache repair and active update/history retention have production browser coverage. Parent acceptance is still required before B09. See [F2L trainer](F2L_Trainer.md) and [integration evidence](../audits/F2L_Trainer_Integration.md). Historical sections below keep their original scope and evidence.
+
+## B06 Cross and Cross+1 integration
 
 Cross and Cross+1 now share the practice timer/history/review loop. A genuine singleton `trainerValidator` is supplied before Repository construction. It dispatches strict Cross or Cross+1 semantic validation; the Cross+1 validation worker is separate from cancellable generation. Unsupported case/combined-Cross+2 attempts and nonempty future algorithm/set/run groups still fail closed. Database and backup versions remain 1.
 

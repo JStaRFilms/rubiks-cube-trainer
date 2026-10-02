@@ -1,5 +1,9 @@
 import { lazy, Suspense, useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { CrossPractice } from './CrossPractice';
+import { F2LPractice } from './F2LPractice';
+import { F2LSettings } from './F2LSettings';
+import { F2LAlgorithms } from './F2LAlgorithms';
+import { defaultF2LPreferences } from '../f2l/model';
 import { trainerValidator } from '../store/trainer-validator';
 import type { AttemptRecord } from '../store/records';
 import { AttemptHistory } from './AttemptHistory';
@@ -16,7 +20,7 @@ import { activityStore, enterActivity } from '../pwa/activity';
 import { PwaController, type OfflineState } from '../pwa/client';
 
 const labels = { cross: 'Cross', cross1: 'Cross+1', f2l: 'F2L', oll: 'Time Attack · OLL', pll: 'Time Attack · PLL', zbll: 'ZBLL', cross2: 'Cross+2' };
-type Panel = 'settings' | 'session' | 'help' | 'data' | 'review';
+type Panel = 'settings' | 'session' | 'help' | 'data' | 'review' | 'algorithms';
 function downloadBackup(backup: TrainerBackupV1) {
   const url = URL.createObjectURL(new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' }));
   const link = document.createElement('a'); link.href = url; link.download = `cube-trainer-${new Date().toISOString().slice(0, 10)}.json`; link.click();
@@ -86,13 +90,16 @@ export function App({ validator = trainerValidator }: { validator?: SemanticVali
       <label className="trainer-label"><span className="sr-only">Trainer</span><select aria-label="Trainer" value={settings.defaultTrainer} disabled={busy || practiceBlocked} onChange={(event) => {
         const trainer = trainers.find((value) => value === event.target.value); if (!trainer || !enterActivity('editing')) return;
         void perform(async () => { await repository.saveSettings({ ...settings, defaultTrainer: trainer }); await refresh(); }).finally(() => { enterActivity('idle'); });
-      }}>{trainers.map((trainer) => <option key={trainer} value={trainer}>{labels[trainer]}{trainer === 'cross' || trainer === 'cross1' ? '' : ' · unavailable'}</option>)}</select></label>
-      <span className="configuration">{settings.defaultTrainer === 'cross1' ? `K ≤ ${settings.lastOptions.cross1?.trainer === 'cross1' ? settings.lastOptions.cross1.K : 3} · L ≤ ${settings.lastOptions.cross1?.trainer === 'cross1' ? settings.lastOptions.cross1.L : 8} · ${settings.lastOptions.cross1?.trainer === 'cross1' && settings.lastOptions.cross1.pair.kind === 'slot' ? settings.lastOptions.cross1.pair.slot : 'Any pair'}` : `Max ${settings.lastOptions.cross?.trainer === 'cross' ? settings.lastOptions.cross.K : 4} HTM`} · {settings.crossColor} · {settings.inspectionMode === '15s' ? '15 s inspection' : 'Untimed'}</span>
+      }}>{trainers.map((trainer) => <option key={trainer} value={trainer}>{labels[trainer]}{trainer === 'cross' || trainer === 'cross1' || trainer === 'f2l' ? '' : ' · unavailable'}</option>)}</select></label>
+      <span className="configuration">{settings.defaultTrainer === 'f2l' ? `${(settings.f2lPractice ?? defaultF2LPreferences).caseIds.length}/41 cases · ${(settings.f2lPractice ?? defaultF2LPreferences).slotMode === 'FR' ? 'FR only' : 'Random slot'} · ${(settings.f2lPractice ?? defaultF2LPreferences).mode}` : settings.defaultTrainer === 'cross1' ? `K ≤ ${settings.lastOptions.cross1?.trainer === 'cross1' ? settings.lastOptions.cross1.K : 3} · L ≤ ${settings.lastOptions.cross1?.trainer === 'cross1' ? settings.lastOptions.cross1.L : 8} · ${settings.lastOptions.cross1?.trainer === 'cross1' && settings.lastOptions.cross1.pair.kind === 'slot' ? settings.lastOptions.cross1.pair.slot : 'Any pair'}` : `Max ${settings.lastOptions.cross?.trainer === 'cross' ? settings.lastOptions.cross.K : 4} HTM`} · {settings.crossColor} · {settings.inspectionMode === '15s' ? '15 s inspection' : 'Untimed'}</span>
       <button disabled={busy || practiceBlocked} onClick={() => open('settings')}>Settings</button><button disabled={busy || practiceBlocked} onClick={() => open('help')}>Help</button>
     </header>
     <aside className="session-dock" aria-label="Session summary">{sessionSummary}<button disabled={practiceBlocked} onClick={() => open('session')}>Session / history</button><p>{attempts.length ? `${stats.dnf} DNF · ${stats.interrupted} interrupted` : 'No saved attempts for this trainer.'}</p><button onClick={() => open('data')}>Local data</button></aside>
     <main className="practice">
-      {(settings.defaultTrainer === 'cross' || settings.defaultTrainer === 'cross1') && data ? <CrossPractice repository={repository} dataEpoch={practiceEpoch} settings={settings} session={selectedSession} editing={panel !== null || busy} reviewing={panel === 'review'}
+      {settings.defaultTrainer === 'f2l' && data ? <F2LPractice repository={repository} dataEpoch={practiceEpoch} settings={settings} session={selectedSession} editing={panel !== null || busy} reviewing={panel === 'review'} algorithms={data.personalAlgorithms} attempts={data.attempts}
+        onSession={(session) => { setSelectedSessionId(session.id); setData((current) => current ? { ...current, sessions: [...current.sessions, session] } : current); }}
+        onSaved={(attempt) => { setData((current) => current ? { ...current, attempts: [...current.attempts.filter((a) => a.id !== attempt.id), attempt] } : current); void repository.read().then(({ backup }) => setData(backup)).catch((reason: unknown) => setError(storageMessage(reason))); }}
+        onReview={(attempt) => { setReviewId(attempt.id); open('review'); }} onAlgorithms={() => open('algorithms')} /> : (settings.defaultTrainer === 'cross' || settings.defaultTrainer === 'cross1') && data ? <CrossPractice repository={repository} dataEpoch={practiceEpoch} settings={settings} session={selectedSession} editing={panel !== null || busy} reviewing={panel === 'review'}
         attempts={data.attempts} onSession={(session) => { setSelectedSessionId(session.id); setData((current) => current ? { ...current, sessions: [...current.sessions, session] } : current); }}
         onSaved={(attempt: AttemptRecord) => { setData((current) => current ? { ...current, attempts: [...current.attempts.filter((a) => a.id !== attempt.id), attempt] } : current); void repository.read().then(({ backup }) => setData(backup)).catch((reason: unknown) => setError(storageMessage(reason))); }}
         onReview={(attempt) => { setReviewId(attempt.id); open('review'); }} /> : <>
@@ -101,10 +108,10 @@ export function App({ validator = trainerValidator }: { validator?: SemanticVali
         <p>No verified scramble available</p>
       </section>
       <section className="timer-canvas" aria-label="Timer unavailable">
-        <div className="clock" aria-hidden="true">--.--</div><h1>{data ? 'Trainer unavailable' : 'Checking local data'}</h1><p>Cross and Cross+1 practice are delivered.</p>
+        <div className="clock" aria-hidden="true">--.--</div><h1>{data ? 'Trainer unavailable' : 'Checking local data'}</h1><p>Cross, Cross+1 and F2L practice are delivered.</p>
       </section>
       </>}
-      <div className="practice-tools"><button disabled={practiceBlocked} data-timer-input="isolated" onClick={() => { setReviewId(null); open('review'); }}>Move review</button><button disabled={practiceBlocked} className="status-button" onClick={() => open('data')}>{offline.phase === 'ready' ? 'Offline review ready · Cross ready · Cross+1 ready' : 'Offline trainer setup'}</button></div>
+      <div className="practice-tools"><button disabled={practiceBlocked} data-timer-input="isolated" onClick={() => { setReviewId(null); open('review'); }}>Move review</button><button disabled={practiceBlocked} className="status-button" onClick={() => open('data')}>{offline.phase === 'ready' ? 'Offline review ready · Cross ready · Cross+1 ready · F2L ready' : 'Offline trainer setup'}</button></div>
       {offline.waiting && <div className="update-bar" role="status"><span>Update downloaded. Apply when idle.</span><button disabled={busy || panel !== null || practiceBlocked} onClick={() => {
         if (window.confirm('Apply the downloaded update? Idle Cube Trainer tabs will reload.')) void perform(() => pwa.applyUpdate());
       }}>Apply update</button></div>}
@@ -112,16 +119,17 @@ export function App({ validator = trainerValidator }: { validator?: SemanticVali
     </main>
     <footer className="session-shelf"><div>{sessionSummary}</div><button onClick={() => open('session')}>Session</button></footer>
     <dialog ref={dialog} aria-labelledby="panel-title" onCancel={(event) => { event.preventDefault(); close(); }}>
-      <div className="dialog-heading"><h2 id="panel-title">{panel === 'settings' ? 'Settings' : panel === 'session' ? 'Session and history' : panel === 'data' ? 'Local data' : panel === 'review' ? 'Move review' : 'Help'}</h2><button disabled={busy} onClick={close} aria-label="Close dialog">Close</button></div>
+      <div className="dialog-heading"><h2 id="panel-title">{panel === 'settings' ? 'Settings' : panel === 'session' ? 'Session and history' : panel === 'data' ? 'Local data' : panel === 'review' ? 'Move review' : panel === 'algorithms' ? 'Personal F2L algorithms' : 'Help'}</h2><button disabled={busy} onClick={close} aria-label="Close dialog">Close</button></div>
       <div className="dialog-body" aria-busy={busy}>
         {panel === 'review' && (reviewId && !reviewAttempt ? <p>This attempt is no longer in saved history.</p> : <Suspense fallback={<p role="status">Loading move review…</p>}><MoveReview key={reviewId ?? 'entered'} color={reviewAttempt?.challenge.frame.crossColor ?? settings.crossColor} challenge={reviewAttempt?.challenge} reduceMotion={settings.reducedMotion === 'on' || systemReduced} /></Suspense>)}
+        {panel === 'algorithms' && <F2LAlgorithms repository={repository} onBusy={setBusy} onChanged={refresh} />}
         {panel === 'settings' && <form onSubmit={(event) => { event.preventDefault(); void perform(async () => { await repository.saveSettings(draft); await refresh(); setNotice('Settings saved on this device.'); }); }}>
           <label>Theme<select value={draft.theme} onChange={(event) => { const theme = event.target.value; if (theme === 'dark' || theme === 'light' || theme === 'system') setDraft({ ...draft, theme }); }}><option>dark</option><option>light</option><option>system</option></select></label>
           <label>Cross color<select value={draft.crossColor} onChange={(event) => { const color = colors.find((value) => value === event.target.value); if (color) setDraft({ ...draft, crossColor: color }); }}>{colors.map((color) => <option key={color}>{color}</option>)}</select></label>
-          <label>Maximum Cross depth<select value={draft.defaultTrainer === 'cross1' ? draft.lastOptions.cross1?.trainer === 'cross1' ? draft.lastOptions.cross1.K : 3 : draft.lastOptions.cross?.trainer === 'cross' ? draft.lastOptions.cross.K : 4} onChange={(event) => {
+          {draft.defaultTrainer !== 'f2l' && <label>Maximum Cross depth<select value={draft.defaultTrainer === 'cross1' ? draft.lastOptions.cross1?.trainer === 'cross1' ? draft.lastOptions.cross1.K : 3 : draft.lastOptions.cross?.trainer === 'cross' ? draft.lastOptions.cross.K : 4} onChange={(event) => {
             const K = ([1, 2, 3, 4, 5, 6, 7, 8] as const).find((value) => String(value) === event.target.value);
             if (K) setDraft({ ...draft, lastOptions: { ...draft.lastOptions, ...(draft.defaultTrainer === 'cross1' ? { cross1: { ...(draft.lastOptions.cross1?.trainer === 'cross1' ? draft.lastOptions.cross1 : defaultOneOptions), K } } : { cross: { trainer: 'cross', K } }) } });
-          }}>{[1, 2, 3, 4, 5, 6, 7, 8].map((K) => <option key={K} value={K}>{K} HTM</option>)}</select></label>
+          }}>{[1, 2, 3, 4, 5, 6, 7, 8].map((K) => <option key={K} value={K}>{K} HTM</option>)}</select></label>}
           {draft.defaultTrainer === 'cross1' && <>
             <label>Combined solution cap<select value={draft.lastOptions.cross1?.trainer === 'cross1' ? draft.lastOptions.cross1.L : 8} onChange={(event) => {
               const L = Number(event.target.value); setDraft({ ...draft, lastOptions: { ...draft.lastOptions, cross1: { ...(draft.lastOptions.cross1?.trainer === 'cross1' ? draft.lastOptions.cross1 : defaultOneOptions), L } } });
@@ -132,11 +140,12 @@ export function App({ validator = trainerValidator }: { validator?: SemanticVali
             }}><option value="any">Any pair</option>{['FR', 'FL', 'BR', 'BL'].map((slot) => <option key={slot}>{slot}</option>)}</select></label>
             <p>K1..8 and L1..12 are ceilings. A found solution proves the combined cap, not global optimality. Generation has a 5-second / 10,000-node budget; exhaustion keeps your options for retry. Physical-phone performance is not yet measured.</p>
           </>}
+          {draft.defaultTrainer === 'f2l' && <F2LSettings value={draft.f2lPractice ?? defaultF2LPreferences} onChange={(f2lPractice) => setDraft({ ...draft, f2lPractice })} />}
           <label>Inspection<select value={draft.inspectionMode} onChange={(event) => { const mode = event.target.value; if (mode === 'untimed' || mode === '15s') setDraft({ ...draft, inspectionMode: mode }); }}><option value="untimed">Untimed</option><option value="15s">15 s inspection</option></select></label>
           <label className="check"><input type="checkbox" checked={draft.audibleWarnings} onChange={(event) => setDraft({ ...draft, audibleWarnings: event.target.checked })} />Audible inspection warnings</label>
           <label className="check"><input type="checkbox" checked={draft.reducedMotion === 'on'} onChange={(event) => setDraft({ ...draft, reducedMotion: event.target.checked ? 'on' : 'system' })} />Reduce motion</label>
-          <p>Preparation includes scrambling and thinking, not just planning. Maximum depth is a ceiling, not exact depth. Half turns count once.</p>
-          <button disabled={busy} type="submit">Save settings</button><button type="button" disabled={busy} onClick={close}>Cancel</button>
+          <p>Preparation includes scrambling and thinking, not just planning. {draft.defaultTrainer !== 'f2l' && 'Maximum depth is a ceiling, not exact depth. Half turns count once.'}</p>
+          <button disabled={busy || (draft.defaultTrainer === 'f2l' && draft.f2lPractice?.caseIds.length === 0)} type="submit">Save settings</button><button type="button" disabled={busy} onClick={close}>Cancel</button>
         </form>}
         {panel === 'session' && <>
           <p>{labels[settings.defaultTrainer]} · {attempts.length} saved attempts.</p>
@@ -146,13 +155,14 @@ export function App({ validator = trainerValidator }: { validator?: SemanticVali
             <button disabled={busy || !sessionLabel.trim()}>{renameId ? 'Save name' : 'New session'}</button>{renameId && <button type="button" onClick={() => { setRenameId(null); setSessionLabel(''); }}>Cancel rename</button>}
           </form><button onClick={() => { setPanel('data'); setPreview(null); }}>Local data</button>
         </>}
-        <div hidden={panel !== 'session'}><AttemptHistory key={selectedSession?.id ?? settings.defaultTrainer} repository={repository} sessionId={selectedSession?.id} visible={panel === 'session'} onBusyChange={setBusy} onChanged={() => { void refresh().catch((reason: unknown) => setError(storageMessage(reason))); }} /></div>
+        <div hidden={panel !== 'session'}><AttemptHistory key={selectedSession?.id ?? settings.defaultTrainer} repository={repository} sessionId={selectedSession?.id} visible={panel === 'session'} onBusyChange={setBusy} onReview={(attempt) => { setReviewId(attempt.id); setPanel('review'); }} onChanged={() => { void refresh().catch((reason: unknown) => setError(storageMessage(reason))); }} /></div>
         {panel === 'help' && <>
+          <p>F2L isolates one pair from all 41 verified cases. Before every setup, confirm Cross and all four pairs solved and aligned. LL may vary. Next returns to this confirmation. Settings selects cases/families, FR or random slot, pre-U, requested view hint and execution/recognition. Personal algorithms change future guidance, never canonical setup or saved review. The net/player LL is representative, not an observed physical state.</p>
           <p>Start Cross practice generates a verified scramble. Begin with the selected Cross solved and aligned to its side centers. Hold the displayed down/front colors, apply the scramble, then solve only the Cross. If unsure of your cube after stopping, restore that Cross before Next. Other pieces in review are representative unless your base was fully solved. Completion is self-reported.</p><p>Cross+1 requires a fully solved cube before every scramble. After each attempt, reset the entire cube, confirm its down/front frame and start a fresh scramble. A solved Cross plus pair is not enough. Any pair leaves your choice open until review; the generated solution does not record the pair you executed.</p><p>Cross uses a maximum optimal depth, not an exact depth. A half turn counts as one move.</p><p>Use Settings for preferences and Session for trainer-specific sessions.</p><p>Install from your browser's install menu. On iPhone, use Share, then Add to Home Screen. Offline setup includes the cube model and never-opened move-review player.</p><button onClick={() => setPanel('data')}>Local data and offline setup</button>
         </>}
         {panel === 'data' && <>
           <p>Stored in this browser. Clearing storage or losing this device can remove it. Keep a file backup.</p>
-          <h3>Offline Cross and Cross+1 practice and review</h3><p role="status">{offline.message}</p><p>Includes both generation workers, the verified Cross distance cache, memory-only pair tables, cube model and never-opened 3D player. No case libraries or other trainers.</p><p><a href="/licenses/THIRD-PARTY-NOTICES.txt" target="_blank" rel="noreferrer">Third-party notices</a> · <a href="/licenses/cubing-0.63.8-source.tgz">Covered cube-tool source</a></p>
+          <h3>Offline Cross, Cross+1 and F2L practice and review</h3><p role="status">{offline.message}</p><p>Includes generation workers, the verified Cross cache, memory-only pair tables, all 41 F2L cases and actual library validation, cube model and never-opened 3D player. OLL/PLL and later trainers remain unavailable.</p><p><a href="/licenses/cases-Lieberkind-MIT.txt" target="_blank" rel="noreferrer">F2L numbering MIT notice</a> · <a href="/licenses/cases-Speeden-MIT.txt" target="_blank" rel="noreferrer">Case defaults MIT notice</a></p><p><a href="/licenses/THIRD-PARTY-NOTICES.txt" target="_blank" rel="noreferrer">Third-party notices</a> · <a href="/licenses/cubing-0.63.8-source.tgz">Covered cube-tool source</a></p>
           <button disabled={busy} onClick={() => void perform(() => pwa.verify(true))}>Set up / retry review</button>{offline.message === 'Shell downloaded. Reload to finish setup.' && <button disabled={busy} onClick={() => { close(); location.reload(); }}>Reload to finish setup</button>}<button disabled={busy} onClick={() => void perform(() => pwa.verify(false))}>Recheck cached review</button><button disabled={busy} onClick={() => void perform(() => pwa.checkUpdate())}>Check for update</button>
           <h3>Storage</h3><p>Persistent storage: {persistence}. This does not replace a backup.</p><button disabled={busy} onClick={() => void perform(async () => {
             if (!navigator.storage?.persist) { setPersistence('Unavailable in this browser'); return; }

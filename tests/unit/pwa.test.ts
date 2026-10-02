@@ -15,7 +15,7 @@ it('guards a deferred attempt start after update confirmation', async () => {
 });
 it('does not let a second activation replace the first token', () => { expect(lockUpdate('first')).toBe(true); expect(lockUpdate('second')).toBe(false); });
 it('validates the pinned review manifest and required initialization without weakening evidence', () => {
-  const value = { releaseId: 'test', cubeContract: 'cube3-facelets-v1', scope: 'cross-cross1-practice', engine: ENGINE_VERSION, engineSource: ENGINE_SOURCE, engineIntegrity: ENGINE_INTEGRITY, dataset: null, tables: ONE_VERSIONS.tables, initialization: [...INITIALIZATION], assets: [{ url: '/index.html', byteLength: 1, sha256: 'a'.repeat(64) }] };
+  const value = { releaseId: 'test', cubeContract: 'cube3-facelets-v1', scope: 'cross-cross1-f2l-practice', engine: ENGINE_VERSION, engineSource: ENGINE_SOURCE, engineIntegrity: ENGINE_INTEGRITY, dataset: 'cfop-libraries-v1', tables: ONE_VERSIONS.tables, initialization: [...INITIALIZATION], assets: [{ url: '/index.html', byteLength: 1, sha256: 'a'.repeat(64) }] };
   expect(decodeManifest(value).assets).toHaveLength(1); expect(() => decodeManifest({ ...value, assets: [] })).toThrow(); expect(() => decodeManifest({ ...value, engine: 'not-integrated' })).toThrow();
   expect(() => decodeManifest({ ...value, initialization: [] })).toThrow();
   expect(() => decodeManifest({ ...value, engineSource: 'wrong-revision' })).toThrow();

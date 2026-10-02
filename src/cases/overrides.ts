@@ -6,7 +6,7 @@ import { boundedInput, date, object, text } from '../store/validation';
 import { QUARTERS, SLOTS, type QuarterTurn } from './identity';
 import { validateGuidance } from './validation';
 
-// Pure pre-storage validation. The app's backup gate remains closed until B08/B09.
+// Pure validation before a caller opens a storage transaction.
 export function validateOverrideImport(engine: CubeEngine, library: readonly CaseEntry[], input: unknown): PersonalAlgorithmRecord[] {
   boundedInput(input);
   if (!Array.isArray(input) || input.length > library.length * 5) throw Error('Expected a bounded personal algorithm list. Existing overrides are unchanged.');
@@ -24,6 +24,10 @@ export function validateOverrideImport(engine: CubeEngine, library: readonly Cas
     const key = `${caseId}/${slot}`;
     if (seen.has(key)) throw Error('Duplicate case/slot overrides.');
     seen.add(key);
+    if (!Array.isArray(value.moves) || value.moves.some((move: unknown) => {
+      const fields = Object.keys(object(move));
+      return fields.length !== 2 || !fields.includes('family') || !fields.includes('amount');
+    })) throw Error('Missing or unknown move fields.');
     const moves = decodeMoves(value.moves);
     // Slot guidance is mapped back to FR before testing the canonical case.
     const slotYaw: QuarterTurn = slot === 'canonical' ? 0 : ({ FR: 0, FL: 1, BR: 3, BL: 2 } as const)[slot];
