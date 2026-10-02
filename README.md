@@ -1,5 +1,9 @@
 # Cube Trainer
 
+[Live app](https://jstarfilms.github.io/rubiks-cube-trainer/) · [Full project status and remaining roadmap](https://github.com/JStaRFilms/rubiks-cube-trainer/issues/1)
+
+The complete 493-case ZBLL library is verified, but its practice integration is blocked after an unrecovered agent dispatch. It is not an available trainer yet. See the status issue and orchestration ledger for the exact checkpoint.
+
 Cross, Cross+1, isolated F2L and separate OLL/PLL Time Attack work for all six colors, with untimed or 15-second inspection, local history/statistics, backup/confirmed restore and notation/3D review. Cross uses maximum optimal depth 1 through 8 HTM. Cross+1 uses a Cross ceiling K1..8 and witnessed combined cap L1..12, with any pair or FR/FL/BR/BL targeting. Cross+1 support is provisional for desktop/touch emulation, not certified phone tiers. F2L includes all 41 sourced cases, family/subset selection, FR or random slot, fixed/random pre-U, requested view hints, execution/recognition and validated canonical/slot personal guidance. Time Attack includes all 57 OLL and 21 PLL cases, custom sets, shuffle, fixed/random pre-U/yaw, recognition and frozen validated personal guidance. ZBLL and Cross+2 remain unavailable. Move review still accepts an entered setup and moves.
 
 Choose Settings for color, maximum depth and inspection. Start Cross practice creates a real Cross session if needed. Begin each scramble with that Cross solved and aligned to its side centers. A fully solved cube also works. Hold the displayed down/front colors, apply the scramble, then solve only the Cross. If unsure after stopping, restore the Cross before Next. Other pieces in 3D are representative unless your base was fully solved. Stopping is self-reported completion, not physical solve detection.

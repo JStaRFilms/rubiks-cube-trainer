@@ -1,6 +1,6 @@
 # Delivery task index
 
-Session `orch-20260930-021158`. Seventeen tasks complete through B10 and P01 preparation, B11 blocked after unrecovered dispatch, and nine pending. Actual trainers are Cross/Cross+1/F2L/OLL/PLL; ZBLL has verified complete data only. Owner authorizes normal push, GitHub Pages production at https://jstarfilms.github.io/rubiks-cube-trainer/ and a comprehensive GitHub issue. Scoped deployment must pass before claiming success. Historical source/review failures and physical limits remain. B11/Q04 require later recovery, not automatic completion.
+Session `orch-20260930-021158`. Seventeen complete, B11 blocked and nine pending. Verified code through `4d1f4ce` is pushed and live at https://jstarfilms.github.io/rubiks-cube-trainer/. Workflow 37019910747 and live asset/HTTPS/offline checks passed. Combined status issue https://github.com/JStaRFilms/rubiks-cube-trainer/issues/1. Actual trainers are Cross/Cross+1/F2L/OLL/PLL; ZBLL has complete data only, not practice. Agent ledger, original failures and physical/performance limits remain. B11/Q04 need later recovery, not automatic completion.
 
 | ID | Authored packet | Stage | Dependencies |
 | --- | --- | --- | --- |

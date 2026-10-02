@@ -4,7 +4,11 @@
 
 The verified app delivers offline Cross, Cross+1, F2L and separate OLL/PLL Time Attack. The complete 493-case ZBLL library is implemented and verified, but ZBLL practice is not built. Cross+2 and the rest of the roadmap remain unfinished.
 
-The owner authorized committing/pushing the accumulated release and current orchestration documents, publishing on GitHub Pages, and opening this consolidated status issue. Confirmed production target is https://jstarfilms.github.io/rubiks-cube-trainer/. Local Pages preparation passed; actual workflow/live deployment verification is recorded separately after publication. This document does not turn a configured site into a completed deployment.
+The accumulated release and corrected orchestration documents are committed and pushed to main. The app is live at https://jstarfilms.github.io/rubiks-cube-trainer/.
+
+[GitHub Pages workflow 37019910747](https://github.com/JStaRFilms/rubiks-cube-trainer/actions/runs/37019910747) succeeded for commit `4d1f4ce897571b769fd185c1431b5b57874fbb7a`. Published release is `pages-4d1f4ce897571b769fd185c1431b5b57874fbb7a-37019910747-1`. Parent verified all 52 live asset SHA-256/length pairs, 9,539,093 required bytes and correct service-worker delivery. Public HTTPS Chrome testing passed full five-trainer offline setup, exact worker scope, cold disconnected navigation, actual Cross generation/timing/save/backup, never-rendered offline player and history after offline reload. No history was seeded and no clock accelerated. This is desktop smoke evidence, not a physical solve or installed-PWA certificate.
+
+The normal fast-forward push covered `973a879..4d1f4ce`, including Cross+1 proof/integration, 41/57/21 libraries, Windows source-byte protection, F2L practice, OLL/PLL Time Attack, Q03 mixed-guidance repair, complete ZBLL library and Pages preparation. Relevant master/index/summary/task packets and the agent ledger are published with it.
 
 ## Product and planning
 
@@ -67,7 +71,7 @@ Important evidence is attributed, not pooled into a fictional aggregate:
 - Q03 initially FAILED mixed guidance, then the same reviewer approved a targeted recheck. Earlier startup/update timeouts and separately passing reruns remain. No clean final full historical browser aggregate is claimed.
 - B10 parent independently repeated lint/typecheck and 45 tests, including all eight full new proof tests, plus 52-asset source/notice inspection and Windows-safe byte checks.
 - P01 coder passed 162 relevant units, 22 root browser regressions and seven Pages tests. Parent repeated lint/typecheck, 80 relevant units and all seven Pages tests, then rebuilt the 52-asset Pages bundle with exact pins/notices/source inspection. Repeated runs do not increase unique coverage.
-- Live Actions, HTTPS delivery and public-origin runtime/offline checks are a separate publication step. The build includes a large source archive and a main-chunk warning; startup/readiness variability is not declared fixed.
+- Live Actions succeeded and public HTTPS asset/runtime/offline smoke passed separately from local tests. The initial scratch live probe launched through the sandbox's Bun executable timed out with no result; invoking the same probe with actual Node passed. No application assertion, source or test timeout changed. The build includes a large source archive and a main-chunk warning; startup/readiness variability is not declared fixed.
 
 Moving from localhost/dev/preview to the Pages HTTPS origin creates separate browser storage. Export a validated backup from the old origin and restore it on the new one if transferring history. No automatic transfer, server database or deployment of personal records occurs.
 
@@ -82,8 +86,19 @@ Moving from localhost/dev/preview to the Pages HTTPS origin creates separate bro
 - [ ] Physical iPhone/Android, Firefox/Safari, OS-installed PWA restart/update, screen readers, real audio, physical touch/solve, GPU/thermal/battery/performance and long-session leaks. Desktop Chrome/headless/touch emulation does not certify them.
 - [ ] Investigate retained startup/model-readiness and history/update-hydration variability with evidence, without hiding failures or weakening deadlines.
 
+## Published status issue
+
+This consolidated report is published as [GitHub issue #1](https://github.com/JStaRFilms/rubiks-cube-trainer/issues/1). Live workflow and asset/runtime evidence are in `docs/audits/GitHub_Pages_Publication.md`.
+
 ## Durable orchestration and references
 
 Session master, index, summary, task packets and `Agent_Execution_Ledger.md` under `docs/tasks/orchestrator-sessions/orch-20260930-021158/` record actual acceptance, missing dispatches and role overrides. Initial board model/persona hints are not proof of served models or completed runs. Parent owns integration/Git/acceptance; coders and read-only reviewers have separate evidence.
 
 Key audits include `B01_Foundation_Handoff.md`, `Cube_Tools_Integration.md`, `Timer_Statistics_Integration.md`, `Cross_Trainer_Integration.md`, `Q01_First_Usable_Increment.md`, `Cross_One_Feasibility.md`, `Cross_One_Integration.md`, `Q02_Cross_One_Acceptance.md`, `Case_Libraries_Verification.md`, `F2L_Trainer_Integration.md`, `Time_Attack_Integration.md`, `Q03_Case_Trainers_Acceptance.md`, `ZBLL_Source_Acceptance_Review.md`, `ZBLL_Library_Verification.md` and `GitHub_Pages_Deployment_Preparation.md`. The project is a verified useful increment, not the full finished plan.
+
+- [Authoritative product plan](https://github.com/JStaRFilms/rubiks-cube-trainer/blob/main/docs/imports/PLAN.md)
+- [Current orchestrator master plan](https://github.com/JStaRFilms/rubiks-cube-trainer/blob/main/docs/tasks/orchestrator-sessions/orch-20260930-021158/master_plan.md)
+- [Task index](https://github.com/JStaRFilms/rubiks-cube-trainer/blob/main/docs/tasks/orchestrator-sessions/orch-20260930-021158/task_index.md)
+- [Orchestrator summary](https://github.com/JStaRFilms/rubiks-cube-trainer/blob/main/docs/tasks/orchestrator-sessions/orch-20260930-021158/Orchestrator_Summary.md)
+- [Actual agent execution ledger](https://github.com/JStaRFilms/rubiks-cube-trainer/blob/main/docs/tasks/orchestrator-sessions/orch-20260930-021158/Agent_Execution_Ledger.md)
+- [Published changes](https://github.com/JStaRFilms/rubiks-cube-trainer/compare/973a879...4d1f4ce)
