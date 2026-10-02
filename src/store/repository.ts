@@ -1,5 +1,6 @@
 import { openDB, type DBSchema, type IDBPDatabase, type IDBPObjectStore } from 'idb';
 import { defaultSettings, personalStores, type AttemptRecord, type PersonalAlgorithmRecord, type PracticeSetRecord, type RunRecord, type SemanticValidator, type SessionRecord, type SettingsRecord, type TrainerBackupV1 } from './records';
+import { closeRep, recoverRun } from '../ll/runs';
 import { boundedInput, DataError, decodeBackup, decodeSession, decodeSettings, validateAttemptDurations } from './validation';
 export const DATABASE_VERSION = 1;
 interface Metadata { key: 'revision' | 'probe'; value: number }
@@ -105,7 +106,52 @@ export class Repository {
       await this.bump(tx.objectStore('settings')); await tx.done;
     } catch (error) { try { tx.abort(); } catch { /* Already aborted. */ } await tx.done.catch(() => {}); throw error; }
   }
+  async savePracticeSet(input: PracticeSetRecord | null, id: string, expectedRevision: number): Promise<void> {
+    input = structuredClone(input);
+    const current = await this.read();
+    if (current.revision !== expectedRevision) throw new DataError('Local data changed. Reload sets.');
+    if (input && input.id !== id) throw new DataError('Set ID mismatch.');
+    await decodeBackup({ ...current.backup, practiceSets: [...current.backup.practiceSets.filter((set) => set.id !== id), ...(input ? [input] : [])] }, this.validator);
+    const db = await this.db(), tx = db.transaction(['settings', 'practiceSets'], 'readwrite');
+    try {
+      const metadata = await tx.objectStore('settings').get('revision');
+      if ((metadata && 'value' in metadata ? metadata.value : 0) !== expectedRevision) throw new DataError('Local data changed before set saving.');
+      if (input) await tx.objectStore('practiceSets').put(input); else await tx.objectStore('practiceSets').delete(id);
+      await this.bump(tx.objectStore('settings')); await tx.done;
+    } catch (error) { try { tx.abort(); } catch { /* Already aborted. */ } await tx.done.catch(() => {}); throw error; }
+  }
+  async saveRun(input: RunRecord, expectedRevision: number): Promise<void> {
+    input = structuredClone(input);
+    const current = await this.read();
+    if (current.revision !== expectedRevision) throw new DataError('Local data changed. Reload this run.');
+    const before = current.backup.runs.find((run) => run.id === input.id);
+    if (!input.snapshot) throw new DataError('Missing actual run snapshot.');
+    if (!before) {
+      if (input.status !== 'active' || input.cursor !== 0 || input.presented || input.outcomes.length || input.interruptions?.length) throw new DataError('A new run must start at its first unpresented rep.');
+      if (current.backup.runs.some((run) => run.sessionId === input.sessionId && (run.status === 'active' || run.status === 'interrupted'))) throw new DataError('Resume or abandon the existing session run first.');
+    } else {
+      const fixed = (run: RunRecord) => JSON.stringify([run.id, run.sessionId, run.setId, run.setSnapshot, run.repPlan, run.snapshot, run.comparisonKey, run.createdAt]);
+      if (fixed(before) !== fixed(input)) throw new DataError('Frozen historical run plan cannot change.');
+      const present = { ...before, status: 'active', presented: true };
+      const resume = { ...before, status: 'active', presented: false };
+      const abandon = { ...before, status: 'abandoned', presented: false, endedAt: input.endedAt };
+      const rep = before.repPlan[before.cursor], cursor = before.cursor + 1;
+      const skip = rep ? { ...before, presented: false, cursor, status: cursor === before.repPlan.length ? 'complete' : 'active', endedAt: cursor === before.repPlan.length ? input.endedAt : null,
+        outcomes: [...before.outcomes, { kind: 'skipped', repIndex: before.cursor, caseId: rep.caseId }] } : null;
+      const equal = (value: unknown) => JSON.stringify(value) === JSON.stringify(input);
+      const live = before.status === 'active' || before.status === 'interrupted';
+      if (!equal(before) && !(live && !before.presented && (equal(present) || equal(resume) || equal(skip))) && !(live && !before.presented && equal(abandon)) && !(before.presented && equal({ ...recoverRun(before), endedAt: input.endedAt }))) throw new DataError('Invalid run state transition.');
+    }
+    await decodeBackup({ ...current.backup, runs: [...current.backup.runs.filter((run) => run.id !== input.id), input] }, this.validator);
+    const db = await this.db(), tx = db.transaction(['settings', 'runs'], 'readwrite');
+    try {
+      const metadata = await tx.objectStore('settings').get('revision');
+      if ((metadata && 'value' in metadata ? metadata.value : 0) !== expectedRevision) throw new DataError('Local data changed before run saving.');
+      await tx.objectStore('runs').put(input); await this.bump(tx.objectStore('settings')); await tx.done;
+    } catch (error) { try { tx.abort(); } catch { /* Already aborted. */ } await tx.done.catch(() => {}); throw error; }
+  }
   async saveAttempt(input: unknown, run?: RunRecord): Promise<void> {
+    input = structuredClone(input); run = structuredClone(run);
     if (!this.validator) throw new DataError('Attempt saving needs the compatible cube validator. Training is not yet available.');
     boundedInput(input);
     const attempt = await this.validator.validateAttempt(input); validateAttemptDurations(attempt);
@@ -113,7 +159,12 @@ export class Repository {
     const session = current.backup.sessions.find((s) => s.id === attempt.sessionId);
     if (!session || session.trainer !== attempt.trainer || attempt.challenge.options.trainer !== attempt.trainer) throw new DataError('Attempt/session trainer does not match.');
     if (attempt.runId && (!run || run.id !== attempt.runId)) throw new DataError('A run-linked attempt requires its atomic run outcome.');
-    if (run) await this.validator.validateTrainingData({ personalAlgorithms: [], practiceSets: current.backup.practiceSets, runs: [run] }, [...current.backup.attempts.filter((a) => a.id !== attempt.id), attempt], current.backup.sessions);
+    const existingAttempt = current.backup.attempts.find((value) => value.id === attempt.id);
+    const previousRun = run ? current.backup.runs.find((value) => value.id === run.id) : undefined;
+    if (run?.snapshot && !(existingAttempt && JSON.stringify(existingAttempt) === JSON.stringify(attempt) && JSON.stringify(previousRun) === JSON.stringify(run))) {
+      if (!previousRun || JSON.stringify(closeRep(previousRun, attempt)) !== JSON.stringify(run)) throw new DataError('Stopped outcome does not match the presented run cursor.');
+    }
+    if (run) await this.validator.validateTrainingData({ personalAlgorithms: current.backup.personalAlgorithms, practiceSets: current.backup.practiceSets, runs: [...current.backup.runs.filter((r) => r.id !== run.id), run] }, [...current.backup.attempts.filter((a) => a.id !== attempt.id), attempt], current.backup.sessions);
     const db = await this.db(), tx = db.transaction(['settings', 'sessions', 'attempts', 'runs'], 'readwrite');
     try {
       const storedSession = await tx.objectStore('sessions').get(attempt.sessionId);
@@ -122,6 +173,7 @@ export class Repository {
       if ((metadata && 'value' in metadata ? metadata.value : 0) !== current.revision) throw new DataError('Local data changed before saving. Retry this record.');
       const existing = await tx.objectStore('attempts').get(attempt.id);
       if (existing && JSON.stringify(existing) !== JSON.stringify(attempt)) throw new DataError('This attempt ID already has a different record. Historical challenges cannot be overwritten.');
+      if (existing && (!run || JSON.stringify(await tx.objectStore('runs').get(run.id)) === JSON.stringify(run))) { await tx.done; return; }
       await tx.objectStore('attempts').put(attempt);
       if (run) await tx.objectStore('runs').put(run);
       await this.bump(tx.objectStore('settings')); await tx.done;
@@ -141,7 +193,8 @@ export class Repository {
     const after: AttemptRecord | null = kind === null ? null : { ...before, penalty: { kind, source: 'manual' } };
     const beforeRun = before.runId ? backup.runs.find((r) => r.id === before.runId) ?? null : null;
     if (before.runId && !beforeRun) throw new DataError('Attempt run is missing. No history was changed.');
-    const afterRun: RunRecord | null = beforeRun && kind === null ? { ...beforeRun, status: 'interrupted',
+    const afterRun: RunRecord | null = beforeRun && kind === null ? { ...beforeRun, status: beforeRun.snapshot ? beforeRun.status : 'interrupted',
+      ...(beforeRun.snapshot ? { interruptions: [...new Set([...(beforeRun.interruptions ?? []), before.repIndex ?? 0])].sort((a, b) => a - b) } : {}),
       outcomes: beforeRun.outcomes.map((outcome) => outcome.kind !== 'skipped' && outcome.attemptId === id
         ? { kind: 'interrupted', repIndex: outcome.repIndex, attemptId: null } : outcome) } : beforeRun;
     await decodeBackup({ ...backup, attempts: backup.attempts.filter((a) => a.id !== id).concat(after ? [after] : []),
@@ -185,7 +238,7 @@ export class Repository {
       for (const record of backup.attempts) await tx.objectStore('attempts').put(record);
       for (const record of backup.personalAlgorithms) await tx.objectStore('personalAlgorithms').put(record);
       for (const record of backup.practiceSets) await tx.objectStore('practiceSets').put(record);
-      for (const record of backup.runs) await tx.objectStore('runs').put(record.status === 'active' ? { ...record, status: 'interrupted' } : record);
+      for (const record of backup.runs) await tx.objectStore('runs').put(record.snapshot ? recoverRun(record, backup.attempts.filter((attempt) => attempt.runId === record.id).reduce((latest, attempt) => attempt.endedAt > latest ? attempt.endedAt : latest, new Date().toISOString())) : record.status === 'active' ? { ...record, status: 'interrupted' } : record);
       await tx.objectStore('settings').put({ key: 'revision', value: revision + 1 }); await tx.done;
     } catch (error) { try { tx.abort(); } catch { /* Already aborted. */ } await tx.done.catch(() => {}); throw error; }
   }

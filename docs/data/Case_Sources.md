@@ -23,7 +23,7 @@ B07 uses two pinned MIT artifacts. Public availability alone was not the rights 
 - Numbering artifact: [src/algs.ts](https://raw.githubusercontent.com/lieberkind/f2l-trainer/76fcfccf522f12822db8699209a6a934c4d28421/src/algs.ts). Its `all-algs` set explicitly selects 1..41; later entries 42+ are excluded. We use the numbered setup states to map the standard 41-case inventory, not its alternate algorithms marked for empty-slot contexts.
 - Source setups sometimes target FL or end in a regrip. Independent replay first restores centers, identifies the sole unsolved slot, and maps it to FR by proper yaw conjugation. The resulting 41 distinct keys equal the independently enumerated non-solved inventory exactly.
 
-Rights verdict: accepted for this bounded reuse under MIT, with both notices retained. These grants do not impose GPL or another whole-project license. They do not establish rights for unrelated collections. Source attribution and exact license copies must remain with distributed derivatives. Static notice assets already join the existing offline asset manifest; the case arrays themselves are not imported by production UI yet.
+Rights verdict: accepted for this bounded reuse under MIT, with both notices retained. These grants do not impose GPL or another whole-project license. They do not establish rights for unrelated collections. Source attribution and exact license copies must remain with distributed derivatives. Static notice assets already join the existing offline asset manifest; the accepted case arrays now support actual F2L and OLL/PLL Time Attack. Canonical identities and pinned bytes remain unchanged.
 
 ## Artifact integrity
 

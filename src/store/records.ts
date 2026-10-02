@@ -31,11 +31,16 @@ export type Challenge = ChallengeCommon & (
 export interface F2LPreferences {
   caseIds: string[]; slotMode: 'FR' | 'random'; hint: boolean; mode: 'execution' | 'recognition'; preAuf: 0 | 1 | 2 | 3 | 'random';
 }
+export interface LLPreferences {
+  caseIds: string[]; setId: string | null; mode: 'execution' | 'recognition'; shuffle: boolean;
+  preAuf: 0 | 1 | 2 | 3 | 'random'; yaw: 0 | 1 | 2 | 3 | 'random';
+}
 export interface SettingsRecord {
   key: 'preferences'; theme: 'dark' | 'light' | 'system'; defaultTrainer: Trainer; crossColor: Color;
   inspectionMode: 'untimed' | '15s'; audibleWarnings: boolean; reducedMotion: 'system' | 'on';
   lastOptions: Partial<Record<Trainer, GoalOptions>>;
   f2lPractice?: F2LPreferences;
+  llPractice?: { oll?: LLPreferences; pll?: LLPreferences };
 }
 export const defaultOneOptions: Extract<GoalOptions, { trainer: 'cross1' }> = { trainer: 'cross1', K: 3, L: 8, pair: { kind: 'any' } };
 export const defaultSettings: SettingsRecord = {
@@ -65,12 +70,22 @@ export interface PracticeSetRecord {
 export type RepOutcome = { kind: 'attempt'; repIndex: number; attemptId: string }
   | { kind: 'skipped'; repIndex: number; caseId: string }
   | { kind: 'interrupted'; repIndex: number; attemptId: string | null };
+export interface LLRunSnapshot {
+  policy: 'll-run-v1'; mode: 'execution' | 'recognition'; shuffle: boolean;
+  preAuf: 0 | 1 | 2 | 3 | 'random'; yaw: 0 | 1 | 2 | 3 | 'random';
+  settings: TimingSettings; frame: TrainingFrame; versions: Versions;
+  guidance: { caseId: string; moves: Move[]; preAuf: 0 | 1 | 2 | 3; finalAuf: 0 | 1 | 2 | 3 }[];
+  challenges: Challenge[];
+}
 export interface RunRecord {
   id: string; sessionId: string; setId: string | null;
   setSnapshot: PracticeSetRecord; comparisonKey: string;
   repPlan: { caseId: string; preAuf: 0 | 1 | 2 | 3; yaw: 0 | 1 | 2 | 3 }[];
   status: 'active' | 'complete' | 'interrupted' | 'abandoned'; cursor: number; outcomes: RepOutcome[];
   createdAt: string; endedAt: string | null;
+  snapshot?: LLRunSnapshot;
+  presented?: boolean;
+  interruptions?: number[];
 }
 export interface TrainerBackupV1 {
   format: 'cube-trainer-backup'; version: 1; exportedAt: string; cubeContract: 'cube3-facelets-v1';

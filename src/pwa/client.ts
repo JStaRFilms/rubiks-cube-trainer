@@ -1,5 +1,6 @@
 import { crossClient } from '../cross/client';
 import { OneClient } from '../cross-one/client';
+import { LLClient } from '../ll/client';
 import { F2LClient } from '../f2l/client';
 import { activityStore, lockUpdate, releaseUpdate } from './activity';
 declare const __RELEASE_ID__: string;
@@ -36,6 +37,7 @@ async function activeWorker(registration: ServiceWorkerRegistration): Promise<Se
 export class PwaController {
   private readonly oneSetup = new OneClient();
   private readonly f2lSetup = new F2LClient();
+  private readonly llSetup = new LLClient();
   private registration: ServiceWorkerRegistration | null = null;
   private state: OfflineState = { phase: 'not-started', message: 'Offline shell not checked.', waiting: false };
   constructor(private readonly publish: (state: OfflineState) => void, private readonly probe: () => Promise<void>) {}
@@ -62,12 +64,12 @@ export class PwaController {
       observe();
       registration.waiting?.postMessage({ kind: 'HELLO' });
       if (navigator.serviceWorker.controller) await this.verify(false);
-      else this.set({ message: 'Set up offline Cross, Cross+1 and F2L practice, including verified tables, the 41-case library, cube models and player.' });
+      else this.set({ message: 'Set up offline Cross, Cross+1, F2L, OLL and PLL practice, including verified tables, actual 41/57/21 libraries, cube models and player.' });
     } catch (error) { this.set({ phase: 'failed', message: error instanceof Error ? error.message : 'Shell setup failed.' }); }
   }
   async verify(download: boolean): Promise<void> {
     try {
-      this.set({ phase: download ? 'downloading' : 'verifying', message: download ? 'Checking and downloading missing Cross, Cross+1, F2L and review assets…' : 'Verifying cached Cross, Cross+1, F2L and review assets…' });
+      this.set({ phase: download ? 'downloading' : 'verifying', message: download ? 'Checking and downloading missing Cross, Cross+1, F2L, OLL, PLL and review assets…' : 'Verifying cached Cross, Cross+1, F2L, OLL, PLL and review assets…' });
       let registration = this.registration;
       if (download && !registration?.active) registration = await navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' });
       if (!registration) throw new Error('No shell worker is installed. Set up the offline shell first.');
@@ -89,12 +91,15 @@ export class PwaController {
       this.set({ phase: 'initializing', message: 'Validating the actual 41-case F2L library and cube model…' });
       await this.f2lSetup.initialize();
       this.f2lSetup.suspend();
+      this.set({ phase: 'initializing', message: 'Validating the actual 57 OLL and 21 PLL libraries and cube model…' });
+      await this.llSetup.initialize();
+      this.llSetup.suspend();
       if (!navigator.serviceWorker.controller) {
         this.set({ phase: 'not-started', message: 'Shell downloaded. Reload to finish setup.' });
         if (download && activityStore.getState().phase === 'idle' && !activityStore.getState().updateToken) location.reload();
         return;
       }
-      this.set({ phase: 'ready', message: `Offline review ready · Cross ready · Cross+1 ready · F2L ready · ${String(result.releaseId)}. All three trainers, timing, history and review included.` });
+      this.set({ phase: 'ready', message: `Offline review ready · Cross ready · Cross+1 ready · F2L ready · OLL ready · PLL ready · ${String(result.releaseId)}. All five trainers, timing, history and review included.` });
     } catch (error) { this.set({ phase: 'failed', message: error instanceof Error ? error.message : 'Shell setup failed. Retry.' }); }
   }
   async checkUpdate(): Promise<void> { await this.registration?.update(); this.set({ waiting: !!this.registration?.waiting }); }

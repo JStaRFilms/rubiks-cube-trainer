@@ -25,6 +25,17 @@ export function validatePresentedF2LGuidance(engine: CubeEngine, state: CubeStat
   fixedLowerProof(engine, state, moves);
   if (!f2lSolved(engine, engine.apply(state, moves))) throw Error('Guidance does not solve the actual presented F2L state.');
 }
+export function validatePresentedLLGuidance(engine: CubeEngine, trainer: 'oll' | 'pll', state: CubeStateV1, moves: readonly Move[]): QuarterTurn {
+  const final = engine.apply(state, moves);
+  if (engine.centerKey(final) !== engine.centerKey(SOLVED)) throw Error('Presented guidance must return to the held frame before final AUF.');
+  if (trainer === 'pll') {
+    for (const post of QUARTERS) if (engine.apply(final, auf(post)).facelets === SOLVED.facelets) return post;
+    throw Error('Guidance does not solve the presented PLL including final AUF.');
+  }
+  fixedLowerProof(engine, state, moves);
+  if (!f2lSolved(engine, final) || !oriented(engine, final)) throw Error('Guidance does not orient the presented OLL and preserve F2L.');
+  return 0;
+}
 export function validateCase(engine: CubeEngine, entry: CaseEntry): void {
   engine.fromState(entry.representative);
   if (entry.identityPolicyVersion !== IDENTITY_POLICIES[entry.trainer]) throw Error('Unsupported case identity policy.');

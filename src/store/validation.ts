@@ -1,5 +1,7 @@
+import { OLL_CASES } from '../data/oll';
+import { PLL_CASES } from '../data/pll';
 import { F2L_CASES } from '../data/f2l';
-import { colors, trainers, type F2LPreferences, type GoalOptions, type SemanticValidator, type SessionRecord, type SettingsRecord, type Trainer, type TrainerBackupV1 } from './records';
+import { colors, trainers, type F2LPreferences, type LLPreferences, type GoalOptions, type SemanticValidator, type SessionRecord, type SettingsRecord, type Trainer, type TrainerBackupV1 } from './records';
 export const MAX_FILE_BYTES = 20 * 1024 * 1024;
 export class DataError extends Error {}
 export function object(value: unknown): Record<string, unknown> {
@@ -67,19 +69,30 @@ export function decodeF2LPreferences(input: unknown): F2LPreferences {
   if (preAuf === undefined) throw new DataError('Invalid F2L pre-U policy.');
   return { caseIds, slotMode: choice(value.slotMode, ['FR', 'random']), hint: bool(value.hint), mode: choice(value.mode, ['execution', 'recognition']), preAuf };
 }
+export function decodeLLPreferences(input: unknown, trainer: 'oll' | 'pll'): LLPreferences {
+  const value = object(input); keys(value, ['caseIds', 'setId', 'mode', 'shuffle', 'preAuf', 'yaw']);
+  const library = trainer === 'oll' ? OLL_CASES : PLL_CASES;
+  if (!Array.isArray(value.caseIds) || !value.caseIds.length || value.caseIds.length > library.length) throw new DataError('Select at least one last-layer case.');
+  const caseIds = value.caseIds.map((id: unknown) => { const entry = library.find((entry) => entry.id === id); if (!entry) throw new DataError('Unknown last-layer selection.'); return entry.id; }); unique(caseIds);
+  const angle = (v: unknown) => v === 'random' ? 'random' : ([0, 1, 2, 3] as const).find((q) => q === v);
+  const preAuf = angle(value.preAuf), yaw = angle(value.yaw); if (preAuf === undefined || yaw === undefined) throw new DataError('Invalid last-layer angle policy.');
+  return { caseIds, setId: value.setId === null ? null : text(value.setId), mode: choice(value.mode, ['execution', 'recognition']), shuffle: bool(value.shuffle), preAuf, yaw };
+}
 export function decodeSettings(input: unknown): SettingsRecord {
   const v = object(input);
-  keys(v, ['key', 'theme', 'defaultTrainer', 'crossColor', 'inspectionMode', 'audibleWarnings', 'reducedMotion', 'lastOptions'], ['f2lPractice']);
+  keys(v, ['key', 'theme', 'defaultTrainer', 'crossColor', 'inspectionMode', 'audibleWarnings', 'reducedMotion', 'lastOptions'], ['f2lPractice', 'llPractice']);
   const lastOptions: Partial<Record<Trainer, GoalOptions>> = {};
   for (const [key, value] of Object.entries(object(v.lastOptions))) {
     const trainer = choice(key, trainers), option = decodeGoalOptions(value);
     if (trainer !== option.trainer) throw new DataError('Trainer options do not match their key.');
     lastOptions[trainer] = option;
   }
+  let llPractice: SettingsRecord['llPractice'];
+  if ('llPractice' in v) { const ll = object(v.llPractice); keys(ll, [], ['oll', 'pll']); llPractice = { ...('oll' in ll ? { oll: decodeLLPreferences(ll.oll, 'oll') } : {}), ...('pll' in ll ? { pll: decodeLLPreferences(ll.pll, 'pll') } : {}) }; }
   return { key: choice(v.key, ['preferences']), theme: choice(v.theme, ['dark', 'light', 'system']),
     defaultTrainer: choice(v.defaultTrainer, trainers), crossColor: choice(v.crossColor, colors),
     inspectionMode: choice(v.inspectionMode, ['untimed', '15s']), audibleWarnings: bool(v.audibleWarnings),
-    reducedMotion: choice(v.reducedMotion, ['system', 'on']), lastOptions, ...('f2lPractice' in v ? { f2lPractice: decodeF2LPreferences(v.f2lPractice) } : {}) };
+    reducedMotion: choice(v.reducedMotion, ['system', 'on']), lastOptions, ...('f2lPractice' in v ? { f2lPractice: decodeF2LPreferences(v.f2lPractice) } : {}), ...('llPractice' in v ? { llPractice } : {}) };
 }
 export function decodeSession(input: unknown): SessionRecord {
   const v = object(input); keys(v, ['id', 'trainer', 'label', 'createdAt']);

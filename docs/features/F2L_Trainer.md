@@ -1,6 +1,6 @@
 # F2L trainer
 
-B08 implementation blueprint. PLAN 4.3 and 6.3 and FR-008/012/013 control this slice. The accepted B07 library supplies all 41 identities. OLL/PLL attempts, sets, runs, ZBLL and Cross+2 remain closed.
+B08 implementation blueprint. PLAN 4.3 and 6.3 and FR-008/012/013 control this slice. The accepted B07 library supplies all 41 identities. At the B08 checkpoint, OLL/PLL attempts, sets and runs remained closed. B09 adds the separate [Time Attack](Time_Attack.md) integration. ZBLL and Cross+2 remain closed.
 
 ## Physical base and goal
 

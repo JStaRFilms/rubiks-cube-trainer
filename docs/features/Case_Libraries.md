@@ -1,6 +1,6 @@
 # Case libraries
 
-B07 library contract. PLAN §§4.3, 4.4 and 6.3 and Core architecture control the behavior. B07 itself added data and pure validators, not trainer UI. Parent accepted B07 and the subsequent [B08 F2L integration](F2L_Trainer.md). Genuine F2L attempts and personal algorithms now persist through strict validation. Time Attack attempts/sets/runs remain closed until B09.
+B07 library contract. PLAN §§4.3, 4.4 and 6.3 and Core architecture control the behavior. B07 itself added data and pure validators, not trainer UI. Parent accepted B07 and the subsequent [B08 F2L integration](F2L_Trainer.md). Genuine F2L attempts and personal algorithms now persist through strict validation. B09 integrates actual OLL/PLL attempts, sets and runs through the strict [Time Attack](Time_Attack.md) contract, pending parent review and Q03.
 
 ## Sources and rights
 
@@ -31,7 +31,7 @@ A presented pre-U turn is undone before canonical guidance, and a yaw maps both 
 
 Each entry has a stable source-qualified ID, trainer, source label/alias, family, representative legal facelet state, identity policy/key, canonical setup, default guidance, angle rules and source/dataset version. Coverage manifests list expected IDs and solved exclusion. Defaults remain independent of personal algorithms.
 
-The case dataset and identity policies have separate version strings. B07 does not change the cube wire contract, database/export versions, Cross/Cross+1 engine/dataset/table versions, or existing history validation. Unsupported trainers and case persistence remain fail-closed until their actual integrations exist.
+The case dataset and identity policies have separate version strings. B07 does not change the cube wire contract, database/export versions, Cross/Cross+1 engine/dataset/table versions, or existing history validation. Actual F2L and OLL/PLL persistence use their integrated semantic gates. ZBLL and Cross+2 remain fail-closed.
 
 ## Verification gate
 

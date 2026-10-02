@@ -4,6 +4,8 @@ import { canonicalText, invertMoves } from '../cube/notation';
 import { effectiveExecution, formatMs } from '../statistics/attempts';
 import { emergencyExport, freezeSnapshot, type Presentation, type TimerController } from '../timer/controller';
 import type { AttemptRecord } from '../store/records';
+import { llEntry } from '../ll/model';
+import { auf } from '../cases/identity';
 import { f2lEntry, SLOT_YAWS } from '../f2l/model';
 import { F2LCaseView } from './F2LCaseView';
 
@@ -112,6 +114,9 @@ export function TimerPractice({ controller, presentation, onSaved, onNext, onRev
     : state.phase === 'execution' ? formatMs(elapsed.execution)
     : inspecting ? formatMs(late ? elapsed.inspection - 15000 : 15000 - elapsed.inspection) : '0.000';
   const canNext = state.phase === 'saved' && controller.canPresent;
+  const llOptions = snapshot.challenge.options.trainer === 'oll' || snapshot.challenge.options.trainer === 'pll' ? snapshot.challenge.options : null;
+  const ll = llOptions ? llEntry(llOptions.trainer === 'oll' ? 'oll' : 'pll', llOptions.caseId) : null;
+  const revealLL = llOptions?.mode === 'execution' ? state.phase !== 'execution' : record?.timing.status === 'completed';
   const f2lOptions = snapshot.challenge.options.trainer === 'f2l' ? snapshot.challenge.options : null;
   const f2l = f2lOptions ? f2lEntry(f2lOptions.caseId) : null;
   const revealF2L = f2lOptions?.mode === 'execution' ? state.phase !== 'execution' : record?.timing.status === 'completed';
@@ -121,8 +126,11 @@ export function TimerPractice({ controller, presentation, onSaved, onNext, onRev
   }
   return <>
     <section className="scramble-rail" aria-label="Presented challenge">
-      <span>{f2lOptions ? `Solve the isolated ${f2lOptions.slot} pair · Base: Cross and all four pairs solved and aligned before each setup` : snapshot.challenge.options.trainer === 'cross1' ? `Solve Cross and ${snapshot.challenge.options.pair.kind === 'any' ? 'any one pair' : `the ${snapshot.challenge.options.pair.slot} pair`} · Base: fully solved cube before each scramble` : 'Solve only Cross · Base: solved, aligned Cross'} · Hold {snapshot.challenge.frame.colorOfFace.D} down, {snapshot.challenge.frame.colorOfFace.F} front</span>
+      <span>{llOptions ? `${llOptions.trainer.toUpperCase()} · ${llOptions.trainer === 'oll' ? 'Base: F2L solved and aligned, LL oriented; permutation may vary' : 'Base: fully solved and aligned, including final AUF'} · rep ${(snapshot.run?.repIndex ?? 0) + 1}` : f2lOptions ? `Solve the isolated ${f2lOptions.slot} pair · Base: Cross and all four pairs solved and aligned before each setup` : snapshot.challenge.options.trainer === 'cross1' ? `Solve Cross and ${snapshot.challenge.options.pair.kind === 'any' ? 'any one pair' : `the ${snapshot.challenge.options.pair.slot} pair`} · Base: fully solved cube before each scramble` : 'Solve only Cross · Base: solved, aligned Cross'} · Hold {snapshot.challenge.frame.colorOfFace.D} down, {snapshot.challenge.frame.colorOfFace.F} front</span>
       <p>{canonicalText(snapshot.challenge.scramble)}</p>
+      {llOptions && <><F2LCaseView state={snapshot.challenge.start} frame={snapshot.challenge.frame} label={llOptions.trainer === 'oll' ? 'Representative last-layer cube net. Permutation may differ on your physical cube.' : 'Last-layer model from the confirmed solved base. Not a camera observation.'} /><span>{llOptions.trainer === 'oll' ? 'Representative permutation, not observed. Orient LL and preserve F2L; no PLL required between reps.' : 'Model from the confirmed solved base, not observed physical stickers.'}</span>
+        {ll && revealLL && snapshot.challenge.proof.kind === 'case' && <div className="f2l-guidance"><span>{llOptions.trainer.toUpperCase()} {ll.label} · {ll.family} · Speeden source {ll.sourceLabel}</span><p>Frozen guidance, includes return regrip if needed: {canonicalText(snapshot.challenge.proof.solution)}</p><span>{llOptions.trainer === 'pll' && `Required final AUF after this guide: ${canonicalText(auf(snapshot.challenge.proof.finalAuf)) || 'None'}. If using a different algorithm, align the physical cube instead of blindly applying this AUF.`}</span></div>}
+      </>}
       {f2lOptions && <><F2LCaseView state={snapshot.challenge.start} frame={snapshot.challenge.frame} />
         <span>Representative LL, not observed physical pieces. {f2lOptions.hint && `${hint}. View hint requested, no physical turn recorded. Not an extra setup move; guidance starts in the displayed frame.`}</span>
         {f2l && revealF2L && snapshot.challenge.proof.kind === 'case' && <div className="f2l-guidance"><span>F2L {f2l.label} · {f2l.family} · Lieberkind numbering, Speeden default source {f2l.sourceLabel}</span><span>{JSON.stringify(snapshot.challenge.proof.solution) === JSON.stringify(invertMoves(snapshot.challenge.scramble)) ? 'Shown guidance matches the sourced default.' : 'Validated alternate guidance, frozen at presentation.'}</span><p>Guidance: {canonicalText(snapshot.challenge.proof.solution)}</p></div>}
@@ -162,6 +170,7 @@ export function TimerPractice({ controller, presentation, onSaved, onNext, onRev
         <p>Raw execution: {formatMs(record.timing.executionMs)} · Preparation, includes scrambling: {formatMs(record.preparationMs)}</p>
         <p>Inspection: {record.timing.inspectionMs === null ? snapshot.settings.inspectionMode === 'untimed' ? 'Not used' : 'Not started' : formatMs(record.timing.inspectionMs)}</p>
         {record.challenge.proof.kind === 'combined-bound' && <p>Found solution: {record.challenge.proof.witness.length} HTM · cap {record.challenge.proof.cap} · generator solved slots {record.challenge.proof.solvedSlots.join('/')}. Not a global optimum. Pair you executed: not recorded. Reset the entire cube to fully solved before Next.</p>}
+        {(record.challenge.options.trainer === 'oll' || record.challenge.options.trainer === 'pll') && <p>{record.challenge.options.trainer === 'oll' ? 'Restore F2L solved and aligned, with LL oriented before Next. Permutation may vary; no mandatory PLL.' : 'Finish final AUF if following the frozen guide, then confirm fully solved and aligned before Next. If you used another algorithm, align the physical base; do not blindly apply the displayed AUF.'}</p>}
         {record.challenge.options.trainer === 'f2l' && <p>Restore Cross and all four pairs before Next. LL may vary. Requested view hint: {record.challenge.options.hint ? 'shown' : 'hidden'}. Physical rotation: not observed.</p>}
         {record.timing.status === 'interrupted' && <p>{record.timing.phase} · {record.timing.reason}. Start fresh, never resume.</p>}
         {state.phase === 'save-failed' && <div role="alert"><p>{state.error}</p><button onClick={() => void controller.retry()}>Retry save</button><button onClick={() => {

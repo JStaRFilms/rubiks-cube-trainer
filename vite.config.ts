@@ -22,7 +22,7 @@ function assetManifest(): Plugin {
       }
       this.emitFile({ type: 'asset', fileName: 'release-assets.json', source: JSON.stringify({
         releaseId, cubeContract: 'cube3-facelets-v1', engine: ENGINE_VERSION, engineSource: ENGINE_SOURCE, engineIntegrity: ENGINE_INTEGRITY, dataset: 'cfop-libraries-v1', tables: ONE_VERSIONS.tables,
-        scope: 'cross-cross1-f2l-practice', initialization: [...INITIALIZATION], assets,
+        scope: 'cross-cross1-f2l-oll-pll-practice', initialization: [...INITIALIZATION], assets,
       }) });
     } },
   };
