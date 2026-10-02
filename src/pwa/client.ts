@@ -4,6 +4,12 @@ import { LLClient } from '../ll/client';
 import { F2LClient } from '../f2l/client';
 import { activityStore, lockUpdate, releaseUpdate } from './activity';
 declare const __RELEASE_ID__: string;
+const base = import.meta.env.BASE_URL;
+const workerUrl = new URL(`${base}sw.js`, location.href).href;
+function controllingWorker(): ServiceWorker | null {
+  const worker = navigator.serviceWorker.controller;
+  return worker?.scriptURL === workerUrl ? worker : null;
+}
 export type SetupState = 'not-started' | 'downloading' | 'initializing' | 'verifying' | 'ready' | 'failed';
 export interface OfflineState { phase: SetupState; message: string; waiting: boolean }
 function request(worker: ServiceWorker, kind: string): Promise<Record<string, unknown>> {
@@ -45,6 +51,7 @@ export class PwaController {
   async start(): Promise<void> {
     if (!('serviceWorker' in navigator)) { this.set({ phase: 'failed', message: 'Service workers are unavailable in this browser.' }); return; }
     navigator.serviceWorker.addEventListener('message', (event: MessageEvent<unknown>) => {
+      if (!(event.source instanceof ServiceWorker) || event.source.scriptURL !== workerUrl) return;
       const data = event.data;
       if (!data || typeof data !== 'object' || !('token' in data) || typeof data.token !== 'string' || !('kind' in data)) return;
       const token = data.token;
@@ -57,13 +64,14 @@ export class PwaController {
       else this.set({ phase: 'not-started', message: 'Shell version changed. Recheck offline setup.' });
     });
     try {
-      this.registration = await navigator.serviceWorker.getRegistration('/') ?? await navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' });
+      const existing = await navigator.serviceWorker.getRegistration(base);
+      this.registration = existing?.scope === new URL(base, location.href).href ? existing : await navigator.serviceWorker.register(workerUrl, { scope: base, updateViaCache: 'none' });
       const registration = this.registration;
       const observe = () => this.set({ waiting: !!registration.waiting });
       registration.addEventListener('updatefound', () => registration.installing?.addEventListener('statechange', observe));
       observe();
       registration.waiting?.postMessage({ kind: 'HELLO' });
-      if (navigator.serviceWorker.controller) await this.verify(false);
+      if (controllingWorker()) await this.verify(false);
       else this.set({ message: 'Set up offline Cross, Cross+1, F2L, OLL and PLL practice, including verified tables, actual 41/57/21 libraries, cube models and player.' });
     } catch (error) { this.set({ phase: 'failed', message: error instanceof Error ? error.message : 'Shell setup failed.' }); }
   }
@@ -71,10 +79,10 @@ export class PwaController {
     try {
       this.set({ phase: download ? 'downloading' : 'verifying', message: download ? 'Checking and downloading missing Cross, Cross+1, F2L, OLL, PLL and review assets…' : 'Verifying cached Cross, Cross+1, F2L, OLL, PLL and review assets…' });
       let registration = this.registration;
-      if (download && !registration?.active) registration = await navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' });
+      if (download && !registration?.active) registration = await navigator.serviceWorker.register(workerUrl, { scope: base, updateViaCache: 'none' });
       if (!registration) throw new Error('No shell worker is installed. Set up the offline shell first.');
       this.registration = registration;
-      const worker = navigator.serviceWorker.controller ?? await activeWorker(registration);
+      const worker = controllingWorker() ?? await activeWorker(registration);
       const result = await request(worker, download ? 'SETUP' : 'VERIFY_SHELL');
       if (result.releaseId !== __RELEASE_ID__) throw new Error('App and offline shell versions differ. Finish or recover any attempt, then reload before setup.');
       this.set({ phase: 'initializing', message: 'Checking local storage…' });
@@ -94,7 +102,7 @@ export class PwaController {
       this.set({ phase: 'initializing', message: 'Validating the actual 57 OLL and 21 PLL libraries and cube model…' });
       await this.llSetup.initialize();
       this.llSetup.suspend();
-      if (!navigator.serviceWorker.controller) {
+      if (!controllingWorker()) {
         this.set({ phase: 'not-started', message: 'Shell downloaded. Reload to finish setup.' });
         if (download && activityStore.getState().phase === 'idle' && !activityStore.getState().updateToken) location.reload();
         return;

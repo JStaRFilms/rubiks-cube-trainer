@@ -32,7 +32,24 @@ pnpm preview --port 4173
 
 Open `http://127.0.0.1:4173`. Help → Local data → Set up / retry review downloads all Cross, Cross+1, F2L, OLL/PLL library/worker and player assets, initializes and checks the trusted table, and probes personal storage. Reload to finish setup. The ready label includes review, Cross, Cross+1, F2L, OLL and PLL, including actual Cross+1 model/pair and all 41/57/21 case validations before first use. Recheck cached review also rechecks the Cross table; missing/corrupt tables fail readiness. Setup rebuilds only disposable solver data, including while offline when the required code is cached. It never deletes history.
 
-Install through the browser's install menu, or Share → Add to Home Screen on iPhone. HTTPS is required outside localhost. No hosting or deployment is configured.
+Install through the browser's install menu, or Share → Add to Home Screen on iPhone. HTTPS is required outside localhost.
+
+## GitHub Pages preparation
+
+Production is selected at `https://jstarfilms.github.io/rubiks-cube-trainer/`. `.github/workflows/pages.yml` prepares the official Pages artifact on main pushes or manual dispatch with Node 24, pnpm 10.33.2 and the frozen lockfile. The repository's Pages source must be GitHub Actions. Parent owns enabling Pages, pushing, running the workflow and checking the live site. Local verification does not establish deployment success.
+
+Root development/build remains the default. Set `VITE_BASE_PATH=/rubiks-cube-trainer/` for Pages, or use Vite's `--base=/rubiks-cube-trainer/` build option. The static manifest uses relative URLs so its identity, start URL, scope and icons resolve within either base. Each service-worker scope/release owns a separate cache. Personal data stays in the existing version-1 databases; root and subpath applications on one origin share those databases, not asset caches. GitHub Pages storage belongs to its origin and does not transfer localhost history. Export a backup if moving devices or origins.
+
+PowerShell production-subpath checks:
+
+```powershell
+$env:VITE_BASE_PATH = '/rubiks-cube-trainer/'
+pnpm build
+pnpm exec playwright test --config playwright.pages.config.ts
+node tests/helpers/bundle-evidence.mjs docs/audits/GitHub_Pages_Bundle_Evidence.json
+```
+
+The Pages test server uses port 4175 and serves files only under the actual repository path, with no server-side SPA fallback. Unknown online paths return 404. After verified setup, the scoped worker supplies offline navigation. The app itself still uses in-page navigation. Update tests publish a prepared alternate release, so the final inspector command rebuilds the intended Pages dist. Remove `VITE_BASE_PATH` from the environment before root tests. In Git Bash on Windows, prefix environment-based Pages commands with `MSYS2_ENV_CONV_EXCL=VITE_BASE_PATH` to prevent path conversion. See [deployment evidence](docs/audits/GitHub_Pages_Deployment_Preparation.md) for root/subpath results and live/device limits.
 
 ## Checks
 
@@ -73,4 +90,4 @@ Cubing 0.63.8 remains pinned for parser/model/player only, under the selected MP
 
 Windows desktop Chrome 154.0.8037.95 is tested, including touch emulation, production offline flows and Node/Vite development. Physical iPhone Safari, Android Chrome, Firefox, desktop Safari, assistive technology, real audio audibility and OS-installed PWA lifecycle remain unrun. Desktop heap/event-loop samples are not a phone memory, heat, battery or latency guarantee. No deployment or production data was touched.
 
-Feature contracts are in [Cross trainer](docs/features/Cross_Trainer.md), [Cross+1 trainer](docs/features/Cross_One_Trainer.md), [F2L trainer](docs/features/F2L_Trainer.md), [Time Attack](docs/features/Time_Attack.md) and [Trainer foundation](docs/features/Trainer_Foundation.md). Parent accepted B07/B08 source libraries and F2L. B09 evidence and limits are in [Time Attack integration](docs/audits/Time_Attack_Integration.md), pending parent review and Q03. Full browser set loops use accelerated test clocks, not physical solves. The unit suite runs one worker so the exhaustive Cartesian tests do not contend for CPU; retained assertions and timeouts are unchanged. Both case MIT notices and exact pinned source bytes remain retained. Video, accounts, sync and later trainers remain gated.
+Feature contracts are in [Cross trainer](docs/features/Cross_Trainer.md), [Cross+1 trainer](docs/features/Cross_One_Trainer.md), [F2L trainer](docs/features/F2L_Trainer.md), [Time Attack](docs/features/Time_Attack.md) and [Trainer foundation](docs/features/Trainer_Foundation.md). Parent accepted B07/B08 source libraries and F2L, and B09 Time Attack after the Q03 mixed-guidance repair. Evidence and limits are in [Time Attack integration](docs/audits/Time_Attack_Integration.md). B10's isolated 493-case ZBLL library is accepted; B11 practice is blocked by the unrecovered dispatch and has not been built. Full browser set loops use accelerated test clocks, not physical solves. The unit suite runs one worker so the exhaustive Cartesian tests do not contend for CPU; retained assertions and timeouts are unchanged. Both case MIT notices and exact pinned source bytes remain retained. Video, accounts, sync and later trainers remain gated.

@@ -1,18 +1,21 @@
 /// <reference lib="webworker" />
 import { decodeManifest, verifyAsset, type ReleaseManifest } from './manifest';
+import { isScopedUrl, releaseCacheName } from './scope';
 declare const self: ServiceWorkerGlobalScope;
 declare const __RELEASE_ID__: string;
-const releaseId = __RELEASE_ID__, cacheName = `cube-trainer-assets-${releaseId}`;
+const scope = new URL(self.registration.scope), base = scope.pathname;
+const releaseId = __RELEASE_ID__, cacheName = releaseCacheName(base, releaseId);
+const manifestPath = `${base}release-assets.json`, indexPath = `${base}index.html`;
 let pendingToken: string | null = null;
 async function manifest(download: boolean): Promise<ReleaseManifest> {
   const cache = await caches.open(cacheName);
-  const stored = await cache.match('/release-assets.json');
+  const stored = await cache.match(manifestPath);
   if (!stored && !download) throw new Error('Offline shell incomplete: release manifest. Reconnect and retry setup.');
-  const response = stored ?? await fetch('/release-assets.json', { cache: 'no-store' });
+  const response = stored ?? await fetch(manifestPath, { cache: 'no-store', redirect: 'error' });
   if (!response.ok) throw new Error('Release manifest download failed. Reconnect and retry.');
-  const decoded = decodeManifest(await response.clone().json());
+  const decoded = decodeManifest(await response.clone().json(), base);
   if (decoded.releaseId !== releaseId) throw new Error('Release changed during setup. Check for an update and retry.');
-  if (!stored) await cache.put('/release-assets.json', response);
+  if (!stored) await cache.put(manifestPath, response);
   return decoded;
 }
 async function setup(download: boolean): Promise<{ releaseId: string; total: number }> {
@@ -21,22 +24,22 @@ async function setup(download: boolean): Promise<{ releaseId: string; total: num
     let response = await cache.match(asset.url);
     if (!response || !await verifyAsset(response.clone(), asset)) {
       if (!download) throw new Error(`Offline shell incomplete: ${asset.url}. Reconnect and retry setup.`);
-      response = await fetch(asset.url, { cache: 'no-store' });
+      response = await fetch(asset.url, { cache: 'no-store', redirect: 'error' });
       if (!await verifyAsset(response.clone(), asset)) throw new Error(`Asset verification failed: ${asset.url}. Retry setup.`);
       await cache.put(asset.url, response);
     }
   }
-  if (!await cache.match('/index.html')) throw new Error('Navigation fallback is missing.');
+  if (!await cache.match(indexPath)) throw new Error('Navigation fallback is missing.');
   return { releaseId, total: data.assets.length };
 }
 self.addEventListener('install', (event) => { event.waitUntil(setup(true)); });
 // No clients.claim, skipWaiting on install, or automatic cache deletion.
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
-  if (url.origin !== self.location.origin || event.request.method !== 'GET') return;
+  if (!isScopedUrl(url, scope) || event.request.method !== 'GET') return;
   event.respondWith((async () => {
     const cache = await caches.open(cacheName);
-    if (event.request.mode === 'navigate') return await cache.match('/index.html') ?? fetch(event.request);
+    if (event.request.mode === 'navigate') return await cache.match(indexPath) ?? fetch(event.request);
     // Static manifest assets have identical bytes across request Origin headers.
     const cached = await cache.match(event.request, { ignoreSearch: false, ignoreVary: true });
     return cached ?? fetch(event.request);
@@ -54,25 +57,29 @@ async function ask(client: Client, token: string, kind: 'LOCK_UPDATE' | 'VERIFY_
     client.postMessage({ kind, token }, [channel.port2]);
   });
 }
+async function scopedClients(): Promise<WindowClient[]> {
+  return (await self.clients.matchAll({ type: 'window', includeUncontrolled: true })).filter((client) => isScopedUrl(new URL(client.url), scope));
+}
 async function activateSafely(): Promise<void> {
   if (pendingToken) throw new Error('An update confirmation is already in progress.');
   const token = crypto.randomUUID(); pendingToken = token;
-  const clients = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+  const clients = await scopedClients();
   let success = false;
   try {
     if (!clients.length || !(await Promise.all(clients.map((client) => ask(client, token, 'LOCK_UPDATE')))).every(Boolean)) throw new Error('Close dialogs or finish practice in other tabs, then retry the update.');
-    const latest = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+    const latest = await scopedClients();
     if (latest.length !== clients.length || latest.some((c) => !clients.some((old) => old.id === c.id))) throw new Error('Open tabs changed. Retry the update when all tabs are idle.');
     if (!(await Promise.all(latest.map((client) => ask(client, token, 'VERIFY_UPDATE')))).every(Boolean)) throw new Error('An attempt or edit blocked the update.');
-    const finalClients = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+    const finalClients = await scopedClients();
     if (finalClients.length !== latest.length || finalClients.some((c) => !latest.some((old) => old.id === c.id))) throw new Error('Open tabs changed. Retry the update.');
     await self.skipWaiting(); success = true;
   } finally {
-    if (!success) for (const client of await self.clients.matchAll({ type: 'window', includeUncontrolled: true })) client.postMessage({ kind: 'UNLOCK_UPDATE', token });
+    if (!success) for (const client of await scopedClients()) client.postMessage({ kind: 'UNLOCK_UPDATE', token });
     pendingToken = null;
   }
 }
 self.addEventListener('message', (event) => {
+  if (!event.source || !('url' in event.source) || !isScopedUrl(new URL(event.source.url), scope)) return;
   const data: unknown = event.data;
   if (!data || typeof data !== 'object' || !('kind' in data)) return;
   const port = event.ports[0];

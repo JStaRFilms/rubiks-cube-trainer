@@ -1,5 +1,9 @@
 # Task B11: Deliver ZBLL family and subset practice
 
+## Dispatch recovery status
+
+BLOCKED, not delivered. The recorded async run `0c1dfc4a-0e02-42a9-b08e-32e0d3323c90` has no recoverable status file. Native management reports no active async runs, and checkout inspection found no B11 code, feature or integration report. This does not prove why the dispatch failed. Do not infer completion, active work or cancellation. Owner subsequently requested publishing the verified checkpoint, confirming GitHub Pages as target. Pause B11 and leave Q04 pending. A later instruction must resume/recover B11 explicitly; do not automatically redispatch while publishing.
+
 ## Agent setup
 
 ### Workflow

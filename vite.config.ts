@@ -7,18 +7,22 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { ENGINE_VERSION, ENGINE_SOURCE, ENGINE_INTEGRITY, INITIALIZATION } from './src/cube/version';
 
 import { ONE_VERSIONS } from './src/cross-one/model';
+import { normalizeBasePath } from './src/pwa/scope';
+const configuredBase = normalizeBasePath(process.env.VITE_BASE_PATH ?? '/');
 const releaseId = process.env.RELEASE_ID ?? `review-${Date.now()}`;
 function assetManifest(): Plugin {
+  let base = configuredBase;
   return {
     name: 'complete-release-manifest', enforce: 'post',
+    configResolved(config) { base = normalizeBasePath(config.base); },
     generateBundle: { order: 'post', handler(_, bundle) {
       const assets = Object.values(bundle).map((item) => {
         const bytes = Buffer.from(item.type === 'chunk' ? item.code : item.source);
-        return { url: `/${item.fileName}`, byteLength: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') };
+        return { url: `${base}${item.fileName}`, byteLength: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') };
       });
       for (const file of ['icon.svg', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png', 'manifest.webmanifest', ...readdirSync('public/licenses').map((file) => `licenses/${file}`)]) {
         const bytes = readFileSync(`public/${file}`);
-        assets.push({ url: `/${file}`, byteLength: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') });
+        assets.push({ url: `${base}${file}`, byteLength: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') });
       }
       this.emitFile({ type: 'asset', fileName: 'release-assets.json', source: JSON.stringify({
         releaseId, cubeContract: 'cube3-facelets-v1', engine: ENGINE_VERSION, engineSource: ENGINE_SOURCE, engineIntegrity: ENGINE_INTEGRITY, dataset: 'cfop-libraries-v1', tables: ONE_VERSIONS.tables,
@@ -28,6 +32,7 @@ function assetManifest(): Plugin {
   };
 }
 export default defineConfig({
+  base: configuredBase,
   define: { __RELEASE_ID__: JSON.stringify(releaseId) },
   plugins: [react(), tailwind(), assetManifest(), VitePWA({
     strategies: 'injectManifest', srcDir: 'src/pwa', filename: 'sw.ts', injectRegister: false,

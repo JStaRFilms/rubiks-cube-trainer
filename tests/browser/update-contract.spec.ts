@@ -1,5 +1,7 @@
-import { expect, test, type Page } from '@playwright/test';
-import { execSync } from 'node:child_process';
+import { expect, type Page } from '@playwright/test';
+import { test } from '../helpers/update-release';
+import { cp } from 'node:fs/promises';
+import { resolve } from 'node:path';
 import type { Activity } from '../../src/pwa/activity';
 import type {} from '../helpers/contract';
 test.use({ baseURL: 'http://127.0.0.1:4174' });
@@ -30,17 +32,17 @@ async function fixture(page: Page) {
   await page.waitForFunction(() => !!window.foundationContract);
   await page.evaluate(() => window.foundationContract.ready);
 }
-async function waitingUpdate(page: Page) {
-  execSync('pnpm build', { env: { ...process.env, RELEASE_ID: `contract-update-${Date.now()}` }, stdio: 'pipe' });
+async function waitingUpdate(page: Page, preparedRelease: string) {
+  await cp(preparedRelease, resolve('dist'), { recursive: true });
   await page.evaluate(() => window.foundationContract.controller.checkUpdate());
   await expect.poll(() => page.evaluate(async () => {
     const registration = await navigator.serviceWorker.getRegistration('/');
     return registration?.waiting?.state === 'installed';
   }), { timeout: 30000 }).toBe(true);
 }
-test('real browser activity phases and all-tab worker handshake block unsafe activation', async ({ page, context }) => {
+test('real browser activity phases and all-tab worker handshake block unsafe activation', async ({ page, context, preparedRelease }) => {
   await install(page); await fixture(page); const other = await context.newPage(); await other.goto('/'); await fixture(other);
-  await waitingUpdate(page);
+  await waitingUpdate(page, preparedRelease);
   const before = await page.evaluate(() => navigator.serviceWorker.controller?.scriptURL);
   for (const phase of ['preparation', 'inspection', 'arming', 'execution', 'save-pending', 'save-failed'] satisfies Activity[]) {
     await other.evaluate((value) => window.foundationContract.enterActivity(value), phase);

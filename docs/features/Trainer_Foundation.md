@@ -25,6 +25,16 @@ Coverage: FR-001–005 and FR-012 directly; shared contracts support FR-006–01
 
 D01 owns layouts, mockups, focus behavior and screen copy. It must include setup incomplete/retrying, worker progress/failure, recognition-hidden identity, inspection/arming, interrupted attempt, saving/save-failed, backup/restore confirmation, update-waiting and offline-unavailable states.
 
+## GitHub Pages deployment preparation
+
+The selected production URL is `https://jstarfilms.github.io/rubiks-cube-trainer/`. P01 prepares static deployment for the five implemented trainers, Cross, Cross+1, F2L, OLL and PLL. The accepted isolated ZBLL library does not enable ZBLL practice or readiness.
+
+Vite keeps `/` as the default development/build base. `VITE_BASE_PATH=/rubiks-cube-trainer/` selects the Pages build. HTML, public links, manifest identity/start/scope/icons, module workers and release asset URLs must use that base. The build hashes the final published bytes and maps published URLs back to files in `dist` for inspection. The service worker registers within that base, validates same-origin in-scope asset paths, caches each scope/release separately and uses its own index for offline navigation. It must neither intercept another application's paths nor delete its caches. Existing idle-only, all-tab update locks apply only to this application's scope; old release caches remain available.
+
+The official Pages workflow runs on main pushes or manual dispatch with Node 24, pnpm 10.33.2 and the frozen lockfile, then builds, uploads and deploys the static artifact. Parent owns Git, site configuration, workflow execution and live verification. Local production-subpath/offline/update tests are preparation evidence, not proof of a deployed site.
+
+No server, API, account, database schema, IndexedDB name/version, backup format or persistent trainer flow changes. Navigation remains in-page; no SPA router or Pages 404 fallback is added. HTTPS outside localhost remains required. Personal history and disposable solver tables retain their existing separation.
+
 ## Local schema v1
 
 Use IndexedDB database `cube-trainer` with initial database version 1. IDs are random local strings created once, not timestamps. Timestamps are UTC ISO strings; durations are rounded finite nonnegative integer milliseconds. Validate all stored/imported data at boundaries. Retain schema-version constants separately from release, engine, dataset, solver-table and export-format versions.
