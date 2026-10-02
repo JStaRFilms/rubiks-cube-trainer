@@ -1,0 +1,20 @@
+ZBLL move-string data
+
+ZBTrain, Christian Naguio, MIT.
+Pinned repository revision bd5b605d3a5bdc61ebf9925f348de62c406ecd1c.
+Complete permission notice: cases-ZBTrain-MIT.txt.
+The publisher credits Roman Strakhov for the algorithm/scramble casemap.
+This is publisher-reported provenance, not an assertion of original ownership
+or an independently established upstream sublicense.
+
+AlphaSheep/Another-ZBLL-Trainer, Brendan James Gray, MIT.
+Pinned repository revision 9cddec702c52e8d6521f8cf7e884f5738f0223a1.
+Only case taxonomy and piece/sticker definitions are reused for source mapping.
+Complete permission notice: cases-AlphaSheep-MIT.txt.
+
+PLL membership reuses the existing Speeden entries and MIT permission notice
+in cases-Speeden-MIT.txt. Existing source notices remain unchanged.
+
+Trainer implementation, lessons, diagrams and GPL AlgDB project code are not
+included in the ZBLL library. The library does not enable a ZBLL trainer in
+this release.

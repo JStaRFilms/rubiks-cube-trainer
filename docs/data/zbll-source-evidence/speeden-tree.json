@@ -1,0 +1,481 @@
+{
+  "sha": "3aaf127b0013cbbfd16d12b397d8c0ff8c912c65",
+  "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/trees/3aaf127b0013cbbfd16d12b397d8c0ff8c912c65",
+  "tree": [
+    {
+      "path": ".env.example",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ea49ecee6be782fe580592f753730eb5c20c46f",
+      "size": 842,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/4ea49ecee6be782fe580592f753730eb5c20c46f"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e792bc818984580597dd624b4bbda78b90b155ae",
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/trees/e792bc818984580597dd624b4bbda78b90b155ae"
+    },
+    {
+      "path": ".github/FUNDING.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fe25fbb6fe80cb1526fc7d57c9436cf6a4c1089",
+      "size": 96,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/5fe25fbb6fe80cb1526fc7d57c9436cf6a4c1089"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "255fbaf721f8050c3cc4ede574b3145ef09af73f",
+      "size": 328,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/255fbaf721f8050c3cc4ede574b3145ef09af73f"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ffde8463635545f7ab304226900016cefefdde7",
+      "size": 1073,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/2ffde8463635545f7ab304226900016cefefdde7"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d3f598025f3bc2dc160322754622047ada4fb2c",
+      "size": 21035,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/8d3f598025f3bc2dc160322754622047ada4fb2c"
+    },
+    {
+      "path": "datenschutz.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01ad1bf2751b82af12b0be276dbebc4d751cf03b",
+      "size": 2011,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/01ad1bf2751b82af12b0be276dbebc4d751cf03b"
+    },
+    {
+      "path": "impressum.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "556e1b26e1f60dbb725ff56cd801feae77960106",
+      "size": 2009,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/556e1b26e1f60dbb725ff56cd801feae77960106"
+    },
+    {
+      "path": "index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40e0ddfd88d33f0315c9278c7016fad211039d22",
+      "size": 8536,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/40e0ddfd88d33f0315c9278c7016fad211039d22"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb3cab0f93650dced97ea1f23fdd678e8d1de685",
+      "size": 995,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/cb3cab0f93650dced97ea1f23fdd678e8d1de685"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "004b5f04b8472478c2384cec857a206ac8ee5c1d",
+      "size": 62207,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/004b5f04b8472478c2384cec857a206ac8ee5c1d"
+    },
+    {
+      "path": "public",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dedf39cd047d720fac7bb6464c4b168454169c9f",
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/trees/dedf39cd047d720fac7bb6464c4b168454169c9f"
+    },
+    {
+      "path": "public/og.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52239ca58b39021eb7202075f3acf6c8bc7e7ec6",
+      "size": 332552,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/52239ca58b39021eb7202075f3acf6c8bc7e7ec6"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eb8eef0d6bf59b481be31a2f51bedb428611487a",
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/trees/eb8eef0d6bf59b481be31a2f51bedb428611487a"
+    },
+    {
+      "path": "scripts/check-legal-info.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba324d31b397092bd3dbbbab758890858411c3c9",
+      "size": 2294,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/ba324d31b397092bd3dbbbab758890858411c3c9"
+    },
+    {
+      "path": "scripts/count-classes.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8efba7f2b5817be6c46e69dbc26518586fd7b03d",
+      "size": 3020,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/8efba7f2b5817be6c46e69dbc26518586fd7b03d"
+    },
+    {
+      "path": "scripts/cube-check.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cc0419bbc9e62422528cc4fd8ba30881a55e896",
+      "size": 3235,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/4cc0419bbc9e62422528cc4fd8ba30881a55e896"
+    },
+    {
+      "path": "scripts/fix-rotations.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "861687cc4e3d0ef5ffb3cfc8134dca7c9c45febb",
+      "size": 1870,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/861687cc4e3d0ef5ffb3cfc8134dca7c9c45febb"
+    },
+    {
+      "path": "scripts/gen-f2l.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "425d22255fa7e15b6c4f08108e61ca497f20899e",
+      "size": 10011,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/425d22255fa7e15b6c4f08108e61ca497f20899e"
+    },
+    {
+      "path": "scripts/gen-thumbs.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd62be2159e46a660b3a4797a441cb447442580b",
+      "size": 7782,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/cd62be2159e46a660b3a4797a441cb447442580b"
+    },
+    {
+      "path": "scripts/gen_oll.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "941e7698c11e85c5af8718f663f114616f2e3a98",
+      "size": 5913,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/941e7698c11e85c5af8718f663f114616f2e3a98"
+    },
+    {
+      "path": "scripts/net-rotation.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b694b776817b5017954a3d7fc9789bbcb8350d7a",
+      "size": 1526,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/b694b776817b5017954a3d7fc9789bbcb8350d7a"
+    },
+    {
+      "path": "scripts/og-card.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bfc0121ba7a50232831f0f797e8aa57e5030e45",
+      "size": 110733,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/5bfc0121ba7a50232831f0f797e8aa57e5030e45"
+    },
+    {
+      "path": "scripts/probe-ori.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fe0b47c8292c132cd015cf536253a339756d859",
+      "size": 871,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/5fe0b47c8292c132cd015cf536253a339756d859"
+    },
+    {
+      "path": "scripts/probe.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "baad2a9ee7cc3e7f1214d7394cec358b5caa76e2",
+      "size": 1153,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/baad2a9ee7cc3e7f1214d7394cec358b5caa76e2"
+    },
+    {
+      "path": "scripts/try-alg.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c279e44d2bfb5527d0785e016bd313ae3602d9e",
+      "size": 1024,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/7c279e44d2bfb5527d0785e016bd313ae3602d9e"
+    },
+    {
+      "path": "scripts/verify-algs.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f9ac91a61c6dabd93b7181ecb31faa64fb047ac",
+      "size": 5326,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/4f9ac91a61c6dabd93b7181ecb31faa64fb047ac"
+    },
+    {
+      "path": "scripts/verify-trainer.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "187e1032fe35e3740f0049f14bc3ab22c9aff470",
+      "size": 21191,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/187e1032fe35e3740f0049f14bc3ab22c9aff470"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0444bb9011a7f8d0fb7081410e567d3cdd926d70",
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/trees/0444bb9011a7f8d0fb7081410e567d3cdd926d70"
+    },
+    {
+      "path": "src/alg-panel.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aeedecaf85de05bb88a81547e3bac61cf4c29077",
+      "size": 26231,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/aeedecaf85de05bb88a81547e3bac61cf4c29077"
+    },
+    {
+      "path": "src/cube-model.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efd7dacac55efda2b74c62da3ade8387f934c864",
+      "size": 4455,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/efd7dacac55efda2b74c62da3ade8387f934c864"
+    },
+    {
+      "path": "src/cube-thumb.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7830c36d6c35783c9b27a4a9866bf8e85e6640b1",
+      "size": 17179,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/7830c36d6c35783c9b27a4a9866bf8e85e6640b1"
+    },
+    {
+      "path": "src/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3c2bee73bdd5d33863b9f391d3387fadf77c4754",
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/trees/3c2bee73bdd5d33863b9f391d3387fadf77c4754"
+    },
+    {
+      "path": "src/data/f2l.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4c7cdc1fe1dd5caba30030ed0e5b8f2d4d1308b",
+      "size": 14764,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/e4c7cdc1fe1dd5caba30030ed0e5b8f2d4d1308b"
+    },
+    {
+      "path": "src/data/oll.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75959ffbe4fc09e0eecfa41321529b614fe4c1e3",
+      "size": 9071,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/75959ffbe4fc09e0eecfa41321529b614fe4c1e3"
+    },
+    {
+      "path": "src/data/pll.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89a3d5887f952d34a5ab9c58aaee27210d846092",
+      "size": 4129,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/89a3d5887f952d34a5ab9c58aaee27210d846092"
+    },
+    {
+      "path": "src/data/thumbs.generated.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "128a8023a4883274a3238510bc9f18bb4e239a92",
+      "size": 10608,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/128a8023a4883274a3238510bc9f18bb4e239a92"
+    },
+    {
+      "path": "src/data/types.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92a4a08b5a4424944d9a6bb9cca88bc90ce68ea2",
+      "size": 1121,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/92a4a08b5a4424944d9a6bb9cca88bc90ce68ea2"
+    },
+    {
+      "path": "src/finder-icons.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "044cd8a1697a5eeabeb34bf006ae26b72afd1bae",
+      "size": 7786,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/044cd8a1697a5eeabeb34bf006ae26b72afd1bae"
+    },
+    {
+      "path": "src/icons.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c13d44bdb144929de45fcba32063070329918a2",
+      "size": 1905,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/1c13d44bdb144929de45fcba32063070329918a2"
+    },
+    {
+      "path": "src/legal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a8c1b354f87611ad817e3ca51f594d75539d98e8",
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/trees/a8c1b354f87611ad817e3ca51f594d75539d98e8"
+    },
+    {
+      "path": "src/legal/datenschutz.generated.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41b964a1ccd3a9b86f56150a4245ce763e76c422",
+      "size": 47333,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/41b964a1ccd3a9b86f56150a4245ce763e76c422"
+    },
+    {
+      "path": "src/legal/datenschutz.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "555a4733019ff0352e835461af21cc4357b6c5f0",
+      "size": 1143,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/555a4733019ff0352e835461af21cc4357b6c5f0"
+    },
+    {
+      "path": "src/legal/impressum.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b057e346ceb5ded21c1f0e50a0d638806cb35ce",
+      "size": 3430,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/0b057e346ceb5ded21c1f0e50a0d638806cb35ce"
+    },
+    {
+      "path": "src/legal/legal-info.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbff0c899869444078ad210211bbebcd0c60d11a",
+      "size": 3137,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/bbff0c899869444078ad210211bbebcd0c60d11a"
+    },
+    {
+      "path": "src/legal/legal.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fbeef26cd93634e4a28733d3ba4191dfc170759",
+      "size": 4000,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/3fbeef26cd93634e4a28733d3ba4191dfc170759"
+    },
+    {
+      "path": "src/main.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9d8e9bccc32449a482c52d26e76f3817bd7941c",
+      "size": 47895,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/c9d8e9bccc32449a482c52d26e76f3817bd7941c"
+    },
+    {
+      "path": "src/oll-shape.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05350201ac8b8f079482f2b1feeb077f14f7cbfe",
+      "size": 22694,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/05350201ac8b8f079482f2b1feeb077f14f7cbfe"
+    },
+    {
+      "path": "src/player.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c0743a0de91d1aef1313bd620087803f0634fa1",
+      "size": 4525,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/7c0743a0de91d1aef1313bd620087803f0634fa1"
+    },
+    {
+      "path": "src/sets.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "457c7e6c50d143510ec1d2f03a8ee829dd8b67f5",
+      "size": 625,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/457c7e6c50d143510ec1d2f03a8ee829dd8b67f5"
+    },
+    {
+      "path": "src/settings.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "522b6fe9c701608ebc69859bfb59fcd588a1e98a",
+      "size": 12009,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/522b6fe9c701608ebc69859bfb59fcd588a1e98a"
+    },
+    {
+      "path": "src/stickering.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23757ed6e7ddc8f58a0c44119bfcb9883b76afd1",
+      "size": 2560,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/23757ed6e7ddc8f58a0c44119bfcb9883b76afd1"
+    },
+    {
+      "path": "src/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c06e60200fe25dc46644fe91b514ff34fcc046b7",
+      "size": 53925,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/c06e60200fe25dc46644fe91b514ff34fcc046b7"
+    },
+    {
+      "path": "src/train-stats.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b4b6f25f47a587c88230d9882b1ec3f38c8efe6",
+      "size": 7344,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/5b4b6f25f47a587c88230d9882b1ec3f38c8efe6"
+    },
+    {
+      "path": "src/trainer.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b43a4b3e64e1b5d468c5be8dd6d10df38944f058",
+      "size": 32591,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/b43a4b3e64e1b5d468c5be8dd6d10df38944f058"
+    },
+    {
+      "path": "src/turn-pad.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ea79a37abe76565da7fd1d7ab5c52b9d2b6ea38",
+      "size": 30155,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/3ea79a37abe76565da7fd1d7ab5c52b9d2b6ea38"
+    },
+    {
+      "path": "src/url-state.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7db3974e21eabc77fbfff8fe57440d7927325bb8",
+      "size": 11224,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/7db3974e21eabc77fbfff8fe57440d7927325bb8"
+    },
+    {
+      "path": "tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "921a3cb5465b5d4f24024208412a0939cca8f8e0",
+      "size": 448,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/921a3cb5465b5d4f24024208412a0939cca8f8e0"
+    },
+    {
+      "path": "vite.config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9dc1684ed71a30a3d79c619fdb96280a90bac62b",
+      "size": 593,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/9dc1684ed71a30a3d79c619fdb96280a90bac62b"
+    },
+    {
+      "path": "wrangler.jsonc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07ac0f8e4042c528be4a1b037643c4ce44e6b80a",
+      "size": 664,
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/blobs/07ac0f8e4042c528be4a1b037643c4ce44e6b80a"
+    }
+  ],
+  "truncated": false
+}

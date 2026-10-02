@@ -3,7 +3,7 @@ import { pieceIndices, stickers } from '../cube/geometry';
 import { invertMoves, parseNotation } from '../cube/notation';
 import type { CaseEntry } from '../data/types';
 import type { Move, Slot } from '../store/records';
-import { auf, caseIdentity, f2lSolved, IDENTITY_POLICIES, isolatedContext, oriented, QUARTERS, type QuarterTurn } from './identity';
+import { auf, caseIdentity, edgesOriented, f2lSolved, IDENTITY_POLICIES, isolatedContext, oriented, QUARTERS, type QuarterTurn } from './identity';
 
 const lower = stickers.filter((s) => (s.position[1] === 0 || s.position[1] === -1) && s.position.filter((v) => v !== 0).length >= 2).map((s) => s.index);
 function llStickers(state: CubeStateV1): Set<number> {
@@ -25,12 +25,12 @@ export function validatePresentedF2LGuidance(engine: CubeEngine, state: CubeStat
   fixedLowerProof(engine, state, moves);
   if (!f2lSolved(engine, engine.apply(state, moves))) throw Error('Guidance does not solve the actual presented F2L state.');
 }
-export function validatePresentedLLGuidance(engine: CubeEngine, trainer: 'oll' | 'pll', state: CubeStateV1, moves: readonly Move[]): QuarterTurn {
+export function validatePresentedLLGuidance(engine: CubeEngine, trainer: 'oll' | 'pll' | 'zbll', state: CubeStateV1, moves: readonly Move[]): QuarterTurn {
   const final = engine.apply(state, moves);
   if (engine.centerKey(final) !== engine.centerKey(SOLVED)) throw Error('Presented guidance must return to the held frame before final AUF.');
-  if (trainer === 'pll') {
+  if (trainer === 'pll' || trainer === 'zbll') {
     for (const post of QUARTERS) if (engine.apply(final, auf(post)).facelets === SOLVED.facelets) return post;
-    throw Error('Guidance does not solve the presented PLL including final AUF.');
+    throw Error(`Guidance does not solve the presented ${trainer.toUpperCase()} including final AUF.`);
   }
   fixedLowerProof(engine, state, moves);
   if (!f2lSolved(engine, final) || !oriented(engine, final)) throw Error('Guidance does not orient the presented OLL and preserve F2L.');
@@ -44,6 +44,7 @@ export function validateCase(engine: CubeEngine, entry: CaseEntry): void {
   if (caseIdentity(engine, entry.trainer, SOLVED) === entry.identityKey) throw Error('Solved is not a library case.');
   if (entry.trainer === 'f2l' ? !isolatedContext(engine, entry.representative, 'FR') : !f2lSolved(engine, entry.representative)) throw Error('Case does not have its required initial context.');
   if (entry.trainer === 'pll' && !oriented(engine, entry.representative)) throw Error('PLL must start with LL oriented.');
+  if (entry.trainer === 'zbll' && !edgesOriented(engine, entry.representative)) throw Error('ZBLL must start with LL edges oriented.');
   if (entry.trainer === 'oll') {
     // Every allowed base has the same U occupancy and the same fixed lower stickers.
     // A sticker permutation cannot depend on which LL cubie carries those stickers.
@@ -52,13 +53,26 @@ export function validateCase(engine: CubeEngine, entry: CaseEntry): void {
   const final = validateGuidance(engine, entry, entry.defaultAlgorithm);
   if (final !== entry.finalAuf) throw Error('Recorded final AUF does not match the default.');
 }
+const zbllGuidanceProofs = new WeakMap<CubeEngine, Map<string, QuarterTurn>>();
 export function validateGuidance(engine: CubeEngine, entry: CaseEntry, moves: readonly Move[], preAuf: QuarterTurn = 0): QuarterTurn {
+  // Structural import checks still run on every call. Cache only successful new
+  // ZBLL goal proofs, keyed by the actual representative, identity and guidance.
+  const key = entry.trainer === 'zbll' ? JSON.stringify([entry.identityPolicyVersion, entry.identityKey, entry.representative, moves, preAuf]) : null;
+  let cache = zbllGuidanceProofs.get(engine);
+  if (key !== null) {
+    if (!cache) { cache = new Map(); zbllGuidanceProofs.set(engine, cache); }
+    const cached = cache.get(key);
+    if (cached !== undefined) return cached;
+  }
   if (caseIdentity(engine, entry.trainer, entry.representative) !== entry.identityKey) throw Error('Canonical identity does not match the requested case.');
   const complete = [...auf(preAuf), ...moves];
   const final = engine.normalize(engine.apply(entry.representative, complete));
-  if (entry.trainer === 'pll') {
-    for (const post of QUARTERS) if (engine.apply(final, auf(post)).facelets === SOLVED.facelets) return post;
-    throw Error('Algorithm does not solve the intended PLL, including final AUF.');
+  if (entry.trainer === 'pll' || entry.trainer === 'zbll') {
+    for (const post of QUARTERS) if (engine.apply(final, auf(post)).facelets === SOLVED.facelets) {
+      if (key !== null && cache) { if (cache.size >= 512) cache.clear(); cache.set(key, post); }
+      return post;
+    }
+    throw Error(`Algorithm does not solve the intended ${entry.trainer.toUpperCase()}, including final AUF.`);
   }
   fixedLowerProof(engine, entry.representative, complete);
   if (!f2lSolved(engine, final)) throw Error('Algorithm does not solve the intended F2L context.');

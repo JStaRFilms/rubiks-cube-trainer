@@ -1,6 +1,6 @@
 # Delivery task index
 
-Session `orch-20260930-021158`. Fifteen tasks are complete through Q03 and eleven remain pending. Cross, Cross+1, F2L and OLL/PLL Time Attack are implemented and accepted. Initial Q03 FAIL, mixed-guidance repair and targeted independent PASS are preserved. Stop for hands-on feedback before B10 ZBLL. Local increments are not pushed; the last authorized remote checkpoint remains `973a879`. Interim A-desktop/B-mobile layout and physical-device limits remain. Research, teaching/sync and deployment keep separate gates.
+Session `orch-20260930-021158`. Sixteen tasks complete through B10, B11 active and nine pending. Complete isolated ZBLL library is accepted, including all 493 identities and shared 21 PLL entries. Parent recovered the unavailable native handoff and repeated full new proofs within 45 passing tests, lint/typecheck and 52-asset build/source inspection. B11 adds actual practice/history/statistics/offline support, then fresh Q04. Both source BLOCKED rounds, source-only review PASS, retained failures and Q03 repair remain. No ZBLL UI certification yet. Local work is unpushed; remote `973a879`. Physical-device limits and later-track gates remain.
 
 | ID | Authored packet | Stage | Dependencies |
 | --- | --- | --- | --- |
@@ -19,8 +19,8 @@ Session `orch-20260930-021158`. Fifteen tasks are complete through Q03 and eleve
 | b08 | [Deliver F2L case and slot practice](completed/b08_deliver_f2l_case_and_slot_practice.task.md) | build | b07 |
 | b09 | [Deliver OLL and PLL Time Attack](completed/b09_deliver_oll_and_pll_time_attack.task.md) | build | b08 |
 | q03 | [Review F2L and Time Attack delivery](completed/q03_review_f2l_and_time_attack_delivery.task.md) | build | b09 |
-| b10 | [Curate the complete ZBLL inventory](pending/b10_curate_the_complete_zbll_inventory.task.md) | build | q03 |
-| b11 | [Deliver ZBLL family and subset practice](pending/b11_deliver_zbll_family_and_subset_practice.task.md) | build | b10 |
+| b10 | [Curate the complete ZBLL inventory](completed/b10_curate_the_complete_zbll_inventory.task.md) | build | q03 |
+| b11 | [Deliver ZBLL family and subset practice](in-progress/b11_deliver_zbll_family_and_subset_practice.task.md) | build | b10 |
 | q04 | [Review ZBLL delivery](pending/q04_review_zbll_delivery.task.md) | build | b11 |
 | q06 | [Check cumulative core readiness](pending/q06_check_cumulative_core_readiness.task.md) | build | q04 |
 | b12 | [Prove Cross plus two feasibility](pending/b12_prove_cross_plus_two_feasibility.task.md) | build | q06 |

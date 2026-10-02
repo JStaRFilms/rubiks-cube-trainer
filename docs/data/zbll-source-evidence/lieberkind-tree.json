@@ -1,0 +1,1009 @@
+{
+  "sha": "76fcfccf522f12822db8699209a6a934c4d28421",
+  "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/trees/76fcfccf522f12822db8699209a6a934c4d28421",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d29575de80483b005c29bfcac5061cd2f45313e",
+      "size": 310,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/4d29575de80483b005c29bfcac5061cd2f45313e"
+    },
+    {
+      "path": "LICENSE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "774a1317dbd81fe4fa8b6a37d74fc01e8e044ca0",
+      "size": 1060,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/774a1317dbd81fe4fa8b6a37d74fc01e8e044ca0"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69aa0fe4a3eca61cc47968aebb1fa04f58e96d00",
+      "size": 50,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/69aa0fe4a3eca61cc47968aebb1fa04f58e96d00"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ff295a31dd33bdb22c9e5093c2fe0bfc8b9f9d7",
+      "size": 1275,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/7ff295a31dd33bdb22c9e5093c2fe0bfc8b9f9d7"
+    },
+    {
+      "path": "postcss.config.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1075d01c30b981ff5ad8f788e4a48bf65babcae",
+      "size": 134,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/f1075d01c30b981ff5ad8f788e4a48bf65babcae"
+    },
+    {
+      "path": "public",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ae11381eda7cab1e4428327431768bd8948b00a8",
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/trees/ae11381eda7cab1e4428327431768bd8948b00a8"
+    },
+    {
+      "path": "public/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "da4ce7749c4d179268610450c534a59594d80479",
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/trees/da4ce7749c4d179268610450c534a59594d80479"
+    },
+    {
+      "path": "public/assets/f2lcases",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d0c145a85c603698335ca59478082f208757cb38",
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/trees/d0c145a85c603698335ca59478082f208757cb38"
+    },
+    {
+      "path": "public/assets/f2lcases/1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b7107d8cf6024870e4559757722e33cfb21ff7f",
+      "size": 38136,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/3b7107d8cf6024870e4559757722e33cfb21ff7f"
+    },
+    {
+      "path": "public/assets/f2lcases/2.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27038d9f04d36c080c370796dc39d29a22877c48",
+      "size": 38196,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/27038d9f04d36c080c370796dc39d29a22877c48"
+    },
+    {
+      "path": "public/assets/f2lcases/3.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8329d5620cd541305633e137e60a006b6bfbcff7",
+      "size": 39094,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/8329d5620cd541305633e137e60a006b6bfbcff7"
+    },
+    {
+      "path": "public/assets/f2lcases/4.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81e6eda197da4a545bc9f0f93f03e50f3657701d",
+      "size": 39222,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/81e6eda197da4a545bc9f0f93f03e50f3657701d"
+    },
+    {
+      "path": "public/assets/f2lcases/5.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fe0c8f6fc9a2a857aa07b9fa334ed46d5dcc2e3",
+      "size": 38364,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/6fe0c8f6fc9a2a857aa07b9fa334ed46d5dcc2e3"
+    },
+    {
+      "path": "public/assets/f2lcases/6.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f465db60a8847743604663f6fc271d19afcb7e3",
+      "size": 38328,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/6f465db60a8847743604663f6fc271d19afcb7e3"
+    },
+    {
+      "path": "public/assets/f2lcases/7.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "119625abc15926feb2d60fe62c0801ce9e698ddb",
+      "size": 39375,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/119625abc15926feb2d60fe62c0801ce9e698ddb"
+    },
+    {
+      "path": "public/assets/f2lcases/8.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "027ca373e2ecb7642772d661d0ecf6ea4429b696",
+      "size": 38962,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/027ca373e2ecb7642772d661d0ecf6ea4429b696"
+    },
+    {
+      "path": "public/assets/fl2cases2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0cb726d5cfb7daa628df8fc9136bb15d44c67e94",
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/trees/0cb726d5cfb7daa628df8fc9136bb15d44c67e94"
+    },
+    {
+      "path": "public/assets/fl2cases2/1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4beefbd27ead40e6ef3d5947f9e70c9b22a2bdd6",
+      "size": 44300,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/4beefbd27ead40e6ef3d5947f9e70c9b22a2bdd6"
+    },
+    {
+      "path": "public/assets/fl2cases2/10.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffc4c8708b91eabf1fe9609f242ceb8a9c672d45",
+      "size": 44185,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/ffc4c8708b91eabf1fe9609f242ceb8a9c672d45"
+    },
+    {
+      "path": "public/assets/fl2cases2/11.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1d5fc6eeca89b4a28686a1714bc30ce1355252c",
+      "size": 44775,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/b1d5fc6eeca89b4a28686a1714bc30ce1355252c"
+    },
+    {
+      "path": "public/assets/fl2cases2/12.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1ce2f9f27297f9d3286a819c124ca423671dbfd",
+      "size": 44015,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/f1ce2f9f27297f9d3286a819c124ca423671dbfd"
+    },
+    {
+      "path": "public/assets/fl2cases2/13.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92070f6cf6c64d78dde5feb745b49c7d8fd0f465",
+      "size": 43521,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/92070f6cf6c64d78dde5feb745b49c7d8fd0f465"
+    },
+    {
+      "path": "public/assets/fl2cases2/14.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1bc16eaac536f5ff3d77361c05a7ba43d2c1a29",
+      "size": 43675,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/f1bc16eaac536f5ff3d77361c05a7ba43d2c1a29"
+    },
+    {
+      "path": "public/assets/fl2cases2/15.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74fa65c936f6ad6cfa6d43868121266c35ace51c",
+      "size": 44160,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/74fa65c936f6ad6cfa6d43868121266c35ace51c"
+    },
+    {
+      "path": "public/assets/fl2cases2/16.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02fa70775b08a3367b9aa5858df48fcfbb4e9143",
+      "size": 44478,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/02fa70775b08a3367b9aa5858df48fcfbb4e9143"
+    },
+    {
+      "path": "public/assets/fl2cases2/17.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf4f89120431a005bf101bc96376deba5f6b5fcf",
+      "size": 44430,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/cf4f89120431a005bf101bc96376deba5f6b5fcf"
+    },
+    {
+      "path": "public/assets/fl2cases2/18.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0464fedf0a7f02953b9581a8e3b07a594b84434",
+      "size": 43770,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/b0464fedf0a7f02953b9581a8e3b07a594b84434"
+    },
+    {
+      "path": "public/assets/fl2cases2/19.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3566d25342bb88782fec338ccd4d962f27ccaa77",
+      "size": 43829,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/3566d25342bb88782fec338ccd4d962f27ccaa77"
+    },
+    {
+      "path": "public/assets/fl2cases2/2.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4938344991ca1f5f63efb642698d58ca3d6644b5",
+      "size": 44429,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/4938344991ca1f5f63efb642698d58ca3d6644b5"
+    },
+    {
+      "path": "public/assets/fl2cases2/20.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25fb8ee5d61ba43cd04efdd7f74ee779e92eef4c",
+      "size": 44849,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/25fb8ee5d61ba43cd04efdd7f74ee779e92eef4c"
+    },
+    {
+      "path": "public/assets/fl2cases2/21.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9331f5a42d84d54354179e8e055be6aceee82c2",
+      "size": 44614,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/f9331f5a42d84d54354179e8e055be6aceee82c2"
+    },
+    {
+      "path": "public/assets/fl2cases2/22.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6ff30b672f5b3e86b78c929f91f35511978b45a",
+      "size": 43564,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/e6ff30b672f5b3e86b78c929f91f35511978b45a"
+    },
+    {
+      "path": "public/assets/fl2cases2/23.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "000bb67177d89408d642d2f2aed35dadcc06dd8f",
+      "size": 43715,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/000bb67177d89408d642d2f2aed35dadcc06dd8f"
+    },
+    {
+      "path": "public/assets/fl2cases2/24.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0f90bd11029772102d2183a5a1ce0fd26b07584",
+      "size": 44611,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/f0f90bd11029772102d2183a5a1ce0fd26b07584"
+    },
+    {
+      "path": "public/assets/fl2cases2/25.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e76528a089dc741bc33f5cdbb219f8f2c25c1809",
+      "size": 44209,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/e76528a089dc741bc33f5cdbb219f8f2c25c1809"
+    },
+    {
+      "path": "public/assets/fl2cases2/26.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f40e854647e2a579032893eb64f19b78a2cb3d2",
+      "size": 44305,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/2f40e854647e2a579032893eb64f19b78a2cb3d2"
+    },
+    {
+      "path": "public/assets/fl2cases2/27.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1cffe0c351aa550c0f7fe90f36a2d3e8c16ca65",
+      "size": 43983,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/a1cffe0c351aa550c0f7fe90f36a2d3e8c16ca65"
+    },
+    {
+      "path": "public/assets/fl2cases2/28.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76fd4aec9daad53583d761d627ea58f8820fe134",
+      "size": 43728,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/76fd4aec9daad53583d761d627ea58f8820fe134"
+    },
+    {
+      "path": "public/assets/fl2cases2/29.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58b17ed0ae26456ccb5af3163b8964ec2d2b061c",
+      "size": 43769,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/58b17ed0ae26456ccb5af3163b8964ec2d2b061c"
+    },
+    {
+      "path": "public/assets/fl2cases2/3.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efa421d5d2ce3ebcabc30425c60cb4a94c682678",
+      "size": 44861,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/efa421d5d2ce3ebcabc30425c60cb4a94c682678"
+    },
+    {
+      "path": "public/assets/fl2cases2/30.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8b62fc76a4afd36ba6be8f28ecd3b68d6c3554d",
+      "size": 43688,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/a8b62fc76a4afd36ba6be8f28ecd3b68d6c3554d"
+    },
+    {
+      "path": "public/assets/fl2cases2/31.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c9d3307c61430a0c9bb067d0b603703196a74b7",
+      "size": 44655,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/9c9d3307c61430a0c9bb067d0b603703196a74b7"
+    },
+    {
+      "path": "public/assets/fl2cases2/32.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a64e7b6e84a0927b837906d1b46a18a056fb50e",
+      "size": 43866,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/8a64e7b6e84a0927b837906d1b46a18a056fb50e"
+    },
+    {
+      "path": "public/assets/fl2cases2/33.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f7b6c5914a6b96b5e11ad716aa4f59eeb03a9cc",
+      "size": 44703,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/8f7b6c5914a6b96b5e11ad716aa4f59eeb03a9cc"
+    },
+    {
+      "path": "public/assets/fl2cases2/34.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ae808a5d3e2b93adbcfef3e08387b10da65c47f",
+      "size": 44250,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/9ae808a5d3e2b93adbcfef3e08387b10da65c47f"
+    },
+    {
+      "path": "public/assets/fl2cases2/35.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d21d506a6b6cbe6ae45fa07bc81974d0be59dfd",
+      "size": 44223,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/1d21d506a6b6cbe6ae45fa07bc81974d0be59dfd"
+    },
+    {
+      "path": "public/assets/fl2cases2/36.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed7a600c126259b6f34c1e52dc06ef092930109b",
+      "size": 44382,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/ed7a600c126259b6f34c1e52dc06ef092930109b"
+    },
+    {
+      "path": "public/assets/fl2cases2/37.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc44b31652be3db9e3b79727f3533954234521c4",
+      "size": 43576,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/dc44b31652be3db9e3b79727f3533954234521c4"
+    },
+    {
+      "path": "public/assets/fl2cases2/38.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29a8056997de874c5afd7ad1dd86dabc48dd12c6",
+      "size": 43060,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/29a8056997de874c5afd7ad1dd86dabc48dd12c6"
+    },
+    {
+      "path": "public/assets/fl2cases2/39.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13cdbeecf8de17c7d01a83c267ae206565342c43",
+      "size": 43039,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/13cdbeecf8de17c7d01a83c267ae206565342c43"
+    },
+    {
+      "path": "public/assets/fl2cases2/4.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1e32f575d4c36177c39a79549b69a0bf53b4898",
+      "size": 44833,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/e1e32f575d4c36177c39a79549b69a0bf53b4898"
+    },
+    {
+      "path": "public/assets/fl2cases2/40.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "daa36525208f303869e63557bc9003e5d99fb7df",
+      "size": 43134,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/daa36525208f303869e63557bc9003e5d99fb7df"
+    },
+    {
+      "path": "public/assets/fl2cases2/41.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b09ca6bd20d675630b90dfd06d29a92dc0349ee7",
+      "size": 43159,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/b09ca6bd20d675630b90dfd06d29a92dc0349ee7"
+    },
+    {
+      "path": "public/assets/fl2cases2/42.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff8e2316895b2ab5f32e8ea966bd56bb705debac",
+      "size": 43492,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/ff8e2316895b2ab5f32e8ea966bd56bb705debac"
+    },
+    {
+      "path": "public/assets/fl2cases2/43.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01b9a790d53b8a6522f2e3850191bbfb3c34e421",
+      "size": 42848,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/01b9a790d53b8a6522f2e3850191bbfb3c34e421"
+    },
+    {
+      "path": "public/assets/fl2cases2/44.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a06efa507cf65209ea0a83f06f1ca29b491015f5",
+      "size": 45268,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/a06efa507cf65209ea0a83f06f1ca29b491015f5"
+    },
+    {
+      "path": "public/assets/fl2cases2/45.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e3ea8aa4e56f122f0043f61b1dc5fc5b71fa4e3",
+      "size": 42788,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/1e3ea8aa4e56f122f0043f61b1dc5fc5b71fa4e3"
+    },
+    {
+      "path": "public/assets/fl2cases2/46.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "175da4f6f5eef4e4cdeaeb5d448e0fae0c2dc863",
+      "size": 43099,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/175da4f6f5eef4e4cdeaeb5d448e0fae0c2dc863"
+    },
+    {
+      "path": "public/assets/fl2cases2/47.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78dca1ea2a2897b4e2ba16814f49371fb18eff9c",
+      "size": 44707,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/78dca1ea2a2897b4e2ba16814f49371fb18eff9c"
+    },
+    {
+      "path": "public/assets/fl2cases2/48.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce76aacdd1e97784e593948d0e01cd9468124a98",
+      "size": 43101,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/ce76aacdd1e97784e593948d0e01cd9468124a98"
+    },
+    {
+      "path": "public/assets/fl2cases2/49.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3da003ca5b9473b305873231a273e2a35899e96c",
+      "size": 43439,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/3da003ca5b9473b305873231a273e2a35899e96c"
+    },
+    {
+      "path": "public/assets/fl2cases2/5.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d24faa0d4d47717bfc86b19bb5ba22d891ce67fc",
+      "size": 43892,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/d24faa0d4d47717bfc86b19bb5ba22d891ce67fc"
+    },
+    {
+      "path": "public/assets/fl2cases2/50.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15d468b61a2cc86e4c2db21bd7dd489363ee4bc5",
+      "size": 45143,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/15d468b61a2cc86e4c2db21bd7dd489363ee4bc5"
+    },
+    {
+      "path": "public/assets/fl2cases2/51.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1906fb0143913641ddabcf599a1dc73dbd6b798",
+      "size": 43093,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/b1906fb0143913641ddabcf599a1dc73dbd6b798"
+    },
+    {
+      "path": "public/assets/fl2cases2/52.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9356994a0ee51ec6a3bde34fc6bf4a8d1554780c",
+      "size": 43504,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/9356994a0ee51ec6a3bde34fc6bf4a8d1554780c"
+    },
+    {
+      "path": "public/assets/fl2cases2/53.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "175b725d05d824e24bf53ec81fa256666bdaa8c1",
+      "size": 45150,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/175b725d05d824e24bf53ec81fa256666bdaa8c1"
+    },
+    {
+      "path": "public/assets/fl2cases2/54.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ac3ab5689b5991b2586e44c91d75dc67e33ac35",
+      "size": 42992,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/3ac3ab5689b5991b2586e44c91d75dc67e33ac35"
+    },
+    {
+      "path": "public/assets/fl2cases2/55.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "399ce8178a5e28ca22974b463a8ca3ca9ca31f3d",
+      "size": 43258,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/399ce8178a5e28ca22974b463a8ca3ca9ca31f3d"
+    },
+    {
+      "path": "public/assets/fl2cases2/56.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bdac9f90eba24053bb2c45c5813b9046d6792a4",
+      "size": 44631,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/8bdac9f90eba24053bb2c45c5813b9046d6792a4"
+    },
+    {
+      "path": "public/assets/fl2cases2/57.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd0f906354068ada3c6b53b2aba3ffe78ff449c5",
+      "size": 42440,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/dd0f906354068ada3c6b53b2aba3ffe78ff449c5"
+    },
+    {
+      "path": "public/assets/fl2cases2/58.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a27774712ec02e8f25442b2f5cf756a737f383e6",
+      "size": 43177,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/a27774712ec02e8f25442b2f5cf756a737f383e6"
+    },
+    {
+      "path": "public/assets/fl2cases2/59.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf0b1b0065da2e8f1210f4e4aa8cd44f3a45cda5",
+      "size": 44960,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/bf0b1b0065da2e8f1210f4e4aa8cd44f3a45cda5"
+    },
+    {
+      "path": "public/assets/fl2cases2/6.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ed926dd95ca27a57110bce25e9c55414b8c28b2",
+      "size": 44015,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/5ed926dd95ca27a57110bce25e9c55414b8c28b2"
+    },
+    {
+      "path": "public/assets/fl2cases2/60.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04da39d3428ae452e0c33abe639078f9774e2f00",
+      "size": 44639,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/04da39d3428ae452e0c33abe639078f9774e2f00"
+    },
+    {
+      "path": "public/assets/fl2cases2/61.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb1e798ee9ff0ed77bc7e672e3fc64b4196b73b9",
+      "size": 44288,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/cb1e798ee9ff0ed77bc7e672e3fc64b4196b73b9"
+    },
+    {
+      "path": "public/assets/fl2cases2/62.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e8ed2fe094832c389c322548334a013e10711d5",
+      "size": 44612,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/4e8ed2fe094832c389c322548334a013e10711d5"
+    },
+    {
+      "path": "public/assets/fl2cases2/63.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43f55bfbea27936c3850f42bf1c5d6f1a55ab1bb",
+      "size": 44621,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/43f55bfbea27936c3850f42bf1c5d6f1a55ab1bb"
+    },
+    {
+      "path": "public/assets/fl2cases2/64.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59b417ee249adac2f8e44c5bff799cf919bf3250",
+      "size": 44620,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/59b417ee249adac2f8e44c5bff799cf919bf3250"
+    },
+    {
+      "path": "public/assets/fl2cases2/65.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc706f3b5362aa6b1cf2c3e289f1d34bdd89dade",
+      "size": 44676,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/fc706f3b5362aa6b1cf2c3e289f1d34bdd89dade"
+    },
+    {
+      "path": "public/assets/fl2cases2/66.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1573e8fada312a27b147d62dbfdf437e086b637",
+      "size": 44406,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/a1573e8fada312a27b147d62dbfdf437e086b637"
+    },
+    {
+      "path": "public/assets/fl2cases2/67.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c764305e6099b28bd297e31d2ce107945d2e5681",
+      "size": 44291,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/c764305e6099b28bd297e31d2ce107945d2e5681"
+    },
+    {
+      "path": "public/assets/fl2cases2/68.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e328e0f324d6d6970df33c1d722c9efef5de45a",
+      "size": 44144,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/0e328e0f324d6d6970df33c1d722c9efef5de45a"
+    },
+    {
+      "path": "public/assets/fl2cases2/69.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6111689fa05a51f6cde7af93d9eb3bb718d08f3",
+      "size": 44916,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/c6111689fa05a51f6cde7af93d9eb3bb718d08f3"
+    },
+    {
+      "path": "public/assets/fl2cases2/7.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c38c9f8ba309e2dab42ac758e0f760068f959bc8",
+      "size": 45086,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/c38c9f8ba309e2dab42ac758e0f760068f959bc8"
+    },
+    {
+      "path": "public/assets/fl2cases2/70.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cf00d304283bf957d85ec129fcf5b5f1547fafa",
+      "size": 44246,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/6cf00d304283bf957d85ec129fcf5b5f1547fafa"
+    },
+    {
+      "path": "public/assets/fl2cases2/71.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c1df61a704849b3ae3f9646b1bc4f68a99acaba",
+      "size": 44577,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/1c1df61a704849b3ae3f9646b1bc4f68a99acaba"
+    },
+    {
+      "path": "public/assets/fl2cases2/72.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d90cc069728fa659d7f43b9970ebc164808fe38",
+      "size": 44766,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/8d90cc069728fa659d7f43b9970ebc164808fe38"
+    },
+    {
+      "path": "public/assets/fl2cases2/73.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "221ac9bafa3aa48838ec8f95b2a2e466bbfb673f",
+      "size": 44922,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/221ac9bafa3aa48838ec8f95b2a2e466bbfb673f"
+    },
+    {
+      "path": "public/assets/fl2cases2/74.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93d05c6de1d0cceca3f93733e051aa950c7802a5",
+      "size": 44971,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/93d05c6de1d0cceca3f93733e051aa950c7802a5"
+    },
+    {
+      "path": "public/assets/fl2cases2/75.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95b59abb87e5c1d7cf663e5f45b83edbe1397ccd",
+      "size": 44593,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/95b59abb87e5c1d7cf663e5f45b83edbe1397ccd"
+    },
+    {
+      "path": "public/assets/fl2cases2/76.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ec14b27871317f793b04a0f0fc7d598f47c2bfb",
+      "size": 45227,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/2ec14b27871317f793b04a0f0fc7d598f47c2bfb"
+    },
+    {
+      "path": "public/assets/fl2cases2/77.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ce34d8b151d0372e0532b1c329266b25301de5e",
+      "size": 45204,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/4ce34d8b151d0372e0532b1c329266b25301de5e"
+    },
+    {
+      "path": "public/assets/fl2cases2/78.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e3ffff073fb726b9bc1c5d16b5f48a1d190359f",
+      "size": 42455,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/5e3ffff073fb726b9bc1c5d16b5f48a1d190359f"
+    },
+    {
+      "path": "public/assets/fl2cases2/79.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e1e0d7b59a3ecd5612cb4d0f58a62a8b2675383",
+      "size": 42439,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/0e1e0d7b59a3ecd5612cb4d0f58a62a8b2675383"
+    },
+    {
+      "path": "public/assets/fl2cases2/8.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e27676653006ef58e9470433a423e454bf7a05e2",
+      "size": 44797,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/e27676653006ef58e9470433a423e454bf7a05e2"
+    },
+    {
+      "path": "public/assets/fl2cases2/80.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bd1c6eb855291935ae41a7bf2db92b0949cef6d",
+      "size": 42225,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/6bd1c6eb855291935ae41a7bf2db92b0949cef6d"
+    },
+    {
+      "path": "public/assets/fl2cases2/81.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c76abfdaac1ac4f2023e07dd99541cf571b5580a",
+      "size": 42480,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/c76abfdaac1ac4f2023e07dd99541cf571b5580a"
+    },
+    {
+      "path": "public/assets/fl2cases2/82.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a918ed286f72b098aa5f5d91b28f88a37d103fb",
+      "size": 41537,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/1a918ed286f72b098aa5f5d91b28f88a37d103fb"
+    },
+    {
+      "path": "public/assets/fl2cases2/83.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2742b006dd3fe6d9627db0c6abce35a8a8047bac",
+      "size": 44574,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/2742b006dd3fe6d9627db0c6abce35a8a8047bac"
+    },
+    {
+      "path": "public/assets/fl2cases2/84.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4233b39332d2f8d53f793036d136414810ad0a7e",
+      "size": 41553,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/4233b39332d2f8d53f793036d136414810ad0a7e"
+    },
+    {
+      "path": "public/assets/fl2cases2/9.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a4859dfc997beac8f4bb80248c4a64bbcc98694",
+      "size": 43876,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/9a4859dfc997beac8f4bb80248c4a64bbcc98694"
+    },
+    {
+      "path": "public/favicon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcd5dfd67cd0361b78123e95c2dd96031f27f743",
+      "size": 3150,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/bcd5dfd67cd0361b78123e95c2dd96031f27f743"
+    },
+    {
+      "path": "public/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77c4f0c58584301304099ee47d7828f9096bf96f",
+      "size": 2105,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/77c4f0c58584301304099ee47d7828f9096bf96f"
+    },
+    {
+      "path": "public/logo192.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc44b0a3796c0e0a64c3d858ca038bd4570465d9",
+      "size": 5347,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/fc44b0a3796c0e0a64c3d858ca038bd4570465d9"
+    },
+    {
+      "path": "public/logo512.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4e47a6545bc15971f8f63fba70e4013df88a664",
+      "size": 9664,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/a4e47a6545bc15971f8f63fba70e4013df88a664"
+    },
+    {
+      "path": "public/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "080d6c77ac21bb2ef88a6992b2b73ad93daaca92",
+      "size": 492,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/080d6c77ac21bb2ef88a6992b2b73ad93daaca92"
+    },
+    {
+      "path": "public/robots.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9e57dc4d41b9b46e05112e9f45b7ea6ac0ba15e",
+      "size": 67,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/e9e57dc4d41b9b46e05112e9f45b7ea6ac0ba15e"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bfaf1d0f5c1ac6d32a524301433eb57f92ea79b5",
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/trees/bfaf1d0f5c1ac6d32a524301433eb57f92ea79b5"
+    },
+    {
+      "path": "src/App.test.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4db7ebc25c2d066cd254805af5dda1ed1d2bc819",
+      "size": 280,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/4db7ebc25c2d066cd254805af5dda1ed1d2bc819"
+    },
+    {
+      "path": "src/App.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7fdac94258eeaa191c76be45ed0329453441255",
+      "size": 13320,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/e7fdac94258eeaa191c76be45ed0329453441255"
+    },
+    {
+      "path": "src/CasesModal.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95cc688dc8b1c725af1c680577df913e221f9581",
+      "size": 4561,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/95cc688dc8b1c725af1c680577df913e221f9581"
+    },
+    {
+      "path": "src/Timer.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cab1d6bf04e67dc8c035b285fb74f7298e0545ae",
+      "size": 1475,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/cab1d6bf04e67dc8c035b285fb74f7298e0545ae"
+    },
+    {
+      "path": "src/algs.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ae6024d4bf7829446577793a189acef96cc025e",
+      "size": 9162,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/3ae6024d4bf7829446577793a189acef96cc025e"
+    },
+    {
+      "path": "src/cube.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2999ab0f3b7c78bfdc49b538cfc01fe179fb1a97",
+      "size": 893,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/2999ab0f3b7c78bfdc49b538cfc01fe179fb1a97"
+    },
+    {
+      "path": "src/index.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42947dff5e1a043554d58929bf83a681c7c5b43d",
+      "size": 462,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/42947dff5e1a043554d58929bf83a681c7c5b43d"
+    },
+    {
+      "path": "src/logo.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b60c1042f58d9fabb75485aa3624dddcf633b5c",
+      "size": 2671,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/6b60c1042f58d9fabb75485aa3624dddcf633b5c"
+    },
+    {
+      "path": "src/react-app-env.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6431bc5fc6b2c932dfe5d0418fc667b86c18b9fc",
+      "size": 40,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/6431bc5fc6b2c932dfe5d0418fc667b86c18b9fc"
+    },
+    {
+      "path": "src/serviceWorker.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b09523f155e978be34dfb9c743d27a90dbe4a141",
+      "size": 5295,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/b09523f155e978be34dfb9c743d27a90dbe4a141"
+    },
+    {
+      "path": "src/setupTests.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74b1a275a0ea7df518f17bcea5375abf003abe55",
+      "size": 255,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/74b1a275a0ea7df518f17bcea5375abf003abe55"
+    },
+    {
+      "path": "src/styles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d5166a9e417ddb4204fc91b85afbeb08b05a9627",
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/trees/d5166a9e417ddb4204fc91b85afbeb08b05a9627"
+    },
+    {
+      "path": "src/styles/index.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f393742af264b3fb6b519a019e576aca39dd8d7",
+      "size": 61,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/7f393742af264b3fb6b519a019e576aca39dd8d7"
+    },
+    {
+      "path": "src/styles/tailwind.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "600302f7c0d464418ff2a9bbe0d74e9adef11cf9",
+      "size": 1044260,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/600302f7c0d464418ff2a9bbe0d74e9adef11cf9"
+    },
+    {
+      "path": "src/util.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55d37e72262d226621b03cf435d68c305b04d8d1",
+      "size": 659,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/55d37e72262d226621b03cf435d68c305b04d8d1"
+    },
+    {
+      "path": "tailwind.config.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f6122eda8d80b6cbe0ea9a1bf8b6d4cb98e724e",
+      "size": 16653,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/1f6122eda8d80b6cbe0ea9a1bf8b6d4cb98e724e"
+    },
+    {
+      "path": "tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2850b71613ed26b0fd526160a1a452b1f06f5bc",
+      "size": 491,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/f2850b71613ed26b0fd526160a1a452b1f06f5bc"
+    },
+    {
+      "path": "yarn.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd8299b4edfcd1d5bba5cf08d534b540e2e6083b",
+      "size": 470408,
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/blobs/bd8299b4edfcd1d5bba5cf08d534b540e2e6083b"
+    }
+  ],
+  "truncated": false
+}

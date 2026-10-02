@@ -96,4 +96,48 @@ Bounded GitHub metadata/source inspection also considered Darguima/FridrichTrain
 
 No SpeedCubeDB, csTimer or other unlicensed/copyleft collection was transcribed. No author permission is invented or external mutation performed.
 
+## Historical B10 ZBLL source gate
+
+B10 is BLOCKED, not a complete library. The approved target remains 493 non-solved cases including 21 PLL. No new default algorithms or production source metadata were imported. The existing sources and reproduction contract below are unchanged.
+
+Complete, untruncated trees at the accepted Speeden and Lieberkind revisions contain no ZBLL artifact. The previously inspected Darguima revision `2aebe3c80eaab87ed02726b7b1388dd97222a1fc` also has none.
+
+Bounded GitHub MIT repository metadata lookup found AlphaSheep/Another-ZBLL-Trainer and Stig115/zbll. AlphaSheep at `9cddec702c52e8d6521f8cf7e884f5738f0223a1` supplies explicit 493 labels and sticker definitions under MIT, Copyright (c) 2017 Brendan James Gray. Its inspected files do not supply default algorithms. Stig115 at `35797fa0e64038df2ac234a2f511bac65bccca67` supplies numbered algorithms and an MIT notice, Copyright (c) 2018 Ashley Nathan Feniello. Its seven ZBLL sets explicitly attribute their content to `http://algdb.net/puzzle/333/zbll`. Permission for that attributed collection was not established. No claim is made that the repository license is invalid; the missing evidence prevents accepting the collection under this task's rights-first rule.
+
+Exact pinned metadata, both notices and AlphaSheep's taxonomy/definition files are retained in `docs/data/zbll-source-evidence/`. Its separate `manifest.json` records raw/API URLs, revisions, SHA-256 hashes and byte lengths. The unaccepted Stig115 algorithm candidate remains only in the ignored local inspection cache; its URL/hash/length are recorded, but its algorithms are not copied into distributable fixtures or production data. Both retained grants require their copyright and permission notices with distributed derivatives. Byte attributes cover only the new frozen evidence directory.
+
+The [B10 audit](../audits/ZBLL_Library_Verification.md) records the blocker, observed subset counts and owner decision needed. The [blueprint](../features/ZBLL_Library.md) preserves the intended full-state proof, PLL alias and physical-final-AUF contracts. Family label counts alone do not establish a verified source numbering map or delivered coverage.
+
+## Historical owner-authorized ZBLL source follow-up
+
+The owner chose Continue sourcing, not a license-risk waiver or library implementation. A second bounded round used 18 public read-only GETs with 30-second caps. Its result remains BLOCKED; the initial source gate above is preserved.
+
+- Stig115/zbll_brief, `e533adab2eaae9ce57ccbc5801e46f1c6d195006`: actual MIT grant, Copyright (c) 2018 Ashley Nathan Feniello. The inspected ZBLL set has eight H defaults and explicit AlgDB attribution. Neither completeness nor upstream permission is established.
+- loltreeman/ZBTrain, `bd5b605d3a5bdc61ebf9925f348de62c406ecd1c`: actual MIT grant, Copyright (c) 2026 Christian Naguio. The inspected `zbllAlgs` object has 472 non-PLL labels and a nonempty first algorithm string per label, with expected seven-family label counts. Its README credits Roman Strakhov's algorithm/scramble casemap without an established upstream redistribution grant. No algorithms were executed and no physical case mapping is proved.
+- cubing/algdb, `8fb041204536c122f9aed24f78425b9f5e001ed4`: project README declares GPL version 3 or later for code; the complete license text is retained as policy evidence. No inspected contribution/data policy establishes a separate permissive license for the historical algorithm collection. Possible copyleft and corresponding-source obligations require an owner decision if covered-code reuse were proposed. No such reuse is implemented.
+
+The two MIT notices require retaining copyright and permission notices for distributed derivatives. They do not establish permission for the separately credited upstream collections. The current `algdb.net` landing page says Under Construction, and Roman's trainer landing page identifies its author but no reuse grant. Public availability, metadata license labels and blank data headers were not treated as permission. This inspection does not prove that permission is unavailable elsewhere.
+
+The existing evidence manifest now includes `sourceRounds` and 11 additional exact-byte metadata/license/policy artifacts. Full request URLs, pins, SHA-256 hashes, lengths, status codes and measured durations are recorded. The two unclear default files, the two website landing documents and all three commit responses remain only in ignored cache. Commit responses can embed source patches, including algorithms. Their hashes are recorded, but their content is not retained in distributable artifacts. Existing byte protection already covers the new frozen filenames; attributes and old source metadata are unchanged in this follow-up. See the [round-two audit](../audits/ZBLL_Library_Verification.md#owner-authorized-source-round-two) for bounds, observations, failures and checks.
+
+## Reproduce the accepted B07 libraries
+
 To reproduce from the retained pinned bytes, run `CURATE_CASE_LIBRARIES=1 pnpm exec vitest run tests/unit/curate-case-libraries.test.ts` in a POSIX shell. This explicitly writes only the three library files, manifests, source-integrity JSON and numbering fixture. The ordinary test suite skips this generator and performs no source or personal-database writes. Generation rejects a missing or hash-mismatched source/license artifact and a missing/duplicate numbering match before writing any library. Follow with the focused library tests described in [verification](../audits/Case_Libraries_Verification.md).
+
+## Accepted B10 ZBLL library
+
+The later [source acceptance review](../audits/ZBLL_Source_Acceptance_Review.md) and parent decision accept bounded ZBTrain move-string and necessary-label extraction under its publisher MIT grant. This does not assert original ownership or an independent Roman Strakhov sublicense. Historical source-round findings above remain unchanged.
+
+The accepted source is ZBTrain revision `bd5b605d3a5bdc61ebf9925f348de62c406ecd1c`, Copyright (c) 2026 Christian Naguio. Retain its publisher-reported Roman Strakhov algorithm/scramble casemap credit. AlphaSheep's definitions and taxonomy use revision `9cddec702c52e8d6521f8cf7e884f5738f0223a1`, Copyright (c) 2017 Brendan James Gray. Complete grants live in `docs/data/licenses/ZBTrain_MIT.txt` and `AlphaSheep_MIT.txt`, with exact copies in `public/licenses/cases-ZBTrain-MIT.txt` and `cases-AlphaSheep-MIT.txt`. `cases-ZBLL-NOTICES.txt` retains the credit and scope limits. Existing PLL notices are untouched.
+
+`src/data/zbll-sources.json` records exact raw URLs, revisions, byte lengths and SHA-256 hashes. The retained ZBTrain input is `tests/fixtures/case-sources/zbtrain-algorithms.js.txt`, 196,120 bytes, SHA-256 `0fd439dccfa05a42316dcfad69b74a848378b78c08a3ee0b5b361ce94bc87bdb`. No trainer implementation, diagrams, lesson prose or GPL AlgDB code is reused.
+
+The isolated `zbll-library-v1` collection contains 472 new non-PLL entries and references the existing 21 PLL entries once. T/U/L/Pi/S/AS have 72 each, H has 40 and PLL has 21. New IDs are source-qualified `zbll:zbtrain-v1:<family>:<subset>:<recognition-code>`. Source subsets and recognition codes remain explicit, with Sune = S and Antisune = AS. These are source conventions, not universal numbering. The manifest freezes every membership ID and all 40 source-to-AlphaSheep COLL subset mappings. The separate numbering fixture records every source label's full-sticker reference, raw default and physical return.
+
+All first defaults are retained. `Pi/4/OsA` contains `R3` at source line 2951. Trusted source compilation spells this exact three-quarter-turn move `R'`; personal notation still rejects `R3`. Canonical setup construction appends actual ending-frame restoration before inversion. Actual guidance restores the held frame before final AUF. These are representation/frame corrections, not replacement solves or fallback guidance.
+
+New non-PLL identity uses `zbll-ll-pre-u-yaw-v1`. PLL IDs, aliases, defaults, versions and `pll-ll-pre-u-yaw-v1` remain authoritative. ZBLL PLL aliases resolve to the existing canonical ID; a second alias-keyed override record is rejected. Pure output separates collection version from each canonical entry's dataset version. No global catalog, backup version or trainer semantics changes.
+
+Reproduce with `CURATE_ZBLL=1 pnpm exec vitest run tests/unit/curate-zbll.test.ts`. It checks pinned inputs and complete independent class/source mappings, then writes only `src/data/zbll-cases.ts`, `src/data/zbll-manifest.ts` and `tests/fixtures/zbll-numbering.json`. No network or personal storage is used. Ordinary tests skip this generator. The old B07 generator targets its original paths and cannot erase the separate ZBLL metadata.
+
+Follow with `pnpm exec vitest run tests/unit/zbll-source-gate.test.ts tests/unit/zbll.test.ts`. The [B10 audit](../audits/ZBLL_Library_Verification.md) records coverage, all-angle/six-frame proofs, actual failures and checks. The pure library is ready for parent review; B11 integration and Q04 remain separate.

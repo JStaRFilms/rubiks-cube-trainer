@@ -2,11 +2,11 @@ import { SOLVED, type CubeEngine, type CubeStateV1 } from '../cube/engine';
 import { OLL_STICKER_INDICES, pieceIndices } from '../cube/geometry';
 import type { Move, Slot } from '../store/records';
 
-export type CaseTrainer = 'f2l' | 'oll' | 'pll';
+export type CaseTrainer = 'f2l' | 'oll' | 'pll' | 'zbll';
 export type QuarterTurn = 0 | 1 | 2 | 3;
 export const QUARTERS = [0, 1, 2, 3] as const;
 export const SLOTS = ['FR', 'FL', 'BR', 'BL'] as const;
-export const IDENTITY_POLICIES = { f2l: 'f2l-fr-pre-u-v1', oll: 'oll-u20-pre-u-yaw-v1', pll: 'pll-ll-pre-u-yaw-v1' } as const;
+export const IDENTITY_POLICIES = { f2l: 'f2l-fr-pre-u-v1', oll: 'oll-u20-pre-u-yaw-v1', pll: 'pll-ll-pre-u-yaw-v1', zbll: 'zbll-ll-pre-u-yaw-v1' } as const;
 export function auf(turn: QuarterTurn): Move[] {
   return turn === 0 ? [] : [{ family: 'U', amount: turn === 3 ? -1 : turn }];
 }
@@ -36,6 +36,10 @@ export function f2lSolved(engine: CubeEngine, state: CubeStateV1): boolean {
 }
 export function isolatedContext(engine: CubeEngine, state: CubeStateV1, slot: Slot): boolean {
   return engine.crossSolved(state) && SLOTS.filter((other) => other !== slot).every((other) => engine.pairSolved(state, other));
+}
+export function edgesOriented(engine: CubeEngine, state: CubeStateV1): boolean {
+  const normalized = engine.normalize(state);
+  return [1, 3, 5, 7].every((i) => normalized.facelets[i] === 'U');
 }
 export function oriented(engine: CubeEngine, state: CubeStateV1): boolean {
   return engine.ollMask(state) === engine.ollMask(SOLVED);

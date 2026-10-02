@@ -1,0 +1,383 @@
+{
+  "sha": "9cddec702c52e8d6521f8cf7e884f5738f0223a1",
+  "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/trees/9cddec702c52e8d6521f8cf7e884f5738f0223a1",
+  "tree": [
+    {
+      "path": ".babelrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26abaf869014da12e8ee527cdf9d19db2f20eb42",
+      "size": 118,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/26abaf869014da12e8ee527cdf9d19db2f20eb42"
+    },
+    {
+      "path": ".editorconfig",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1923d4101aa52161105a6f9d54e29f68ace4b19b",
+      "size": 130,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/1923d4101aa52161105a6f9d54e29f68ace4b19b"
+    },
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "176a458f94e0ea5272ce67c36bf30b6be9caf623",
+      "size": 12,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/176a458f94e0ea5272ce67c36bf30b6be9caf623"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1a88cc415962e3af3671c56344be9899550cd4f",
+      "size": 48,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/f1a88cc415962e3af3671c56344be9899550cd4f"
+    },
+    {
+      "path": ".yo-rc.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f89dc9ca829f3f238a16617c525d3d2fa9a73ba",
+      "size": 451,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/1f89dc9ca829f3f238a16617c525d3d2fa9a73ba"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7604ac9a400f50a7a15f2b1c29956877c72f93f3",
+      "size": 1075,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/7604ac9a400f50a7a15f2b1c29956877c72f93f3"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9d55c8f891422e37fd792c951c84783e2aa379b",
+      "size": 75,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/a9d55c8f891422e37fd792c951c84783e2aa379b"
+    },
+    {
+      "path": "conf",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "44aa4ff21b0f4d5df82eb419a1f88065fdaab153",
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/trees/44aa4ff21b0f4d5df82eb419a1f88065fdaab153"
+    },
+    {
+      "path": "conf/browsersync-dist.conf.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa4584553e142ae23802893f8fb94da23feb9a6f",
+      "size": 174,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/fa4584553e142ae23802893f8fb94da23feb9a6f"
+    },
+    {
+      "path": "conf/browsersync.conf.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49936d48cb19c00a43d9dfb3f8999cbbae84737e",
+      "size": 197,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/49936d48cb19c00a43d9dfb3f8999cbbae84737e"
+    },
+    {
+      "path": "conf/gulp.conf.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27ea7b072c2a7f6fcdcf44e4eff3286cc9c75ad7",
+      "size": 1230,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/27ea7b072c2a7f6fcdcf44e4eff3286cc9c75ad7"
+    },
+    {
+      "path": "conf/karma-auto.conf.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fdf45c9e3f40a6bc7cc1c07805d230d02fb8e14",
+      "size": 1238,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/4fdf45c9e3f40a6bc7cc1c07805d230d02fb8e14"
+    },
+    {
+      "path": "conf/karma.conf.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4303595b6308d0aa31c08bf528edd6471b88990",
+      "size": 1238,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/b4303595b6308d0aa31c08bf528edd6471b88990"
+    },
+    {
+      "path": "conf/webpack-dist.conf.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9486a43bbc7768436c9fbb00a912b37bddfe7c8",
+      "size": 1917,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/a9486a43bbc7768436c9fbb00a912b37bddfe7c8"
+    },
+    {
+      "path": "conf/webpack-test.conf.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c18925476862a39ae3591f07a985c22e4fc0cbf2",
+      "size": 697,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/c18925476862a39ae3591f07a985c22e4fc0cbf2"
+    },
+    {
+      "path": "conf/webpack.conf.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1b556eaa7f60c4b05956dfd3f02063ac6b12963",
+      "size": 1483,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/f1b556eaa7f60c4b05956dfd3f02063ac6b12963"
+    },
+    {
+      "path": "gulp_tasks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "904cc5d50ea5ca8a8fa7e2933789e801f0e9748d",
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/trees/904cc5d50ea5ca8a8fa7e2933789e801f0e9748d"
+    },
+    {
+      "path": "gulp_tasks/browsersync.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "945a88da79067c8144c2ed959ef931a419c5cbd2",
+      "size": 541,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/945a88da79067c8144c2ed959ef931a419c5cbd2"
+    },
+    {
+      "path": "gulp_tasks/karma.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98aaf1d44c3ba4d8be79602475f641b911b34c31",
+      "size": 777,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/98aaf1d44c3ba4d8be79602475f641b911b34c31"
+    },
+    {
+      "path": "gulp_tasks/misc.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6ba8d08fb9813dc5a2d27d700005adf2888cfbb",
+      "size": 564,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/f6ba8d08fb9813dc5a2d27d700005adf2888cfbb"
+    },
+    {
+      "path": "gulp_tasks/webpack.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec8e8b1c21c23387f03544a6e9644a11200f7403",
+      "size": 1163,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/ec8e8b1c21c23387f03544a6e9644a11200f7403"
+    },
+    {
+      "path": "gulpfile.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "541d6e445dbb9c2a547873ae682f904c0bacebc1",
+      "size": 886,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/541d6e445dbb9c2a547873ae682f904c0bacebc1"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "534ca72e68304471bc52b05a81c41be8ca4d7c63",
+      "size": 2344,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/534ca72e68304471bc52b05a81c41be8ca4d7c63"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "76162dd2ba5c9afd015fc2b236729fe5f587a183",
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/trees/76162dd2ba5c9afd015fc2b236729fe5f587a183"
+    },
+    {
+      "path": "src/.eslintrc.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a3da4b798a0448dd8221be6f2327c3c6090f954",
+      "size": 103,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/2a3da4b798a0448dd8221be6f2327c3c6090f954"
+    },
+    {
+      "path": "src/app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6e7d3131c9eba2aa6343afcf3d58952190c68a41",
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/trees/6e7d3131c9eba2aa6343afcf3d58952190c68a41"
+    },
+    {
+      "path": "src/app/caseSelector",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8659cf5c95d6de44ccfff20a6abc4b069bb8ca94",
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/trees/8659cf5c95d6de44ccfff20a6abc4b069bb8ca94"
+    },
+    {
+      "path": "src/app/caseSelector/caseSelector.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fe100b3780b25aead6b047b86b6f226f18e5f58",
+      "size": 1659,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/5fe100b3780b25aead6b047b86b6f226f18e5f58"
+    },
+    {
+      "path": "src/app/caseSelector/caseSelector.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49ffe004abbffcb238d6e734975321f64989db3f",
+      "size": 1747,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/49ffe004abbffcb238d6e734975321f64989db3f"
+    },
+    {
+      "path": "src/app/caseSelector/caseSelector.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2cb08f1734396f23fe41d5172b3c8023dcc817b",
+      "size": 3811,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/e2cb08f1734396f23fe41d5172b3c8023dcc817b"
+    },
+    {
+      "path": "src/app/caseSelector/zblls.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "573a5277df2c6d262d2bc9eec90597c510a16590",
+      "size": 9262,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/573a5277df2c6d262d2bc9eec90597c510a16590"
+    },
+    {
+      "path": "src/app/cube",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f31861e819d93d4da4dc67273d196ffbb07eb556",
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/trees/f31861e819d93d4da4dc67273d196ffbb07eb556"
+    },
+    {
+      "path": "src/app/cube/cube.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6acc5ab7e898f68815c2c48b703eb9ee8cbeda3",
+      "size": 1637,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/d6acc5ab7e898f68815c2c48b703eb9ee8cbeda3"
+    },
+    {
+      "path": "src/app/cube/cube.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f05e44d98ff103c9292d8e31bd0ea3c1ba0c72bc",
+      "size": 2075,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/f05e44d98ff103c9292d8e31bd0ea3c1ba0c72bc"
+    },
+    {
+      "path": "src/app/cubeImage",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "acdfc78d470f6a1f4ef1e05e6433aa9af0e8151c",
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/trees/acdfc78d470f6a1f4ef1e05e6433aa9af0e8151c"
+    },
+    {
+      "path": "src/app/cubeImage/cubeImage.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1438733475ceaf392d247ee799542e55b242e18d",
+      "size": 1638,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/1438733475ceaf392d247ee799542e55b242e18d"
+    },
+    {
+      "path": "src/app/cubeImage/cubeImage.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c89b545c5ac0a2a9db0571749025946344396e3",
+      "size": 12,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/7c89b545c5ac0a2a9db0571749025946344396e3"
+    },
+    {
+      "path": "src/app/cubeImage/cubeImage.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3610dd1b3111a5354f3e958fc4c24ef820d48c46",
+      "size": 2403,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/3610dd1b3111a5354f3e958fc4c24ef820d48c46"
+    },
+    {
+      "path": "src/app/main.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c90840f8f8f7b0d5bf0d3157550bf01d05f5580",
+      "size": 146,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/7c90840f8f8f7b0d5bf0d3157550bf01d05f5580"
+    },
+    {
+      "path": "src/app/main.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98229c6e5673cbe705af47a0a94e5039a53e2e8c",
+      "size": 173,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/98229c6e5673cbe705af47a0a94e5039a53e2e8c"
+    },
+    {
+      "path": "src/app/timer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "44ce48ae61f8fd3af667b186017de48652bc2911",
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/trees/44ce48ae61f8fd3af667b186017de48652bc2911"
+    },
+    {
+      "path": "src/app/timer/timeFilter.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e90d9da63d4aa332c37c928008b9861d87fbbee",
+      "size": 556,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/1e90d9da63d4aa332c37c928008b9861d87fbbee"
+    },
+    {
+      "path": "src/app/timer/timer.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c433fba55738d7d4eed2eace57cc128566f5f88e",
+      "size": 141,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/c433fba55738d7d4eed2eace57cc128566f5f88e"
+    },
+    {
+      "path": "src/app/timer/timer.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e953257e78508745d340f1054f1c27ae96ea3142",
+      "size": 1549,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/e953257e78508745d340f1054f1c27ae96ea3142"
+    },
+    {
+      "path": "src/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0d48c31663279ff2918c10d2731865cae9cc666",
+      "size": 388,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/e0d48c31663279ff2918c10d2731865cae9cc666"
+    },
+    {
+      "path": "src/index.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72cd2562c39171a8a5426173740d8d2cab3cf1f4",
+      "size": 507,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/72cd2562c39171a8a5426173740d8d2cab3cf1f4"
+    },
+    {
+      "path": "src/index.scss",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5618b0239086298c66335495813ffb801af9c4f8",
+      "size": 524,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/5618b0239086298c66335495813ffb801af9c4f8"
+    },
+    {
+      "path": "src/index.spec.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d56de873e12d167d3f329ce04bc1443d1d9bff82",
+      "size": 99,
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/blobs/d56de873e12d167d3f329ce04bc1443d1d9bff82"
+    }
+  ],
+  "truncated": false
+}

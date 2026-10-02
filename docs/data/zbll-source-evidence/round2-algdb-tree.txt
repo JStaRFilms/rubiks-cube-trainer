@@ -1,0 +1,4033 @@
+{
+  "sha": "8fb041204536c122f9aed24f78425b9f5e001ed4",
+  "url": "https://api.github.com/repos/cubing/algdb/git/trees/8fb041204536c122f9aed24f78425b9f5e001ed4",
+  "tree": [
+    {
+      "path": ".eslintignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1274acca9d134a59184e080964e683d49a79a1ad",
+      "size": 27,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/1274acca9d134a59184e080964e683d49a79a1ad"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09f86af5bf9680c25af4de8ededb6094a55f3cd1",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/09f86af5bf9680c25af4de8ededb6094a55f3cd1"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25eb753696a20ad7582d7972a0922e97e76db9b5",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/25eb753696a20ad7582d7972a0922e97e76db9b5"
+    },
+    {
+      "path": ".github/workflows/backend-deploy.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "394322035ace9aae194d07836ad47138f9656ef3",
+      "size": 747,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/394322035ace9aae194d07836ad47138f9656ef3"
+    },
+    {
+      "path": ".github/workflows/client-cd.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b7f82793472684f3ec6c7d999bd11a77b80117f",
+      "size": 1319,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6b7f82793472684f3ec6c7d999bd11a77b80117f"
+    },
+    {
+      "path": ".github/workflows/reference-client-deploy.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e66845975a501e294b30f5c6f8f2e9d548fc036f",
+      "size": 1162,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e66845975a501e294b30f5c6f8f2e9d548fc036f"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab822567485ce17543f92e297153626456119434",
+      "size": 976,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ab822567485ce17543f92e297153626456119434"
+    },
+    {
+      "path": "LICENSE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fb2e74d8d7fa1c9286b18af0afa5c00402f56e3",
+      "size": 34916,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/2fb2e74d8d7fa1c9286b18af0afa5c00402f56e3"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29d3b5af39a066b0de473afb17a2c7e0b53702f5",
+      "size": 982,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/29d3b5af39a066b0de473afb17a2c7e0b53702f5"
+    },
+    {
+      "path": "backend",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2ce99c3aeb0721089bf3d5ce75aecf56fcab7af6",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/2ce99c3aeb0721089bf3d5ce75aecf56fcab7af6"
+    },
+    {
+      "path": "backend/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adb15e82488f1d25826c0c776a8bf77d6a455837",
+      "size": 1158,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/adb15e82488f1d25826c0c776a8bf77d6a455837"
+    },
+    {
+      "path": "backend/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1b7222ba73c7f2443752cb5b433bf5df70bf31e",
+      "size": 2291,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/c1b7222ba73c7f2443752cb5b433bf5df70bf31e"
+    },
+    {
+      "path": "backend/env.json.example",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef17922ede567d48048f6d05d5b73fe194278b88",
+      "size": 499,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ef17922ede567d48048f6d05d5b73fe194278b88"
+    },
+    {
+      "path": "backend/env.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a38440b442f273c8a8407918a7c178f3ace95cb",
+      "size": 440,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6a38440b442f273c8a8407918a7c178f3ace95cb"
+    },
+    {
+      "path": "backend/firebase.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5aadbeaeb6e0617d13d12c813b51a81e3c7c89e3",
+      "size": 493,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/5aadbeaeb6e0617d13d12c813b51a81e3c7c89e3"
+    },
+    {
+      "path": "backend/firestore.indexes.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "415027e5ddaf944819977c1d5e9aaf49e835093f",
+      "size": 44,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/415027e5ddaf944819977c1d5e9aaf49e835093f"
+    },
+    {
+      "path": "backend/firestore.rules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c38e3ae32eafbb198d38c24a2057b09ed0ed21fe",
+      "size": 162,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/c38e3ae32eafbb198d38c24a2057b09ed0ed21fe"
+    },
+    {
+      "path": "backend/functions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fdd783445601d13d669758c3339e473a9872fab8",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/fdd783445601d13d669758c3339e473a9872fab8"
+    },
+    {
+      "path": "backend/functions/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fbb8b40884ecfd72361527c97741f9ddfa8cdaf",
+      "size": 107,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/7fbb8b40884ecfd72361527c97741f9ddfa8cdaf"
+    },
+    {
+      "path": "backend/functions/db",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "facac958aaab510e0376d9ac4427102e39579165",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/facac958aaab510e0376d9ac4427102e39579165"
+    },
+    {
+      "path": "backend/functions/db/migrations",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "96881cbf257c5f775df66b399a3937501b234dc5",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/96881cbf257c5f775df66b399a3937501b234dc5"
+    },
+    {
+      "path": "backend/functions/db/migrations/20210206212029_initial.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5967ea1cc8b8f3741c722d7d48a1a8d966cbd6e4",
+      "size": 4307,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/5967ea1cc8b8f3741c722d7d48a1a8d966cbd6e4"
+    },
+    {
+      "path": "backend/functions/db/migrations/20210213170303_kenum_to_integer.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82be7d42e3df1765a358227f12d2f8e754846310",
+      "size": 383,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/82be7d42e3df1765a358227f12d2f8e754846310"
+    },
+    {
+      "path": "backend/functions/db/migrations/20210215160941_add_userAlgVoteLink.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49f3ab66e2c6bddb54a4ed5b8dab0faf1ff224ab",
+      "size": 626,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/49f3ab66e2c6bddb54a4ed5b8dab0faf1ff224ab"
+    },
+    {
+      "path": "backend/functions/db/migrations/20210218120914_add_usertag_algusertaglink.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b311cb514666fe30de37963c8a056a828cf5883",
+      "size": 1003,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/4b311cb514666fe30de37963c8a056a828cf5883"
+    },
+    {
+      "path": "backend/functions/db/seeds",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "72f233d316bdd60b7097bdb5ab3e6abf8a749f2d",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/72f233d316bdd60b7097bdb5ab3e6abf8a749f2d"
+    },
+    {
+      "path": "backend/functions/db/seeds/initialize_users.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ac0e79261f6850187a4990abdf5bd6e8d66fb50",
+      "size": 1368,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/3ac0e79261f6850187a4990abdf5bd6e8d66fb50"
+    },
+    {
+      "path": "backend/functions/knexfile.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3262b1a58542ffaa24e4934a11be422a3d6c2543",
+      "size": 903,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/3262b1a58542ffaa24e4934a11be422a3d6c2543"
+    },
+    {
+      "path": "backend/functions/migration.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "885dfc03d72817c9a17aaed7a38ee51c180c89b2",
+      "size": 5591,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/885dfc03d72817c9a17aaed7a38ee51c180c89b2"
+    },
+    {
+      "path": "backend/functions/oldSrc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fce93f4da8f3cfe0cf10b2b066a0c555f4ababbb",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/fce93f4da8f3cfe0cf10b2b066a0c555f4ababbb"
+    },
+    {
+      "path": "backend/functions/oldSrc/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aafd05686ee9b16e3d3d59e71dd70f6c6a5204c5",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/aafd05686ee9b16e3d3d59e71dd70f6c6a5204c5"
+    },
+    {
+      "path": "backend/functions/oldSrc/config/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfd9fa419970564acace7b3f7a74d1695d7441a6",
+      "size": 166,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/dfd9fa419970564acace7b3f7a74d1695d7441a6"
+    },
+    {
+      "path": "backend/functions/oldSrc/helpers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7375aa500828f88d620ec214df2c0ba2691596bc",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/7375aa500828f88d620ec214df2c0ba2691596bc"
+    },
+    {
+      "path": "backend/functions/oldSrc/helpers/tier0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c9fb10c7a06a15cc02b12cdefbe4e78f90a624b6",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/c9fb10c7a06a15cc02b12cdefbe4e78f90a624b6"
+    },
+    {
+      "path": "backend/functions/oldSrc/helpers/tier0/error.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64faaf91599b83cf9b2ba054f350444f7abe4f0a",
+      "size": 766,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/64faaf91599b83cf9b2ba054f350444f7abe4f0a"
+    },
+    {
+      "path": "backend/functions/oldSrc/helpers/tier0/shared.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4002c899ddf8a00dbc4d54ecae35e62547f8dc8",
+      "size": 1486,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e4002c899ddf8a00dbc4d54ecae35e62547f8dc8"
+    },
+    {
+      "path": "backend/functions/oldSrc/helpers/tier0/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb27750eb39c84dbde736848471d91a7d1e55ab2",
+      "size": 3515,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/bb27750eb39c84dbde736848471d91a7d1e55ab2"
+    },
+    {
+      "path": "backend/functions/oldSrc/helpers/tier1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "71b22c55fffe06929fa6bde7d3d853f54a413aef",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/71b22c55fffe06929fa6bde7d3d853f54a413aef"
+    },
+    {
+      "path": "backend/functions/oldSrc/helpers/tier1/auth.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b75e356b71dd461121c86e829597ec79d7193622",
+      "size": 547,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/b75e356b71dd461121c86e829597ec79d7193622"
+    },
+    {
+      "path": "backend/functions/oldSrc/helpers/tier2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f6787d362b5785abb9dd2d6c3d73ad98a66d21d",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/0f6787d362b5785abb9dd2d6c3d73ad98a66d21d"
+    },
+    {
+      "path": "backend/functions/oldSrc/helpers/tier2/permissions.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa444fbb44705796280d264ec36ae2c594be0c60",
+      "size": 2274,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/aa444fbb44705796280d264ec36ae2c594be0c60"
+    },
+    {
+      "path": "backend/functions/oldSrc/helpers/tier2/rootResolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b96dc02500573aae15e04121555363bd9fa0979",
+      "size": 4560,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/9b96dc02500573aae15e04121555363bd9fa0979"
+    },
+    {
+      "path": "backend/functions/oldSrc/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccacec10f9912007e14eebe495efdae3bb0757f2",
+      "size": 820,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ccacec10f9912007e14eebe495efdae3bb0757f2"
+    },
+    {
+      "path": "backend/functions/oldSrc/schema.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17d0cee5b06de8a4ef69708c7a9d11574acd86f6",
+      "size": 153,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/17d0cee5b06de8a4ef69708c7a9d11574acd86f6"
+    },
+    {
+      "path": "backend/functions/oldSrc/services",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed4fdf1b3e37d514a033166668e0d99c5b726924",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/ed4fdf1b3e37d514a033166668e0d99c5b726924"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/alg",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "21e820d1da8cc59f6cf6ee4a7b9c6eeee49b34bb",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/21e820d1da8cc59f6cf6ee4a7b9c6eeee49b34bb"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/alg/resolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "179d1e4426adc9f39286786c685fd5bc721fb3ee",
+      "size": 382,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/179d1e4426adc9f39286786c685fd5bc721fb3ee"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/alg/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4a34b90c06785826deaa36b7a16577b266fb57a",
+      "size": 3557,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/c4a34b90c06785826deaa36b7a16577b266fb57a"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/alg/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3bd433cef416816858a892e9c7e73160378a592",
+      "size": 1119,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f3bd433cef416816858a892e9c7e73160378a592"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/algcase",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0ada4b708f645f21f391be3f0e693fa090ad85e5",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/0ada4b708f645f21f391be3f0e693fa090ad85e5"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/algcase/resolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e19782b2fc12280a2a1633e0366e9804dfe8282e",
+      "size": 390,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e19782b2fc12280a2a1633e0366e9804dfe8282e"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/algcase/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9d6f8a99ac62d014a1d2fd46e51248f03e98b2b",
+      "size": 2790,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f9d6f8a99ac62d014a1d2fd46e51248f03e98b2b"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/algcase/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d76ac33cf10e3b1934e74ddc1c450095f5a5c25e",
+      "size": 1088,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d76ac33cf10e3b1934e74ddc1c450095f5a5c25e"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/algset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d988347e36a51d17570af11d3970fd674239a432",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/d988347e36a51d17570af11d3970fd674239a432"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/algset/resolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0569e3e9cff8825af85ad8eecb2132f4699e63dc",
+      "size": 388,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/0569e3e9cff8825af85ad8eecb2132f4699e63dc"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/algset/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec8ff2f79c440a424db4d74bb195999888b8cdcf",
+      "size": 2620,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ec8ff2f79c440a424db4d74bb195999888b8cdcf"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/algset/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cc0a9509f487224f0d316ff3744f7e83ad8dd63",
+      "size": 2025,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/9cc0a9509f487224f0d316ff3744f7e83ad8dd63"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/auth",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0104f41253e9508833eeeaf56ac3d5e800f17d37",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/0104f41253e9508833eeeaf56ac3d5e800f17d37"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/auth/resolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2792309617b95a16a78acf4f2a15b11410a3537",
+      "size": 550,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a2792309617b95a16a78acf4f2a15b11410a3537"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/auth/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebd37d60bebd39c5f0f3779dcdddd80112ee520c",
+      "size": 3393,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ebd37d60bebd39c5f0f3779dcdddd80112ee520c"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/auth/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f7c79075873bed0804a5a64d55c4c38bd4be069",
+      "size": 868,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/5f7c79075873bed0804a5a64d55c4c38bd4be069"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/core",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9f1c55be822e84c15ea1cf5b5c20ecb5cdaa19ef",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/9f1c55be822e84c15ea1cf5b5c20ecb5cdaa19ef"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/core/generators",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bb1b0091345c6c353d21e536812c56eda80a5fc2",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/bb1b0091345c6c353d21e536812c56eda80a5fc2"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/core/generators/accessor.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd37eae3c7cdf719025ae21ad048275512a18b61",
+      "size": 1453,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/dd37eae3c7cdf719025ae21ad048275512a18b61"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/core/generators/accessorInfo.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd20e0d132479de259ea3b62a84a958f8b200293",
+      "size": 1305,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/bd20e0d132479de259ea3b62a84a958f8b200293"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/core/generators/enum.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80dc57db65468817e6941773d453127369ea0f20",
+      "size": 833,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/80dc57db65468817e6941773d453127369ea0f20"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/core/generators/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11bd2f88b4aa5a2cb17835a1ee96fb9786cae26f",
+      "size": 412,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/11bd2f88b4aa5a2cb17835a1ee96fb9786cae26f"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/core/generators/paginator.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45f5596c1938958eae70d40284bcb28e044d41ab",
+      "size": 1127,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/45f5596c1938958eae70d40284bcb28e044d41ab"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/core/generators/paginatorInfo.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89832d4d29848dd61312d288ca23ff8be56fcaf7",
+      "size": 1389,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/89832d4d29848dd61312d288ca23ff8be56fcaf7"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/core/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18bcd614e22bc2490f23c326d14b3473ff8346a2",
+      "size": 10710,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/18bcd614e22bc2490f23c326d14b3473ff8346a2"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/enum",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3b3fa09812afd6b5d8962c4b2ac67e1b448da773",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/3b3fa09812afd6b5d8962c4b2ac67e1b448da773"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/enum/caseVisualization.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c315e45670bc2492b4fded675110de1321d3d5cc",
+      "size": 78,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/c315e45670bc2492b4fded675110de1321d3d5cc"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/enum/userRole.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31a552a3746897d4bb0409f71ec8c27cf592a553",
+      "size": 69,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/31a552a3746897d4bb0409f71ec8c27cf592a553"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/enums.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "445c4ad2c85fcd9cc3a7a112fc4527e6a731a222",
+      "size": 270,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/445c4ad2c85fcd9cc3a7a112fc4527e6a731a222"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c7809fa01dea28b6702db57c93493334a421ed11",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/c7809fa01dea28b6702db57c93493334a421ed11"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link/algAlgcaseLink",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf06e50b96016db7bf97c76707e0fdc07bd2d25b",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/bf06e50b96016db7bf97c76707e0fdc07bd2d25b"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link/algAlgcaseLink/resolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "406638440afbf37fd8319e61aef52b432307ce41",
+      "size": 391,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/406638440afbf37fd8319e61aef52b432307ce41"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link/algAlgcaseLink/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cc5226265501a7b72108f8a6dcf4f5a17e9d50b",
+      "size": 2996,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/8cc5226265501a7b72108f8a6dcf4f5a17e9d50b"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link/algAlgcaseLink/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2fe7f81d41c7295c1ae5a22e40cc71137fa08df",
+      "size": 526,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f2fe7f81d41c7295c1ae5a22e40cc71137fa08df"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link/algTagLink",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f58d08042b924c756ab5e2d1ab094e5159b5dc3",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/4f58d08042b924c756ab5e2d1ab094e5159b5dc3"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link/algTagLink/resolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d180678c645ef4c8ae567d5094b4bdd935d059c",
+      "size": 373,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/0d180678c645ef4c8ae567d5094b4bdd935d059c"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link/algTagLink/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c33f3a51a02bd634a4b46337b7368ee16d76177f",
+      "size": 2442,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/c33f3a51a02bd634a4b46337b7368ee16d76177f"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link/algTagLink/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "344a6b39bab0910254925b7b5053e4130f9d3e88",
+      "size": 518,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/344a6b39bab0910254925b7b5053e4130f9d3e88"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link/userAlgTagLink",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8e8d26ecce7ed8d8c298559aa61aaaa503308127",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/8e8d26ecce7ed8d8c298559aa61aaaa503308127"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link/userAlgTagLink/resolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c11513a776636458fcdef60f6df9164abfeec80a",
+      "size": 391,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/c11513a776636458fcdef60f6df9164abfeec80a"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link/userAlgTagLink/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad9df3c595751048d5f543a0cf4557f5a0dd3b39",
+      "size": 2327,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ad9df3c595751048d5f543a0cf4557f5a0dd3b39"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link/userAlgTagLink/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eddfc1e0a6231ae88e9e627c1fac891a116a8d27",
+      "size": 1050,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/eddfc1e0a6231ae88e9e627c1fac891a116a8d27"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link/userAlgVoteLink",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "86aa65caea9033604bf0351a8eeda87ce066d9da",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/86aa65caea9033604bf0351a8eeda87ce066d9da"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link/userAlgVoteLink/resolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "408da9f50de629ac6f9290c81649e9ab0771c951",
+      "size": 635,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/408da9f50de629ac6f9290c81649e9ab0771c951"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link/userAlgVoteLink/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c41789468c918119a83d3ef04024f3887d013d65",
+      "size": 3301,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/c41789468c918119a83d3ef04024f3887d013d65"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/link/userAlgVoteLink/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dde3ee2bb6acf6fda8f8edbb0c1b20417907e90f",
+      "size": 762,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/dde3ee2bb6acf6fda8f8edbb0c1b20417907e90f"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/puzzle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "757e26738b80bf23ede4060bd477f8ca757db44a",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/757e26738b80bf23ede4060bd477f8ca757db44a"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/puzzle/resolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b702c2cf68584772352ccda18704af01439e0f50",
+      "size": 388,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/b702c2cf68584772352ccda18704af01439e0f50"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/puzzle/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92e0f42b1b316c90e66adb8abd90223ab99cd2df",
+      "size": 2251,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/92e0f42b1b316c90e66adb8abd90223ab99cd2df"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/puzzle/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96f11eb564bf71ff8e910a7206ec61ac384a8566",
+      "size": 1081,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/96f11eb564bf71ff8e910a7206ec61ac384a8566"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/resolvers.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f2c9632d2ac2b7f354140b2277a427d25f13996",
+      "size": 1070,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/4f2c9632d2ac2b7f354140b2277a427d25f13996"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/services.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6841632bdadb288a6053f323874a2c751df0c541",
+      "size": 944,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6841632bdadb288a6053f323874a2c751df0c541"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/subset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a2acc6e6077d3e654f9c0283d04b130475ee983d",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/a2acc6e6077d3e654f9c0283d04b130475ee983d"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/subset/resolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "147702facceef7711292d3524a903738484ff697",
+      "size": 388,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/147702facceef7711292d3524a903738484ff697"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/subset/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "174c5382f5040ef2c6a427b614c81c485ecac341",
+      "size": 5429,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/174c5382f5040ef2c6a427b614c81c485ecac341"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/subset/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4b5b6f88ec18d52e22ef3322c3928af77c79f16",
+      "size": 2089,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a4b5b6f88ec18d52e22ef3322c3928af77c79f16"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/tag",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c7d070d3aa633e672501fe27833b6f6ad7b72cc4",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/c7d070d3aa633e672501fe27833b6f6ad7b72cc4"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/tag/resolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38f6a318e4df4fcc2c80517134fa9f8d79cc0f2f",
+      "size": 372,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/38f6a318e4df4fcc2c80517134fa9f8d79cc0f2f"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/tag/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9679039bcd5488ec2a2cd2949ae0e98fc77be6f2",
+      "size": 965,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/9679039bcd5488ec2a2cd2949ae0e98fc77be6f2"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/tag/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85813efc549b5c81e57b09d1eb0f501eac2bff53",
+      "size": 512,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/85813efc549b5c81e57b09d1eb0f501eac2bff53"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/typeDefs.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26c3521a5b3750748453238b0ea483f28cd964d1",
+      "size": 1888,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/26c3521a5b3750748453238b0ea483f28cd964d1"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/user",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "745ad3b841e11c69ee358fc750dc2ddf5f3ebc8a",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/745ad3b841e11c69ee358fc750dc2ddf5f3ebc8a"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/user/resolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53be154f093ca4fd696cc979a55e72fa96a542df",
+      "size": 775,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/53be154f093ca4fd696cc979a55e72fa96a542df"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/user/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c654d90fc86beaecc6460f59e6779e5a7c4463a6",
+      "size": 3116,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/c654d90fc86beaecc6460f59e6779e5a7c4463a6"
+    },
+    {
+      "path": "backend/functions/oldSrc/services/user/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40c8d863551155e979396f49b1534d65e9ef079c",
+      "size": 2164,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/40c8d863551155e979396f49b1534d65e9ef079c"
+    },
+    {
+      "path": "backend/functions/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8653b4fcec8dfae25c3055cdc6f61ff5ce79023c",
+      "size": 177846,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/8653b4fcec8dfae25c3055cdc6f61ff5ce79023c"
+    },
+    {
+      "path": "backend/functions/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1ce6f2e462c9374f8dc29731dd23549a7eb6091",
+      "size": 1356,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e1ce6f2e462c9374f8dc29731dd23549a7eb6091"
+    },
+    {
+      "path": "backend/functions/schema.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "572f2b2c42efa4fe139bb438613eaa9ad21cfdbb",
+      "size": 36287,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/572f2b2c42efa4fe139bb438613eaa9ad21cfdbb"
+    },
+    {
+      "path": "backend/functions/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b33b8917c1a746de88e03de01fe861bf513519e9",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/b33b8917c1a746de88e03de01fe861bf513519e9"
+    },
+    {
+      "path": "backend/functions/src/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a5a804f7a3ca513b4e2d0083c4347c99114566f",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/4a5a804f7a3ca513b4e2d0083c4347c99114566f"
+    },
+    {
+      "path": "backend/functions/src/config/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d25946e9a98cd9c0b004951d60cc4bbd891786e",
+      "size": 964,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/1d25946e9a98cd9c0b004951d60cc4bbd891786e"
+    },
+    {
+      "path": "backend/functions/src/helpers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ad094c7ec71feb3f1664681f2232518fd4ce9f77",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/ad094c7ec71feb3f1664681f2232518fd4ce9f77"
+    },
+    {
+      "path": "backend/functions/src/helpers/auth.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb884dd4787f48d0a80b37f01372b92eebb6b6d4",
+      "size": 1901,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/fb884dd4787f48d0a80b37f01372b92eebb6b6d4"
+    },
+    {
+      "path": "backend/functions/src/helpers/pusher.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5026af3cd39b253eda335b5d99aeb932931c3681",
+      "size": 1040,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/5026af3cd39b253eda335b5d99aeb932931c3681"
+    },
+    {
+      "path": "backend/functions/src/helpers/schema.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0b44625f66e98e8ea48f94f23c0c29e40eeef91",
+      "size": 1557,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d0b44625f66e98e8ea48f94f23c0c29e40eeef91"
+    },
+    {
+      "path": "backend/functions/src/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e37f2e10ddf4618f5e91528378afd592b5dc4b1a",
+      "size": 2096,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e37f2e10ddf4618f5e91528378afd592b5dc4b1a"
+    },
+    {
+      "path": "backend/functions/src/schema",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9f2e9587b2984cf3c00a41c5178de1bb23b43a2e",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/9f2e9587b2984cf3c00a41c5178de1bb23b43a2e"
+    },
+    {
+      "path": "backend/functions/src/schema/core",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "26420887faf3b23207409b1838e52ddd05591b88",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/26420887faf3b23207409b1838e52ddd05591b88"
+    },
+    {
+      "path": "backend/functions/src/schema/core/generators",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "28fb85b5ead557791e4bc87635f5f2e5e5574262",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/28fb85b5ead557791e4bc87635f5f2e5e5574262"
+    },
+    {
+      "path": "backend/functions/src/schema/core/generators/edge.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8751b67bcf0ab538d26b69ee5effa31c0ff015cd",
+      "size": 969,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/8751b67bcf0ab538d26b69ee5effa31c0ff015cd"
+    },
+    {
+      "path": "backend/functions/src/schema/core/generators/enumPaginator.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bee6bc399787360c2bb4d30b739fec4f06379e5f",
+      "size": 903,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/bee6bc399787360c2bb4d30b739fec4f06379e5f"
+    },
+    {
+      "path": "backend/functions/src/schema/core/generators/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39028ea3a965edaf840d789078cb174e4f7f8e2e",
+      "size": 276,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/39028ea3a965edaf840d789078cb174e4f7f8e2e"
+    },
+    {
+      "path": "backend/functions/src/schema/core/generators/link.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65c37a554021b81504f7ab109061595b31b47c35",
+      "size": 1147,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/65c37a554021b81504f7ab109061595b31b47c35"
+    },
+    {
+      "path": "backend/functions/src/schema/core/generators/paginator.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e05210cbdc3ba470f500e0d5dccd6585d18031ac",
+      "size": 1750,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e05210cbdc3ba470f500e0d5dccd6585d18031ac"
+    },
+    {
+      "path": "backend/functions/src/schema/core/generators/paginatorInfo.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33432d69c0e980fd7259ce96fa233cea3c3a6a99",
+      "size": 2459,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/33432d69c0e980fd7259ce96fa233cea3c3a6a99"
+    },
+    {
+      "path": "backend/functions/src/schema/core/services",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4c0e211fe4bb778d9df9cd28f54748a47473f133",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/4c0e211fe4bb778d9df9cd28f54748a47473f133"
+    },
+    {
+      "path": "backend/functions/src/schema/core/services/base.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e988eb9c368755dc312703806d228c54d65c3c99",
+      "size": 2184,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e988eb9c368755dc312703806d228c54d65c3c99"
+    },
+    {
+      "path": "backend/functions/src/schema/core/services/edge.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d91d83b010f52f1138339769ca266ddfc05869e2",
+      "size": 449,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d91d83b010f52f1138339769ca266ddfc05869e2"
+    },
+    {
+      "path": "backend/functions/src/schema/core/services/enum.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10392c455281462e6d3fcaf949d7151c192a003f",
+      "size": 725,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/10392c455281462e6d3fcaf949d7151c192a003f"
+    },
+    {
+      "path": "backend/functions/src/schema/core/services/enumPaginator.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fe5effcd63a1bbc0a6a9554ef7c615b6bd2f35d",
+      "size": 477,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/0fe5effcd63a1bbc0a6a9554ef7c615b6bd2f35d"
+    },
+    {
+      "path": "backend/functions/src/schema/core/services/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aab3ec73e2904918016df324b12c57cd278d9c2e",
+      "size": 484,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/aab3ec73e2904918016df324b12c57cd278d9c2e"
+    },
+    {
+      "path": "backend/functions/src/schema/core/services/kenum.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9898a774e82302c6bfc6e8e5c92a8f1e66531e3",
+      "size": 372,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f9898a774e82302c6bfc6e8e5c92a8f1e66531e3"
+    },
+    {
+      "path": "backend/functions/src/schema/core/services/link.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06bb07c1e7f899366015a334ca64f9e302b049ab",
+      "size": 833,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/06bb07c1e7f899366015a334ca64f9e302b049ab"
+    },
+    {
+      "path": "backend/functions/src/schema/core/services/normal.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c7218a4911ebca21c5ce0a5d422aea5b55e0171",
+      "size": 21397,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6c7218a4911ebca21c5ce0a5d422aea5b55e0171"
+    },
+    {
+      "path": "backend/functions/src/schema/core/services/paginated.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df9dea9fc024479f85f127a7a218768c346c8043",
+      "size": 319,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/df9dea9fc024479f85f127a7a218768c346c8043"
+    },
+    {
+      "path": "backend/functions/src/schema/core/services/paginator.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50f31a2cdfe9fdd2fe2be73bdd95b60497b5ad50",
+      "size": 1993,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/50f31a2cdfe9fdd2fe2be73bdd95b60497b5ad50"
+    },
+    {
+      "path": "backend/functions/src/schema/core/services/paginatorInfo.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "248e94c5e56f37a3153749d4bee5c85f2439819c",
+      "size": 1302,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/248e94c5e56f37a3153749d4bee5c85f2439819c"
+    },
+    {
+      "path": "backend/functions/src/schema/core/services/simple.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5f45ff55f51b85d96bda171479dd679d6a627d1",
+      "size": 1061,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d5f45ff55f51b85d96bda171479dd679d6a627d1"
+    },
+    {
+      "path": "backend/functions/src/schema/enums",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc27a8fdc76928f3b905149d8d9ae88648dc3d8f",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/cc27a8fdc76928f3b905149d8d9ae88648dc3d8f"
+    },
+    {
+      "path": "backend/functions/src/schema/enums/caseVisualization.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6c21809b1ce331bf4a8fe1ef2f5916848361961",
+      "size": 277,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a6c21809b1ce331bf4a8fe1ef2f5916848361961"
+    },
+    {
+      "path": "backend/functions/src/schema/enums/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba28f167279768fc1e95f653bae809dbbdc1a2c6",
+      "size": 160,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ba28f167279768fc1e95f653bae809dbbdc1a2c6"
+    },
+    {
+      "path": "backend/functions/src/schema/enums/userPermission.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "370edc451ab60d9158a15e410a660613590b59a3",
+      "size": 565,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/370edc451ab60d9158a15e410a660613590b59a3"
+    },
+    {
+      "path": "backend/functions/src/schema/enums/userRole.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e68a4b17fc9b0513319e4d57aff51b43081ca88e",
+      "size": 258,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e68a4b17fc9b0513319e4d57aff51b43081ca88e"
+    },
+    {
+      "path": "backend/functions/src/schema/helpers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "772017b54a0a99580713c1f163fb97a675b05807",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/772017b54a0a99580713c1f163fb97a675b05807"
+    },
+    {
+      "path": "backend/functions/src/schema/helpers/enum.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "887b166de8dc48f2b32c2502c56896323527019f",
+      "size": 1555,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/887b166de8dc48f2b32c2502c56896323527019f"
+    },
+    {
+      "path": "backend/functions/src/schema/helpers/error.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50ee67427b01643a16351b05a3cd592fa7d2f4e4",
+      "size": 637,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/50ee67427b01643a16351b05a3cd592fa7d2f4e4"
+    },
+    {
+      "path": "backend/functions/src/schema/helpers/permissions.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb268e9a000a47671fa0363e114e1e9516bcdf3f",
+      "size": 4382,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/cb268e9a000a47671fa0363e114e1e9516bcdf3f"
+    },
+    {
+      "path": "backend/functions/src/schema/helpers/resolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec16364835be22146a9b0fca11c27aa15501674d",
+      "size": 14353,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ec16364835be22146a9b0fca11c27aa15501674d"
+    },
+    {
+      "path": "backend/functions/src/schema/helpers/rootResolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7546cb4327a3340c8619c99c412943d060c27ce6",
+      "size": 12028,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/7546cb4327a3340c8619c99c412943d060c27ce6"
+    },
+    {
+      "path": "backend/functions/src/schema/helpers/scalar.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "100a1573344142912609886d9808512838430229",
+      "size": 1003,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/100a1573344142912609886d9808512838430229"
+    },
+    {
+      "path": "backend/functions/src/schema/helpers/shared.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7081c5c8d370fdf6908a8755b0929aa9ce6506ea",
+      "size": 1570,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/7081c5c8d370fdf6908a8755b0929aa9ce6506ea"
+    },
+    {
+      "path": "backend/functions/src/schema/helpers/sql.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee6db8e5b0d019607880e65181b9fe320d0dab69",
+      "size": 20330,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ee6db8e5b0d019607880e65181b9fe320d0dab69"
+    },
+    {
+      "path": "backend/functions/src/schema/helpers/subscription.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f3d43609384787d8e134fbe212c78209e8d699b",
+      "size": 4372,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/0f3d43609384787d8e134fbe212c78209e8d699b"
+    },
+    {
+      "path": "backend/functions/src/schema/helpers/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9029b5ddad35d4b54031b7f12dff1f5c7b65870a",
+      "size": 22209,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/9029b5ddad35d4b54031b7f12dff1f5c7b65870a"
+    },
+    {
+      "path": "backend/functions/src/schema/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aed33700563dd30199c9c32546d6cff2582a5488",
+      "size": 2182,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/aed33700563dd30199c9c32546d6cff2582a5488"
+    },
+    {
+      "path": "backend/functions/src/schema/links",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eec1c3f2302b18afa97454cba84d3896be7d216c",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/eec1c3f2302b18afa97454cba84d3896be7d216c"
+    },
+    {
+      "path": "backend/functions/src/schema/links/algAlgcaseLink",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ec827082ee9db9c0cff1387156c2679882560faf",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/ec827082ee9db9c0cff1387156c2679882560faf"
+    },
+    {
+      "path": "backend/functions/src/schema/links/algAlgcaseLink/rootResolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a5e629d8e275c113c5e29025e462b6eb056290c",
+      "size": 244,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/0a5e629d8e275c113c5e29025e462b6eb056290c"
+    },
+    {
+      "path": "backend/functions/src/schema/links/algAlgcaseLink/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48835a149be36e0fce7b8bab54c1e9eec534fb47",
+      "size": 626,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/48835a149be36e0fce7b8bab54c1e9eec534fb47"
+    },
+    {
+      "path": "backend/functions/src/schema/links/algTagLink",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63f2fee03d2939642ea1f96cd3c9be554f72b211",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/63f2fee03d2939642ea1f96cd3c9be554f72b211"
+    },
+    {
+      "path": "backend/functions/src/schema/links/algTagLink/rootResolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8143d10e79ba09e4e4f120d34127ce48188b6cd3",
+      "size": 219,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/8143d10e79ba09e4e4f120d34127ce48188b6cd3"
+    },
+    {
+      "path": "backend/functions/src/schema/links/algTagLink/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b596634570c35e00f982428a1da7862708a61de",
+      "size": 602,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/1b596634570c35e00f982428a1da7862708a61de"
+    },
+    {
+      "path": "backend/functions/src/schema/links/algUsertagLink",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "965b3be3d6fc9aaf7494e8b05c90dcc6c3042b98",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/965b3be3d6fc9aaf7494e8b05c90dcc6c3042b98"
+    },
+    {
+      "path": "backend/functions/src/schema/links/algUsertagLink/rootResolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7cf6b1b8fa5ed8ecddaa7c3bc2ccce072581117",
+      "size": 244,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d7cf6b1b8fa5ed8ecddaa7c3bc2ccce072581117"
+    },
+    {
+      "path": "backend/functions/src/schema/links/algUsertagLink/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40495b87da05be34a89f77db5ce75ad75c5475c2",
+      "size": 639,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/40495b87da05be34a89f77db5ce75ad75c5475c2"
+    },
+    {
+      "path": "backend/functions/src/schema/links/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6ede80c6ebd08e3b9d287e50fcb52abd9bcce9c",
+      "size": 217,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d6ede80c6ebd08e3b9d287e50fcb52abd9bcce9c"
+    },
+    {
+      "path": "backend/functions/src/schema/links/userAlgVoteLink",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c9bbb04e263dc4304163d7bb4a6663d8bf3ae973",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/c9bbb04e263dc4304163d7bb4a6663d8bf3ae973"
+    },
+    {
+      "path": "backend/functions/src/schema/links/userAlgVoteLink/rootResolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f28604fc7e3f25d3b872723b74ac38d81782806",
+      "size": 246,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/1f28604fc7e3f25d3b872723b74ac38d81782806"
+    },
+    {
+      "path": "backend/functions/src/schema/links/userAlgVoteLink/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a24cc8308b223fe11ea98a338586030a33b8c2e",
+      "size": 1828,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/4a24cc8308b223fe11ea98a338586030a33b8c2e"
+    },
+    {
+      "path": "backend/functions/src/schema/links/userAlgVoteLink/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3780de20be66b0814178942cf160450391ce944",
+      "size": 459,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e3780de20be66b0814178942cf160450391ce944"
+    },
+    {
+      "path": "backend/functions/src/schema/models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c354c91b1430d2cfb55157940971d47abee42fe3",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/c354c91b1430d2cfb55157940971d47abee42fe3"
+    },
+    {
+      "path": "backend/functions/src/schema/models/alg",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a9cce847d6ac00736f37ee5cf34f2c0cc14b24ca",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/a9cce847d6ac00736f37ee5cf34f2c0cc14b24ca"
+    },
+    {
+      "path": "backend/functions/src/schema/models/alg/rootResolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58e0dd71f691309afa3c12723f39e0247cf2bd5c",
+      "size": 1457,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/58e0dd71f691309afa3c12723f39e0247cf2bd5c"
+    },
+    {
+      "path": "backend/functions/src/schema/models/alg/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9cb5b0936692b56c480efbfd3b38a11ce706ae7",
+      "size": 2673,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f9cb5b0936692b56c480efbfd3b38a11ce706ae7"
+    },
+    {
+      "path": "backend/functions/src/schema/models/alg/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2405da45510a656d93c22468bd2aafa558005193",
+      "size": 2108,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/2405da45510a656d93c22468bd2aafa558005193"
+    },
+    {
+      "path": "backend/functions/src/schema/models/algcase",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "21cacfed8d9b6ed6258efa8d897563cecfacc406",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/21cacfed8d9b6ed6258efa8d897563cecfacc406"
+    },
+    {
+      "path": "backend/functions/src/schema/models/algcase/rootResolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b63b8d8342e38d276467f2a6afa2dadacc53668",
+      "size": 255,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/7b63b8d8342e38d276467f2a6afa2dadacc53668"
+    },
+    {
+      "path": "backend/functions/src/schema/models/algcase/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13cd5c871142bdccd98ac353815d485d9f23fffe",
+      "size": 856,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/13cd5c871142bdccd98ac353815d485d9f23fffe"
+    },
+    {
+      "path": "backend/functions/src/schema/models/algcase/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b93ec4b08caf1aa890f318eeafa44bdac62f5cbd",
+      "size": 782,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/b93ec4b08caf1aa890f318eeafa44bdac62f5cbd"
+    },
+    {
+      "path": "backend/functions/src/schema/models/algset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8ea7b5b72153538e1be4aae34596fc67eca48842",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/8ea7b5b72153538e1be4aae34596fc67eca48842"
+    },
+    {
+      "path": "backend/functions/src/schema/models/algset/rootResolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "251334de057a2f2e6329db1362978de8d5e74ece",
+      "size": 253,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/251334de057a2f2e6329db1362978de8d5e74ece"
+    },
+    {
+      "path": "backend/functions/src/schema/models/algset/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a3704db8ffc2393f7cf7d636d1122d6a17233aa",
+      "size": 888,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/2a3704db8ffc2393f7cf7d636d1122d6a17233aa"
+    },
+    {
+      "path": "backend/functions/src/schema/models/algset/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "808042fc7eea69f0477effb974dbf21be3c60722",
+      "size": 1550,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/808042fc7eea69f0477effb974dbf21be3c60722"
+    },
+    {
+      "path": "backend/functions/src/schema/models/auth",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "66e2f351f7585ac3ad8ddaddeb2107ffc40aa474",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/66e2f351f7585ac3ad8ddaddeb2107ffc40aa474"
+    },
+    {
+      "path": "backend/functions/src/schema/models/auth/rootResolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e714217bc517142624136b1a798046d86f297d38",
+      "size": 1044,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e714217bc517142624136b1a798046d86f297d38"
+    },
+    {
+      "path": "backend/functions/src/schema/models/auth/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7393492c6ebddf008b770497003e57e7ddca3bed",
+      "size": 4237,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/7393492c6ebddf008b770497003e57e7ddca3bed"
+    },
+    {
+      "path": "backend/functions/src/schema/models/auth/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b79ec6c56fbe1dfdb50745b6c0c65fdba7808410",
+      "size": 1755,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/b79ec6c56fbe1dfdb50745b6c0c65fdba7808410"
+    },
+    {
+      "path": "backend/functions/src/schema/models/puzzle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8f0a1e96345aa4578ab782de1dd7100cef8c5a2c",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/8f0a1e96345aa4578ab782de1dd7100cef8c5a2c"
+    },
+    {
+      "path": "backend/functions/src/schema/models/puzzle/rootResolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2c94bef6e5ccf755057f76b4d5ae629c05725fe",
+      "size": 253,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f2c94bef6e5ccf755057f76b4d5ae629c05725fe"
+    },
+    {
+      "path": "backend/functions/src/schema/models/puzzle/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1dc57026753af2c16a8539414e36cc40d752cef",
+      "size": 832,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/b1dc57026753af2c16a8539414e36cc40d752cef"
+    },
+    {
+      "path": "backend/functions/src/schema/models/puzzle/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09328162f4e703a17909134b89cdbebda3f20095",
+      "size": 873,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/09328162f4e703a17909134b89cdbebda3f20095"
+    },
+    {
+      "path": "backend/functions/src/schema/models/tag",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eea852175c1bfd0c5a45f190a5d939fc3421f230",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/eea852175c1bfd0c5a45f190a5d939fc3421f230"
+    },
+    {
+      "path": "backend/functions/src/schema/models/tag/rootResolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "233b418a31dd2505e56a47ce74da82cfb3673fe5",
+      "size": 212,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/233b418a31dd2505e56a47ce74da82cfb3673fe5"
+    },
+    {
+      "path": "backend/functions/src/schema/models/tag/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7befafdbed15a12993d5ec4c0080a8f73f4df212",
+      "size": 801,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/7befafdbed15a12993d5ec4c0080a8f73f4df212"
+    },
+    {
+      "path": "backend/functions/src/schema/models/tag/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ab27ebf43ef7799c10d53d6b928a5fea07a221a",
+      "size": 690,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/8ab27ebf43ef7799c10d53d6b928a5fea07a221a"
+    },
+    {
+      "path": "backend/functions/src/schema/models/user",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "425fbaa54d60438060cdaf0cd776ec8a8967bdc2",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/425fbaa54d60438060cdaf0cd776ec8a8967bdc2"
+    },
+    {
+      "path": "backend/functions/src/schema/models/user/rootResolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8df77ef7fb43649303611a8a503ff8a9e3ad050",
+      "size": 848,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e8df77ef7fb43649303611a8a503ff8a9e3ad050"
+    },
+    {
+      "path": "backend/functions/src/schema/models/user/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be37e15e5892491b036c7818de346abeb5b6d38a",
+      "size": 653,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/be37e15e5892491b036c7818de346abeb5b6d38a"
+    },
+    {
+      "path": "backend/functions/src/schema/models/user/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5cd91d2c09ac1597e0ab11e2b59a4119f9d8979",
+      "size": 3362,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d5cd91d2c09ac1597e0ab11e2b59a4119f9d8979"
+    },
+    {
+      "path": "backend/functions/src/schema/models/usertag",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b14634f03871330c70bbe94546bf9b56fa9bc49f",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/b14634f03871330c70bbe94546bf9b56fa9bc49f"
+    },
+    {
+      "path": "backend/functions/src/schema/models/usertag/rootResolver.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbf31fa2e8c657f2a4aa0f20aa076f8d465e6a48",
+      "size": 241,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/fbf31fa2e8c657f2a4aa0f20aa076f8d465e6a48"
+    },
+    {
+      "path": "backend/functions/src/schema/models/usertag/service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a66c0e4d238ecca314e14cc1ee6c06522c0f8fc6",
+      "size": 773,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a66c0e4d238ecca314e14cc1ee6c06522c0f8fc6"
+    },
+    {
+      "path": "backend/functions/src/schema/models/usertag/typeDef.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51b74776093d28b794e5b8913e38cd54a39152b4",
+      "size": 706,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/51b74776093d28b794e5b8913e38cd54a39152b4"
+    },
+    {
+      "path": "backend/functions/src/schema/scalars",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dcbcc4c3803f04d3c78710390268ee708fc849b4",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/dcbcc4c3803f04d3c78710390268ee708fc849b4"
+    },
+    {
+      "path": "backend/functions/src/schema/scalars/id.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e49d74f324a8807232ca4a6898ae48e1db3254b",
+      "size": 341,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/9e49d74f324a8807232ca4a6898ae48e1db3254b"
+    },
+    {
+      "path": "backend/functions/src/schema/scalars/imageUrl.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e01abb21abc03730c9368ba77e943093de5de801",
+      "size": 718,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e01abb21abc03730c9368ba77e943093de5de801"
+    },
+    {
+      "path": "backend/functions/src/schema/scalars/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bc3cf59cc7b8327b90cf1eba7e002c291390254",
+      "size": 1156,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/5bc3cf59cc7b8327b90cf1eba7e002c291390254"
+    },
+    {
+      "path": "backend/functions/src/schema/scalars/jsonAsString.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d42ee79b8e4a0b95a213b87ace78fb2b26716e6",
+      "size": 382,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6d42ee79b8e4a0b95a213b87ace78fb2b26716e6"
+    },
+    {
+      "path": "backend/functions/src/schema/scalars/number.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccfc133a709111b4ddbb83215799dd4168be989e",
+      "size": 354,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ccfc133a709111b4ddbb83215799dd4168be989e"
+    },
+    {
+      "path": "backend/functions/src/schema/scalars/regex.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26232af861d5d309555a01806789883c234136d0",
+      "size": 357,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/26232af861d5d309555a01806789883c234136d0"
+    },
+    {
+      "path": "backend/functions/src/schema/scalars/unixTimestamp.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13a6c001fcdf705a9afc49c7a2769253d413b83f",
+      "size": 385,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/13a6c001fcdf705a9afc49c7a2769253d413b83f"
+    },
+    {
+      "path": "backend/functions/src/schema/services.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfee30cfc2c46a9177573d92f908368be9a5c011",
+      "size": 1706,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/cfee30cfc2c46a9177573d92f908368be9a5c011"
+    },
+    {
+      "path": "backend/functions/src/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7a45353a0b7791f1649a7758044785641b1cda46",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/7a45353a0b7791f1649a7758044785641b1cda46"
+    },
+    {
+      "path": "backend/functions/src/scripts/generateMigration.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "643bb24fe13562970763d67e40bde7f8dd2b8306",
+      "size": 3673,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/643bb24fe13562970763d67e40bde7f8dd2b8306"
+    },
+    {
+      "path": "backend/functions/src/scripts/generateSchema.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39b3a445ec5d49815cf2ccb4bb0218380a422524",
+      "size": 542,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/39b3a445ec5d49815cf2ccb4bb0218380a422524"
+    },
+    {
+      "path": "backend/functions/src/scripts/syncDatabase.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccb614a6d828f04fe1c2df3e6665692944aeeb3a",
+      "size": 2646,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ccb614a6d828f04fe1c2df3e6665692944aeeb3a"
+    },
+    {
+      "path": "backend/functions/src/types",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b2114a5be355d1729dacf5bfc7e3552c94dd1d45",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/b2114a5be355d1729dacf5bfc7e3552c94dd1d45"
+    },
+    {
+      "path": "backend/functions/src/types/express",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ddffd04226aaf1e7bcb178ef830cfdb6e8e77547",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/ddffd04226aaf1e7bcb178ef830cfdb6e8e77547"
+    },
+    {
+      "path": "backend/functions/src/types/express/index.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "462925e92d3c457a797a7ba3bce241afed441b89",
+      "size": 147,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/462925e92d3c457a797a7ba3bce241afed441b89"
+    },
+    {
+      "path": "backend/functions/src/types/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e7b656501af3ca0a3e117ac85d017a34fe260f9",
+      "size": 3378,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/3e7b656501af3ca0a3e117ac85d017a34fe260f9"
+    },
+    {
+      "path": "backend/functions/src/types/jomql",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1201b6249a87228c2eaf3cc26e24bdaa173f33a2",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/1201b6249a87228c2eaf3cc26e24bdaa173f33a2"
+    },
+    {
+      "path": "backend/functions/src/types/jomql/index.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bba65b2a20ab2f04523dfcc010f4d64e0f9ddacc",
+      "size": 624,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/bba65b2a20ab2f04523dfcc010f4d64e0f9ddacc"
+    },
+    {
+      "path": "backend/functions/src/types/schema.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "027748d8c76360bec0f02fa355b23415272e5568",
+      "size": 27676,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/027748d8c76360bec0f02fa355b23415272e5568"
+    },
+    {
+      "path": "backend/functions/src/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c663d124828b5576fe6143a7c66f1d374a0cd14",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/7c663d124828b5576fe6143a7c66f1d374a0cd14"
+    },
+    {
+      "path": "backend/functions/src/utils/knex.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8b00c384678f26402fb102c44fa60dab25799fb",
+      "size": 394,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d8b00c384678f26402fb102c44fa60dab25799fb"
+    },
+    {
+      "path": "backend/functions/src/utils/pusher.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47b7418bc419c2ac7447100f0b978264090f655e",
+      "size": 367,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/47b7418bc419c2ac7447100f0b978264090f655e"
+    },
+    {
+      "path": "backend/functions/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5805350f209b68bb7343a3b283841985a40a6443",
+      "size": 374,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/5805350f209b68bb7343a3b283841985a40a6443"
+    },
+    {
+      "path": "backend/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d90844bce88a97e71015f7be28e7c2a4e3b57021",
+      "size": 78,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d90844bce88a97e71015f7be28e7c2a4e3b57021"
+    },
+    {
+      "path": "backend/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02f3b1d9b751ea3861a1f4304b038b9e7174850e",
+      "size": 170,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/02f3b1d9b751ea3861a1f4304b038b9e7174850e"
+    },
+    {
+      "path": "backend/public",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dba05eeb42196d5017d19c81a8bb85f5ec61c96e",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/dba05eeb42196d5017d19c81a8bb85f5ec61c96e"
+    },
+    {
+      "path": "backend/public/404.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "829eda8fdcf133ab2083dbc880b6362b11d0c8ea",
+      "size": 1808,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/829eda8fdcf133ab2083dbc880b6362b11d0c8ea"
+    },
+    {
+      "path": "backend/public/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8fb37e010fa04d477e68eb4e0d8f172a2c7cbcc",
+      "size": 3510,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a8fb37e010fa04d477e68eb4e0d8f172a2c7cbcc"
+    },
+    {
+      "path": "client",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3918d1f2dbd2a3b8c3df23aedb8d3b5982dbd4e",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/d3918d1f2dbd2a3b8c3df23aedb8d3b5982dbd4e"
+    },
+    {
+      "path": "client/.env.development",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10e9a17e8eb9607bf9bfd1f6c5c80804160da963",
+      "size": 264,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/10e9a17e8eb9607bf9bfd1f6c5c80804160da963"
+    },
+    {
+      "path": "client/.eslintignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73d560a098eae6408dcd75f141af528587377f30",
+      "size": 26,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/73d560a098eae6408dcd75f141af528587377f30"
+    },
+    {
+      "path": "client/.eslintrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "972634e329047d9e6e9aa6f1a540bde8665a6d77",
+      "size": 775,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/972634e329047d9e6e9aa6f1a540bde8665a6d77"
+    },
+    {
+      "path": "client/.firebaserc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a74f8553071b148306dd002fc8622d237d032a76",
+      "size": 55,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a74f8553071b148306dd002fc8622d237d032a76"
+    },
+    {
+      "path": "client/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f62685251bd58e2bf516c7835234d8a1120b7297",
+      "size": 1144,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f62685251bd58e2bf516c7835234d8a1120b7297"
+    },
+    {
+      "path": "client/.prettierrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0563613601f7b1a4ad117d6c5c9b5be2228c124b",
+      "size": 89,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/0563613601f7b1a4ad117d6c5c9b5be2228c124b"
+    },
+    {
+      "path": "client/@types",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "26c086775f5758fb4c84fb20b2642321579903d5",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/26c086775f5758fb4c84fb20b2642321579903d5"
+    },
+    {
+      "path": "client/@types/declarations.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86aae5a966fdc66dbaa1c20e518a8d2f128f52cc",
+      "size": 191,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/86aae5a966fdc66dbaa1c20e518a8d2f128f52cc"
+    },
+    {
+      "path": "client/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9dcf25b9b0621353c2f467fbac4995367c8bd1d5",
+      "size": 2097,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/9dcf25b9b0621353c2f467fbac4995367c8bd1d5"
+    },
+    {
+      "path": "client/codegen.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec75029e84c28341245a15540d3853c26c71ebd4",
+      "size": 153,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ec75029e84c28341245a15540d3853c26c71ebd4"
+    },
+    {
+      "path": "client/firebase.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfbc74ce71d3216b552bbc2fbc0d5dd6cfb36346",
+      "size": 211,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/cfbc74ce71d3216b552bbc2fbc0d5dd6cfb36346"
+    },
+    {
+      "path": "client/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c39d5e35facad9b26e4be2b836f54ecf3a058ee",
+      "size": 2779,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6c39d5e35facad9b26e4be2b836f54ecf3a058ee"
+    },
+    {
+      "path": "client/public",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b7b17ebbb4973b1d0544bcc75361d771906f2825",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/b7b17ebbb4973b1d0544bcc75361d771906f2825"
+    },
+    {
+      "path": "client/public/_redirects",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7797f7c6a7356b0d451d11a49925df854c22e978",
+      "size": 19,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/7797f7c6a7356b0d451d11a49925df854c22e978"
+    },
+    {
+      "path": "client/public/css",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c9442571c1f9c83cab9e8ad801bb9c79d6dbab7",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/9c9442571c1f9c83cab9e8ad801bb9c79d6dbab7"
+    },
+    {
+      "path": "client/public/css/cubing-icons.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c997a86dfe8137e361126605398c25fd97fa4ad",
+      "size": 40521,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/2c997a86dfe8137e361126605398c25fd97fa4ad"
+    },
+    {
+      "path": "client/public/favicon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a11777cc471a4344702741ab1c8a588998b1311a",
+      "size": 3870,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a11777cc471a4344702741ab1c8a588998b1311a"
+    },
+    {
+      "path": "client/public/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33d8bfe493fcaef8e43e3e3e130422d250af17bf",
+      "size": 1795,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/33d8bfe493fcaef8e43e3e3e130422d250af17bf"
+    },
+    {
+      "path": "client/public/logo192.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc44b0a3796c0e0a64c3d858ca038bd4570465d9",
+      "size": 5347,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/fc44b0a3796c0e0a64c3d858ca038bd4570465d9"
+    },
+    {
+      "path": "client/public/logo512.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4e47a6545bc15971f8f63fba70e4013df88a664",
+      "size": 9664,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a4e47a6545bc15971f8f63fba70e4013df88a664"
+    },
+    {
+      "path": "client/public/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "080d6c77ac21bb2ef88a6992b2b73ad93daaca92",
+      "size": 492,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/080d6c77ac21bb2ef88a6992b2b73ad93daaca92"
+    },
+    {
+      "path": "client/public/robots.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9e57dc4d41b9b46e05112e9f45b7ea6ac0ba15e",
+      "size": 67,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e9e57dc4d41b9b46e05112e9f45b7ea6ac0ba15e"
+    },
+    {
+      "path": "client/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dc09d4ac95e074ba5d786e272b702d422b59e556",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/dc09d4ac95e074ba5d786e272b702d422b59e556"
+    },
+    {
+      "path": "client/scripts/fetchSchema.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65b4f5750aa9b0279a0ad6000e2a7c05ce26fd09",
+      "size": 221,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/65b4f5750aa9b0279a0ad6000e2a7c05ce26fd09"
+    },
+    {
+      "path": "client/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00936c8bf239fd1fa19f5f07ab83fa4336eaf9bb",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/00936c8bf239fd1fa19f5f07ab83fa4336eaf9bb"
+    },
+    {
+      "path": "client/src/components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d1052d4c6e7a2f689bb0a809ad3a6210c2aa08e9",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/d1052d4c6e7a2f689bb0a809ad3a6210c2aa08e9"
+    },
+    {
+      "path": "client/src/components/AuthenticatedRoute",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2d720efa1019968040c3f5d7e3f84d03420bd74a",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/2d720efa1019968040c3f5d7e3f84d03420bd74a"
+    },
+    {
+      "path": "client/src/components/AuthenticatedRoute/AuthenticatedRoute.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b26e4876a9c1db0f89c86e1f8593969032396ced",
+      "size": 747,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/b26e4876a9c1db0f89c86e1f8593969032396ced"
+    },
+    {
+      "path": "client/src/components/ColorModeSwitcher",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a3906b10f91bbcf702fa44ae1c2bb11112a34ac5",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/a3906b10f91bbcf702fa44ae1c2bb11112a34ac5"
+    },
+    {
+      "path": "client/src/components/ColorModeSwitcher/ColorModeSwitcher.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40e806a17ffbbfa7a4125fe7e273990f7ff71110",
+      "size": 798,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/40e806a17ffbbfa7a4125fe7e273990f7ff71110"
+    },
+    {
+      "path": "client/src/components/CubingIcon",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e47d5521aab6c9a024c4b44c70b0de5b0515313a",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/e47d5521aab6c9a024c4b44c70b0de5b0515313a"
+    },
+    {
+      "path": "client/src/components/CubingIcon/CubingIcon.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "783533710017f2231be8ded4b105f6d331921573",
+      "size": 424,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/783533710017f2231be8ded4b105f6d331921573"
+    },
+    {
+      "path": "client/src/components/Paginator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a177544de0f801b5211593654ddef7153b24d60e",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/a177544de0f801b5211593654ddef7153b24d60e"
+    },
+    {
+      "path": "client/src/components/Paginator/Paginator.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bf40959311b4160b5fe6797d5052647441aa884",
+      "size": 145,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6bf40959311b4160b5fe6797d5052647441aa884"
+    },
+    {
+      "path": "client/src/components/Search",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8bd33b07477e1f160022332f74a4ff8cbb220b6d",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/8bd33b07477e1f160022332f74a4ff8cbb220b6d"
+    },
+    {
+      "path": "client/src/components/Search/Search.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7beb7f5ca21e103fb9e64d047efd0568f24182e5",
+      "size": 337,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/7beb7f5ca21e103fb9e64d047efd0568f24182e5"
+    },
+    {
+      "path": "client/src/components/Tags",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1168f287ec3a343673dbe11dfd7e848454767f33",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/1168f287ec3a343673dbe11dfd7e848454767f33"
+    },
+    {
+      "path": "client/src/components/Tags/AlgTag.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19b04017d28f3448ecc6ae4067e15f7435851bff",
+      "size": 839,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/19b04017d28f3448ecc6ae4067e15f7435851bff"
+    },
+    {
+      "path": "client/src/components/Tags/PuzzleTag.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7957da79bf6686c10b8f1935d1a50902a3c6cbf2",
+      "size": 879,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/7957da79bf6686c10b8f1935d1a50902a3c6cbf2"
+    },
+    {
+      "path": "client/src/components/TwistyPlayers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1e78ebfe981ef60454fde3f9dd4d206e130929b9",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/1e78ebfe981ef60454fde3f9dd4d206e130929b9"
+    },
+    {
+      "path": "client/src/components/TwistyPlayers/Transparent.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d424b63698095bdc4ead42e47add8d4ec08a1d98",
+      "size": 318,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d424b63698095bdc4ead42e47add8d4ec08a1d98"
+    },
+    {
+      "path": "client/src/config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b96b3fc4e90ce024032b76e351a82d9c4cbe2ba",
+      "size": 262,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/0b96b3fc4e90ce024032b76e351a82d9c4cbe2ba"
+    },
+    {
+      "path": "client/src/constants",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "734e4343ef05184c00627a880077f8756b0d0222",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/734e4343ef05184c00627a880077f8756b0d0222"
+    },
+    {
+      "path": "client/src/constants/events.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9450b96f562498a03c11252f8810236ca87927e",
+      "size": 451,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e9450b96f562498a03c11252f8810236ca87927e"
+    },
+    {
+      "path": "client/src/constants/jql.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c997641481ba4bee56934661b5bba742b29a8177",
+      "size": 68,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/c997641481ba4bee56934661b5bba742b29a8177"
+    },
+    {
+      "path": "client/src/generated",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1fdf4bccd66f40c314ee12375a52fb02b59c9f76",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/1fdf4bccd66f40c314ee12375a52fb02b59c9f76"
+    },
+    {
+      "path": "client/src/generated/jql.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edbbe8ab842aece79bf5a8ac2c521f4e6265c8c0",
+      "size": 13433,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/edbbe8ab842aece79bf5a8ac2c521f4e6265c8c0"
+    },
+    {
+      "path": "client/src/generated/schema.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f12e8b95f83a0c35985804a4d524d7ff9cdca145",
+      "size": 13979,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f12e8b95f83a0c35985804a4d524d7ff9cdca145"
+    },
+    {
+      "path": "client/src/hooks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "85b0796dfc9f190a2241da3c83c50ee4f84014bb",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/85b0796dfc9f190a2241da3c83c50ee4f84014bb"
+    },
+    {
+      "path": "client/src/hooks/useJql.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9614573db75ba15bfd6ab0702413a8bc58f7f766",
+      "size": 159,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/9614573db75ba15bfd6ab0702413a8bc58f7f766"
+    },
+    {
+      "path": "client/src/hooks/useJqlMutation.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee6676746f0ce6280393253050b9db9633c57077",
+      "size": 1196,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ee6676746f0ce6280393253050b9db9633c57077"
+    },
+    {
+      "path": "client/src/hooks/useJqlQuery.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "878626ac737dd5fc516b50b11e1eda4f55d5ab01",
+      "size": 1361,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/878626ac737dd5fc516b50b11e1eda4f55d5ab01"
+    },
+    {
+      "path": "client/src/hooks/useUser.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e673bc5ee84f7808ac4509a80926eb10e426810a",
+      "size": 161,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e673bc5ee84f7808ac4509a80926eb10e426810a"
+    },
+    {
+      "path": "client/src/index.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1112a6ae759246d7e0a9a624903f9d68b515476",
+      "size": 768,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d1112a6ae759246d7e0a9a624903f9d68b515476"
+    },
+    {
+      "path": "client/src/logic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ea4fc149e7de0eb457bbaf066b845ee58a7c8eb",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/4ea4fc149e7de0eb457bbaf066b845ee58a7c8eb"
+    },
+    {
+      "path": "client/src/logic/time.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e640b781a95f6ba14b583ec9c0ad9ec5ebd1b9e4",
+      "size": 197,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e640b781a95f6ba14b583ec9c0ad9ec5ebd1b9e4"
+    },
+    {
+      "path": "client/src/pages",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e86388daf16a67f81a47a326b925bc4a3486afb",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/5e86388daf16a67f81a47a326b925bc4a3486afb"
+    },
+    {
+      "path": "client/src/pages/Admin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bcbb5e77cb5b174b64760dd125168a357559630e",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/bcbb5e77cb5b174b64760dd125168a357559630e"
+    },
+    {
+      "path": "client/src/pages/Admin/Admin.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b5e9d3758eec8bf301b096e1793d253aff97da9",
+      "size": 2760,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/5b5e9d3758eec8bf301b096e1793d253aff97da9"
+    },
+    {
+      "path": "client/src/pages/Admin/Algset.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eddd563cd54b835a557eb32d17df1991bcb057bd",
+      "size": 3971,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/eddd563cd54b835a557eb32d17df1991bcb057bd"
+    },
+    {
+      "path": "client/src/pages/Admin/Algsets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "28b44b4ca8601f5a9a80b65ac656d52388a1f58c",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/28b44b4ca8601f5a9a80b65ac656d52388a1f58c"
+    },
+    {
+      "path": "client/src/pages/Admin/Algsets/AddAlgset.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffe77c04cea360125af638acd0ddde865af1e928",
+      "size": 2152,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ffe77c04cea360125af638acd0ddde865af1e928"
+    },
+    {
+      "path": "client/src/pages/Admin/Algsets/Algsets.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "244f4e6ecec68db852b56e87333a6f9b0014b081",
+      "size": 7784,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/244f4e6ecec68db852b56e87333a6f9b0014b081"
+    },
+    {
+      "path": "client/src/pages/Admin/Algsets/index.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7399143f93ba84a29f3b8d535ddb62a38a2e6215",
+      "size": 56,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/7399143f93ba84a29f3b8d535ddb62a38a2e6215"
+    },
+    {
+      "path": "client/src/pages/Admin/Puzzles.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf29830ccc8ca4fa45bbf228f5845b942b9fe7f1",
+      "size": 3219,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/bf29830ccc8ca4fa45bbf228f5845b942b9fe7f1"
+    },
+    {
+      "path": "client/src/pages/Admin/Users.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a73bce632872e3fbf7db2212aa766382f52d804e",
+      "size": 3325,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a73bce632872e3fbf7db2212aa766382f52d804e"
+    },
+    {
+      "path": "client/src/pages/Admin/index.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7f3f18d1d4f922f2aa83bdd59dfcce0e9b41208",
+      "size": 50,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/c7f3f18d1d4f922f2aa83bdd59dfcce0e9b41208"
+    },
+    {
+      "path": "client/src/pages/Algset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b375127ed7aeb699a7adc7d8f5c0cfdc9c7b97c1",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/b375127ed7aeb699a7adc7d8f5c0cfdc9c7b97c1"
+    },
+    {
+      "path": "client/src/pages/Algset/Algset.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f6cd9425d6a2312f0b2415ea0222e01a3395d55",
+      "size": 1718,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6f6cd9425d6a2312f0b2415ea0222e01a3395d55"
+    },
+    {
+      "path": "client/src/pages/Algset/SubsetRow.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bcf3a1a9f6bee20e4db0e9938b0b025bf04e75b",
+      "size": 2194,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6bcf3a1a9f6bee20e4db0e9938b0b025bf04e75b"
+    },
+    {
+      "path": "client/src/pages/App",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3eac61df07e2d37201850a24ea6e6d6c30edc84f",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/3eac61df07e2d37201850a24ea6e6d6c30edc84f"
+    },
+    {
+      "path": "client/src/pages/App/App.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e3005351a2d12d119276aa9c040aa57abd8ea7b",
+      "size": 710,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/4e3005351a2d12d119276aa9c040aa57abd8ea7b"
+    },
+    {
+      "path": "client/src/pages/App/Footer.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5563802db135d3e8ee6e11e78f3db4d99ddcd4b",
+      "size": 1527,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f5563802db135d3e8ee6e11e78f3db4d99ddcd4b"
+    },
+    {
+      "path": "client/src/pages/App/Header.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9379caf93df44daff7994e1c263249cb5553c8d",
+      "size": 3006,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e9379caf93df44daff7994e1c263249cb5553c8d"
+    },
+    {
+      "path": "client/src/pages/App/Navigation.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9dd215cb61ee3cc001ec8f12175ca861953b0e0",
+      "size": 1068,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f9dd215cb61ee3cc001ec8f12175ca861953b0e0"
+    },
+    {
+      "path": "client/src/pages/Landing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "820716edd7846391d9ad8d5b39235fd99ab631ca",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/820716edd7846391d9ad8d5b39235fd99ab631ca"
+    },
+    {
+      "path": "client/src/pages/Landing/Landing.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d765f31674462e6968ff74e367e68fc210ae5271",
+      "size": 1043,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d765f31674462e6968ff74e367e68fc210ae5271"
+    },
+    {
+      "path": "client/src/pages/Landing/LandingCube.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad6251a63354d7600f70a2a60320935938244e2e",
+      "size": 1325,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ad6251a63354d7600f70a2a60320935938244e2e"
+    },
+    {
+      "path": "client/src/pages/Landing/New.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbefd04cc85d7cea551048892f0fc12d767408fc",
+      "size": 933,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/fbefd04cc85d7cea551048892f0fc12d767408fc"
+    },
+    {
+      "path": "client/src/pages/Landing/Trending.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9ac3c9ddc2e2221503df4a40b8610fc589e40b1",
+      "size": 994,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a9ac3c9ddc2e2221503df4a40b8610fc589e40b1"
+    },
+    {
+      "path": "client/src/pages/Puzzle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f75e0a54c8564df241a2cd59b8b0958277f3a84f",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/f75e0a54c8564df241a2cd59b8b0958277f3a84f"
+    },
+    {
+      "path": "client/src/pages/Puzzle/Puzzle.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "028aa47e512edfc4f647cfbd2b422ce2884d0680",
+      "size": 2832,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/028aa47e512edfc4f647cfbd2b422ce2884d0680"
+    },
+    {
+      "path": "client/src/pages/Puzzles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "acb015b49a711e19ede80757537a3f8389735d1c",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/acb015b49a711e19ede80757537a3f8389735d1c"
+    },
+    {
+      "path": "client/src/pages/Puzzles/Puzzles.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47ea82f681888dcace5b7544060102922125f59f",
+      "size": 2455,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/47ea82f681888dcace5b7544060102922125f59f"
+    },
+    {
+      "path": "client/src/pages/WcaRedirect",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ec76883b13a6ea01367f1377779daf13d6ff02ff",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/ec76883b13a6ea01367f1377779daf13d6ff02ff"
+    },
+    {
+      "path": "client/src/pages/WcaRedirect/WcaRedirect.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3172031d114746d35e439547cc3c3f6746b08f6",
+      "size": 1000,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e3172031d114746d35e439547cc3c3f6746b08f6"
+    },
+    {
+      "path": "client/src/providers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1d9c9338d605916eb3038f2f4d68006002b691d4",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/1d9c9338d605916eb3038f2f4d68006002b691d4"
+    },
+    {
+      "path": "client/src/providers/JqlProvider.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68e1d9ddac0e157d8fd3fa50468df0a6f9d3c072",
+      "size": 1447,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/68e1d9ddac0e157d8fd3fa50468df0a6f9d3c072"
+    },
+    {
+      "path": "client/src/providers/UserProvider.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a6dc682f644d3bd75cc9e9a242bb333a77b9aa3",
+      "size": 2318,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/2a6dc682f644d3bd75cc9e9a242bb333a77b9aa3"
+    },
+    {
+      "path": "client/src/react-app-env.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6431bc5fc6b2c932dfe5d0418fc667b86c18b9fc",
+      "size": 40,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6431bc5fc6b2c932dfe5d0418fc667b86c18b9fc"
+    },
+    {
+      "path": "client/src/reportWebVitals.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57a24a21eae1de4e00842390a8e04a76e7c68bad",
+      "size": 416,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/57a24a21eae1de4e00842390a8e04a76e7c68bad"
+    },
+    {
+      "path": "client/src/serviceWorker.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3aaa1dbf8ed0be944eccbd5d8de2489871e0b6d5",
+      "size": 5309,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/3aaa1dbf8ed0be944eccbd5d8de2489871e0b6d5"
+    },
+    {
+      "path": "client/src/setupTests.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52aaef1d2452104517b38ed65ea62c9a305aaa66",
+      "size": 240,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/52aaef1d2452104517b38ed65ea62c9a305aaa66"
+    },
+    {
+      "path": "client/src/test-utils.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af50278dbd8488fcbca71ecce7fed90ae057dab5",
+      "size": 563,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/af50278dbd8488fcbca71ecce7fed90ae057dab5"
+    },
+    {
+      "path": "client/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75a21116eee0c0cb2a888d8e74fdd0e7ecfe0c7e",
+      "size": 566,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/75a21116eee0c0cb2a888d8e74fdd0e7ecfe0c7e"
+    },
+    {
+      "path": "client/yarn.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "795e1c341af7713763a43e786009b8e5ec635b54",
+      "size": 679215,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/795e1c341af7713763a43e786009b8e5ec635b54"
+    },
+    {
+      "path": "client_web",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ec37407df987326b77d5b7da22cba48fc1646a09",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/ec37407df987326b77d5b7da22cba48fc1646a09"
+    },
+    {
+      "path": "client_web/.env.development",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10e9a17e8eb9607bf9bfd1f6c5c80804160da963",
+      "size": 264,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/10e9a17e8eb9607bf9bfd1f6c5c80804160da963"
+    },
+    {
+      "path": "client_web/.eslintignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73d560a098eae6408dcd75f141af528587377f30",
+      "size": 26,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/73d560a098eae6408dcd75f141af528587377f30"
+    },
+    {
+      "path": "client_web/.eslintrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "972634e329047d9e6e9aa6f1a540bde8665a6d77",
+      "size": 775,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/972634e329047d9e6e9aa6f1a540bde8665a6d77"
+    },
+    {
+      "path": "client_web/.firebaserc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a74f8553071b148306dd002fc8622d237d032a76",
+      "size": 55,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a74f8553071b148306dd002fc8622d237d032a76"
+    },
+    {
+      "path": "client_web/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f62685251bd58e2bf516c7835234d8a1120b7297",
+      "size": 1144,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f62685251bd58e2bf516c7835234d8a1120b7297"
+    },
+    {
+      "path": "client_web/.prettierrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0563613601f7b1a4ad117d6c5c9b5be2228c124b",
+      "size": 89,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/0563613601f7b1a4ad117d6c5c9b5be2228c124b"
+    },
+    {
+      "path": "client_web/@types",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "26c086775f5758fb4c84fb20b2642321579903d5",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/26c086775f5758fb4c84fb20b2642321579903d5"
+    },
+    {
+      "path": "client_web/@types/declarations.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86aae5a966fdc66dbaa1c20e518a8d2f128f52cc",
+      "size": 191,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/86aae5a966fdc66dbaa1c20e518a8d2f128f52cc"
+    },
+    {
+      "path": "client_web/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9dcf25b9b0621353c2f467fbac4995367c8bd1d5",
+      "size": 2097,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/9dcf25b9b0621353c2f467fbac4995367c8bd1d5"
+    },
+    {
+      "path": "client_web/firebase.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfbc74ce71d3216b552bbc2fbc0d5dd6cfb36346",
+      "size": 211,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/cfbc74ce71d3216b552bbc2fbc0d5dd6cfb36346"
+    },
+    {
+      "path": "client_web/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67b955195fdda015994b2fdd96bc6bcd9e00788c",
+      "size": 2734,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/67b955195fdda015994b2fdd96bc6bcd9e00788c"
+    },
+    {
+      "path": "client_web/public",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b7b17ebbb4973b1d0544bcc75361d771906f2825",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/b7b17ebbb4973b1d0544bcc75361d771906f2825"
+    },
+    {
+      "path": "client_web/public/_redirects",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7797f7c6a7356b0d451d11a49925df854c22e978",
+      "size": 19,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/7797f7c6a7356b0d451d11a49925df854c22e978"
+    },
+    {
+      "path": "client_web/public/css",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c9442571c1f9c83cab9e8ad801bb9c79d6dbab7",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/9c9442571c1f9c83cab9e8ad801bb9c79d6dbab7"
+    },
+    {
+      "path": "client_web/public/css/cubing-icons.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c997a86dfe8137e361126605398c25fd97fa4ad",
+      "size": 40521,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/2c997a86dfe8137e361126605398c25fd97fa4ad"
+    },
+    {
+      "path": "client_web/public/favicon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a11777cc471a4344702741ab1c8a588998b1311a",
+      "size": 3870,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a11777cc471a4344702741ab1c8a588998b1311a"
+    },
+    {
+      "path": "client_web/public/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33d8bfe493fcaef8e43e3e3e130422d250af17bf",
+      "size": 1795,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/33d8bfe493fcaef8e43e3e3e130422d250af17bf"
+    },
+    {
+      "path": "client_web/public/logo192.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc44b0a3796c0e0a64c3d858ca038bd4570465d9",
+      "size": 5347,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/fc44b0a3796c0e0a64c3d858ca038bd4570465d9"
+    },
+    {
+      "path": "client_web/public/logo512.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4e47a6545bc15971f8f63fba70e4013df88a664",
+      "size": 9664,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a4e47a6545bc15971f8f63fba70e4013df88a664"
+    },
+    {
+      "path": "client_web/public/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "080d6c77ac21bb2ef88a6992b2b73ad93daaca92",
+      "size": 492,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/080d6c77ac21bb2ef88a6992b2b73ad93daaca92"
+    },
+    {
+      "path": "client_web/public/robots.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9e57dc4d41b9b46e05112e9f45b7ea6ac0ba15e",
+      "size": 67,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e9e57dc4d41b9b46e05112e9f45b7ea6ac0ba15e"
+    },
+    {
+      "path": "client_web/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dc09d4ac95e074ba5d786e272b702d422b59e556",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/dc09d4ac95e074ba5d786e272b702d422b59e556"
+    },
+    {
+      "path": "client_web/scripts/fetchSchema.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65b4f5750aa9b0279a0ad6000e2a7c05ce26fd09",
+      "size": 221,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/65b4f5750aa9b0279a0ad6000e2a7c05ce26fd09"
+    },
+    {
+      "path": "client_web/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e18f845e743343ebd79b999a9e1abe0c2b0f5081",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/e18f845e743343ebd79b999a9e1abe0c2b0f5081"
+    },
+    {
+      "path": "client_web/src/components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f446c0ab64f2de74c43bc18cd72c6c27d7fc703d",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/f446c0ab64f2de74c43bc18cd72c6c27d7fc703d"
+    },
+    {
+      "path": "client_web/src/components/AuthenticatedRoute",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd26c2b36eaa9615351359a7862d687a21f8d749",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/fd26c2b36eaa9615351359a7862d687a21f8d749"
+    },
+    {
+      "path": "client_web/src/components/AuthenticatedRoute/AuthenticatedRoute.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ec812b89b9c571305fa3d71a4084cbbfd1fd552",
+      "size": 803,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/4ec812b89b9c571305fa3d71a4084cbbfd1fd552"
+    },
+    {
+      "path": "client_web/src/components/ColorModeSwitcher",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a3906b10f91bbcf702fa44ae1c2bb11112a34ac5",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/a3906b10f91bbcf702fa44ae1c2bb11112a34ac5"
+    },
+    {
+      "path": "client_web/src/components/ColorModeSwitcher/ColorModeSwitcher.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40e806a17ffbbfa7a4125fe7e273990f7ff71110",
+      "size": 798,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/40e806a17ffbbfa7a4125fe7e273990f7ff71110"
+    },
+    {
+      "path": "client_web/src/components/CubingIcon",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e47d5521aab6c9a024c4b44c70b0de5b0515313a",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/e47d5521aab6c9a024c4b44c70b0de5b0515313a"
+    },
+    {
+      "path": "client_web/src/components/CubingIcon/CubingIcon.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "783533710017f2231be8ded4b105f6d331921573",
+      "size": 424,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/783533710017f2231be8ded4b105f6d331921573"
+    },
+    {
+      "path": "client_web/src/components/Paginator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a177544de0f801b5211593654ddef7153b24d60e",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/a177544de0f801b5211593654ddef7153b24d60e"
+    },
+    {
+      "path": "client_web/src/components/Paginator/Paginator.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bf40959311b4160b5fe6797d5052647441aa884",
+      "size": 145,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6bf40959311b4160b5fe6797d5052647441aa884"
+    },
+    {
+      "path": "client_web/src/components/Search",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e86f0f0a39c07f665c04a5b6eeacace69c52b4a6",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/e86f0f0a39c07f665c04a5b6eeacace69c52b4a6"
+    },
+    {
+      "path": "client_web/src/components/Search/Search.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f629860e029c5e318712a9df9176ceba6d4e8337",
+      "size": 366,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f629860e029c5e318712a9df9176ceba6d4e8337"
+    },
+    {
+      "path": "client_web/src/components/Search/SearchBar.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7af5d54d2c6debd8e0c8dc0512b07f32be7ab41",
+      "size": 8393,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e7af5d54d2c6debd8e0c8dc0512b07f32be7ab41"
+    },
+    {
+      "path": "client_web/src/components/Tags",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1168f287ec3a343673dbe11dfd7e848454767f33",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/1168f287ec3a343673dbe11dfd7e848454767f33"
+    },
+    {
+      "path": "client_web/src/components/Tags/AlgTag.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19b04017d28f3448ecc6ae4067e15f7435851bff",
+      "size": 839,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/19b04017d28f3448ecc6ae4067e15f7435851bff"
+    },
+    {
+      "path": "client_web/src/components/Tags/PuzzleTag.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7957da79bf6686c10b8f1935d1a50902a3c6cbf2",
+      "size": 879,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/7957da79bf6686c10b8f1935d1a50902a3c6cbf2"
+    },
+    {
+      "path": "client_web/src/components/TwistyPlayers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1e78ebfe981ef60454fde3f9dd4d206e130929b9",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/1e78ebfe981ef60454fde3f9dd4d206e130929b9"
+    },
+    {
+      "path": "client_web/src/components/TwistyPlayers/Transparent.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d424b63698095bdc4ead42e47add8d4ec08a1d98",
+      "size": 318,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d424b63698095bdc4ead42e47add8d4ec08a1d98"
+    },
+    {
+      "path": "client_web/src/config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89b921f925cfffccccc3b0cc5ee5c5a5d696ab4b",
+      "size": 264,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/89b921f925cfffccccc3b0cc5ee5c5a5d696ab4b"
+    },
+    {
+      "path": "client_web/src/constants",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "734e4343ef05184c00627a880077f8756b0d0222",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/734e4343ef05184c00627a880077f8756b0d0222"
+    },
+    {
+      "path": "client_web/src/constants/events.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9450b96f562498a03c11252f8810236ca87927e",
+      "size": 451,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e9450b96f562498a03c11252f8810236ca87927e"
+    },
+    {
+      "path": "client_web/src/constants/jql.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c997641481ba4bee56934661b5bba742b29a8177",
+      "size": 68,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/c997641481ba4bee56934661b5bba742b29a8177"
+    },
+    {
+      "path": "client_web/src/generated",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "69652d8e651dbcb17b587f206357bc3ff71e2aa6",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/69652d8e651dbcb17b587f206357bc3ff71e2aa6"
+    },
+    {
+      "path": "client_web/src/generated/schema.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d752a8b5e4b0ca942ffc67f921ec4a7fe38f7cf0",
+      "size": 15171,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d752a8b5e4b0ca942ffc67f921ec4a7fe38f7cf0"
+    },
+    {
+      "path": "client_web/src/hooks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8d2bd5505dc45abe90d5512438a28c468087c35d",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/8d2bd5505dc45abe90d5512438a28c468087c35d"
+    },
+    {
+      "path": "client_web/src/hooks/useDebounce.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e33647775ae3a3a5972f1d90679409957ae0522",
+      "size": 1060,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/9e33647775ae3a3a5972f1d90679409957ae0522"
+    },
+    {
+      "path": "client_web/src/hooks/useJql.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9614573db75ba15bfd6ab0702413a8bc58f7f766",
+      "size": 159,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/9614573db75ba15bfd6ab0702413a8bc58f7f766"
+    },
+    {
+      "path": "client_web/src/hooks/useJqlMutation.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0ce06d9050b2341fbd6592411974c6e2f4caedb",
+      "size": 1198,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a0ce06d9050b2341fbd6592411974c6e2f4caedb"
+    },
+    {
+      "path": "client_web/src/hooks/useJqlQuery.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1643e9a8a45fbf53917e5bb199058e8050a17421",
+      "size": 1266,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/1643e9a8a45fbf53917e5bb199058e8050a17421"
+    },
+    {
+      "path": "client_web/src/hooks/useKeyPress.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2004a4a906036c2623fe85d1ace03c3ea16dda32",
+      "size": 1004,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/2004a4a906036c2623fe85d1ace03c3ea16dda32"
+    },
+    {
+      "path": "client_web/src/hooks/useSearch.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef867a56e6398ee5b248731d3de824e1e8ef608e",
+      "size": 144,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ef867a56e6398ee5b248731d3de824e1e8ef608e"
+    },
+    {
+      "path": "client_web/src/hooks/useUser.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e673bc5ee84f7808ac4509a80926eb10e426810a",
+      "size": 161,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e673bc5ee84f7808ac4509a80926eb10e426810a"
+    },
+    {
+      "path": "client_web/src/index.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1112a6ae759246d7e0a9a624903f9d68b515476",
+      "size": 768,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d1112a6ae759246d7e0a9a624903f9d68b515476"
+    },
+    {
+      "path": "client_web/src/pages",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f8808a4da386a57d3b568d409637bdb2455a0345",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/f8808a4da386a57d3b568d409637bdb2455a0345"
+    },
+    {
+      "path": "client_web/src/pages/App",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3f78e876ab93e62cf049f7e1f6e051244298d08",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/d3f78e876ab93e62cf049f7e1f6e051244298d08"
+    },
+    {
+      "path": "client_web/src/pages/App/App.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdbabf2d28e94e9aaba1e24cbacc861133fb164b",
+      "size": 934,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/cdbabf2d28e94e9aaba1e24cbacc861133fb164b"
+    },
+    {
+      "path": "client_web/src/pages/App/Footer.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5563802db135d3e8ee6e11e78f3db4d99ddcd4b",
+      "size": 1527,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f5563802db135d3e8ee6e11e78f3db4d99ddcd4b"
+    },
+    {
+      "path": "client_web/src/pages/App/Header.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3252c6db66d76e7822755ab675f329ba41814157",
+      "size": 3167,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/3252c6db66d76e7822755ab675f329ba41814157"
+    },
+    {
+      "path": "client_web/src/pages/App/Navigation.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5eabf9c0eed467c04ce0bd6027bcb363173dc862",
+      "size": 1088,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/5eabf9c0eed467c04ce0bd6027bcb363173dc862"
+    },
+    {
+      "path": "client_web/src/pages/Landing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb48a824b930f0281533e93cc136bec2fb2c4b0b",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/fb48a824b930f0281533e93cc136bec2fb2c4b0b"
+    },
+    {
+      "path": "client_web/src/pages/Landing/Landing.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08e0e0a37e1b6ff35f9ef63d9ee1cc46fa0f3eac",
+      "size": 1223,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/08e0e0a37e1b6ff35f9ef63d9ee1cc46fa0f3eac"
+    },
+    {
+      "path": "client_web/src/pages/Landing/LandingCube.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e4a7cb7c5fe616944e299b4cb6b49023135c66c",
+      "size": 1372,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/7e4a7cb7c5fe616944e299b4cb6b49023135c66c"
+    },
+    {
+      "path": "client_web/src/pages/Landing/New.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbefd04cc85d7cea551048892f0fc12d767408fc",
+      "size": 933,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/fbefd04cc85d7cea551048892f0fc12d767408fc"
+    },
+    {
+      "path": "client_web/src/pages/Landing/Trending.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9ac3c9ddc2e2221503df4a40b8610fc589e40b1",
+      "size": 994,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a9ac3c9ddc2e2221503df4a40b8610fc589e40b1"
+    },
+    {
+      "path": "client_web/src/pages/WcaRedirect",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "89f15e8f21a3edd1c24b6701c325573aeb78dee4",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/89f15e8f21a3edd1c24b6701c325573aeb78dee4"
+    },
+    {
+      "path": "client_web/src/pages/WcaRedirect/WcaRedirect.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3cda79ef81635be2d991a8a4446183f4c9e00fe",
+      "size": 1101,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/c3cda79ef81635be2d991a8a4446183f4c9e00fe"
+    },
+    {
+      "path": "client_web/src/providers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a1059ff0b705fcf69857646211b133107508f5a3",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/a1059ff0b705fcf69857646211b133107508f5a3"
+    },
+    {
+      "path": "client_web/src/providers/JqlProvider.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68e1d9ddac0e157d8fd3fa50468df0a6f9d3c072",
+      "size": 1447,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/68e1d9ddac0e157d8fd3fa50468df0a6f9d3c072"
+    },
+    {
+      "path": "client_web/src/providers/UserProvider.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ac80c08c269e7c8f4f331ef272f25f68b9609cc",
+      "size": 2590,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6ac80c08c269e7c8f4f331ef272f25f68b9609cc"
+    },
+    {
+      "path": "client_web/src/react-app-env.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6431bc5fc6b2c932dfe5d0418fc667b86c18b9fc",
+      "size": 40,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6431bc5fc6b2c932dfe5d0418fc667b86c18b9fc"
+    },
+    {
+      "path": "client_web/src/reportWebVitals.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57a24a21eae1de4e00842390a8e04a76e7c68bad",
+      "size": 416,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/57a24a21eae1de4e00842390a8e04a76e7c68bad"
+    },
+    {
+      "path": "client_web/src/serviceWorker.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3aaa1dbf8ed0be944eccbd5d8de2489871e0b6d5",
+      "size": 5309,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/3aaa1dbf8ed0be944eccbd5d8de2489871e0b6d5"
+    },
+    {
+      "path": "client_web/src/setupTests.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52aaef1d2452104517b38ed65ea62c9a305aaa66",
+      "size": 240,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/52aaef1d2452104517b38ed65ea62c9a305aaa66"
+    },
+    {
+      "path": "client_web/src/test-utils.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af50278dbd8488fcbca71ecce7fed90ae057dab5",
+      "size": 563,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/af50278dbd8488fcbca71ecce7fed90ae057dab5"
+    },
+    {
+      "path": "client_web/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75a21116eee0c0cb2a888d8e74fdd0e7ecfe0c7e",
+      "size": 566,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/75a21116eee0c0cb2a888d8e74fdd0e7ecfe0c7e"
+    },
+    {
+      "path": "client_web/yarn.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0390b30b575f7b45a499929dd7f8104c03c7d7d",
+      "size": 651407,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/b0390b30b575f7b45a499929dd7f8104c03c7d7d"
+    },
+    {
+      "path": "package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16cba33f11b995da33cd708f565d3df6dd00d3c0",
+      "size": 394089,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/16cba33f11b995da33cd708f565d3df6dd00d3c0"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65c5f762877a1fd04711e0d694c78c605d6938bd",
+      "size": 238,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/65c5f762877a1fd04711e0d694c78c605d6938bd"
+    },
+    {
+      "path": "reference_client",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4363e9060a863969725f7986c1c7ecee134e3aa5",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/4363e9060a863969725f7986c1c7ecee134e3aa5"
+    },
+    {
+      "path": "reference_client/.editorconfig",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d126348471c348decba17143ce128130c9f4104",
+      "size": 207,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/5d126348471c348decba17143ce128130c9f4104"
+    },
+    {
+      "path": "reference_client/.env.example",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eaa8b6f26c8cd4ea76f82cbd6db42b23f3677582",
+      "size": 564,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/eaa8b6f26c8cd4ea76f82cbd6db42b23f3677582"
+    },
+    {
+      "path": "reference_client/.eslintrc.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08335fa5dcfdf89b145142b714fa1ca631000535",
+      "size": 314,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/08335fa5dcfdf89b145142b714fa1ca631000535"
+    },
+    {
+      "path": "reference_client/.firebase",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0d4eeed4fe65e182e009ac9504c6c453c8ccd8f8",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/0d4eeed4fe65e182e009ac9504c6c453c8ccd8f8"
+    },
+    {
+      "path": "reference_client/.firebase/hosting.ZGlzdA.cache",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "524be04143503f029b720e711153ac9626b7f3ef",
+      "size": 2623,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/524be04143503f029b720e711153ac9626b7f3ef"
+    },
+    {
+      "path": "reference_client/.firebaserc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9359e26d66b8659e06fc98635e48a4f9b9e67f5",
+      "size": 195,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d9359e26d66b8659e06fc98635e48a4f9b9e67f5"
+    },
+    {
+      "path": "reference_client/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e81832677df5831e4d3214c2ce3e76743fc2d538",
+      "size": 1266,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e81832677df5831e4d3214c2ce3e76743fc2d538"
+    },
+    {
+      "path": "reference_client/.prettierrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2095be81e4e40b736dfc9b3559d0250e4becd02",
+      "size": 43,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/b2095be81e4e40b736dfc9b3559d0250e4becd02"
+    },
+    {
+      "path": "reference_client/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d16a6903acd8b876cc960c52d7bb748ea9380e1",
+      "size": 354,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6d16a6903acd8b876cc960c52d7bb748ea9380e1"
+    },
+    {
+      "path": "reference_client/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a5914bb03c05e820bc795e0c2c27ae9dd4c607da",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/a5914bb03c05e820bc795e0c2c27ae9dd4c607da"
+    },
+    {
+      "path": "reference_client/assets/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34766f93438c2647179a9bb81c8ef49c1f710add",
+      "size": 296,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/34766f93438c2647179a9bb81c8ef49c1f710add"
+    },
+    {
+      "path": "reference_client/assets/main.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "460c965fd134d330843d910a74063c6d9481eb5d",
+      "size": 192,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/460c965fd134d330843d910a74063c6d9481eb5d"
+    },
+    {
+      "path": "reference_client/assets/variables.scss",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f60e6090d9b7053ac70371e1d23ab0748fbc8118",
+      "size": 138,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f60e6090d9b7053ac70371e1d23ab0748fbc8118"
+    },
+    {
+      "path": "reference_client/components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d096278146e7f457663cd34f2013a47bb40ee48b",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/d096278146e7f457663cd34f2013a47bb40ee48b"
+    },
+    {
+      "path": "reference_client/components/dialog",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "58a1223102a40d50f5cba3b07cfd0be8640916b1",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/58a1223102a40d50f5cba3b07cfd0be8640916b1"
+    },
+    {
+      "path": "reference_client/components/dialog/deleteRecordDialog.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "048627cbc294f0e083b3c23fef3d9cc3154254eb",
+      "size": 2350,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/048627cbc294f0e083b3c23fef3d9cc3154254eb"
+    },
+    {
+      "path": "reference_client/components/dialog/editRecordDialog.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "401901e94e1e49db6e4d6aee6f18639691f8c6a8",
+      "size": 4445,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/401901e94e1e49db6e4d6aee6f18639691f8c6a8"
+    },
+    {
+      "path": "reference_client/components/dialog/shareRecordDialog.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71cf3760a348ce219d8e8a236d94d02ec130af23",
+      "size": 2315,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/71cf3760a348ce219d8e8a236d94d02ec130af23"
+    },
+    {
+      "path": "reference_client/components/interface",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f1cff170d336e4424ea656a50e153af3e6bc8375",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/f1cff170d336e4424ea656a50e153af3e6bc8375"
+    },
+    {
+      "path": "reference_client/components/interface/crud",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "75c964d608ad5afeb059f39613632ff18ba5f6fe",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/75c964d608ad5afeb059f39613632ff18ba5f6fe"
+    },
+    {
+      "path": "reference_client/components/interface/crud/crudAlgsetInterface.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "865edce6b23b6cb76507c00dbe567325aef52862",
+      "size": 13402,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/865edce6b23b6cb76507c00dbe567325aef52862"
+    },
+    {
+      "path": "reference_client/components/interface/crud/crudRecordInterface.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2aab11761ddd5fed1636edd9375064e419d853f",
+      "size": 11218,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f2aab11761ddd5fed1636edd9375064e419d853f"
+    },
+    {
+      "path": "reference_client/components/snackbar",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68896226bedcf4a696abbc523c48198ff25e8317",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/68896226bedcf4a696abbc523c48198ff25e8317"
+    },
+    {
+      "path": "reference_client/components/snackbar/snackbar.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4afa52f6d281ac9ae72b8ec71e4d28ed63fac617",
+      "size": 1280,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/4afa52f6d281ac9ae72b8ec71e4d28ed63fac617"
+    },
+    {
+      "path": "reference_client/components/table",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "254dd7f3e4f4f33e3d928beea1751cc2adc7e8b4",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/254dd7f3e4f4f33e3d928beea1751cc2adc7e8b4"
+    },
+    {
+      "path": "reference_client/components/table/alg",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "35eec2aa145f7a995a91fec31639f9266aa3a296",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/35eec2aa145f7a995a91fec31639f9266aa3a296"
+    },
+    {
+      "path": "reference_client/components/table/alg/currentUserVoteColumn.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a354eb32c6ccf8076b396bc4aab10b91bcfdf3de",
+      "size": 2240,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a354eb32c6ccf8076b396bc4aab10b91bcfdf3de"
+    },
+    {
+      "path": "reference_client/components/table/common",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3d74cd4f1207302ebc7ef5a2123d3bf5e4ebebb8",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/3d74cd4f1207302ebc7ef5a2123d3bf5e4ebebb8"
+    },
+    {
+      "path": "reference_client/components/table/common/copyableColumn.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b05e0a359eb914b10234f43edd3364473445b33c",
+      "size": 416,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/b05e0a359eb914b10234f43edd3364473445b33c"
+    },
+    {
+      "path": "reference_client/components/table/common/timeagoColumn.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f653778c369ccfd08e3390edf31216d5e5612eb0",
+      "size": 297,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f653778c369ccfd08e3390edf31216d5e5612eb0"
+    },
+    {
+      "path": "reference_client/firebase.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c160fa6f80502236c468c9a3fa6037a17cda5e7f",
+      "size": 190,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/c160fa6f80502236c468c9a3fa6037a17cda5e7f"
+    },
+    {
+      "path": "reference_client/jomql",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c0a792876209bbc4fc8bbb811260ff9d62b954b3",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/c0a792876209bbc4fc8bbb811260ff9d62b954b3"
+    },
+    {
+      "path": "reference_client/jomql/fragments.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "300382a971430a38da2043f7c535784855e57358",
+      "size": 118,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/300382a971430a38da2043f7c535784855e57358"
+    },
+    {
+      "path": "reference_client/jomql/mutation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed9fbf2b17caf53cf0624ddcf4daaaa1e39579bb",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/ed9fbf2b17caf53cf0624ddcf4daaaa1e39579bb"
+    },
+    {
+      "path": "reference_client/jomql/mutation/auth.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd61aded97560cc16c8c49dd40f85e2662511971",
+      "size": 269,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/dd61aded97560cc16c8c49dd40f85e2662511971"
+    },
+    {
+      "path": "reference_client/jomql/query",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "99ab2ce1248b7517baeefa2b8e3738218645c247",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/99ab2ce1248b7517baeefa2b8e3738218645c247"
+    },
+    {
+      "path": "reference_client/jomql/query/auth.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37244b667e2be457fdd5d334c07400a024774cc9",
+      "size": 102,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/37244b667e2be457fdd5d334c07400a024774cc9"
+    },
+    {
+      "path": "reference_client/layouts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "37d90b4bcb946ec6e4927e5faa20e42fbedc6107",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/37d90b4bcb946ec6e4927e5faa20e42fbedc6107"
+    },
+    {
+      "path": "reference_client/layouts/default.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0ae37d92a8b9324db42b19ef4649cc5cd51fdc0",
+      "size": 9323,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/b0ae37d92a8b9324db42b19ef4649cc5cd51fdc0"
+    },
+    {
+      "path": "reference_client/layouts/error.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80f4a26ffbc861cf1dfa0d3b002b1022fa988e36",
+      "size": 655,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/80f4a26ffbc861cf1dfa0d3b002b1022fa988e36"
+    },
+    {
+      "path": "reference_client/middleware",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bc372583b0e5c1acfbfe2b24ad5f727551a71b9d",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/bc372583b0e5c1acfbfe2b24ad5f727551a71b9d"
+    },
+    {
+      "path": "reference_client/middleware/router-auth.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "277d701c8f5a9efea878bd95eb7e3020bcebd43e",
+      "size": 304,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/277d701c8f5a9efea878bd95eb7e3020bcebd43e"
+    },
+    {
+      "path": "reference_client/mixins",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8a24344e516cb197be76e4e99567204eab99341a",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/8a24344e516cb197be76e4e99567204eab99341a"
+    },
+    {
+      "path": "reference_client/mixins/column.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da39dae3e811e3ef6f5a4da28ead7fdeed0ee00b",
+      "size": 703,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/da39dae3e811e3ef6f5a4da28ead7fdeed0ee00b"
+    },
+    {
+      "path": "reference_client/mixins/crud.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f04e23d10766ea2fdd3d0a302cb2f89b714f7d8d",
+      "size": 18247,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f04e23d10766ea2fdd3d0a302cb2f89b714f7d8d"
+    },
+    {
+      "path": "reference_client/mixins/crudPage.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0a69bc99a89cb958d0e54496326131c40ab0960",
+      "size": 2315,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a0a69bc99a89cb958d0e54496326131c40ab0960"
+    },
+    {
+      "path": "reference_client/mixins/editRecordDialog.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e59387f3bb2ffe47c8a276f4a97dff08f1da02e",
+      "size": 11697,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/4e59387f3bb2ffe47c8a276f4a97dff08f1da02e"
+    },
+    {
+      "path": "reference_client/nuxt.config.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a4772b8ceece421a323afa42a3df0cd79d0d3b1",
+      "size": 2391,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/4a4772b8ceece421a323afa42a3df0cd79d0d3b1"
+    },
+    {
+      "path": "reference_client/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6305492c61bd070fd6f2577b706aceb098a3df8f",
+      "size": 523709,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6305492c61bd070fd6f2577b706aceb098a3df8f"
+    },
+    {
+      "path": "reference_client/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8276ee2e84c13a27a2502edbc8d9b05ab8f299a",
+      "size": 1025,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/b8276ee2e84c13a27a2502edbc8d9b05ab8f299a"
+    },
+    {
+      "path": "reference_client/pages",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "69c9dec1f74161a4a6531759b8974dedb40149c5",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/69c9dec1f74161a4a6531759b8974dedb40149c5"
+    },
+    {
+      "path": "reference_client/pages/algcases.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e25f00e62be7c99e0ba4d8add4f3ef0bfb49a4fc",
+      "size": 717,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e25f00e62be7c99e0ba4d8add4f3ef0bfb49a4fc"
+    },
+    {
+      "path": "reference_client/pages/algs.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee1a507b9a230c0c5df897fd2fa232d90b955dfe",
+      "size": 705,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ee1a507b9a230c0c5df897fd2fa232d90b955dfe"
+    },
+    {
+      "path": "reference_client/pages/algsets.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fd6588e7f1b63e1aa2b543a98caf1905e8e9734",
+      "size": 714,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/0fd6588e7f1b63e1aa2b543a98caf1905e8e9734"
+    },
+    {
+      "path": "reference_client/pages/index.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f110004ee7d05c4b5044f13e7a31da6546a4144",
+      "size": 1458,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/5f110004ee7d05c4b5044f13e7a31da6546a4144"
+    },
+    {
+      "path": "reference_client/pages/puzzles.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afe8898a39e11faddb926c146d3cd8d6e9750999",
+      "size": 714,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/afe8898a39e11faddb926c146d3cd8d6e9750999"
+    },
+    {
+      "path": "reference_client/pages/settings.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f957109352e93b9052f4e7b7c37dba00dabec3dd",
+      "size": 2655,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/f957109352e93b9052f4e7b7c37dba00dabec3dd"
+    },
+    {
+      "path": "reference_client/pages/tags.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca0c346670887da46d5d070825898591f4d3852a",
+      "size": 705,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ca0c346670887da46d5d070825898591f4d3852a"
+    },
+    {
+      "path": "reference_client/pages/users.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "336081d29819ef0919a8d86c45a643e0d7596545",
+      "size": 708,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/336081d29819ef0919a8d86c45a643e0d7596545"
+    },
+    {
+      "path": "reference_client/pages/usertags.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1d82cec56590df5ca620c90f3762f267dabffa2",
+      "size": 1064,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a1d82cec56590df5ca620c90f3762f267dabffa2"
+    },
+    {
+      "path": "reference_client/pages/wca-redirect.vue",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "512402743ab8ed94cfb4a225090debfb42a8dae1",
+      "size": 1964,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/512402743ab8ed94cfb4a225090debfb42a8dae1"
+    },
+    {
+      "path": "reference_client/plugins",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eef6aea8757f0123c5f06a8c91ba133d153ee1cd",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/eef6aea8757f0123c5f06a8c91ba133d153ee1cd"
+    },
+    {
+      "path": "reference_client/plugins/auth.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6073fba77d5a236103afc39417eeec54fd9d0e65",
+      "size": 706,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6073fba77d5a236103afc39417eeec54fd9d0e65"
+    },
+    {
+      "path": "reference_client/plugins/notifier.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bad6a45af61e9f0b228ca06a212db08ac5656184",
+      "size": 187,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/bad6a45af61e9f0b228ca06a212db08ac5656184"
+    },
+    {
+      "path": "reference_client/plugins/vuetify.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65b0a28b54f49078bf7f9ce3b93cbf933bd7d63f",
+      "size": 136,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/65b0a28b54f49078bf7f9ce3b93cbf933bd7d63f"
+    },
+    {
+      "path": "reference_client/services",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dabe8f3a105f1639ff1971ba7cfbac152938eda2",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/dabe8f3a105f1639ff1971ba7cfbac152938eda2"
+    },
+    {
+      "path": "reference_client/services/auth.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3468d87ad50769ea68f1590030b55aa38a1ef2ed",
+      "size": 343,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/3468d87ad50769ea68f1590030b55aa38a1ef2ed"
+    },
+    {
+      "path": "reference_client/services/common.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e514b4e36b8edc9a6db1951b12c6505789c3d7b",
+      "size": 2350,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/8e514b4e36b8edc9a6db1951b12c6505789c3d7b"
+    },
+    {
+      "path": "reference_client/services/dropdown.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b72b3e3ed515c663d6f6515382dfa9cd9eab46b",
+      "size": 2551,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/5b72b3e3ed515c663d6f6515382dfa9cd9eab46b"
+    },
+    {
+      "path": "reference_client/services/jomql.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a4698b6cd5ecf11a8dde0fd8fc74255e59bb8b7",
+      "size": 1215,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/8a4698b6cd5ecf11a8dde0fd8fc74255e59bb8b7"
+    },
+    {
+      "path": "reference_client/services/models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "403b803e7e98cc05b6e8edd6dcb6ff329ecc03b7",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/403b803e7e98cc05b6e8edd6dcb6ff329ecc03b7"
+    },
+    {
+      "path": "reference_client/services/models/alg.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4519f548dcd7ed2e786eb979b8fdd43ce02049fd",
+      "size": 4127,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/4519f548dcd7ed2e786eb979b8fdd43ce02049fd"
+    },
+    {
+      "path": "reference_client/services/models/algAlgcaseLink.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abbf38133db2e470dbe61e0d7751cdc706d7065e",
+      "size": 1274,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/abbf38133db2e470dbe61e0d7751cdc706d7065e"
+    },
+    {
+      "path": "reference_client/services/models/algTagLink.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eac4c3c1243e0187febebb4960eb3108f4bd7eda",
+      "size": 1393,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/eac4c3c1243e0187febebb4960eb3108f4bd7eda"
+    },
+    {
+      "path": "reference_client/services/models/algUsertagLink.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f714dc1699389648611718f6bfcd0b56b0ea21e",
+      "size": 1567,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/3f714dc1699389648611718f6bfcd0b56b0ea21e"
+    },
+    {
+      "path": "reference_client/services/models/algcase.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5df7ceb6f99cd38868272e21671e3802b05d616",
+      "size": 1829,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a5df7ceb6f99cd38868272e21671e3802b05d616"
+    },
+    {
+      "path": "reference_client/services/models/algset.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "072a2a102d54642f4464874d9fb0368c8fef767e",
+      "size": 3036,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/072a2a102d54642f4464874d9fb0368c8fef767e"
+    },
+    {
+      "path": "reference_client/services/models/puzzle.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0063f2248e85f5f40fdeeb35782ffc3f5982dc6",
+      "size": 2063,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/a0063f2248e85f5f40fdeeb35782ffc3f5982dc6"
+    },
+    {
+      "path": "reference_client/services/models/tag.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2073065b01b95d0dd60735bdfdf021d2dbfb7a9d",
+      "size": 1249,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/2073065b01b95d0dd60735bdfdf021d2dbfb7a9d"
+    },
+    {
+      "path": "reference_client/services/models/user.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1392ebb22ea7608ee182b90c054b591e272f6ab8",
+      "size": 2428,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/1392ebb22ea7608ee182b90c054b591e272f6ab8"
+    },
+    {
+      "path": "reference_client/services/models/userAlgVoteLink.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f4c6e0382117d15063a1fe365000a28b6f33ecb",
+      "size": 1473,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/4f4c6e0382117d15063a1fe365000a28b6f33ecb"
+    },
+    {
+      "path": "reference_client/services/models/usertag.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ec11e6a0916fb2121d4de7285a32240761681eb",
+      "size": 1262,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/1ec11e6a0916fb2121d4de7285a32240761681eb"
+    },
+    {
+      "path": "reference_client/services/pusher.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6cd97a1d8db5d16a17f554fa924582d13c1ab2e",
+      "size": 297,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/c6cd97a1d8db5d16a17f554fa924582d13c1ab2e"
+    },
+    {
+      "path": "reference_client/services/shared.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46b2c3c50d4d31507fbf234c5a5cf80d8c9be222",
+      "size": 1015,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/46b2c3c50d4d31507fbf234c5a5cf80d8c9be222"
+    },
+    {
+      "path": "reference_client/static",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8b28dd0e999c6597e4724cb5abe554cd4465aec2",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/8b28dd0e999c6597e4724cb5abe554cd4465aec2"
+    },
+    {
+      "path": "reference_client/static/WCAlogo_notext.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddb8fedd8f8803dce408455ab60cfc4171e3f082",
+      "size": 13855,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/ddb8fedd8f8803dce408455ab60cfc4171e3f082"
+    },
+    {
+      "path": "reference_client/static/algdb-withcube-vertical.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59cfdc6a696332a278e1ceb160731c1bc17d2d77",
+      "size": 222967,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/59cfdc6a696332a278e1ceb160731c1bc17d2d77"
+    },
+    {
+      "path": "reference_client/static/algdb0.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "454bc348d31b4eb5ecd926063069e6fc6c98388a",
+      "size": 86681,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/454bc348d31b4eb5ecd926063069e6fc6c98388a"
+    },
+    {
+      "path": "reference_client/static/algdb1-nobg.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0b4c101acab93970cde641d5aad7496dc6ded2f",
+      "size": 106115,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d0b4c101acab93970cde641d5aad7496dc6ded2f"
+    },
+    {
+      "path": "reference_client/static/algdb1-trimmed.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62b6cce07922bba57a6f717bedf4d7e09cb62d92",
+      "size": 101741,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/62b6cce07922bba57a6f717bedf4d7e09cb62d92"
+    },
+    {
+      "path": "reference_client/static/algdb1-withcube.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c715eb001bb9d1359b48ddd00d5a26f96d499657",
+      "size": 157747,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/c715eb001bb9d1359b48ddd00d5a26f96d499657"
+    },
+    {
+      "path": "reference_client/static/algdb1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ff8f1c8c7f05e711556f4b4bf7eb029529fe32f",
+      "size": 992849,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/9ff8f1c8c7f05e711556f4b4bf7eb029529fe32f"
+    },
+    {
+      "path": "reference_client/static/favicon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3632d0c89129045dc4103e84e59e426c57b8f51a",
+      "size": 1393,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/3632d0c89129045dc4103e84e59e426c57b8f51a"
+    },
+    {
+      "path": "reference_client/store",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b46fd31fba501e6b48cf25f4fc5f9df8acd0ca18",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/b46fd31fba501e6b48cf25f4fc5f9df8acd0ca18"
+    },
+    {
+      "path": "reference_client/store/auth.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41507cc06a284d9c5c1d6c97f3169ce949b3ab0d",
+      "size": 772,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/41507cc06a284d9c5c1d6c97f3169ce949b3ab0d"
+    },
+    {
+      "path": "reference_client/store/snackbar.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9514a9e41b6f1fb4d43f830a75557401f8f0a76",
+      "size": 200,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/e9514a9e41b6f1fb4d43f830a75557401f8f0a76"
+    },
+    {
+      "path": "reference_client/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30691fe13ff4bd5db9c3aa8b8abc0d6459212f35",
+      "size": 519,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/30691fe13ff4bd5db9c3aa8b8abc0d6459212f35"
+    },
+    {
+      "path": "reference_client/types",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8c879b1a824d52d6fb6357e7666789b8ebe63613",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/8c879b1a824d52d6fb6357e7666789b8ebe63613"
+    },
+    {
+      "path": "reference_client/types/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a57cb6c798dcab55ae33191919f20f32ac6c2f0",
+      "size": 4000,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/6a57cb6c798dcab55ae33191919f20f32ac6c2f0"
+    },
+    {
+      "path": "reference_client/types/schema.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86bcfc6793cf135eda9df16c66d1bd95eac5b025",
+      "size": 35492,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/86bcfc6793cf135eda9df16c66d1bd95eac5b025"
+    },
+    {
+      "path": "reference_client/types/vue-shim.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9f24faa42e74d0f178759f8f085a0541db6cc7c",
+      "size": 72,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/d9f24faa42e74d0f178759f8f085a0541db6cc7c"
+    },
+    {
+      "path": "schema.graphql",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17466ef66b98483429a81104cb70a1c6b24fe15b",
+      "size": 6433,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/17466ef66b98483429a81104cb70a1c6b24fe15b"
+    },
+    {
+      "path": "yarn.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d7ae418c91dff7afcfec9d020bc7481ef191ef2",
+      "size": 14183,
+      "url": "https://api.github.com/repos/cubing/algdb/git/blobs/9d7ae418c91dff7afcfec9d020bc7481ef191ef2"
+    }
+  ],
+  "truncated": false
+}

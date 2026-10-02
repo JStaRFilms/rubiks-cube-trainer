@@ -1,0 +1,2251 @@
+{
+  "sha": "e533adab2eaae9ce57ccbc5801e46f1c6d195006",
+  "url": "https://api.github.com/repos/Stig115/zbll_brief/git/trees/e533adab2eaae9ce57ccbc5801e46f1c6d195006",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e43b0f988953ae3a84b00331d0ccf5f7d51cb3cf",
+      "size": 10,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/e43b0f988953ae3a84b00331d0ccf5f7d51cb3cf"
+    },
+    {
+      "path": "CNAME",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f38d845ced1a4ac557cfc8d57ed4b77cbc92338",
+      "size": 15,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/8f38d845ced1a4ac557cfc8d57ed4b77cbc92338"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "229cc94263ab24db22a1482859665dadd7597132",
+      "size": 1079,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/229cc94263ab24db22a1482859665dadd7597132"
+    },
+    {
+      "path": "algs.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16d2a1bf28c1b15cccb463bcfc7022e1b9759591",
+      "size": 549669,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/16d2a1bf28c1b15cccb463bcfc7022e1b9759591"
+    },
+    {
+      "path": "btcube.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a0252112dfbc6b7a3cc945a8ef864e93db44274",
+      "size": 11705,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/8a0252112dfbc6b7a3cc945a8ef864e93db44274"
+    },
+    {
+      "path": "correct.wav",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c2c23c1d55936c2de8b0ed64c433aff76a189a6",
+      "size": 285228,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/1c2c23c1d55936c2de8b0ed64c433aff76a189a6"
+    },
+    {
+      "path": "cube.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6aa36869ce47754bf0ccb400e1f5cc039dae3b66",
+      "size": 19448,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/6aa36869ce47754bf0ccb400e1f5cc039dae3b66"
+    },
+    {
+      "path": "dev",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "16e042bf083aad3a6dbd8bd3ddc1a1d16e455ca0",
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/trees/16e042bf083aad3a6dbd8bd3ddc1a1d16e455ca0"
+    },
+    {
+      "path": "dev/notes.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d31ffbd994e00c910aa848951fb4f84f1c6f2525",
+      "size": 756,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/d31ffbd994e00c910aa848951fb4f84f1c6f2525"
+    },
+    {
+      "path": "display.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93150ab27a79bfb2aab7aa3212b528147fe73074",
+      "size": 29777,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/93150ab27a79bfb2aab7aa3212b528147fe73074"
+    },
+    {
+      "path": "experimental",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9cf4da678308cfcb2ec283192c96cb6d5e3474a4",
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/trees/9cf4da678308cfcb2ec283192c96cb6d5e3474a4"
+    },
+    {
+      "path": "experimental/analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7f7249981a989ba8659407e986f7e815af63d45d",
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/trees/7f7249981a989ba8659407e986f7e815af63d45d"
+    },
+    {
+      "path": "experimental/analysis/analysis.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "700974630fb748cef85b7df98d9980383c30ac32",
+      "size": 1802,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/700974630fb748cef85b7df98d9980383c30ac32"
+    },
+    {
+      "path": "experimental/analysis/cubing.umd.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5dd4ddc3aa16f72433cb654a5f8cd3293a3e7ad",
+      "size": 705799,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/a5dd4ddc3aa16f72433cb654a5f8cd3293a3e7ad"
+    },
+    {
+      "path": "experimental/analysis/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49ec756a57cd358a399265c6e0a729ede6e8163e",
+      "size": 657,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/49ec756a57cd358a399265c6e0a729ede6e8163e"
+    },
+    {
+      "path": "experimental/analysis/twisty.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68f2b3462493f4d4c63e4f84aef66ef85fa55f55",
+      "size": 7636,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/68f2b3462493f4d4c63e4f84aef66ef85fa55f55"
+    },
+    {
+      "path": "experimental/gan356i",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1445c0a784fee3bad5e75a20b4a3c54b899e7cf4",
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/trees/1445c0a784fee3bad5e75a20b4a3c54b899e7cf4"
+    },
+    {
+      "path": "experimental/gan356i/gan-simple.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "560df0b123bf2da392d07d900f0f2753cfafd784",
+      "size": 10722,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/560df0b123bf2da392d07d900f0f2753cfafd784"
+    },
+    {
+      "path": "experimental/gan356i/gan.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a0f4a384fc6ded8e07f5ab4b4d8b90801f6d3a4",
+      "size": 5072,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/6a0f4a384fc6ded8e07f5ab4b4d8b90801f6d3a4"
+    },
+    {
+      "path": "experimental/gan356i/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd911657e8b4635a9a1548f0338a63481e596ba4",
+      "size": 565,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/bd911657e8b4635a9a1548f0338a63481e596ba4"
+    },
+    {
+      "path": "experimental/gan356i/readme.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "920859e3f991350d6a2cd3d980a39afed35d7c42",
+      "size": 32562,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/920859e3f991350d6a2cd3d980a39afed35d7c42"
+    },
+    {
+      "path": "experimental/gan356i/simple.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a55e9d82b19799402563125fa872d9414d494ca4",
+      "size": 670,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/a55e9d82b19799402563125fa872d9414d494ca4"
+    },
+    {
+      "path": "experimental/gan356i/solve.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c120bbc5e6a2461da55cd545695621689a0e70e5",
+      "size": 356,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/c120bbc5e6a2461da55cd545695621689a0e70e5"
+    },
+    {
+      "path": "experimental/gan356i/solve.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "530f5f70550f21750697462f34cc2de6c66bb2f8",
+      "size": 1797,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/530f5f70550f21750697462f34cc2de6c66bb2f8"
+    },
+    {
+      "path": "experimental/gan356i/twist.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05c6b92fa0744af80259cd51456a0fe0a545e134",
+      "size": 554,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/05c6b92fa0744af80259cd51456a0fe0a545e134"
+    },
+    {
+      "path": "experimental/gan356i/twist.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fbc483d8fede76c4a5b83581f51e4d59b84ad77",
+      "size": 3693,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/7fbc483d8fede76c4a5b83581f51e4d59b84ad77"
+    },
+    {
+      "path": "experimental/giiker2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6a01af9a8a2a67a08a1ab53a7bd152180feb8a48",
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/trees/6a01af9a8a2a67a08a1ab53a7bd152180feb8a48"
+    },
+    {
+      "path": "experimental/giiker2/giiker2.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56fa1a47e082e62ebe944bdd6f723b64bbb76fe1",
+      "size": 3259,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/56fa1a47e082e62ebe944bdd6f723b64bbb76fe1"
+    },
+    {
+      "path": "experimental/giiker2/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d87854cd9769df004cb28297016ec5eb3fb63031",
+      "size": 398,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/d87854cd9769df004cb28297016ec5eb3fb63031"
+    },
+    {
+      "path": "experimental/giiker2/readme.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a725d8091e7ea63f242fa8c5b93727111a74507",
+      "size": 42882,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/0a725d8091e7ea63f242fa8c5b93727111a74507"
+    },
+    {
+      "path": "experimental/gocube",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "70e68af1fda7bd4bbac3ceb71453a1eff4096036",
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/trees/70e68af1fda7bd4bbac3ceb71453a1eff4096036"
+    },
+    {
+      "path": "experimental/gocube/gocube.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7208855149b0cbb4e3033261d635debed0b3d024",
+      "size": 1586,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/7208855149b0cbb4e3033261d635debed0b3d024"
+    },
+    {
+      "path": "experimental/gocube/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "652cbe7bf39acc630364aa7bd6e703ee6c6fb8c6",
+      "size": 387,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/652cbe7bf39acc630364aa7bd6e703ee6c6fb8c6"
+    },
+    {
+      "path": "experimental/gocube/readme.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41968483ebf34bd238d84cd63961de8667781ddd",
+      "size": 1857,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/41968483ebf34bd238d84cd63961de8667781ddd"
+    },
+    {
+      "path": "favicon-16x16.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee166d86ba3232c7008aee4a44f5b9e574cee147",
+      "size": 1167,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/ee166d86ba3232c7008aee4a44f5b9e574cee147"
+    },
+    {
+      "path": "favicon-32x32.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b5c0a09ddd374ba73c53efe314bd183825cb76a",
+      "size": 1639,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/8b5c0a09ddd374ba73c53efe314bd183825cb76a"
+    },
+    {
+      "path": "favicon-96x96.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94e2a9b60f168055c377490a03e66d14e111bc03",
+      "size": 3487,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/94e2a9b60f168055c377490a03e66d14e111bc03"
+    },
+    {
+      "path": "favicon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05c8f393de0f507cb68e2f6b232aa7335667ad35",
+      "size": 1150,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/05c8f393de0f507cb68e2f6b232aa7335667ad35"
+    },
+    {
+      "path": "hamburger.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7c0b1c5b2a27023d77228a30de93b2a529d13cf",
+      "size": 573,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/a7c0b1c5b2a27023d77228a30de93b2a529d13cf"
+    },
+    {
+      "path": "images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "95e6c22c91c95b23f461831131c8b663ff07d5a0",
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/trees/95e6c22c91c95b23f461831131c8b663ff07d5a0"
+    },
+    {
+      "path": "images/ajax-loader.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57f5624e7bce9ace2e91c342025a91eae38fbbf2",
+      "size": 6242,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/57f5624e7bce9ace2e91c342025a91eae38fbbf2"
+    },
+    {
+      "path": "incorrect.wav",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "122f3013096fdad824cdd0cb4e740728eb40cf39",
+      "size": 191788,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/122f3013096fdad824cdd0cb4e740728eb40cf39"
+    },
+    {
+      "path": "index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39fc2133b2e892005769ce76bb0822f345042dca",
+      "size": 24834,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/39fc2133b2e892005769ce76bb0822f345042dca"
+    },
+    {
+      "path": "jquery.min.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c5be4c0fbe230e81d95718a18829e965a2d14b2",
+      "size": 86709,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/4c5be4c0fbe230e81d95718a18829e965a2d14b2"
+    },
+    {
+      "path": "jquery",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e6c692e0aefa4468f0831b99579781be80a00788",
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/trees/e6c692e0aefa4468f0831b99579781be80a00788"
+    },
+    {
+      "path": "jquery/images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e80bace2b071032e777f69585b1caf8c3793c5ef",
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/trees/e80bace2b071032e777f69585b1caf8c3793c5ef"
+    },
+    {
+      "path": "jquery/images/ajax-loader.gif",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57f5624e7bce9ace2e91c342025a91eae38fbbf2",
+      "size": 6242,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/57f5624e7bce9ace2e91c342025a91eae38fbbf2"
+    },
+    {
+      "path": "jquery/images/icons-png",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "396d66ff61a37123412dc03bb64cf7d53a1d3d9b",
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/trees/396d66ff61a37123412dc03bb64cf7d53a1d3d9b"
+    },
+    {
+      "path": "jquery/images/icons-png/action-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15e8e48f1361dc5e33734cd5f9e3b6a26ee57941",
+      "size": 219,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/15e8e48f1361dc5e33734cd5f9e3b6a26ee57941"
+    },
+    {
+      "path": "jquery/images/icons-png/action-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f31c01db81f8e8995a8353e5ebfdd10de699e5e",
+      "size": 227,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/9f31c01db81f8e8995a8353e5ebfdd10de699e5e"
+    },
+    {
+      "path": "jquery/images/icons-png/alert-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a34a9921a143627fb46cc6cf89c91794e7836ad",
+      "size": 244,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/0a34a9921a143627fb46cc6cf89c91794e7836ad"
+    },
+    {
+      "path": "jquery/images/icons-png/alert-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d44e25b4fb5c4a07682fbf9784256552946c2f03",
+      "size": 243,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/d44e25b4fb5c4a07682fbf9784256552946c2f03"
+    },
+    {
+      "path": "jquery/images/icons-png/arrow-d-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "797ab9b65f7dd2935b11aea7d81d29f939cea179",
+      "size": 146,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/797ab9b65f7dd2935b11aea7d81d29f939cea179"
+    },
+    {
+      "path": "jquery/images/icons-png/arrow-d-l-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07018838490d10f5d38e94982c15d7bd604483c6",
+      "size": 167,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/07018838490d10f5d38e94982c15d7bd604483c6"
+    },
+    {
+      "path": "jquery/images/icons-png/arrow-d-l-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4234114fd7c83fef6c220f537a4c1682789bb853",
+      "size": 173,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/4234114fd7c83fef6c220f537a4c1682789bb853"
+    },
+    {
+      "path": "jquery/images/icons-png/arrow-d-r-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33cd363184b1be9baa07752529ff43fecfb24a9c",
+      "size": 159,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/33cd363184b1be9baa07752529ff43fecfb24a9c"
+    },
+    {
+      "path": "jquery/images/icons-png/arrow-d-r-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3db6ebdf98a3d9113b695e8a2e27d256a93509a5",
+      "size": 171,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/3db6ebdf98a3d9113b695e8a2e27d256a93509a5"
+    },
+    {
+      "path": "jquery/images/icons-png/arrow-d-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fcdb6c36b08ab39deed3105f8f3f32ed3249f69",
+      "size": 149,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/0fcdb6c36b08ab39deed3105f8f3f32ed3249f69"
+    },
+    {
+      "path": "jquery/images/icons-png/arrow-l-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93a248ecd963693eb3bcdb30e34967a1d50f2f02",
+      "size": 149,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/93a248ecd963693eb3bcdb30e34967a1d50f2f02"
+    },
+    {
+      "path": "jquery/images/icons-png/arrow-l-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c8b133574759a973b92141a0357ea62ffda0c7d",
+      "size": 156,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/3c8b133574759a973b92141a0357ea62ffda0c7d"
+    },
+    {
+      "path": "jquery/images/icons-png/arrow-r-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5f5d49ae50b958e94b5e830483b9107efcf96d4",
+      "size": 147,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/b5f5d49ae50b958e94b5e830483b9107efcf96d4"
+    },
+    {
+      "path": "jquery/images/icons-png/arrow-r-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf316061908654cd2612750f19c86e1cb8727dca",
+      "size": 152,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/bf316061908654cd2612750f19c86e1cb8727dca"
+    },
+    {
+      "path": "jquery/images/icons-png/arrow-u-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9e15daa7c9125d7e4f673cf783f922a8245db58",
+      "size": 147,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/f9e15daa7c9125d7e4f673cf783f922a8245db58"
+    },
+    {
+      "path": "jquery/images/icons-png/arrow-u-l-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b518a1df5c9154f7301970ab4e4d5fb984f8b834",
+      "size": 163,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/b518a1df5c9154f7301970ab4e4d5fb984f8b834"
+    },
+    {
+      "path": "jquery/images/icons-png/arrow-u-l-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71adaa1ec525436b986db137f2db1e0b5997d3b5",
+      "size": 169,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/71adaa1ec525436b986db137f2db1e0b5997d3b5"
+    },
+    {
+      "path": "jquery/images/icons-png/arrow-u-r-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "375b09792600b9fa6d171a2ff73d07a85fd2a6e5",
+      "size": 163,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/375b09792600b9fa6d171a2ff73d07a85fd2a6e5"
+    },
+    {
+      "path": "jquery/images/icons-png/arrow-u-r-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45b518de8b1973db73d67b95f672023d299601bf",
+      "size": 165,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/45b518de8b1973db73d67b95f672023d299601bf"
+    },
+    {
+      "path": "jquery/images/icons-png/arrow-u-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18afaa11e1fb7045112145754a74a80c630c8e47",
+      "size": 151,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/18afaa11e1fb7045112145754a74a80c630c8e47"
+    },
+    {
+      "path": "jquery/images/icons-png/audio-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7901c506bc878488f7e6f0a98d81d91c764990b",
+      "size": 307,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/b7901c506bc878488f7e6f0a98d81d91c764990b"
+    },
+    {
+      "path": "jquery/images/icons-png/audio-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34082825cdd0f6191bf4f30428164e9d4e1b9831",
+      "size": 314,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/34082825cdd0f6191bf4f30428164e9d4e1b9831"
+    },
+    {
+      "path": "jquery/images/icons-png/back-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b58685d087ff2f0385a8c82abf2b61ca6f9c4c4a",
+      "size": 233,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/b58685d087ff2f0385a8c82abf2b61ca6f9c4c4a"
+    },
+    {
+      "path": "jquery/images/icons-png/back-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "856d515a7e17c0bfe0430a58a865859f79afd7e4",
+      "size": 240,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/856d515a7e17c0bfe0430a58a865859f79afd7e4"
+    },
+    {
+      "path": "jquery/images/icons-png/bars-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3e99e678478403328879da830ad2f635b1d9130",
+      "size": 132,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/f3e99e678478403328879da830ad2f635b1d9130"
+    },
+    {
+      "path": "jquery/images/icons-png/bars-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84059c63e650cea8d2b9d8797e4333385095281f",
+      "size": 135,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/84059c63e650cea8d2b9d8797e4333385095281f"
+    },
+    {
+      "path": "jquery/images/icons-png/bullets-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10a2f1cc67f9ce00a2cd4e98b580dc0b70d3f730",
+      "size": 147,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/10a2f1cc67f9ce00a2cd4e98b580dc0b70d3f730"
+    },
+    {
+      "path": "jquery/images/icons-png/bullets-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49971a164ad8a3c98bf54ce7335fc76582e4a455",
+      "size": 152,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/49971a164ad8a3c98bf54ce7335fc76582e4a455"
+    },
+    {
+      "path": "jquery/images/icons-png/calendar-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4a643c70188af028dce70840319ab7fa0d0a3ac",
+      "size": 146,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/c4a643c70188af028dce70840319ab7fa0d0a3ac"
+    },
+    {
+      "path": "jquery/images/icons-png/calendar-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5b7b9f22077147cfbc8edce56b1514ab083819f",
+      "size": 143,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/e5b7b9f22077147cfbc8edce56b1514ab083819f"
+    },
+    {
+      "path": "jquery/images/icons-png/camera-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a029ea0eef23f5669df2000f7d232e05d4b9aac",
+      "size": 250,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/6a029ea0eef23f5669df2000f7d232e05d4b9aac"
+    },
+    {
+      "path": "jquery/images/icons-png/camera-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f00e232b01225a9cbd5a0840138de70407843a6",
+      "size": 251,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/7f00e232b01225a9cbd5a0840138de70407843a6"
+    },
+    {
+      "path": "jquery/images/icons-png/carat-d-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0653b692f0e5682a109ea6ef8968b045fd63793f",
+      "size": 207,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/0653b692f0e5682a109ea6ef8968b045fd63793f"
+    },
+    {
+      "path": "jquery/images/icons-png/carat-d-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e7e9e98a8a6727d71e6859db2228d2326722b28",
+      "size": 213,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/9e7e9e98a8a6727d71e6859db2228d2326722b28"
+    },
+    {
+      "path": "jquery/images/icons-png/carat-l-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8c495d3c032061164d44fa72159c1f7615f6bef",
+      "size": 174,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/c8c495d3c032061164d44fa72159c1f7615f6bef"
+    },
+    {
+      "path": "jquery/images/icons-png/carat-l-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af941a03022b9a94ab4942adbae028a3d05a8c98",
+      "size": 177,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/af941a03022b9a94ab4942adbae028a3d05a8c98"
+    },
+    {
+      "path": "jquery/images/icons-png/carat-r-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1343997bc6f4421714ec0e27972ce71d50231fdc",
+      "size": 184,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/1343997bc6f4421714ec0e27972ce71d50231fdc"
+    },
+    {
+      "path": "jquery/images/icons-png/carat-r-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f377fd8479d3605d2041e59e3b62e775a1c2d38f",
+      "size": 194,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/f377fd8479d3605d2041e59e3b62e775a1c2d38f"
+    },
+    {
+      "path": "jquery/images/icons-png/carat-u-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1a5ab6f9391883553ab79c0b687102302b47ca5",
+      "size": 196,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/a1a5ab6f9391883553ab79c0b687102302b47ca5"
+    },
+    {
+      "path": "jquery/images/icons-png/carat-u-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b2deba37b2ce8269eb76a3b539ee2dbb2635086",
+      "size": 204,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/5b2deba37b2ce8269eb76a3b539ee2dbb2635086"
+    },
+    {
+      "path": "jquery/images/icons-png/check-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cf2fc6abcde05d2f7db52465a8935d18a5188e2",
+      "size": 169,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/2cf2fc6abcde05d2f7db52465a8935d18a5188e2"
+    },
+    {
+      "path": "jquery/images/icons-png/check-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9f558c9af4f90b5dea8fe251bf026d7e2c072b9",
+      "size": 172,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/b9f558c9af4f90b5dea8fe251bf026d7e2c072b9"
+    },
+    {
+      "path": "jquery/images/icons-png/clock-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c38d91e3d217375cf09084b5f85f301bd6b4c01",
+      "size": 310,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/0c38d91e3d217375cf09084b5f85f301bd6b4c01"
+    },
+    {
+      "path": "jquery/images/icons-png/clock-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf5a877e9999af6c10c34341dc250caa9b538ca0",
+      "size": 316,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/bf5a877e9999af6c10c34341dc250caa9b538ca0"
+    },
+    {
+      "path": "jquery/images/icons-png/cloud-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c50e3724e787999546f35ee9093d269973415cd",
+      "size": 212,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/7c50e3724e787999546f35ee9093d269973415cd"
+    },
+    {
+      "path": "jquery/images/icons-png/cloud-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bbe75210a4371d8b47cc8a6ecb76270c7abc921",
+      "size": 210,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/6bbe75210a4371d8b47cc8a6ecb76270c7abc921"
+    },
+    {
+      "path": "jquery/images/icons-png/comment-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8de9ce841f47399d651ba373e4535a2f274b1cc5",
+      "size": 165,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/8de9ce841f47399d651ba373e4535a2f274b1cc5"
+    },
+    {
+      "path": "jquery/images/icons-png/comment-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ff59e34f9d0eb69a162db8b68c92f9edc730d62",
+      "size": 160,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/5ff59e34f9d0eb69a162db8b68c92f9edc730d62"
+    },
+    {
+      "path": "jquery/images/icons-png/delete-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94a5b9f57974d7f743fc6af408d457abfbb57119",
+      "size": 171,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/94a5b9f57974d7f743fc6af408d457abfbb57119"
+    },
+    {
+      "path": "jquery/images/icons-png/delete-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff984a9afb63c983f05533fe121281daff10d6e9",
+      "size": 185,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/ff984a9afb63c983f05533fe121281daff10d6e9"
+    },
+    {
+      "path": "jquery/images/icons-png/edit-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab390d7a170003eab1834a240f2bdc876bc16a45",
+      "size": 163,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/ab390d7a170003eab1834a240f2bdc876bc16a45"
+    },
+    {
+      "path": "jquery/images/icons-png/edit-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae657a02d60f665d3aa6ef959cb8577ba96787b4",
+      "size": 170,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/ae657a02d60f665d3aa6ef959cb8577ba96787b4"
+    },
+    {
+      "path": "jquery/images/icons-png/eye-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7cc1d06931dc19f5a9208b2f07b0ecf163e4412",
+      "size": 249,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/d7cc1d06931dc19f5a9208b2f07b0ecf163e4412"
+    },
+    {
+      "path": "jquery/images/icons-png/eye-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c05bd0d8acdc575aeff54977026d9bff306e4fb7",
+      "size": 253,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/c05bd0d8acdc575aeff54977026d9bff306e4fb7"
+    },
+    {
+      "path": "jquery/images/icons-png/forbidden-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75098251be0dfff41e11f96e03b20daa1c67f9f9",
+      "size": 299,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/75098251be0dfff41e11f96e03b20daa1c67f9f9"
+    },
+    {
+      "path": "jquery/images/icons-png/forbidden-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf135930f01a908ad207282f578124ec38c81105",
+      "size": 308,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/bf135930f01a908ad207282f578124ec38c81105"
+    },
+    {
+      "path": "jquery/images/icons-png/forward-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcc46226e3c5ac3c504e2da089dd891cb84eb0bd",
+      "size": 233,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/bcc46226e3c5ac3c504e2da089dd891cb84eb0bd"
+    },
+    {
+      "path": "jquery/images/icons-png/forward-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa80f3677ec180fd4cf5fe60bbb4fea1db542109",
+      "size": 243,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/fa80f3677ec180fd4cf5fe60bbb4fea1db542109"
+    },
+    {
+      "path": "jquery/images/icons-png/gear-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6b37b4f499f9eb80f8299d78b92f6369bfd5214",
+      "size": 318,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/b6b37b4f499f9eb80f8299d78b92f6369bfd5214"
+    },
+    {
+      "path": "jquery/images/icons-png/gear-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72c9767a20dd25b35e23272a2cb51d2e6e03d74e",
+      "size": 302,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/72c9767a20dd25b35e23272a2cb51d2e6e03d74e"
+    },
+    {
+      "path": "jquery/images/icons-png/grid-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aee31601c1287cdb68bc465dfac35d4becf1ce79",
+      "size": 160,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/aee31601c1287cdb68bc465dfac35d4becf1ce79"
+    },
+    {
+      "path": "jquery/images/icons-png/grid-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19652cdb8f4ecedd3f8676e29039438f1ae0985d",
+      "size": 167,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/19652cdb8f4ecedd3f8676e29039438f1ae0985d"
+    },
+    {
+      "path": "jquery/images/icons-png/heart-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fda9f924877666b8f83063a2c83d88bda474c2a6",
+      "size": 242,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/fda9f924877666b8f83063a2c83d88bda474c2a6"
+    },
+    {
+      "path": "jquery/images/icons-png/heart-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba7a949e33e4800538660675cc8b94cf8d3f693e",
+      "size": 246,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/ba7a949e33e4800538660675cc8b94cf8d3f693e"
+    },
+    {
+      "path": "jquery/images/icons-png/home-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b4e5f35aef0a787439eb31b69b584cd795a2a87",
+      "size": 150,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/6b4e5f35aef0a787439eb31b69b584cd795a2a87"
+    },
+    {
+      "path": "jquery/images/icons-png/home-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1f8feda6bbfd4d223326cf9133fcd4972cd8700",
+      "size": 154,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/c1f8feda6bbfd4d223326cf9133fcd4972cd8700"
+    },
+    {
+      "path": "jquery/images/icons-png/info-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46ee7e3b95ab0e611ab1b0c99f549d66e7c15645",
+      "size": 250,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/46ee7e3b95ab0e611ab1b0c99f549d66e7c15645"
+    },
+    {
+      "path": "jquery/images/icons-png/info-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af8346f1467b23c53d0e42c63ee6662242328e28",
+      "size": 251,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/af8346f1467b23c53d0e42c63ee6662242328e28"
+    },
+    {
+      "path": "jquery/images/icons-png/location-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cd89986764e80e27ab3eea18c7623d038e07759",
+      "size": 245,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/4cd89986764e80e27ab3eea18c7623d038e07759"
+    },
+    {
+      "path": "jquery/images/icons-png/location-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6eeacd73cc73cdbfb18ba8f5f408aa2d6972bbf",
+      "size": 247,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/f6eeacd73cc73cdbfb18ba8f5f408aa2d6972bbf"
+    },
+    {
+      "path": "jquery/images/icons-png/lock-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf947e81d792a3504200b26a39ba2fcc602d1a20",
+      "size": 204,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/bf947e81d792a3504200b26a39ba2fcc602d1a20"
+    },
+    {
+      "path": "jquery/images/icons-png/lock-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa60e236e1012d7b319394a574a210332830bf43",
+      "size": 207,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/aa60e236e1012d7b319394a574a210332830bf43"
+    },
+    {
+      "path": "jquery/images/icons-png/mail-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb67c0e26b80ec0c16696f406f6a022b39c9c8cd",
+      "size": 226,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/cb67c0e26b80ec0c16696f406f6a022b39c9c8cd"
+    },
+    {
+      "path": "jquery/images/icons-png/mail-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06a60839d239dd1cfeb46a8d13eb00f474e385bf",
+      "size": 227,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/06a60839d239dd1cfeb46a8d13eb00f474e385bf"
+    },
+    {
+      "path": "jquery/images/icons-png/minus-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97589d7cfb70eb7ee6fbd69648e56d55c5902812",
+      "size": 116,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/97589d7cfb70eb7ee6fbd69648e56d55c5902812"
+    },
+    {
+      "path": "jquery/images/icons-png/minus-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "874eaf37890e0049b66191217bdb1d944c9210f3",
+      "size": 116,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/874eaf37890e0049b66191217bdb1d944c9210f3"
+    },
+    {
+      "path": "jquery/images/icons-png/navigation-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17abd7b7433d4303c87ef4b7ea3baf401544476b",
+      "size": 242,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/17abd7b7433d4303c87ef4b7ea3baf401544476b"
+    },
+    {
+      "path": "jquery/images/icons-png/navigation-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "195388d0c674eebcb65fd7d768c469711e8f8e83",
+      "size": 241,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/195388d0c674eebcb65fd7d768c469711e8f8e83"
+    },
+    {
+      "path": "jquery/images/icons-png/phone-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d0a09cdfb3cbb4fca6cfd3e58766c743cac8863",
+      "size": 270,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/6d0a09cdfb3cbb4fca6cfd3e58766c743cac8863"
+    },
+    {
+      "path": "jquery/images/icons-png/phone-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "773b60233cb15da7a1020414b1364fa114d4687e",
+      "size": 274,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/773b60233cb15da7a1020414b1364fa114d4687e"
+    },
+    {
+      "path": "jquery/images/icons-png/plus-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08547279df5a0f720d6e298611f3a6947225c290",
+      "size": 123,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/08547279df5a0f720d6e298611f3a6947225c290"
+    },
+    {
+      "path": "jquery/images/icons-png/plus-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b484187a63abb44b261a3426f60c8171c02b54d",
+      "size": 124,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/7b484187a63abb44b261a3426f60c8171c02b54d"
+    },
+    {
+      "path": "jquery/images/icons-png/power-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb95411b77c41ebf7fff5502340b1d9ccf8b500e",
+      "size": 292,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/bb95411b77c41ebf7fff5502340b1d9ccf8b500e"
+    },
+    {
+      "path": "jquery/images/icons-png/power-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8852da1a20070e815be83df8894ecd34bb9ad5f6",
+      "size": 302,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/8852da1a20070e815be83df8894ecd34bb9ad5f6"
+    },
+    {
+      "path": "jquery/images/icons-png/recycle-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dabed38b27e9d3d679a98d1159c47c50a55c5127",
+      "size": 243,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/dabed38b27e9d3d679a98d1159c47c50a55c5127"
+    },
+    {
+      "path": "jquery/images/icons-png/recycle-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42c37b66eecb1a768fb74f21a68a6f5d2621e1f7",
+      "size": 253,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/42c37b66eecb1a768fb74f21a68a6f5d2621e1f7"
+    },
+    {
+      "path": "jquery/images/icons-png/refresh-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb19712aac4448e45b4d585cb6c4116a688fbd02",
+      "size": 295,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/fb19712aac4448e45b4d585cb6c4116a688fbd02"
+    },
+    {
+      "path": "jquery/images/icons-png/refresh-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdd59adb9774476597d60c40a2890c0bbe561fb3",
+      "size": 301,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/fdd59adb9774476597d60c40a2890c0bbe561fb3"
+    },
+    {
+      "path": "jquery/images/icons-png/search-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02b66cf24fb1c0d094535f8cf13eddd49a861c7d",
+      "size": 324,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/02b66cf24fb1c0d094535f8cf13eddd49a861c7d"
+    },
+    {
+      "path": "jquery/images/icons-png/search-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "274517d360b4fbe92fa20c9d71535aa6bbe5003f",
+      "size": 321,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/274517d360b4fbe92fa20c9d71535aa6bbe5003f"
+    },
+    {
+      "path": "jquery/images/icons-png/shop-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2f3719c368082f44b0327ba686537948e6b0a3d",
+      "size": 174,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/c2f3719c368082f44b0327ba686537948e6b0a3d"
+    },
+    {
+      "path": "jquery/images/icons-png/shop-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96de9757036c891aba08a8e93b3fa29a3c1493ae",
+      "size": 173,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/96de9757036c891aba08a8e93b3fa29a3c1493ae"
+    },
+    {
+      "path": "jquery/images/icons-png/star-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "381e1f285354018bc559afb742032e51b50cd73e",
+      "size": 231,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/381e1f285354018bc559afb742032e51b50cd73e"
+    },
+    {
+      "path": "jquery/images/icons-png/star-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf6c4abbbea9ce6a4b9845c7281e69b9af457990",
+      "size": 239,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/bf6c4abbbea9ce6a4b9845c7281e69b9af457990"
+    },
+    {
+      "path": "jquery/images/icons-png/tag-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6f65d1b291355f1e3cd42b7d2c2d47a5474394a",
+      "size": 159,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/d6f65d1b291355f1e3cd42b7d2c2d47a5474394a"
+    },
+    {
+      "path": "jquery/images/icons-png/tag-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc0df96c5eddd517ed739cdc3972ebd203495974",
+      "size": 159,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/fc0df96c5eddd517ed739cdc3972ebd203495974"
+    },
+    {
+      "path": "jquery/images/icons-png/user-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a0cb07718e6c966ca1a075296f5f8c568f6a8e9",
+      "size": 245,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/1a0cb07718e6c966ca1a075296f5f8c568f6a8e9"
+    },
+    {
+      "path": "jquery/images/icons-png/user-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f843f6f88d13c1e2d63cb15233af73095e9e0ee9",
+      "size": 245,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/f843f6f88d13c1e2d63cb15233af73095e9e0ee9"
+    },
+    {
+      "path": "jquery/images/icons-png/video-black.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97e74d40f3ad5d0db12f8ca9b5fb810c6fc30008",
+      "size": 171,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/97e74d40f3ad5d0db12f8ca9b5fb810c6fc30008"
+    },
+    {
+      "path": "jquery/images/icons-png/video-white.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbe8bdea12953877fd0210dc1cbe23ae6762a3c4",
+      "size": 170,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/cbe8bdea12953877fd0210dc1cbe23ae6762a3c4"
+    },
+    {
+      "path": "jquery/images/icons-svg",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "95bfd8acade01860710e1d9a9181ef15efa37df2",
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/trees/95bfd8acade01860710e1d9a9181ef15efa37df2"
+    },
+    {
+      "path": "jquery/images/icons-svg/action-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae0670ab0f6e46deb1b1515077066ab286813dc1",
+      "size": 573,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/ae0670ab0f6e46deb1b1515077066ab286813dc1"
+    },
+    {
+      "path": "jquery/images/icons-svg/action-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "381b002ce1badbbc193de65f8f15b1f2bd62fd69",
+      "size": 595,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/381b002ce1badbbc193de65f8f15b1f2bd62fd69"
+    },
+    {
+      "path": "jquery/images/icons-svg/alert-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1cf40cf22d958b0b25d757e76135c96e60e0810",
+      "size": 679,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/e1cf40cf22d958b0b25d757e76135c96e60e0810"
+    },
+    {
+      "path": "jquery/images/icons-svg/alert-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69d8c0aa5cceb5816c4d624d9c5f3d0f3bbd6891",
+      "size": 701,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/69d8c0aa5cceb5816c4d624d9c5f3d0f3bbd6891"
+    },
+    {
+      "path": "jquery/images/icons-svg/arrow-d-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a8b7de352275f4186b6442b089e701e92a5f32c",
+      "size": 669,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/7a8b7de352275f4186b6442b089e701e92a5f32c"
+    },
+    {
+      "path": "jquery/images/icons-svg/arrow-d-l-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c8d30576621ef6755a8b5f9ca5195d138e924d7",
+      "size": 681,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/8c8d30576621ef6755a8b5f9ca5195d138e924d7"
+    },
+    {
+      "path": "jquery/images/icons-svg/arrow-d-l-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7379cd72ce349fd885c7e1d843845a78fe19d79",
+      "size": 693,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/f7379cd72ce349fd885c7e1d843845a78fe19d79"
+    },
+    {
+      "path": "jquery/images/icons-svg/arrow-d-r-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95861e05b71f61290ebe7e16a368e648359c5b46",
+      "size": 681,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/95861e05b71f61290ebe7e16a368e648359c5b46"
+    },
+    {
+      "path": "jquery/images/icons-svg/arrow-d-r-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7874ca89465e96978aa71b6f25fd681547eab026",
+      "size": 693,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/7874ca89465e96978aa71b6f25fd681547eab026"
+    },
+    {
+      "path": "jquery/images/icons-svg/arrow-d-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f80ad1bc2c5c15ddac5db55598d7072dbb7e6070",
+      "size": 681,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/f80ad1bc2c5c15ddac5db55598d7072dbb7e6070"
+    },
+    {
+      "path": "jquery/images/icons-svg/arrow-l-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0190649d6f58279ac49336d1ea9efa075f148049",
+      "size": 670,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/0190649d6f58279ac49336d1ea9efa075f148049"
+    },
+    {
+      "path": "jquery/images/icons-svg/arrow-l-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9de81d397b03c7496c52fba6bc8e50ecd4ec27c",
+      "size": 682,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/d9de81d397b03c7496c52fba6bc8e50ecd4ec27c"
+    },
+    {
+      "path": "jquery/images/icons-svg/arrow-r-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7853c5f3d1e2a96ceece3026c2f47bbb5ade540a",
+      "size": 669,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/7853c5f3d1e2a96ceece3026c2f47bbb5ade540a"
+    },
+    {
+      "path": "jquery/images/icons-svg/arrow-r-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c28fc7af0cdabfd329f43b54eeaff8ec387e36c",
+      "size": 681,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/8c28fc7af0cdabfd329f43b54eeaff8ec387e36c"
+    },
+    {
+      "path": "jquery/images/icons-svg/arrow-u-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abf9d90dd7f0c0d48c5bc945c648f976f1d33f20",
+      "size": 670,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/abf9d90dd7f0c0d48c5bc945c648f976f1d33f20"
+    },
+    {
+      "path": "jquery/images/icons-svg/arrow-u-l-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08b5c6d55be30f849c86bf5580aec40e35b4e95d",
+      "size": 681,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/08b5c6d55be30f849c86bf5580aec40e35b4e95d"
+    },
+    {
+      "path": "jquery/images/icons-svg/arrow-u-l-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "234471ea787618e59296722b1d7c1a6c8f146033",
+      "size": 693,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/234471ea787618e59296722b1d7c1a6c8f146033"
+    },
+    {
+      "path": "jquery/images/icons-svg/arrow-u-r-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db1536d544feffb83f313fbd10e25d92f797d7a0",
+      "size": 681,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/db1536d544feffb83f313fbd10e25d92f797d7a0"
+    },
+    {
+      "path": "jquery/images/icons-svg/arrow-u-r-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a510f2f8fd3ccf6df3d10fcc232a8b4e3c5e337",
+      "size": 693,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/5a510f2f8fd3ccf6df3d10fcc232a8b4e3c5e337"
+    },
+    {
+      "path": "jquery/images/icons-svg/arrow-u-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e2aeb2220113e728105dcaf3b02fc70cb1a7f99",
+      "size": 682,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/7e2aeb2220113e728105dcaf3b02fc70cb1a7f99"
+    },
+    {
+      "path": "jquery/images/icons-svg/audio-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3651d78ae73f37eee53a1c63d6dad187ad52010",
+      "size": 1017,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/f3651d78ae73f37eee53a1c63d6dad187ad52010"
+    },
+    {
+      "path": "jquery/images/icons-svg/audio-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a68969942fe51d6d9ec0841ed937b007963e837d",
+      "size": 1029,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/a68969942fe51d6d9ec0841ed937b007963e837d"
+    },
+    {
+      "path": "jquery/images/icons-svg/back-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b281e8718838ae8e24ce2c99980d4df9a840c7f",
+      "size": 561,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/0b281e8718838ae8e24ce2c99980d4df9a840c7f"
+    },
+    {
+      "path": "jquery/images/icons-svg/back-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c13ff0a2032f64349b9a116ab974f65571114962",
+      "size": 583,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/c13ff0a2032f64349b9a116ab974f65571114962"
+    },
+    {
+      "path": "jquery/images/icons-svg/bars-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86b42c9014bcc705681bd3d74bdadb8a892ef3e5",
+      "size": 752,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/86b42c9014bcc705681bd3d74bdadb8a892ef3e5"
+    },
+    {
+      "path": "jquery/images/icons-svg/bars-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "035c2995e7a69cfa4d472b1e3fb8c75aa891243a",
+      "size": 774,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/035c2995e7a69cfa4d472b1e3fb8c75aa891243a"
+    },
+    {
+      "path": "jquery/images/icons-svg/bullets-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd96193528e6a3cea99452d457dd904b435be6c0",
+      "size": 957,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/cd96193528e6a3cea99452d457dd904b435be6c0"
+    },
+    {
+      "path": "jquery/images/icons-svg/bullets-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4655f15af0c30f2c7c1823969e1e141fae8582c8",
+      "size": 981,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/4655f15af0c30f2c7c1823969e1e141fae8582c8"
+    },
+    {
+      "path": "jquery/images/icons-svg/calendar-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c3aededda771bc90098b5962ba33ebfaade381b",
+      "size": 942,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/5c3aededda771bc90098b5962ba33ebfaade381b"
+    },
+    {
+      "path": "jquery/images/icons-svg/calendar-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "177dab9fd698b240f9361e69dbc28544356d2f42",
+      "size": 954,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/177dab9fd698b240f9361e69dbc28544356d2f42"
+    },
+    {
+      "path": "jquery/images/icons-svg/camera-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58a3182c4de420c06d3e44ad319f3f2554f3f61a",
+      "size": 855,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/58a3182c4de420c06d3e44ad319f3f2554f3f61a"
+    },
+    {
+      "path": "jquery/images/icons-svg/camera-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78c620e3ef47a47afea70ef6e19e51fbb605f3a7",
+      "size": 879,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/78c620e3ef47a47afea70ef6e19e51fbb605f3a7"
+    },
+    {
+      "path": "jquery/images/icons-svg/carat-d-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03dc07987443b5e6571300ba747a6b93b360f721",
+      "size": 570,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/03dc07987443b5e6571300ba747a6b93b360f721"
+    },
+    {
+      "path": "jquery/images/icons-svg/carat-d-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21ea91fee684394aedc7e8a60eb4bee51b33b7fe",
+      "size": 592,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/21ea91fee684394aedc7e8a60eb4bee51b33b7fe"
+    },
+    {
+      "path": "jquery/images/icons-svg/carat-l-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc853bcfdf47997171398f7c0388b614387996dd",
+      "size": 571,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/bc853bcfdf47997171398f7c0388b614387996dd"
+    },
+    {
+      "path": "jquery/images/icons-svg/carat-l-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9a6ce7430aaa9a6d8f67db3e253442ac3b054a5",
+      "size": 593,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/d9a6ce7430aaa9a6d8f67db3e253442ac3b054a5"
+    },
+    {
+      "path": "jquery/images/icons-svg/carat-r-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "594cfa26f5f8b7dd22ba07156c0c10a1001fc851",
+      "size": 570,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/594cfa26f5f8b7dd22ba07156c0c10a1001fc851"
+    },
+    {
+      "path": "jquery/images/icons-svg/carat-r-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d384145c02ac1196d3e8161160538caceeec5989",
+      "size": 592,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/d384145c02ac1196d3e8161160538caceeec5989"
+    },
+    {
+      "path": "jquery/images/icons-svg/carat-u-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7647d06bb68c399a522a0ce9622185f2e83f6562",
+      "size": 571,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/7647d06bb68c399a522a0ce9622185f2e83f6562"
+    },
+    {
+      "path": "jquery/images/icons-svg/carat-u-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdbc1cfd3ae72ff3c2fb880b1c8adc1722ac83cd",
+      "size": 593,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/cdbc1cfd3ae72ff3c2fb880b1c8adc1722ac83cd"
+    },
+    {
+      "path": "jquery/images/icons-svg/check-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4b866342de368d8f7e9093550ed7e5cdf12d5dc",
+      "size": 561,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/a4b866342de368d8f7e9093550ed7e5cdf12d5dc"
+    },
+    {
+      "path": "jquery/images/icons-svg/check-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7afefd50458be030e9e61a8cd1ffa2e75c35b2c7",
+      "size": 583,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/7afefd50458be030e9e61a8cd1ffa2e75c35b2c7"
+    },
+    {
+      "path": "jquery/images/icons-svg/clock-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c68abefbe26096e372cb32b91e5003eccae884f1",
+      "size": 859,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/c68abefbe26096e372cb32b91e5003eccae884f1"
+    },
+    {
+      "path": "jquery/images/icons-svg/clock-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55892385e867248a478eb33f5fd32d868c257b0f",
+      "size": 871,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/55892385e867248a478eb33f5fd32d868c257b0f"
+    },
+    {
+      "path": "jquery/images/icons-svg/cloud-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddfbde51bf56de5c6fd8adfe8a597bd270d9998a",
+      "size": 771,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/ddfbde51bf56de5c6fd8adfe8a597bd270d9998a"
+    },
+    {
+      "path": "jquery/images/icons-svg/cloud-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5b07940cdc4368a957f8bbfd5e682c62cfd98a8",
+      "size": 793,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/d5b07940cdc4368a957f8bbfd5e682c62cfd98a8"
+    },
+    {
+      "path": "jquery/images/icons-svg/comment-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "485fcc86b0bc249332327cdd76a04b3e03f6b6e6",
+      "size": 736,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/485fcc86b0bc249332327cdd76a04b3e03f6b6e6"
+    },
+    {
+      "path": "jquery/images/icons-svg/comment-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d188db6fe4c5c25e5dfe6df0b9872db78d616c9",
+      "size": 748,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/8d188db6fe4c5c25e5dfe6df0b9872db78d616c9"
+    },
+    {
+      "path": "jquery/images/icons-svg/delete-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74d99888c7a33d88a319f0f0698e69099c94cd2b",
+      "size": 697,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/74d99888c7a33d88a319f0f0698e69099c94cd2b"
+    },
+    {
+      "path": "jquery/images/icons-svg/delete-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6cc735c567ad54221cc7dfae2e710f0ae295b76",
+      "size": 709,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/a6cc735c567ad54221cc7dfae2e710f0ae295b76"
+    },
+    {
+      "path": "jquery/images/icons-svg/edit-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d908f9d999c549ca71456e04ceae7ca8276eb406",
+      "size": 683,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/d908f9d999c549ca71456e04ceae7ca8276eb406"
+    },
+    {
+      "path": "jquery/images/icons-svg/edit-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a88643df28a64f69c5d40005d62b9d2c2fba94c3",
+      "size": 695,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/a88643df28a64f69c5d40005d62b9d2c2fba94c3"
+    },
+    {
+      "path": "jquery/images/icons-svg/eye-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d55bc65ddf3a4ddc26ab7f9470b4b58b0679ef8f",
+      "size": 701,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/d55bc65ddf3a4ddc26ab7f9470b4b58b0679ef8f"
+    },
+    {
+      "path": "jquery/images/icons-svg/eye-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f95ad50a9498ae1704559ef0b0f4e7737a24dc22",
+      "size": 723,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/f95ad50a9498ae1704559ef0b0f4e7737a24dc22"
+    },
+    {
+      "path": "jquery/images/icons-svg/forbidden-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe831bc656786b4411909df27fba359e6c1f2d2b",
+      "size": 1123,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/fe831bc656786b4411909df27fba359e6c1f2d2b"
+    },
+    {
+      "path": "jquery/images/icons-svg/forbidden-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "710ac39573fc88ad2bd133a6ed371bd1621997cd",
+      "size": 1135,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/710ac39573fc88ad2bd133a6ed371bd1621997cd"
+    },
+    {
+      "path": "jquery/images/icons-svg/forward-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0001d97d0ffd7f8eb0df0b540101cbf8e6c3191",
+      "size": 562,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/b0001d97d0ffd7f8eb0df0b540101cbf8e6c3191"
+    },
+    {
+      "path": "jquery/images/icons-svg/forward-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1f3a6a0af1ea49deade1a80f331485371f86d52",
+      "size": 584,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/e1f3a6a0af1ea49deade1a80f331485371f86d52"
+    },
+    {
+      "path": "jquery/images/icons-svg/gear-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f397c5fa6b9cfcd4c2b356707c95ea48a55e9de",
+      "size": 2388,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/4f397c5fa6b9cfcd4c2b356707c95ea48a55e9de"
+    },
+    {
+      "path": "jquery/images/icons-svg/gear-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a5668fc23073d906267b5b98c5cd6cd90febda8",
+      "size": 2400,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/3a5668fc23073d906267b5b98c5cd6cd90febda8"
+    },
+    {
+      "path": "jquery/images/icons-svg/grid-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e692e1f8bea6040d20f80357df71cbb6bcab6d06",
+      "size": 1525,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/e692e1f8bea6040d20f80357df71cbb6bcab6d06"
+    },
+    {
+      "path": "jquery/images/icons-svg/grid-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cfaa7c1f043ded2d1bf69b2c25b1e62bd5a7506",
+      "size": 1537,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/5cfaa7c1f043ded2d1bf69b2c25b1e62bd5a7506"
+    },
+    {
+      "path": "jquery/images/icons-svg/heart-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4946b017822fe599380cabd3d0176875b77733e",
+      "size": 605,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/f4946b017822fe599380cabd3d0176875b77733e"
+    },
+    {
+      "path": "jquery/images/icons-svg/heart-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "190ebef47fa659b647c47044a959421e5d5896a8",
+      "size": 623,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/190ebef47fa659b647c47044a959421e5d5896a8"
+    },
+    {
+      "path": "jquery/images/icons-svg/home-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4950a37f7a2290b8f351fb74d9022cb01b824d3",
+      "size": 690,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/a4950a37f7a2290b8f351fb74d9022cb01b824d3"
+    },
+    {
+      "path": "jquery/images/icons-svg/home-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7c1a6118ff74ade85f6fd9bcd21f27cebac0cd3",
+      "size": 702,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/b7c1a6118ff74ade85f6fd9bcd21f27cebac0cd3"
+    },
+    {
+      "path": "jquery/images/icons-svg/info-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "151cfa2bf6082f592b1ae81f64f95e8c7f56f8de",
+      "size": 786,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/151cfa2bf6082f592b1ae81f64f95e8c7f56f8de"
+    },
+    {
+      "path": "jquery/images/icons-svg/info-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd0f885b0b61f3886be497ede18308565ceac1d1",
+      "size": 798,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/dd0f885b0b61f3886be497ede18308565ceac1d1"
+    },
+    {
+      "path": "jquery/images/icons-svg/location-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a29d739ab29857cd3e1b21cf781600abc661557",
+      "size": 637,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/4a29d739ab29857cd3e1b21cf781600abc661557"
+    },
+    {
+      "path": "jquery/images/icons-svg/location-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b6ac8a05909ee60ec2e67d6f4c70449a6de6a95",
+      "size": 659,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/2b6ac8a05909ee60ec2e67d6f4c70449a6de6a95"
+    },
+    {
+      "path": "jquery/images/icons-svg/lock-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a005ea43a1065b3d6b06d0596065c4868481c7e",
+      "size": 715,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/0a005ea43a1065b3d6b06d0596065c4868481c7e"
+    },
+    {
+      "path": "jquery/images/icons-svg/lock-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1e042ca1166305755163fe3fd7bfcc47525c599",
+      "size": 739,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/b1e042ca1166305755163fe3fd7bfcc47525c599"
+    },
+    {
+      "path": "jquery/images/icons-svg/mail-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "635c61590e05304a720cd45b627477c87482bc66",
+      "size": 544,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/635c61590e05304a720cd45b627477c87482bc66"
+    },
+    {
+      "path": "jquery/images/icons-svg/mail-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "547f512c2b09a15b8c445f80a7782cf0af7ac72d",
+      "size": 566,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/547f512c2b09a15b8c445f80a7782cf0af7ac72d"
+    },
+    {
+      "path": "jquery/images/icons-svg/minus-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a20df147d5368674f7c60836d836bcec70503c30",
+      "size": 519,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/a20df147d5368674f7c60836d836bcec70503c30"
+    },
+    {
+      "path": "jquery/images/icons-svg/minus-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8063cdc3ed9fcd0824af31f8bd39987b2e547bad",
+      "size": 541,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/8063cdc3ed9fcd0824af31f8bd39987b2e547bad"
+    },
+    {
+      "path": "jquery/images/icons-svg/navigation-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6867808a644c442c3fcb85e250751ee0c1f2d8f9",
+      "size": 522,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/6867808a644c442c3fcb85e250751ee0c1f2d8f9"
+    },
+    {
+      "path": "jquery/images/icons-svg/navigation-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d3115f9c0477c8908dc5b9945565629459a3a3d",
+      "size": 544,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/0d3115f9c0477c8908dc5b9945565629459a3a3d"
+    },
+    {
+      "path": "jquery/images/icons-svg/phone-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf84c78d60f62d41cbe5fc2d4a233fdd900f6ff6",
+      "size": 1094,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/cf84c78d60f62d41cbe5fc2d4a233fdd900f6ff6"
+    },
+    {
+      "path": "jquery/images/icons-svg/phone-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "825425ebc05d056b1f06f81ac6e4c2cf2e653b6e",
+      "size": 1127,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/825425ebc05d056b1f06f81ac6e4c2cf2e653b6e"
+    },
+    {
+      "path": "jquery/images/icons-svg/plus-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e268b019e9d8e88dfdfcc108eb358d4324708bc",
+      "size": 691,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/2e268b019e9d8e88dfdfcc108eb358d4324708bc"
+    },
+    {
+      "path": "jquery/images/icons-svg/plus-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "488129f0193c75304055ca857870ce17dda33c46",
+      "size": 703,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/488129f0193c75304055ca857870ce17dda33c46"
+    },
+    {
+      "path": "jquery/images/icons-svg/power-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "461ea1f9c4bc6e0a6861bd9f8e4470763224fd5d",
+      "size": 1093,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/461ea1f9c4bc6e0a6861bd9f8e4470763224fd5d"
+    },
+    {
+      "path": "jquery/images/icons-svg/power-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c82ba73a1804f81fd4f15a36122322a20dafdf2",
+      "size": 1115,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/5c82ba73a1804f81fd4f15a36122322a20dafdf2"
+    },
+    {
+      "path": "jquery/images/icons-svg/recycle-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25078b7d373d5b721f1a07a3604d0c35c3728a0b",
+      "size": 734,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/25078b7d373d5b721f1a07a3604d0c35c3728a0b"
+    },
+    {
+      "path": "jquery/images/icons-svg/recycle-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a9f5e774ebbec8c9a994251af236cbc9d230254",
+      "size": 758,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/8a9f5e774ebbec8c9a994251af236cbc9d230254"
+    },
+    {
+      "path": "jquery/images/icons-svg/refresh-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16c978c4dd6d77305801ad3a247faef11f283ad2",
+      "size": 975,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/16c978c4dd6d77305801ad3a247faef11f283ad2"
+    },
+    {
+      "path": "jquery/images/icons-svg/refresh-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa370e69a9b8b8f0d31f8fc850c9927a62db2c61",
+      "size": 987,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/fa370e69a9b8b8f0d31f8fc850c9927a62db2c61"
+    },
+    {
+      "path": "jquery/images/icons-svg/search-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "229b22189ecc5451fe38431e76bc77300da4d42c",
+      "size": 808,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/229b22189ecc5451fe38431e76bc77300da4d42c"
+    },
+    {
+      "path": "jquery/images/icons-svg/search-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a54a52a0e1553520c5a449dc2858abfafd05f4d0",
+      "size": 830,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/a54a52a0e1553520c5a449dc2858abfafd05f4d0"
+    },
+    {
+      "path": "jquery/images/icons-svg/shop-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba541b462157e1f7e148afb6b280811b5976f80d",
+      "size": 753,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/ba541b462157e1f7e148afb6b280811b5976f80d"
+    },
+    {
+      "path": "jquery/images/icons-svg/shop-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3acf9e853e4283af4be5892eba3ae07025ccd30a",
+      "size": 775,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/3acf9e853e4283af4be5892eba3ae07025ccd30a"
+    },
+    {
+      "path": "jquery/images/icons-svg/star-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43076c084baca85edf8640fa71cb92921def8a2a",
+      "size": 558,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/43076c084baca85edf8640fa71cb92921def8a2a"
+    },
+    {
+      "path": "jquery/images/icons-svg/star-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0cc53d69e92ed04efa9aa59173e88c3b001afb6",
+      "size": 580,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/e0cc53d69e92ed04efa9aa59173e88c3b001afb6"
+    },
+    {
+      "path": "jquery/images/icons-svg/tag-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd11ae67aba8ad793a10be32443a00107f017e3a",
+      "size": 714,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/bd11ae67aba8ad793a10be32443a00107f017e3a"
+    },
+    {
+      "path": "jquery/images/icons-svg/tag-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cd4a50af441235f21f02f7a91d92b951dcf3e92",
+      "size": 726,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/7cd4a50af441235f21f02f7a91d92b951dcf3e92"
+    },
+    {
+      "path": "jquery/images/icons-svg/user-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7530c98752dd65391492614337eff1247c5c1016",
+      "size": 1094,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/7530c98752dd65391492614337eff1247c5c1016"
+    },
+    {
+      "path": "jquery/images/icons-svg/user-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5528c2e971204ce00d8ede87e91c6de1b6b6f343",
+      "size": 1106,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/5528c2e971204ce00d8ede87e91c6de1b6b6f343"
+    },
+    {
+      "path": "jquery/images/icons-svg/video-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9474acd4597bf8cbc7c845eff7ecbd1282e7cdfd",
+      "size": 612,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/9474acd4597bf8cbc7c845eff7ecbd1282e7cdfd"
+    },
+    {
+      "path": "jquery/images/icons-svg/video-white.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36198685ab837e890a7b623447f1d3fd45b74fa7",
+      "size": 636,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/36198685ab837e890a7b623447f1d3fd45b74fa7"
+    },
+    {
+      "path": "jquery/jquery-1.11.1.min.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab28a24729b320bffd3d2f60302af949db39ab85",
+      "size": 95786,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/ab28a24729b320bffd3d2f60302af949db39ab85"
+    },
+    {
+      "path": "jquery/jquery.mobile-1.4.5.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3502e3ae049582a79167564ff093268bab4cae7a",
+      "size": 239560,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/3502e3ae049582a79167564ff093268bab4cae7a"
+    },
+    {
+      "path": "jquery/jquery.mobile-1.4.5.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "937dfa539fe6cd37a06a674ce2f6a4b9cf398b8e",
+      "size": 465716,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/937dfa539fe6cd37a06a674ce2f6a4b9cf398b8e"
+    },
+    {
+      "path": "jquery/jquery.mobile-1.4.5.min.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0461232d9227dc604414cfa6efd229802ede6243",
+      "size": 207465,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/0461232d9227dc604414cfa6efd229802ede6243"
+    },
+    {
+      "path": "jquery/jquery.mobile-1.4.5.min.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b1a9a11fca05a36b5ab16e27787f49300a8fec4",
+      "size": 200143,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/5b1a9a11fca05a36b5ab16e27787f49300a8fec4"
+    },
+    {
+      "path": "jquery/jquery.mobile-1.4.5.min.map",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "852c422a919829f861703f156b58ac10e0faa0e2",
+      "size": 235912,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/852c422a919829f861703f156b58ac10e0faa0e2"
+    },
+    {
+      "path": "jquery/jquery.mobile.external-png-1.4.5.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19adde2c93e0b5ed98b62d4df51ae9b86aa5d8c7",
+      "size": 122128,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/19adde2c93e0b5ed98b62d4df51ae9b86aa5d8c7"
+    },
+    {
+      "path": "jquery/jquery.mobile.external-png-1.4.5.min.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "154b2683949dd854271ca1fd344b69c3a7356d54",
+      "size": 90835,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/154b2683949dd854271ca1fd344b69c3a7356d54"
+    },
+    {
+      "path": "jquery/jquery.mobile.icons-1.4.5.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd98772304a1ca8a415ec4bd632b621488cbf2ad",
+      "size": 129103,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/cd98772304a1ca8a415ec4bd632b621488cbf2ad"
+    },
+    {
+      "path": "jquery/jquery.mobile.icons-1.4.5.min.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35fe8927e1ed80d80ef9933666751207aaf2fd9c",
+      "size": 127053,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/35fe8927e1ed80d80ef9933666751207aaf2fd9c"
+    },
+    {
+      "path": "jquery/jquery.mobile.inline-png-1.4.5.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25f500522810219fafbde73dcec94d39e9bcc25f",
+      "size": 149156,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/25f500522810219fafbde73dcec94d39e9bcc25f"
+    },
+    {
+      "path": "jquery/jquery.mobile.inline-png-1.4.5.min.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e1761b93b0f2d4e088018dd1bf37fa99b9d9572",
+      "size": 117863,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/9e1761b93b0f2d4e088018dd1bf37fa99b9d9572"
+    },
+    {
+      "path": "jquery/jquery.mobile.inline-svg-1.4.5.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67903bb7dda8b3311524f692343ecba57ccfb2cd",
+      "size": 226959,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/67903bb7dda8b3311524f692343ecba57ccfb2cd"
+    },
+    {
+      "path": "jquery/jquery.mobile.inline-svg-1.4.5.min.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cef4b537ca72cf5b700d301f80a0eb41295b841",
+      "size": 195666,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/1cef4b537ca72cf5b700d301f80a0eb41295b841"
+    },
+    {
+      "path": "jquery/jquery.mobile.structure-1.4.5.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77f06107a98ab5a08c3d0595705609224f13c934",
+      "size": 91343,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/77f06107a98ab5a08c3d0595705609224f13c934"
+    },
+    {
+      "path": "jquery/jquery.mobile.structure-1.4.5.min.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42f245bf853d98478debec9472f498930100ff11",
+      "size": 68712,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/42f245bf853d98478debec9472f498930100ff11"
+    },
+    {
+      "path": "jquery/jquery.mobile.theme-1.4.5.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c862c29b4216e69439ccc7feb39be495adb5438",
+      "size": 19892,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/6c862c29b4216e69439ccc7feb39be495adb5438"
+    },
+    {
+      "path": "jquery/jquery.mobile.theme-1.4.5.min.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49e5d97765d782b6ce47cdde5b73dabdc49abe98",
+      "size": 11976,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/49e5d97765d782b6ce47cdde5b73dabdc49abe98"
+    },
+    {
+      "path": "localization.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "844b3fdae1b6c4b0c491ba6e8ea676db49859ea2",
+      "size": 8856,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/844b3fdae1b6c4b0c491ba6e8ea676db49859ea2"
+    },
+    {
+      "path": "logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60f5d9b3ea7b6698d1fd150338ba4623415ce36d",
+      "size": 6200,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/60f5d9b3ea7b6698d1fd150338ba4623415ce36d"
+    },
+    {
+      "path": "logo_transparent.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d239960131b924672a11596634ea09aa446a78af",
+      "size": 6351,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/d239960131b924672a11596634ea09aa446a78af"
+    },
+    {
+      "path": "lzstring.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "deddd5ee07e941498c55da76cf0db548cb098df2",
+      "size": 14489,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/deddd5ee07e941498c55da76cf0db548cb098df2"
+    },
+    {
+      "path": "nosleep.min.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3768ef7fcede64a5d961129f64c32f0b41e8ba37",
+      "size": 8623,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/3768ef7fcede64a5d961129f64c32f0b41e8ba37"
+    },
+    {
+      "path": "readme.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77c223de281062823e2b21639006565d80cc8ec3",
+      "size": 402,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/77c223de281062823e2b21639006565d80cc8ec3"
+    },
+    {
+      "path": "roofpig_and_three.min.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d158724d9258e6cf3684ba59ae464efc9d19021e",
+      "size": 479640,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/d158724d9258e6cf3684ba59ae464efc9d19021e"
+    },
+    {
+      "path": "settings.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "212de92e430a9c2d085ab9e6fdf4c240c392285b",
+      "size": 1487,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/212de92e430a9c2d085ab9e6fdf4c240c392285b"
+    },
+    {
+      "path": "spectrum",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34113ccecf208d14ca9eb712d591daec115dd05c",
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/trees/34113ccecf208d14ca9eb712d591daec115dd05c"
+    },
+    {
+      "path": "spectrum/spectrum.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8ad9e4f82ff5f9737ba1fdb7d23ea1acdc9d0d3",
+      "size": 14921,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/a8ad9e4f82ff5f9737ba1fdb7d23ea1acdc9d0d3"
+    },
+    {
+      "path": "spectrum/spectrum.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "720097877d5e0f397687365a53b06575e79b1787",
+      "size": 79270,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/720097877d5e0f397687365a53b06575e79b1787"
+    },
+    {
+      "path": "styles.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33244a3208741c9a91836c752185a0a18a55bc21",
+      "size": 641,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/33244a3208741c9a91836c752185a0a18a55bc21"
+    },
+    {
+      "path": "test.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d67a84c95e50f7538da0248f98a1e946dceac3f0",
+      "size": 7728,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/d67a84c95e50f7538da0248f98a1e946dceac3f0"
+    },
+    {
+      "path": "theme-classic.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1775535b47326dcf87e16a61a1fd0a6b9602cdf6",
+      "size": 68329,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/1775535b47326dcf87e16a61a1fd0a6b9602cdf6"
+    },
+    {
+      "path": "ui.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb2abf39b687eb40e9aaad0423e6b2fc497f4914",
+      "size": 27221,
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/blobs/eb2abf39b687eb40e9aaad0423e6b2fc497f4914"
+    }
+  ],
+  "truncated": false
+}

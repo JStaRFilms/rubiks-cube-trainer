@@ -1,0 +1,721 @@
+{
+  "status": "blocked-source-gate",
+  "sources": [
+    {
+      "id": "speeden",
+      "repository": "https://github.com/Blaxzter/speeden-and-cuben",
+      "revision": "3aaf127b0013cbbfd16d12b397d8c0ff8c912c65"
+    },
+    {
+      "id": "lieberkind",
+      "repository": "https://github.com/lieberkind/f2l-trainer",
+      "revision": "76fcfccf522f12822db8699209a6a934c4d28421"
+    },
+    {
+      "id": "darguima",
+      "repository": "https://github.com/Darguima/FridrichTrainer",
+      "revision": "2aebe3c80eaab87ed02726b7b1388dd97222a1fc"
+    },
+    {
+      "id": "alpha",
+      "repository": "https://github.com/AlphaSheep/Another-ZBLL-Trainer",
+      "revision": "9cddec702c52e8d6521f8cf7e884f5738f0223a1"
+    },
+    {
+      "id": "stig",
+      "repository": "https://github.com/Stig115/zbll",
+      "revision": "35797fa0e64038df2ac234a2f511bac65bccca67"
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "speeden-tree.json",
+      "url": "https://api.github.com/repos/Blaxzter/speeden-and-cuben/git/trees/3aaf127b0013cbbfd16d12b397d8c0ff8c912c65?recursive=1",
+      "bytes": 17631,
+      "sha256": "6ed36784806424fc5b65e837c2bef5c378b6b3d334f88ecafe4ebe669cf87698"
+    },
+    {
+      "file": "lieberkind-tree.json",
+      "url": "https://api.github.com/repos/lieberkind/f2l-trainer/git/trees/76fcfccf522f12822db8699209a6a934c4d28421?recursive=1",
+      "bytes": 37679,
+      "sha256": "0b3c2030750f45bdf27188bb062e82a3cbababac6a42dbe9d4b2f4730e2e37cb"
+    },
+    {
+      "file": "darguima-tree.json",
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/2aebe3c80eaab87ed02726b7b1388dd97222a1fc?recursive=1",
+      "bytes": 16278,
+      "sha256": "acd2a07c35a67eafd5a66fac989f4977a2a9a14102811c14f6314f293401cfa7"
+    },
+    {
+      "file": "alpha-tree.json",
+      "url": "https://api.github.com/repos/AlphaSheep/Another-ZBLL-Trainer/git/trees/9cddec702c52e8d6521f8cf7e884f5738f0223a1?recursive=1",
+      "bytes": 14417,
+      "sha256": "40889f661a62d8b0654d6df849d7564f4e158112312dae33241198b5520d82f9"
+    },
+    {
+      "file": "stig-tree.json",
+      "url": "https://api.github.com/repos/Stig115/zbll/git/trees/35797fa0e64038df2ac234a2f511bac65bccca67?recursive=1",
+      "bytes": 83550,
+      "sha256": "6fee0290c0006b1104f040ea2e6973511a362dcf4ba7e43b9312ebe133e56464"
+    },
+    {
+      "file": "alpha-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/AlphaSheep/Another-ZBLL-Trainer/9cddec702c52e8d6521f8cf7e884f5738f0223a1/LICENSE",
+      "bytes": 1075,
+      "sha256": "d06848139d759d73cfa894f768807d160be341079d562ab5cf95f711641c6b30"
+    },
+    {
+      "file": "alpha-README.md.txt",
+      "url": "https://raw.githubusercontent.com/AlphaSheep/Another-ZBLL-Trainer/9cddec702c52e8d6521f8cf7e884f5738f0223a1/README.md",
+      "bytes": 75,
+      "sha256": "b2d7b1116cae51eacf4f8441921b17a8b10449547751c0c7db6cabdb993405ef"
+    },
+    {
+      "file": "alpha-zblls.json",
+      "url": "https://raw.githubusercontent.com/AlphaSheep/Another-ZBLL-Trainer/9cddec702c52e8d6521f8cf7e884f5738f0223a1/src/app/caseSelector/zblls.json",
+      "bytes": 9262,
+      "sha256": "fd3849f130be1d3dc894c1bad15f79e5f557b1cc8f364d29ec4da78a45c8df79"
+    },
+    {
+      "file": "alpha-caseSelector.js.txt",
+      "url": "https://raw.githubusercontent.com/AlphaSheep/Another-ZBLL-Trainer/9cddec702c52e8d6521f8cf7e884f5738f0223a1/src/app/caseSelector/caseSelector.js",
+      "bytes": 3811,
+      "sha256": "f59c0c1c2a9220825864dee2a6d1a19f32ca0519b0083c035adc7918a59f2338"
+    },
+    {
+      "file": "alpha-cube.js.txt",
+      "url": "https://raw.githubusercontent.com/AlphaSheep/Another-ZBLL-Trainer/9cddec702c52e8d6521f8cf7e884f5738f0223a1/src/app/cube/cube.js",
+      "bytes": 2075,
+      "sha256": "f0955d2da937493da59b5c7b5351589d6935a587ec5640ad8e2dbe24e01c33aa"
+    },
+    {
+      "file": "alpha-timer.js.txt",
+      "url": "https://raw.githubusercontent.com/AlphaSheep/Another-ZBLL-Trainer/9cddec702c52e8d6521f8cf7e884f5738f0223a1/src/app/timer/timer.js",
+      "bytes": 1549,
+      "sha256": "55c4613e575b920e0e16fef1c43b3edd6fe2c36d1d81161e0913768e4e383d4a"
+    },
+    {
+      "file": "stig-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/Stig115/zbll/35797fa0e64038df2ac234a2f511bac65bccca67/LICENSE",
+      "bytes": 1079,
+      "sha256": "334cb6207a09c070907519584becb781a55e2050e8f4f1ab7200b3895803fcfe"
+    },
+    {
+      "file": "stig-readme.md.txt",
+      "url": "https://raw.githubusercontent.com/Stig115/zbll/35797fa0e64038df2ac234a2f511bac65bccca67/readme.md",
+      "bytes": 402,
+      "sha256": "5cffcc48d983f397cf9bbfd191c9f86a842fcc2fac71be9cb01f014459e3c165"
+    },
+    {
+      "file": "round2-algdb-search.txt",
+      "url": "https://api.github.com/search/repositories?q=algdb+in%3Aname&per_page=5",
+      "bytes": 29133,
+      "sha256": "624bb180a54b4c91a707cd675c7d3bd1be4e372d8eb5edeb9ad17c76afca884b"
+    },
+    {
+      "file": "round2-brief-tree.txt",
+      "url": "https://api.github.com/repos/Stig115/zbll_brief/git/trees/e533adab2eaae9ce57ccbc5801e46f1c6d195006?recursive=1",
+      "bytes": 85248,
+      "sha256": "ac55414f71b628b780a94062e965d75bd3d42003ccf72da78deb735b0dafcf87"
+    },
+    {
+      "file": "round2-zbtrain-tree.txt",
+      "url": "https://api.github.com/repos/loltreeman/ZBTrain/git/trees/bd5b605d3a5bdc61ebf9925f348de62c406ecd1c?recursive=1",
+      "bytes": 313145,
+      "sha256": "96aafa2af78df6314493de8b90369bfc3bdcd2f1dd355e6c6717a800bc5ed06f"
+    },
+    {
+      "file": "round2-brief-license.txt",
+      "url": "https://raw.githubusercontent.com/Stig115/zbll_brief/e533adab2eaae9ce57ccbc5801e46f1c6d195006/LICENSE",
+      "bytes": 1079,
+      "sha256": "334cb6207a09c070907519584becb781a55e2050e8f4f1ab7200b3895803fcfe"
+    },
+    {
+      "file": "round2-brief-readme.txt",
+      "url": "https://raw.githubusercontent.com/Stig115/zbll_brief/e533adab2eaae9ce57ccbc5801e46f1c6d195006/readme.md",
+      "bytes": 402,
+      "sha256": "5cffcc48d983f397cf9bbfd191c9f86a842fcc2fac71be9cb01f014459e3c165"
+    },
+    {
+      "file": "round2-zbtrain-license.txt",
+      "url": "https://raw.githubusercontent.com/loltreeman/ZBTrain/bd5b605d3a5bdc61ebf9925f348de62c406ecd1c/LICENSE",
+      "bytes": 1073,
+      "sha256": "0be1970364793143492241502a6b1c2403ec9f140080117c41dbef7663814b8a"
+    },
+    {
+      "file": "round2-zbtrain-readme.txt",
+      "url": "https://raw.githubusercontent.com/loltreeman/ZBTrain/bd5b605d3a5bdc61ebf9925f348de62c406ecd1c/README.md",
+      "bytes": 2551,
+      "sha256": "7a9bd54cfa72fcd0faf1d336b11a3924dd6fca415131bc8cdf8b7883972b7b94"
+    },
+    {
+      "file": "round2-algdb-tree.txt",
+      "url": "https://api.github.com/repos/cubing/algdb/git/trees/8fb041204536c122f9aed24f78425b9f5e001ed4?recursive=1",
+      "bytes": 153240,
+      "sha256": "a17fd56cab44f65a52de56849b1df769dab7697a24ba4b6c8f593493d32cf59d"
+    },
+    {
+      "file": "round2-algdb-license.txt",
+      "url": "https://raw.githubusercontent.com/cubing/algdb/8fb041204536c122f9aed24f78425b9f5e001ed4/LICENSE.md",
+      "bytes": 34916,
+      "sha256": "33bc26d4498c183b703d1760ee45b8774d21d6e0178ca393dc715271840c7a21"
+    },
+    {
+      "file": "round2-algdb-readme.txt",
+      "url": "https://raw.githubusercontent.com/cubing/algdb/8fb041204536c122f9aed24f78425b9f5e001ed4/README.md",
+      "bytes": 982,
+      "sha256": "7205b0623b499775e07ad4339e16f4eb9ce605cadf86e582a28b35916daf5301"
+    },
+    {
+      "file": "round2-roman-search.txt",
+      "url": "https://api.github.com/search/repositories?q=zbll+strakhov&per_page=5",
+      "bytes": 73,
+      "sha256": "08c082fdf7ca87ba911a2aabb0f0cf2d3e482a6feeaac9713e4578c20b2600b2"
+    }
+  ],
+  "unacceptedDefaultCandidate": {
+    "url": "https://raw.githubusercontent.com/Stig115/zbll/35797fa0e64038df2ac234a2f511bac65bccca67/algs.js",
+    "bytes": 562242,
+    "sha256": "741e485c67e84231e9e02ce9b3fe4efe6367744e92181a12ce9caf6364d0816a",
+    "localInspectionOnly": "node_modules/.cache/b10-stig-algs.js",
+    "attributedCollection": "http://algdb.net/puzzle/333/zbll",
+    "reason": "Upstream attributed collection permission not established. Not copied into retained distributable fixtures or production data."
+  },
+  "sourceRounds": [
+    {
+      "id": "owner-authorized-source-round-2",
+      "authorization": "Continue sourcing. No license-risk waiver or production/math implementation authorization.",
+      "verdict": "blocked-no-established-reusable-default-corpus",
+      "requestBudget": {
+        "maximum": 20,
+        "used": 18,
+        "timeoutSeconds": 30,
+        "redirectsFollowed": false
+      },
+      "candidates": [
+        {
+          "repository": "https://github.com/Stig115/zbll_brief",
+          "revision": "e533adab2eaae9ce57ccbc5801e46f1c6d195006",
+          "license": "MIT",
+          "attribution": "Copyright (c) 2018 Ashley Nathan Feniello",
+          "verdict": "Not accepted: eight ZBLL defaults only, explicitly attributed to AlgDB without an established upstream grant."
+        },
+        {
+          "repository": "https://github.com/loltreeman/ZBTrain",
+          "revision": "bd5b605d3a5bdc61ebf9925f348de62c406ecd1c",
+          "license": "MIT",
+          "attribution": "Copyright (c) 2026 Christian Naguio",
+          "verdict": "Not accepted: README credits Roman Strakhov for the algorithms/scrambles casemap; upstream redistribution grant not established. 472 non-PLL label/default arrays observed, not physical coverage."
+        },
+        {
+          "repository": "https://github.com/cubing/algdb",
+          "revision": "8fb041204536c122f9aed24f78425b9f5e001ed4",
+          "license": "GPL-3.0-or-later project policy",
+          "verdict": "Policy evidence only. README describes a code license and software contributions, not a separate historical submitted-algorithm dataset grant. GPL covered-code reuse could impose materially different copyleft/corresponding-source obligations; not accepted or imported."
+        }
+      ],
+      "observations": {
+        "method": "Static AST/text inspection only, no source execution, move parsing or physical proof.",
+        "brief": {
+          "labels": [
+            "h_33",
+            "h_34",
+            "h_35",
+            "h_36",
+            "h_37",
+            "h_38",
+            "h_39",
+            "h_40"
+          ],
+          "count": 8,
+          "defaultStringsPresent": true
+        },
+        "zbtrain": {
+          "caseLabels": 472,
+          "families": [
+            {
+              "family": "T",
+              "count": 72,
+              "subsets": [
+                {
+                  "subset": "2GLL",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "Diag",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "3",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "4",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "5",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "6",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                }
+              ]
+            },
+            {
+              "family": "U",
+              "count": 72,
+              "subsets": [
+                {
+                  "subset": "2GLL",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "Diag",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "3",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "4",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "5",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "6",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                }
+              ]
+            },
+            {
+              "family": "L",
+              "count": 72,
+              "subsets": [
+                {
+                  "subset": "2GLL",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "Diag",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "3",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "4",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "5",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "6",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                }
+              ]
+            },
+            {
+              "family": "H",
+              "count": 40,
+              "subsets": [
+                {
+                  "subset": "2GLL",
+                  "count": 8,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "Diag",
+                  "count": 8,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "3",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "4",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                }
+              ]
+            },
+            {
+              "family": "Pi",
+              "count": 72,
+              "subsets": [
+                {
+                  "subset": "2GLL",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "Diag",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "3",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "4",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "5",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "6",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                }
+              ]
+            },
+            {
+              "family": "Sune",
+              "count": 72,
+              "subsets": [
+                {
+                  "subset": "2GLL",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "Diag",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "3",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "4",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "5",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "6",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                }
+              ]
+            },
+            {
+              "family": "Antisune",
+              "count": 72,
+              "subsets": [
+                {
+                  "subset": "2GLL",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "Diag",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "3",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "4",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "5",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                },
+                {
+                  "subset": "6",
+                  "count": 12,
+                  "allHaveDefaultStrings": true
+                }
+              ]
+            }
+          ],
+          "pllFamilyInInspectedObject": false
+        }
+      },
+      "requests": [
+        {
+          "number": 1,
+          "id": "brief-commit",
+          "url": "https://api.github.com/repos/Stig115/zbll_brief/commits/master",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 977,
+          "bytes": 6969,
+          "sha256": "182cc24eb70189796931568bea5d34cd79b65c48b4883fb572f49736b3242aff",
+          "cache": "node_modules/.cache/b10-r2-brief-commit",
+          "error": null,
+          "retainedFile": null
+        },
+        {
+          "number": 2,
+          "id": "zbtrain-commit",
+          "url": "https://api.github.com/repos/loltreeman/ZBTrain/commits/main",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 1122,
+          "bytes": 39917,
+          "sha256": "49cd55c6ae96260bf220e138ea75fa963c6bd29694f80c946dceb824025ab400",
+          "cache": "node_modules/.cache/b10-r2-zbtrain-commit",
+          "error": null,
+          "retainedFile": null
+        },
+        {
+          "number": 3,
+          "id": "algdb-search",
+          "url": "https://api.github.com/search/repositories?q=algdb+in%3Aname&per_page=5",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 1156,
+          "bytes": 29133,
+          "sha256": "624bb180a54b4c91a707cd675c7d3bd1be4e372d8eb5edeb9ad17c76afca884b",
+          "cache": "node_modules/.cache/b10-r2-algdb-search",
+          "error": null,
+          "retainedFile": "round2-algdb-search.txt"
+        },
+        {
+          "number": 4,
+          "id": "brief-tree",
+          "url": "https://api.github.com/repos/Stig115/zbll_brief/git/trees/e533adab2eaae9ce57ccbc5801e46f1c6d195006?recursive=1",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 1086,
+          "bytes": 85248,
+          "sha256": "ac55414f71b628b780a94062e965d75bd3d42003ccf72da78deb735b0dafcf87",
+          "cache": "node_modules/.cache/b10-r2-brief-tree",
+          "error": null,
+          "retainedFile": "round2-brief-tree.txt"
+        },
+        {
+          "number": 5,
+          "id": "zbtrain-tree",
+          "url": "https://api.github.com/repos/loltreeman/ZBTrain/git/trees/bd5b605d3a5bdc61ebf9925f348de62c406ecd1c?recursive=1",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 1308,
+          "bytes": 313145,
+          "sha256": "96aafa2af78df6314493de8b90369bfc3bdcd2f1dd355e6c6717a800bc5ed06f",
+          "cache": "node_modules/.cache/b10-r2-zbtrain-tree",
+          "error": null,
+          "retainedFile": "round2-zbtrain-tree.txt"
+        },
+        {
+          "number": 6,
+          "id": "algdb-commit",
+          "url": "https://api.github.com/repos/cubing/algdb/commits/main",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 951,
+          "bytes": 5133,
+          "sha256": "062bfd24dd3f37477909924728ec0315dee6c00afe85469f5a14228ae483062d",
+          "cache": "node_modules/.cache/b10-r2-algdb-commit",
+          "error": null,
+          "retainedFile": null
+        },
+        {
+          "number": 7,
+          "id": "brief-license",
+          "url": "https://raw.githubusercontent.com/Stig115/zbll_brief/e533adab2eaae9ce57ccbc5801e46f1c6d195006/LICENSE",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 861,
+          "bytes": 1079,
+          "sha256": "334cb6207a09c070907519584becb781a55e2050e8f4f1ab7200b3895803fcfe",
+          "cache": "node_modules/.cache/b10-r2-brief-license",
+          "error": null,
+          "retainedFile": "round2-brief-license.txt"
+        },
+        {
+          "number": 8,
+          "id": "brief-readme",
+          "url": "https://raw.githubusercontent.com/Stig115/zbll_brief/e533adab2eaae9ce57ccbc5801e46f1c6d195006/readme.md",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 767,
+          "bytes": 402,
+          "sha256": "5cffcc48d983f397cf9bbfd191c9f86a842fcc2fac71be9cb01f014459e3c165",
+          "cache": "node_modules/.cache/b10-r2-brief-readme",
+          "error": null,
+          "retainedFile": "round2-brief-readme.txt"
+        },
+        {
+          "number": 9,
+          "id": "zbtrain-license",
+          "url": "https://raw.githubusercontent.com/loltreeman/ZBTrain/bd5b605d3a5bdc61ebf9925f348de62c406ecd1c/LICENSE",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 857,
+          "bytes": 1073,
+          "sha256": "0be1970364793143492241502a6b1c2403ec9f140080117c41dbef7663814b8a",
+          "cache": "node_modules/.cache/b10-r2-zbtrain-license",
+          "error": null,
+          "retainedFile": "round2-zbtrain-license.txt"
+        },
+        {
+          "number": 10,
+          "id": "zbtrain-readme",
+          "url": "https://raw.githubusercontent.com/loltreeman/ZBTrain/bd5b605d3a5bdc61ebf9925f348de62c406ecd1c/README.md",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 782,
+          "bytes": 2551,
+          "sha256": "7a9bd54cfa72fcd0faf1d336b11a3924dd6fca415131bc8cdf8b7883972b7b94",
+          "cache": "node_modules/.cache/b10-r2-zbtrain-readme",
+          "error": null,
+          "retainedFile": "round2-zbtrain-readme.txt"
+        },
+        {
+          "number": 11,
+          "id": "algdb-tree",
+          "url": "https://api.github.com/repos/cubing/algdb/git/trees/8fb041204536c122f9aed24f78425b9f5e001ed4?recursive=1",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 1221,
+          "bytes": 153240,
+          "sha256": "a17fd56cab44f65a52de56849b1df769dab7697a24ba4b6c8f593493d32cf59d",
+          "cache": "node_modules/.cache/b10-r2-algdb-tree",
+          "error": null,
+          "retainedFile": "round2-algdb-tree.txt"
+        },
+        {
+          "number": 12,
+          "id": "brief-algs",
+          "url": "https://raw.githubusercontent.com/Stig115/zbll_brief/e533adab2eaae9ce57ccbc5801e46f1c6d195006/algs.js",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 1494,
+          "bytes": 549669,
+          "sha256": "58baf1db2d4a19d2194161b2b18c650ce7dd33332e2e479685b3810a1a7e9274",
+          "cache": "node_modules/.cache/b10-r2-brief-algs",
+          "error": null,
+          "retainedFile": null
+        },
+        {
+          "number": 13,
+          "id": "zbtrain-algorithms",
+          "url": "https://raw.githubusercontent.com/loltreeman/ZBTrain/bd5b605d3a5bdc61ebf9925f348de62c406ecd1c/scripts/algorithms.js",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 1381,
+          "bytes": 196120,
+          "sha256": "0fd439dccfa05a42316dcfad69b74a848378b78c08a3ee0b5b361ce94bc87bdb",
+          "cache": "node_modules/.cache/b10-r2-zbtrain-algorithms",
+          "error": null,
+          "retainedFile": null
+        },
+        {
+          "number": 14,
+          "id": "algdb-license",
+          "url": "https://raw.githubusercontent.com/cubing/algdb/8fb041204536c122f9aed24f78425b9f5e001ed4/LICENSE.md",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 897,
+          "bytes": 34916,
+          "sha256": "33bc26d4498c183b703d1760ee45b8774d21d6e0178ca393dc715271840c7a21",
+          "cache": "node_modules/.cache/b10-r2-algdb-license",
+          "error": null,
+          "retainedFile": "round2-algdb-license.txt"
+        },
+        {
+          "number": 15,
+          "id": "algdb-readme",
+          "url": "https://raw.githubusercontent.com/cubing/algdb/8fb041204536c122f9aed24f78425b9f5e001ed4/README.md",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 816,
+          "bytes": 982,
+          "sha256": "7205b0623b499775e07ad4339e16f4eb9ce605cadf86e582a28b35916daf5301",
+          "cache": "node_modules/.cache/b10-r2-algdb-readme",
+          "error": null,
+          "retainedFile": "round2-algdb-readme.txt"
+        },
+        {
+          "number": 16,
+          "id": "algdb-project",
+          "url": "https://algdb.net",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 4662,
+          "bytes": 1004,
+          "sha256": "3fc4dfee609378aaf4d5bfc3ed3b74e37977c61a17500e34aacae30f53e885b6",
+          "cache": "node_modules/.cache/b10-r2-algdb-project",
+          "error": null,
+          "retainedFile": null
+        },
+        {
+          "number": 17,
+          "id": "roman-project",
+          "url": "https://bestsiteever.net/zbll/",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 1046,
+          "bytes": 1236,
+          "sha256": "adac60a9a2f11baa017d3f292f06dbe47a92a99acd4f0e7cbde9d71be5277988",
+          "cache": "node_modules/.cache/b10-r2-roman-project",
+          "error": null,
+          "retainedFile": null
+        },
+        {
+          "number": 18,
+          "id": "roman-search",
+          "url": "https://api.github.com/search/repositories?q=zbll+strakhov&per_page=5",
+          "status": "200",
+          "curlExit": 0,
+          "elapsedMs": 697,
+          "bytes": 73,
+          "sha256": "08c082fdf7ca87ba911a2aabb0f0cf2d3e482a6feeaac9713e4578c20b2600b2",
+          "cache": "node_modules/.cache/b10-r2-roman-search",
+          "error": null,
+          "retainedFile": "round2-roman-search.txt"
+        }
+      ],
+      "cacheOnlyReason": "Unclear default provenance, commit responses that can embed source patches, and unlicensed website landing documents are local inspection only. Exact response hashes/lengths retained here, not their content. Cache is disposable."
+    }
+  ]
+}

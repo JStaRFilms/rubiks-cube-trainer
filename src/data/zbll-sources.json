@@ -1,0 +1,54 @@
+{
+  "datasetVersion": "zbll-library-v1",
+  "sources": [
+    {
+      "id": "zbtrain-mit-bd5b605",
+      "repository": "https://github.com/loltreeman/ZBTrain",
+      "revision": "bd5b605d3a5bdc61ebf9925f348de62c406ecd1c",
+      "license": "MIT",
+      "attribution": "Copyright (c) 2026 Christian Naguio",
+      "publisherReportedCredit": "Roman Strakhov for the algorithm/scramble casemap",
+      "scope": "Non-PLL move strings and necessary case/family/subset labels only. No independent upstream title or sublicense assertion."
+    },
+    {
+      "id": "alphasheep-mit-9cddec7",
+      "repository": "https://github.com/AlphaSheep/Another-ZBLL-Trainer",
+      "revision": "9cddec702c52e8d6521f8cf7e884f5738f0223a1",
+      "license": "MIT",
+      "attribution": "Copyright (c) 2017 Brendan James Gray",
+      "scope": "Taxonomy and piece/sticker definitions only. No trainer implementation or diagrams."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "tests/fixtures/case-sources/zbtrain-algorithms.js.txt",
+      "url": "https://raw.githubusercontent.com/loltreeman/ZBTrain/bd5b605d3a5bdc61ebf9925f348de62c406ecd1c/scripts/algorithms.js",
+      "bytes": 196120,
+      "sha256": "0fd439dccfa05a42316dcfad69b74a848378b78c08a3ee0b5b361ce94bc87bdb"
+    },
+    {
+      "path": "docs/data/licenses/ZBTrain_MIT.txt",
+      "url": "https://raw.githubusercontent.com/loltreeman/ZBTrain/bd5b605d3a5bdc61ebf9925f348de62c406ecd1c/LICENSE",
+      "bytes": 1073,
+      "sha256": "0be1970364793143492241502a6b1c2403ec9f140080117c41dbef7663814b8a"
+    },
+    {
+      "path": "docs/data/licenses/AlphaSheep_MIT.txt",
+      "url": "https://raw.githubusercontent.com/AlphaSheep/Another-ZBLL-Trainer/9cddec702c52e8d6521f8cf7e884f5738f0223a1/LICENSE",
+      "bytes": 1075,
+      "sha256": "d06848139d759d73cfa894f768807d160be341079d562ab5cf95f711641c6b30"
+    },
+    {
+      "path": "docs/data/zbll-source-evidence/alpha-cube.js.txt",
+      "url": "https://raw.githubusercontent.com/AlphaSheep/Another-ZBLL-Trainer/9cddec702c52e8d6521f8cf7e884f5738f0223a1/src/app/cube/cube.js",
+      "bytes": 2075,
+      "sha256": "f0955d2da937493da59b5c7b5351589d6935a587ec5640ad8e2dbe24e01c33aa"
+    },
+    {
+      "path": "docs/data/zbll-source-evidence/alpha-zblls.json",
+      "url": "https://raw.githubusercontent.com/AlphaSheep/Another-ZBLL-Trainer/9cddec702c52e8d6521f8cf7e884f5738f0223a1/src/app/caseSelector/zblls.json",
+      "bytes": 9262,
+      "sha256": "fd3849f130be1d3dc894c1bad15f79e5f557b1cc8f364d29ec4da78a45c8df79"
+    }
+  ]
+}

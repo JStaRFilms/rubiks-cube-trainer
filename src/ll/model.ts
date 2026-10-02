@@ -28,7 +28,7 @@ export function yawGuidance(moves: readonly Move[], yaw: QuarterTurn): Move[] {
   return [...invertMoves(rotation), ...moves, ...rotation];
 }
 const presentedGuidance = new WeakMap<CubeEngine, Map<string, { solution: Move[]; finalAuf: QuarterTurn }>>();
-export function presentLLGuidance(engine: CubeEngine, trainer: LLTrainer, start: CubeStateV1, moves: readonly Move[]) {
+export function presentLLGuidance(engine: CubeEngine, trainer: LLTrainer | 'zbll', start: CubeStateV1, moves: readonly Move[]) {
   let cache = presentedGuidance.get(engine);
   if (!cache) { cache = new Map(); presentedGuidance.set(engine, cache); }
   const key = JSON.stringify([trainer, start, moves]), cached = cache.get(key);

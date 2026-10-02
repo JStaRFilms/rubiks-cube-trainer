@@ -1,0 +1,432 @@
+{
+  "sha": "2aebe3c80eaab87ed02726b7b1388dd97222a1fc",
+  "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/2aebe3c80eaab87ed02726b7b1388dd97222a1fc",
+  "tree": [
+    {
+      "path": ".eslintrc.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c024210965d343e68184a30a95f3dea08a9d2f9",
+      "size": 496,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/0c024210965d343e68184a30a95f3dea08a9d2f9"
+    },
+    {
+      "path": ".expo-shared",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68c0ca9ffb7651c9f9b40d6610e71296bab7e191",
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/68c0ca9ffb7651c9f9b40d6610e71296bab7e191"
+    },
+    {
+      "path": ".expo-shared/assets.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e6decfbb52a26e6ebdcd634328e42305446fa60",
+      "size": 155,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/1e6decfbb52a26e6ebdcd634328e42305446fa60"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73e9e945749da10000301c265cc32b465dcf25c0",
+      "size": 118,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/73e9e945749da10000301c265cc32b465dcf25c0"
+    },
+    {
+      "path": "App.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b1a0fb05ff22ec725e8aeec6210a0daa7d2ef52",
+      "size": 429,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/2b1a0fb05ff22ec725e8aeec6210a0daa7d2ef52"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc0e44a0bb27790b98dde6b309ad65f8a22ce8fa",
+      "size": 1073,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/dc0e44a0bb27790b98dde6b309ad65f8a22ce8fa"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d06bd1e7f4276102c1509468f583ce2ff9f00e22",
+      "size": 5804,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/d06bd1e7f4276102c1509468f583ce2ff9f00e22"
+    },
+    {
+      "path": "app.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd15360122765fa1b5aea34b068fde2b265baed5",
+      "size": 593,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/bd15360122765fa1b5aea34b068fde2b265baed5"
+    },
+    {
+      "path": "assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b651784c9f54b5128314fa39c7e19a31006a7433",
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/b651784c9f54b5128314fa39c7e19a31006a7433"
+    },
+    {
+      "path": "assets/FridrichTrainerLogo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aea4b203aae9eb543fede61c7f62976ae2ed3d27",
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/aea4b203aae9eb543fede61c7f62976ae2ed3d27"
+    },
+    {
+      "path": "assets/FridrichTrainerLogo/FridrichTrainerIcon_500.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd9b9f350f17e0c918f62473a0d32dc32f63a06b",
+      "size": 6593,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/fd9b9f350f17e0c918f62473a0d32dc32f63a06b"
+    },
+    {
+      "path": "assets/FridrichTrainerLogo/FridrichTrainerIcon_500.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc0afa8135759929566653db72182e6386555a30",
+      "size": 749,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/cc0afa8135759929566653db72182e6386555a30"
+    },
+    {
+      "path": "assets/FridrichTrainerLogo/FridrichTrainerlogoHorizontal_500.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5521bc9fbcb64655799696d739582f42cc59f97d",
+      "size": 5818,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/5521bc9fbcb64655799696d739582f42cc59f97d"
+    },
+    {
+      "path": "assets/FridrichTrainerLogo/FridrichTrainerlogoHorizontal_500.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a002fa97372743740ab198b75b79fd9037b00f7",
+      "size": 10913,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/0a002fa97372743740ab198b75b79fd9037b00f7"
+    },
+    {
+      "path": "assets/FridrichTrainerLogo/FridrichTrainerlogoVertical_500.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ce58a0539d2bfd854d5e2e0b9a4c4e77d8e34a5",
+      "size": 5640,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/5ce58a0539d2bfd854d5e2e0b9a4c4e77d8e34a5"
+    },
+    {
+      "path": "assets/FridrichTrainerLogo/FridrichTrainerlogoVertical_500.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6712912c86a6e31f02384506fbe516778b421929",
+      "size": 10937,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/6712912c86a6e31f02384506fbe516778b421929"
+    },
+    {
+      "path": "assets/favicon.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "523089e06edf07de5f1f1de3c6519efd3b4f60e5",
+      "size": 1597,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/523089e06edf07de5f1f1de3c6519efd3b4f60e5"
+    },
+    {
+      "path": "assets/icon.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31d560987f9b60af32d6423b5f630140c0a3312f",
+      "size": 3290,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/31d560987f9b60af32d6423b5f630140c0a3312f"
+    },
+    {
+      "path": "assets/splash.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b404257c46931594cd46f88238c4f3d2cb6d572",
+      "size": 15770,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/8b404257c46931594cd46f88238c4f3d2cb6d572"
+    },
+    {
+      "path": "babel.config.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2900afe9d85a54cf9552ec0b4107665c5c10e078",
+      "size": 107,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/2900afe9d85a54cf9552ec0b4107665c5c10e078"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6795c4f87724ae9e24bc05395b635c51cd40e886",
+      "size": 2329,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/6795c4f87724ae9e24bc05395b635c51cd40e886"
+    },
+    {
+      "path": "readme",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9646b2ad91d913974ce0591b45d6d1cb86d756b3",
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/9646b2ad91d913974ce0591b45d6d1cb86d756b3"
+    },
+    {
+      "path": "readme/F2L_TrainPage.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14a8bb5fae01c93696bdab24bd0fc0cc51e8e67f",
+      "size": 76157,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/14a8bb5fae01c93696bdab24bd0fc0cc51e8e67f"
+    },
+    {
+      "path": "readme/F2L_TrainPage_without_options.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94c1092e07a4a233361c54b7dbc100fed9c14416",
+      "size": 76259,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/94c1092e07a4a233361c54b7dbc100fed9c14416"
+    },
+    {
+      "path": "readme/FridrichTrainerLogoHorizontal_500.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67ef8210c506394a91a0a8acd856167133f2882d",
+      "size": 9858,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/67ef8210c506394a91a0a8acd856167133f2882d"
+    },
+    {
+      "path": "readme/LandingPage.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de11cbd8fe168dea260cbe5f150bb70ad83464e5",
+      "size": 90711,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/de11cbd8fe168dea260cbe5f150bb70ad83464e5"
+    },
+    {
+      "path": "readme/OLL_ConfigPage.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3824a2e9640a5a10d7c33f8a72e43de964e633c9",
+      "size": 123418,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/3824a2e9640a5a10d7c33f8a72e43de964e633c9"
+    },
+    {
+      "path": "readme/OLL_TrainPage.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e69a619c25ea34998dbef44385e38667c872193",
+      "size": 67600,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/6e69a619c25ea34998dbef44385e38667c872193"
+    },
+    {
+      "path": "readme/PLL_ListCases.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4180296e2a3715c54bc31c76870ee76513da3d5",
+      "size": 101221,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/f4180296e2a3715c54bc31c76870ee76513da3d5"
+    },
+    {
+      "path": "readme/PLL_TrainPage.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19e648535631328994545cb519d3441ac296d560",
+      "size": 75469,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/19e648535631328994545cb519d3441ac296d560"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f824fa2ee176e88ecbdd562a3d2e866e781669a3",
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/f824fa2ee176e88ecbdd562a3d2e866e781669a3"
+    },
+    {
+      "path": "src/Components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "093fffa68146d96cca86db3983d0ebe5fcf263b3",
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/093fffa68146d96cca86db3983d0ebe5fcf263b3"
+    },
+    {
+      "path": "src/Components/HeaderPage",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "884522d2f3476bf9d1fc6023d708484165ff8f41",
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/884522d2f3476bf9d1fc6023d708484165ff8f41"
+    },
+    {
+      "path": "src/Components/HeaderPage/index.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c68eb2f634aa128f6f7b7065d1dcb4efee5ee4f6",
+      "size": 1376,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/c68eb2f634aa128f6f7b7065d1dcb4efee5ee4f6"
+    },
+    {
+      "path": "src/ConfigPage",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ce70e8fc0d9940ddf830d75c156ff254553ac22",
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/6ce70e8fc0d9940ddf830d75c156ff254553ac22"
+    },
+    {
+      "path": "src/ConfigPage/index.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "795cafe96d5f347a0eecd00efa45f6d690950662",
+      "size": 4835,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/795cafe96d5f347a0eecd00efa45f6d690950662"
+    },
+    {
+      "path": "src/LandingPage",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "137f7cea43e26a5c9130b608e77babb608a3d96d",
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/137f7cea43e26a5c9130b608e77babb608a3d96d"
+    },
+    {
+      "path": "src/LandingPage/index.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0438bf8b430f90a3bf52260e0333201b6a48d125",
+      "size": 2117,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/0438bf8b430f90a3bf52260e0333201b6a48d125"
+    },
+    {
+      "path": "src/ListCasesArrayPage",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a4d234963d9bd387833400cff46a612e2fc96e86",
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/a4d234963d9bd387833400cff46a612e2fc96e86"
+    },
+    {
+      "path": "src/ListCasesArrayPage/index.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "becac601d4fd5dac23be667489960a7452e87302",
+      "size": 3739,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/becac601d4fd5dac23be667489960a7452e87302"
+    },
+    {
+      "path": "src/TrainPage",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d04f0a05957c35131847c9916e4717bf2efbd67a",
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/d04f0a05957c35131847c9916e4717bf2efbd67a"
+    },
+    {
+      "path": "src/TrainPage/index.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0951759cb0621db284d759b6015b3e37baeb5eb",
+      "size": 9357,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/e0951759cb0621db284d759b6015b3e37baeb5eb"
+    },
+    {
+      "path": "src/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5727707d505602baa8ea2b3c9ae649c023fe5e9f",
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/5727707d505602baa8ea2b3c9ae649c023fe5e9f"
+    },
+    {
+      "path": "src/assets/images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8f8d2c9ed707a831915d6fd809f5c5f216b0e1eb",
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/8f8d2c9ed707a831915d6fd809f5c5f216b0e1eb"
+    },
+    {
+      "path": "src/assets/images/FridrichTrainerlogo.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "000ac26fc5d5600faf543a39d026f128f3f10e9d",
+      "size": 11723,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/000ac26fc5d5600faf543a39d026f128f3f10e9d"
+    },
+    {
+      "path": "src/contexts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f1ce280af5670b2ba800708b63d244376f123559",
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/f1ce280af5670b2ba800708b63d244376f123559"
+    },
+    {
+      "path": "src/contexts/casesArray.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8f67a74be8c28ee357ad3f74415c8ae6f0062d4",
+      "size": 1221,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/e8f67a74be8c28ee357ad3f74415c8ae6f0062d4"
+    },
+    {
+      "path": "src/f2l_simulation.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a04281c5a46c46bc2faabdbd8385894ef3358a76",
+      "size": 190781,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/a04281c5a46c46bc2faabdbd8385894ef3358a76"
+    },
+    {
+      "path": "src/fridrich.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7301ed7988a682e5bfe3c04fc2ed7d02c765288f",
+      "size": 11763,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/7301ed7988a682e5bfe3c04fc2ed7d02c765288f"
+    },
+    {
+      "path": "src/oll_simulation.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d1cc2378a095c54ccea0d28a663cbea5b7571e4",
+      "size": 101436,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/1d1cc2378a095c54ccea0d28a663cbea5b7571e4"
+    },
+    {
+      "path": "src/pll_simulation.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9743c4f429ae2bd9acc23ef3aaa3a75f74ad5004",
+      "size": 40282,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/9743c4f429ae2bd9acc23ef3aaa3a75f74ad5004"
+    },
+    {
+      "path": "src/routes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a750a3b1780b7b10ab056ddfccabfa2613b55246",
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/trees/a750a3b1780b7b10ab056ddfccabfa2613b55246"
+    },
+    {
+      "path": "src/routes/routes.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9522f437abaf5dd636d1863d3db5a8949cced5dc",
+      "size": 1000,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/9522f437abaf5dd636d1863d3db5a8949cced5dc"
+    },
+    {
+      "path": "tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c78a191dbc99581e5ec7c3f658287a6cc809e35",
+      "size": 258,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/3c78a191dbc99581e5ec7c3f658287a6cc809e35"
+    },
+    {
+      "path": "yarn.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e41b436bf113cd82bb46e606c6def802b0b22553",
+      "size": 308562,
+      "url": "https://api.github.com/repos/Darguima/FridrichTrainer/git/blobs/e41b436bf113cd82bb46e606c6def802b0b22553"
+    }
+  ],
+  "truncated": false
+}

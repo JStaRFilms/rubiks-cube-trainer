@@ -2,3 +2,6 @@ tests/fixtures/case-sources/* -text
 docs/data/licenses/* -text
 public/licenses/cases-Lieberkind-MIT.txt -text
 public/licenses/cases-Speeden-MIT.txt -text
+docs/data/zbll-source-evidence/* -text
+public/licenses/cases-ZBTrain-MIT.txt -text
+public/licenses/cases-AlphaSheep-MIT.txt -text
