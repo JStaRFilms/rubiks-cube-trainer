@@ -1,0 +1,4 @@
+tests/fixtures/case-sources/* -text
+docs/data/licenses/* -text
+public/licenses/cases-Lieberkind-MIT.txt -text
+public/licenses/cases-Speeden-MIT.txt -text
