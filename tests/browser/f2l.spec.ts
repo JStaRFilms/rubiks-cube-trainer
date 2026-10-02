@@ -4,6 +4,7 @@ import { cp } from 'node:fs/promises';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { F2L_CASES } from '../../src/data/f2l';
+import { OLL_CASES, PLL_CASES } from '../../src/data';
 import { canonicalText } from '../../src/cube/notation';
 import type { TrainerBackupV1 } from '../../src/store/records';
 import { lowerIndices, normalize, replay, solved } from '../helpers/case-oracle';
@@ -103,6 +104,38 @@ test('canonical/slot algorithm editor, explicit pre-AUF, wrong-case and quota at
   await page.getByRole('combobox', { name: 'Algorithm scope', exact: true }).selectOption('canonical'); await expect(page.getByRole('button', { name: 'Use default' })).toBeEnabled(); await page.getByRole('button', { name: 'Use default' }).click(); await expect(page.getByText('Override removed.', { exact: false })).toBeVisible(); await page.getByRole('button', { name: 'Close dialog' }).click();
   const reset = await backup(page); expect(reset.value.personalAlgorithms).toEqual([]); expect(reset.value.attempts).toEqual(actual.value.attempts);
   await page.reload(); await page.getByRole('button', { name: 'Session / history', exact: true }).click(); await page.locator('.attempt-list summary').first().click(); await page.getByRole('button', { name: 'Review saved attempt' }).first().click(); await expect(page.getByTestId('canonical-moves')).toHaveText(canonicalText(latest.challenge.proof.solution));
+});
+
+test('mixed OLL/PLL and canonical/slot F2L guidance survives real F2L generation and saving', async ({ page }) => {
+  await page.goto('/');
+  for (const trainer of ['oll', 'pll'] as const) {
+    const entry = (trainer === 'oll' ? OLL_CASES : PLL_CASES)[0]; if (!entry) throw Error('Missing actual LL case.');
+    await page.getByRole('combobox', { name: 'Trainer', exact: true }).selectOption(trainer);
+    await page.getByRole('button', { name: 'Personal algorithms', exact: true }).click();
+    await expect(page.getByRole('textbox', { name: 'Personal algorithm', exact: true })).toHaveValue(canonicalText(entry.defaultAlgorithm));
+    await page.getByRole('button', { name: 'Validate algorithm' }).click(); await expect(page.getByText('Valid for this intended case. Not saved yet.')).toBeVisible();
+    await page.getByRole('button', { name: 'Save algorithm' }).click(); await expect(page.getByText('Algorithm saved on this device. Frozen runs are unchanged.')).toBeVisible();
+    await page.getByRole('button', { name: 'Close dialog' }).click();
+  }
+  const ll = await backup(page); expect(ll.value.attempts).toEqual([]); expect(ll.value.personalAlgorithms).toHaveLength(2);
+  await choose(page, 'execution', 'hidden'); const entry = F2L_CASES[0]; if (!entry) throw Error('Missing actual F2L case.'); const source = canonicalText(entry.defaultAlgorithm);
+  await page.getByRole('button', { name: 'Personal algorithms', exact: true }).click();
+  for (const scope of ['canonical', 'FR'] as const) {
+    await page.getByRole('combobox', { name: 'Algorithm scope', exact: true }).selectOption(scope);
+    await page.getByRole('combobox', { name: 'Algorithm pre-AUF', exact: true }).selectOption(scope === 'canonical' ? '1' : '3');
+    await page.getByRole('textbox', { name: 'Personal algorithm', exact: true }).fill(scope === 'canonical' ? `U' ${source} U` : `U ${source} U2`);
+    await page.getByRole('button', { name: 'Validate algorithm' }).click(); await expect(page.getByText('Valid for this intended case. Not saved yet.')).toBeVisible();
+    await page.getByRole('button', { name: 'Save algorithm' }).click(); await expect(page.getByText('Algorithm saved on this device.', { exact: true })).toBeVisible();
+  }
+  await page.getByRole('button', { name: 'Close dialog' }).click(); const before = await backup(page);
+  expect(before.value.personalAlgorithms).toHaveLength(4); expect(before.value.personalAlgorithms.filter((record) => !record.caseId.startsWith('f2l:'))).toEqual(ll.value.personalAlgorithms); expect(before.value.attempts).toEqual([]);
+  await start(page); await execute(page); const after = await backup(page);
+  expect(after.value.personalAlgorithms).toEqual(before.value.personalAlgorithms); expect(after.value.attempts).toHaveLength(1);
+  const attempt = after.value.attempts[0]; if (!attempt || attempt.challenge.options.trainer !== 'f2l' || attempt.challenge.proof.kind !== 'case') throw Error('Missing actual saved F2L rep.');
+  expect(attempt.timing.status).toBe('completed'); expect(attempt.challenge.options).toMatchObject({ caseId: entry.id, slot: 'FR', mode: 'execution' }); expect(attempt.challenge.proof.identityKey).toBe(entry.identityKey);
+  expect(replay(solved, attempt.challenge.scramble)).toBe(attempt.challenge.start.facelets); expect(attempt.challenge.proof.solution.at(-1)).toEqual({ family: 'U', amount: 2 });
+  const final = normalize(replay(attempt.challenge.start.facelets, attempt.challenge.proof.solution)); expect(lowerIndices.every((i) => final[i] === solved[i])).toBe(true);
+  await page.getByRole('button', { name: 'Review attempt' }).click(); await expect(page.getByTestId('canonical-moves')).toHaveText(canonicalText(attempt.challenge.proof.solution)); await page.getByRole('button', { name: 'Close dialog' }).click();
 });
 
 test('actual F2L request deferral/cancel, settings/session/restore and post-read cross-tab ownership', async ({ page, context }) => {

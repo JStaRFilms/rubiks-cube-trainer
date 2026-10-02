@@ -1,6 +1,6 @@
 # Delivery task index
 
-Session: `orch-20260930-021158`. G01/G02/D01/B01/B02/B03/B04 are complete. Fourteen tasks are complete through B09 and twelve remain pending. Actual F2L and OLL/PLL Time Attack are parent accepted. Independent Q03 is next. The owner authorized continued work after the recap; verified F2L/OLL/PLL libraries precede B08/B09/Q03. B05 bounds are accepted. The owner authorized the next step after the input repair and push to `origin/main` at `973a879`. Cross now has verified challenges, live timing, saved history, backups and offline optimal review. The interim A-desktop/B-mobile layout remains; polish and research are deferred. B06 uses the accepted provisional ranges and fully solved base, then Q02 reviews the integrated loop. Research remains separately gated.
+Session `orch-20260930-021158`. Fifteen tasks are complete through Q03 and eleven remain pending. Cross, Cross+1, F2L and OLL/PLL Time Attack are implemented and accepted. Initial Q03 FAIL, mixed-guidance repair and targeted independent PASS are preserved. Stop for hands-on feedback before B10 ZBLL. Local increments are not pushed; the last authorized remote checkpoint remains `973a879`. Interim A-desktop/B-mobile layout and physical-device limits remain. Research, teaching/sync and deployment keep separate gates.
 
 | ID | Authored packet | Stage | Dependencies |
 | --- | --- | --- | --- |
@@ -18,7 +18,7 @@ Session: `orch-20260930-021158`. G01/G02/D01/B01/B02/B03/B04 are complete. Fourt
 | b07 | [Curate verified F2L OLL and PLL libraries](completed/b07_curate_verified_f2l_oll_and_pll_libraries.task.md) | build | q02 |
 | b08 | [Deliver F2L case and slot practice](completed/b08_deliver_f2l_case_and_slot_practice.task.md) | build | b07 |
 | b09 | [Deliver OLL and PLL Time Attack](completed/b09_deliver_oll_and_pll_time_attack.task.md) | build | b08 |
-| q03 | [Review F2L and Time Attack delivery](pending/q03_review_f2l_and_time_attack_delivery.task.md) | build | b09 |
+| q03 | [Review F2L and Time Attack delivery](completed/q03_review_f2l_and_time_attack_delivery.task.md) | build | b09 |
 | b10 | [Curate the complete ZBLL inventory](pending/b10_curate_the_complete_zbll_inventory.task.md) | build | q03 |
 | b11 | [Deliver ZBLL family and subset practice](pending/b11_deliver_zbll_family_and_subset_practice.task.md) | build | b10 |
 | q04 | [Review ZBLL delivery](pending/q04_review_zbll_delivery.task.md) | build | b11 |

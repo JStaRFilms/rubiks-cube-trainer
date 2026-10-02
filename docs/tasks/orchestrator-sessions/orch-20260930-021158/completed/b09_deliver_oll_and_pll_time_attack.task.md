@@ -1,5 +1,11 @@
 # Task B09: Deliver OLL and PLL Time Attack
 
+## Confirmed Q03 repair, current scope
+
+The initial B09 checkpoint is committed as `335a730`. Fresh independent Q03 returned FAIL for one confirmed integration blocker: saving a valid OLL or PLL override prevents F2L from starting because `F2LPractice` dispatches all stored personal algorithms to F2L-only generation validation. Read `docs/audits/Q03_Case_Trainers_Acceptance.md` and reviewer traces in `.pi/takomi/q03-mixed-guidance/`.
+
+Reuse `coder-b09`. Make only the narrow dispatch correction and focused mixed-guidance regression. Pass genuine F2L overrides to generation, retaining the full selected/stored algorithm list for global validation and post-await ownership checks. Do not broaden `createF2L` validation, delete LL records, weaken backups or stale guards, or change canonical setup/history. Production regression must save valid OLL and PLL guidance, retain F2L guidance as applicable, then actually generate/time/save F2L with preserved algorithms. Update the B09 audit with commands/results. Parent records Q03 outcome and task state. Existing 260-unit/math/offline/source checks are baseline evidence, not permission for unrelated changes. Return actual focused PASS/FAIL/BLOCKED; same reviewer performs a targeted recheck. No Git/state writes or new trainer work.
+
 ## Agent setup
 
 ### Workflow to follow

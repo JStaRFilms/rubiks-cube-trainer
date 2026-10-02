@@ -1,5 +1,5 @@
 {
-  "releaseId": "review-1790918572666",
+  "releaseId": "review-1790923520554",
   "engine": "cubing@0.63.8",
   "engineSource": "d02c02fc90f3410e612315141072a47af03feb97",
   "engineIntegrity": "sha512-suliTEg6p+PgyFcGtp3Y2NLd8gHnZFKYa5+Wd2HK7ciKuQOIuvRiM/on6HTVQuAxz2cNB/7WedgfUjQ1kR0kcA==",
@@ -13,19 +13,19 @@
     "ll-libraries-57-21-v1"
   ],
   "totals": {
-    "rawBytes": 9534250,
-    "gzipBytes": 7685731,
-    "brotliBytes": 7588106
+    "rawBytes": 9534291,
+    "gzipBytes": 7685756,
+    "brotliBytes": 7588140
   },
   "executable": {
-    "rawBytes": 2432001,
-    "gzipBytes": 614834,
-    "brotliBytes": 521745
+    "rawBytes": 2432042,
+    "gzipBytes": 614862,
+    "brotliBytes": 521779
   },
   "applicationWithoutSourceArchive": {
-    "rawBytes": 2481531,
-    "gzipBytes": 631923,
-    "brotliBytes": 535363
+    "rawBytes": 2481572,
+    "gzipBytes": 631948,
+    "brotliBytes": 535397
   },
   "assets": [
     {
@@ -36,25 +36,25 @@
       "brotliBytes": 3056
     },
     {
-      "url": "/assets/index-CD5WwJZ5.js",
-      "byteLength": 546810,
-      "sha256": "56a8a29bb3be5617960416ab6400be9056cba18d8f698ffc3da84d10068a018c",
-      "gzipBytes": 137531,
-      "brotliBytes": 116263
+      "url": "/assets/index-Dm8Vi67W.js",
+      "byteLength": 546851,
+      "sha256": "b74d99a60f8908da1e8792866abfe48d98bece8e68f8c2402c9283638cba5326",
+      "gzipBytes": 137557,
+      "brotliBytes": 116337
     },
     {
-      "url": "/assets/MoveReview-DzLTbPef.js",
+      "url": "/assets/MoveReview-CzhdE2le.js",
       "byteLength": 9217,
-      "sha256": "092cbc3d78bcd099427d349cf3be7f399b1b6fb63d9362a8e2bdf1d587a822b6",
-      "gzipBytes": 3447,
-      "brotliBytes": 2923
+      "sha256": "fce04e37fb1cdcf600297a266a34e20b5bd08c702c51fd947d4ad4945c66bb46",
+      "gzipBytes": 3448,
+      "brotliBytes": 2924
     },
     {
-      "url": "/assets/initialize-B6a0lf8R.js",
+      "url": "/assets/initialize-Cn_0ijXR.js",
       "byteLength": 808,
-      "sha256": "864fb9b550dd3c2ccbed01f6d7d0462f85a4e6b3cd9dbbeedcc0c977c36d2bf3",
-      "gzipBytes": 420,
-      "brotliBytes": 380
+      "sha256": "ec6a8eda10e821954819a0d3df78e735e3b08936026ca622dc5e8faa2e191149",
+      "gzipBytes": 421,
+      "brotliBytes": 381
     },
     {
       "url": "/assets/puzzles-dynamic-side-events-IMYJ533P-uM0XY_nj.js",
@@ -85,18 +85,18 @@
       "brotliBytes": 1643
     },
     {
-      "url": "/assets/index-nAaKZFcj.js",
+      "url": "/assets/index-q8v6I7cz.js",
       "byteLength": 70426,
-      "sha256": "61b1152c620abe57c02bea76bc9cbc73cf5830a0ba848eaca513bc51e5bce316",
+      "sha256": "48e6e9277253ccc02465af5168b59ee12e3b628512b88d5e444c61ebd514d53e",
       "gzipBytes": 22922,
-      "brotliBytes": 20048
+      "brotliBytes": 20066
     },
     {
-      "url": "/assets/big-puzzle-orientation-ADWIOX6S-ucTYiN1z.js",
+      "url": "/assets/big-puzzle-orientation-ADWIOX6S-BGCPVf9v.js",
       "byteLength": 827,
-      "sha256": "995c0ae347e2b48379723bdaad446f5a041bc35c3197a361ee2d6709a58a5b7b",
+      "sha256": "d63d03dc614a08d5a10bc2b52aa22c436b1ab6691da14271d87842f9d200ebd1",
       "gzipBytes": 502,
-      "brotliBytes": 437
+      "brotliBytes": 436
     },
     {
       "url": "/assets/puzzles-dynamic-3x3x3-FYXD7SIU-BAAKgtmM.js",
@@ -106,25 +106,25 @@
       "brotliBytes": 1757
     },
     {
-      "url": "/assets/player-Ck9zc3lB.js",
+      "url": "/assets/player-B0PJqPDN.js",
       "byteLength": 228256,
-      "sha256": "0e783b77594fe1069dd99125574fe6290b4d0ba2130ebbcc994eb89dbc166436",
-      "gzipBytes": 65050,
-      "brotliBytes": 53760
+      "sha256": "534917e0a2a5b3a66af3a39229feecd49590656f9b25a59c7fa8c420e23b776d",
+      "gzipBytes": 65051,
+      "brotliBytes": 53779
     },
     {
-      "url": "/assets/client-tzhKcFsR.js",
+      "url": "/assets/client-DzzMDMET.js",
       "byteLength": 811,
-      "sha256": "97c7b3f7b098ef90909b5b12b5ad9cfde0637eb8ae713ab04dbedb7e4189d31e",
-      "gzipBytes": 484,
-      "brotliBytes": 405
+      "sha256": "b2b15c739519cd6b58d75be029d20d3616261430843a4d70d92dba6271c50c1b",
+      "gzipBytes": 483,
+      "brotliBytes": 404
     },
     {
-      "url": "/assets/twisty-dynamic-3d-4BEQ76PB-D1MIL8CG.js",
+      "url": "/assets/twisty-dynamic-3d-4BEQ76PB-tYSy_LLU.js",
       "byteLength": 406707,
-      "sha256": "bab06e072fbfbfc92df685fa91b856a3e0ef971cd7a628495c2452a3278c8a8b",
+      "sha256": "ef8545a8bbed5bb71891cd0ace97e8a7ac93c70d58c9a1b931427b92e1e40721",
       "gzipBytes": 104935,
-      "brotliBytes": 87295
+      "brotliBytes": 87218
     },
     {
       "url": "/assets/puzzles-dynamic-side-events-IMYJ533P-CDePOl55.js",
@@ -204,27 +204,6 @@
       "brotliBytes": 17041
     },
     {
-      "url": "/assets/index-DraujmgN.js",
-      "byteLength": 70431,
-      "sha256": "06f6cc6fb3e9f2ad6a01c6df6a43cd2ac09dd5a2df26be71b71e3aeeec1801a1",
-      "gzipBytes": 22925,
-      "brotliBytes": 20116
-    },
-    {
-      "url": "/assets/big-puzzle-orientation-ADWIOX6S-CtaWZ5K-.js",
-      "byteLength": 832,
-      "sha256": "26ba989ee04bf3d1e60435b2989d4adb879d2f5b36dc458fb4926706b66839e3",
-      "gzipBytes": 503,
-      "brotliBytes": 440
-    },
-    {
-      "url": "/assets/one.worker-B0xQQOIg.js",
-      "byteLength": 89350,
-      "sha256": "ecc0faaf6d602ea8d2ab3138e5308f299d6c7e1370775a0efbff3acb43e3e5ec",
-      "gzipBytes": 25963,
-      "brotliBytes": 23187
-    },
-    {
       "url": "/assets/index-BACHa-H-.js",
       "byteLength": 70433,
       "sha256": "609d1839f54b1549fb9e9febf12912c3dbebc5d987b5427dc9c0b90ddb557c47",
@@ -246,10 +225,31 @@
       "brotliBytes": 21683
     },
     {
+      "url": "/assets/index-DraujmgN.js",
+      "byteLength": 70431,
+      "sha256": "06f6cc6fb3e9f2ad6a01c6df6a43cd2ac09dd5a2df26be71b71e3aeeec1801a1",
+      "gzipBytes": 22925,
+      "brotliBytes": 20116
+    },
+    {
+      "url": "/assets/big-puzzle-orientation-ADWIOX6S-CtaWZ5K-.js",
+      "byteLength": 832,
+      "sha256": "26ba989ee04bf3d1e60435b2989d4adb879d2f5b36dc458fb4926706b66839e3",
+      "gzipBytes": 503,
+      "brotliBytes": 440
+    },
+    {
+      "url": "/assets/one.worker-B0xQQOIg.js",
+      "byteLength": 89350,
+      "sha256": "ecc0faaf6d602ea8d2ab3138e5308f299d6c7e1370775a0efbff3acb43e3e5ec",
+      "gzipBytes": 25963,
+      "brotliBytes": 23187
+    },
+    {
       "url": "/index.html",
       "byteLength": 624,
-      "sha256": "d41325f337169277c46cf75dfe775449f56123d47ecd7006fcde106245a217da",
-      "gzipBytes": 366,
+      "sha256": "599a5d09fd386b90043f27d0006e831f3c9b27a2084b450700fb6e855cea3d47",
+      "gzipBytes": 363,
       "brotliBytes": 232
     },
     {
@@ -374,14 +374,14 @@
   ],
   "chunks": [
     {
-      "file": "assets/index-CD5WwJZ5.js",
+      "file": "assets/index-Dm8Vi67W.js",
       "imports": [],
       "dynamicImports": [
-        "assets/index-nAaKZFcj.js",
-        "assets/index-nAaKZFcj.js",
-        "assets/index-nAaKZFcj.js",
-        "assets/index-nAaKZFcj.js",
-        "assets/big-puzzle-orientation-ADWIOX6S-ucTYiN1z.js",
+        "assets/index-q8v6I7cz.js",
+        "assets/index-q8v6I7cz.js",
+        "assets/index-q8v6I7cz.js",
+        "assets/index-q8v6I7cz.js",
+        "assets/big-puzzle-orientation-ADWIOX6S-BGCPVf9v.js",
         "assets/puzzles-dynamic-3x3x3-FYXD7SIU-BAAKgtmM.js",
         "assets/puzzles-dynamic-3x3x3-FYXD7SIU-BAAKgtmM.js",
         "assets/puzzles-dynamic-3x3x3-FYXD7SIU-BAAKgtmM.js",
@@ -406,8 +406,8 @@
         "assets/puzzles-dynamic-side-events-IMYJ533P-uM0XY_nj.js",
         "assets/puzzles-dynamic-side-events-IMYJ533P-uM0XY_nj.js",
         "assets/puzzles-dynamic-side-events-IMYJ533P-uM0XY_nj.js",
-        "assets/initialize-B6a0lf8R.js",
-        "assets/MoveReview-DzLTbPef.js"
+        "assets/initialize-Cn_0ijXR.js",
+        "assets/MoveReview-CzhdE2le.js"
       ],
       "modules": [
         "\u0000vite/modulepreload-polyfill.js",
@@ -492,25 +492,25 @@
       ]
     },
     {
-      "file": "assets/MoveReview-DzLTbPef.js",
+      "file": "assets/MoveReview-CzhdE2le.js",
       "imports": [
-        "assets/index-CD5WwJZ5.js"
+        "assets/index-Dm8Vi67W.js"
       ],
       "dynamicImports": [
-        "assets/player-Ck9zc3lB.js"
+        "assets/player-B0PJqPDN.js"
       ],
       "modules": [
         "src/app/MoveReview.tsx"
       ]
     },
     {
-      "file": "assets/initialize-B6a0lf8R.js",
+      "file": "assets/initialize-Cn_0ijXR.js",
       "imports": [
-        "assets/index-CD5WwJZ5.js"
+        "assets/index-Dm8Vi67W.js"
       ],
       "dynamicImports": [
-        "assets/player-Ck9zc3lB.js",
-        "assets/client-tzhKcFsR.js"
+        "assets/player-B0PJqPDN.js",
+        "assets/client-DzzMDMET.js"
       ],
       "modules": [
         "src/cube/initialize.ts"
@@ -549,9 +549,9 @@
       ]
     },
     {
-      "file": "assets/index-nAaKZFcj.js",
+      "file": "assets/index-q8v6I7cz.js",
       "imports": [
-        "assets/index-CD5WwJZ5.js"
+        "assets/index-Dm8Vi67W.js"
       ],
       "dynamicImports": [],
       "modules": [
@@ -559,9 +559,9 @@
       ]
     },
     {
-      "file": "assets/big-puzzle-orientation-ADWIOX6S-ucTYiN1z.js",
+      "file": "assets/big-puzzle-orientation-ADWIOX6S-BGCPVf9v.js",
       "imports": [
-        "assets/index-CD5WwJZ5.js"
+        "assets/index-Dm8Vi67W.js"
       ],
       "dynamicImports": [],
       "modules": [
@@ -577,13 +577,13 @@
       ]
     },
     {
-      "file": "assets/player-Ck9zc3lB.js",
+      "file": "assets/player-B0PJqPDN.js",
       "imports": [
-        "assets/index-CD5WwJZ5.js"
+        "assets/index-Dm8Vi67W.js"
       ],
       "dynamicImports": [
-        "assets/twisty-dynamic-3d-4BEQ76PB-D1MIL8CG.js",
-        "assets/index-nAaKZFcj.js"
+        "assets/twisty-dynamic-3d-4BEQ76PB-tYSy_LLU.js",
+        "assets/index-q8v6I7cz.js"
       ],
       "modules": [
         "node_modules/.pnpm/cubing@0.63.8/node_modules/cubing/dist/lib/cubing/chunks/chunk-YR72E7KZ.js",
@@ -617,9 +617,9 @@
       ]
     },
     {
-      "file": "assets/client-tzhKcFsR.js",
+      "file": "assets/client-DzzMDMET.js",
       "imports": [
-        "assets/index-CD5WwJZ5.js"
+        "assets/index-Dm8Vi67W.js"
       ],
       "dynamicImports": [],
       "modules": [
@@ -627,10 +627,10 @@
       ]
     },
     {
-      "file": "assets/twisty-dynamic-3d-4BEQ76PB-D1MIL8CG.js",
+      "file": "assets/twisty-dynamic-3d-4BEQ76PB-tYSy_LLU.js",
       "imports": [
-        "assets/player-Ck9zc3lB.js",
-        "assets/index-CD5WwJZ5.js"
+        "assets/player-B0PJqPDN.js",
+        "assets/index-Dm8Vi67W.js"
       ],
       "dynamicImports": [],
       "modules": [

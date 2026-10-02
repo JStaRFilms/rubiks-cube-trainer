@@ -1,5 +1,9 @@
 # B09 Time Attack integration
 
+## Accepted checkpoint
+
+Q03 returned PASS/APPROVE after the narrow mixed-guidance dispatch repair and targeted independent recheck. The original FAIL, repro and correction remain recorded in [Q03 acceptance](Q03_Case_Trainers_Acceptance.md). Parent final bundle evidence is release `review-1790923520554`, matching normal rebuilt dist and all 49 assets. This does not claim a clean aggregate 51-browser run or physical-device certification. Earlier sections are chronological checkpoint evidence.
+
 Implementation evidence for the separate 57 OLL and 21 PLL trainers. This is not parent acceptance or Q03. The blueprint is [Time Attack](../features/Time_Attack.md).
 
 ## Current status
@@ -103,7 +107,7 @@ No physical-phone, installed-PWA, audible-output, screen-reader, thermal, GPU or
 
 Vite reports a main chunk above 500 kB, 546,810 bytes in the final evidence. Build succeeds; no phone performance claim follows from that success. Cold validated-history startup exceeded five-second test waits during some runs. This variability remains a real test/runtime latency limitation, even though unchanged retained checks and the final LL readiness-aware checks passed.
 
-Final [bundle evidence](Time_Attack_Bundle_Evidence.json) records release `review-1790916180145`, which matches `dist/release-assets.json`, and the normal `dist` rebuilt after the last alternate-release update exercise. It records 49 assets, actual `ll-libraries-57-21-v1` initialization, 9,534,250 raw bytes, 7,685,711 gzip bytes, 7,588,239 Brotli bytes and no source-rights conflicts. Executable payload is 2,432,001 raw bytes; the app without the required source archive is 2,481,531 raw bytes. These include actual worker/library/player dependencies and MIT notices.
+The implementer's pre-repair bundle checkpoint recorded release `review-1790916180145`, matching its normal dist after update exercises. The following sizes describe that checkpoint. Parent has refreshed the linked [bundle evidence](Time_Attack_Bundle_Evidence.json) for the accepted repair, as recorded at the top of this audit. It records 49 assets, actual `ll-libraries-57-21-v1` initialization, 9,534,250 raw bytes, 7,685,711 gzip bytes, 7,588,239 Brotli bytes and no source-rights conflicts. Executable payload is 2,432,001 raw bytes; the app without the required source archive is 2,481,531 raw bytes. These include actual worker/library/player dependencies and MIT notices.
 
 The final pinned-byte command read `src/data/sources.json`, checked each of its six fixture byte lengths and SHA-256 hashes, then compared both pinned MIT buffers byte-for-byte with `public/licenses/`, rebuilt `dist/licenses/` and `docs/data/licenses/`. Protected-path read-only diff output was empty for `.gitattributes`, `src/data/`, source fixtures, docs/public license files, `package.json` and `pnpm-lock.yaml`. Exact Node command:
 
@@ -124,3 +128,35 @@ After a normal rebuild, parent repeated that identical Cross repair test three t
 Parent's final actual rebuild refreshed the linked bundle evidence with 49 assets and no source-rights conflict. All six pinned artifact hashes/lengths and both public/dist/documentation MIT copies matched. Protected source, licenses, `.gitattributes`, dependencies and lockfile remain unchanged. Whitespace passed.
 
 B09 is accepted for the implemented functional contracts with the recorded timing/device limits, pending fresh independent Q03. Parent did not claim a clean aggregate 50-browser rerun. No push or deployment occurred.
+
+## Confirmed Q03 mixed-guidance repair
+
+Scoped repair PASS, pending parent inspection and the same independent reviewer's targeted recheck. The earlier implementation/parent sections are checkpoint evidence. Fresh Q03 returned FAIL at `335a730` for a confirmed mixed-guidance blocker; that initial verdict remains recorded in [Q03 acceptance](Q03_Case_Trainers_Acceptance.md). This appendix does not change the independent verdict or task state.
+
+`F2LPractice` sent the complete, globally validated algorithm list into F2L-only generation. A valid saved OLL or PLL record therefore triggered the pure F2L validator's correct unknown-case rejection. The production fix changes only that call's payload to `selectedAlgorithms.filter((record) => record.caseId.startsWith('f2l:'))`, using the existing source-namespace dispatch pattern. The complete `selectedAlgorithms` list remains captured and compared after awaits. Global repository validation, algorithm-change cancellation, worker/session/settings ownership guards, the strict pure F2L validator, canonical setup, precedence, history and frame logic are unchanged. Unknown or malformed stored data still fails global validation before this dispatch; unknown F2L IDs are not made acceptable by the prefix check.
+
+One new production browser test saves valid real OLL and PLL defaults through their editors, then saves canonical and FR-specific F2L guidance with explicit authored pre-AUF through the F2L editor. It confirms the physical base, generates the actual F2L case, starts/stops the shared timer through keyboard input and waits for durable saving. Backup comparison proves all four saved algorithm records are unchanged. The saved rep has the sourced identity/setup, uses the FR override rather than canonical guidance, independently replays to preserved/solved lower pieces, and reviews the frozen captured move list. No history is seeded, no timer clock is accelerated, and no physical solve is claimed.
+
+### Repair commands and results
+
+| Command | Actual result |
+| --- | --- |
+| Before fix: `pnpm exec playwright test tests/browser/f2l.spec.ts --grep "mixed OLL/PLL" --reporter=list` | FAIL as expected, one test, 42.7 s body. No timer appeared within the unchanged 30-second start wait. Captured production alert was `Unknown case ID. Existing overrides are unchanged.`; zero attempts were saved. |
+| `pnpm lint && pnpm typecheck && pnpm build && pnpm exec playwright test tests/browser/f2l.spec.ts --grep "mixed OLL/PLL" --reporter=list` | Lint and both TypeScript checks PASS. Combined tool command timed out after 180 s during build, after the main build output; service-worker output was absent and browser verification did not run. Not counted as a build/browser pass. |
+| Standalone `pnpm build` | PASS, main and service-worker build completed unchanged. |
+| After fix: `pnpm exec playwright test tests/browser/f2l.spec.ts --grep "mixed OLL/PLL" --reporter=list` | PASS, one test, 17.8 s command and 8.0 s body. |
+| `pnpm exec vitest run tests/unit/f2l.test.ts tests/unit/f2l-client.test.ts tests/unit/interchange.test.ts tests/unit/ll-boundaries.test.ts` | PASS, 71 tests in four files, 82.57 s. Includes all 3,936 F2L defaults and 7,872 canonical/slot override presentations, varied-LL bases, client stale correspondence and wrong-case/unknown-field/version/import rejection. |
+| `pnpm exec playwright test tests/browser/f2l.spec.ts --reporter=list` | Six PASS, one retained update-test FAIL at its unchanged five-second saved-history wait after navigation, 1.8 min. Mixed guidance, default cold offline/player/restore/touch, canonical/slot editor, stale/cancel/cross-tab guards, strict inspection/input/quota and cache repair all passed. |
+| Unchanged `pnpm exec playwright test tests/browser/f2l.spec.ts --grep "active real F2L" --reporter=list` | PASS, one retained update test, 42.3 s command and 18.4 s body. The previous failure is retained here; no assertion or timeout was changed. |
+| After the last update exercise: `node tests/helpers/bundle-evidence.mjs node_modules/.cache/b09-q03-assets.json` | PASS, final normal main/SW rebuild and 49-asset byte/source/rights inspection, 13 inspected chunks, no rights conflict. |
+| Pinned artifact/MIT buffer check, final release identity check and read-only protected-path diff/whitespace/status checks | PASS. All six pinned lengths/hashes and both public/docs/dist MIT copies match. Final evidence and `dist/release-assets.json` share release `review-1790921543862`. |
+
+The retained update failure showed the initial Cross/no-session placeholder after reload, not a confirmed loss of its saved F2L record. Its unchanged focused repeat passed. This observation does not fix, diagnose or erase earlier startup/readiness latency, including the parent's Cross repair warning. No unrelated repair was made. A read-only Windows process inspection also timed out during verification; no process was killed and no cause was inferred.
+
+Final repair bundle sizes are 9,534,291 raw bytes, 7,685,737 gzip bytes and 7,588,122 Brotli bytes. The detailed local evidence and command logs are under ignored `node_modules/.cache/b09-q03-*`. The committed `Time_Attack_Bundle_Evidence.json` remains the earlier parent checkpoint snapshot and is not the current repair `dist` identity.
+
+Only `src/app/F2LPractice.tsx`, `tests/browser/f2l.spec.ts` and this repair appendix were changed by the coder. Read-only status confirmed HEAD remains `335a730a950cac9f2f971aeea0437275836226fb` and origin/main remains `973a8796cb522e2626d86b334e7f9f01733f7a6b`. Protected `.gitattributes`, source/data/license files, pure F2L/LL/cube/case/store/statistics/PWA modules, old unit assertions/timeouts, dependencies and lockfile have no diff. Expected parent Q03/task/master/index/summary changes were preserved, not authored here.
+
+The engine and LL code are unchanged, so the 1,575,936 OLL combination proof and full 260-unit/LL-browser suite were not repeated for this payload-only repair. Their initial and independent Q03 results remain baseline evidence, not newly run checks. Physical-device, installed-PWA, audio/screen-reader and other certification limits remain unchanged. Parent and the same reviewer own re-acceptance. No commit, push, deployment or further trainer work occurred.
+
+Parent inspected the one-line payload-only change and its production regression. The complete algorithm list remains compared after awaits and global/pure validation is unchanged. Parent independently passed lint/typecheck, 39 F2L-client/mixed-backup units, normal build and both new mixed-guidance and retained cross-tab/stale-presentation browser flows in 38.6 seconds. Whitespace passed. This accepts the scoped repair implementation, not the still-pending independent Q03 recheck.

@@ -74,7 +74,7 @@ export function F2LPractice({ repository, dataEpoch, settings, session, editing,
       if (!mounted.current || myEpoch !== epoch.current) return;
       const selectedAlgorithms = stored.backup.personalAlgorithms, instance = client.workerInstance;
       const challenge = await client.generate({ requestId: id, epoch: myEpoch, frame: { crossColor: snapshot.crossColor, colorOfFace: { ...TRAINING_FRAMES[snapshot.crossColor] } },
-        caseId: pick(prefs.caseIds), slot: prefs.slotMode === 'FR' ? 'FR' : pick(SLOTS), hint: prefs.hint, mode: prefs.mode, preAuf: prefs.preAuf === 'random' ? pick(QUARTERS) : prefs.preAuf }, selectedAlgorithms);
+        caseId: pick(prefs.caseIds), slot: prefs.slotMode === 'FR' ? 'FR' : pick(SLOTS), hint: prefs.hint, mode: prefs.mode, preAuf: prefs.preAuf === 'random' ? pick(QUARTERS) : prefs.preAuf }, selectedAlgorithms.filter((record) => record.caseId.startsWith('f2l:')));
       if (!mounted.current || myEpoch !== epoch.current) return;
       setMessage('F2L verified. Waiting until practice can be presented…');
       while (mounted.current && myEpoch === epoch.current) {
