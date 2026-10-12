@@ -1,8 +1,32 @@
 # Task B11: Deliver ZBLL family and subset practice
 
-## Dispatch recovery status
+## Current verification status
 
-BLOCKED, not delivered. The recorded async run `0c1dfc4a-0e02-42a9-b08e-32e0d3323c90` has no recoverable status file. Native management reports no active async runs, and checkout inspection found no B11 code, feature or integration report. This does not prove why the dispatch failed. Do not infer completion, active work or cancellation. Owner subsequently requested publishing the verified checkpoint, confirming GitHub Pages as target. Pause B11 and leave Q04 pending. A later instruction must resume/recover B11 explicitly; do not automatically redispatch while publishing.
+B11 is complete after the owner's requested parent follow-up on 2026-10-12. The actual integration from T3 task `b11-resume-20261012-round1` and Q04's independent correctness review remain the baseline. Parent profiled LL initialization and extended the existing identity cache to OLL/PLL, with engine-scoped actual-byte keys that distinguish trainers. LL state decodes fell from 6,951 to 3,409. Every case/guidance/readiness proof and all retained deadlines remain intact.
+
+Parent's focused review found no blocking regression. Lint/typecheck, the full unit aggregate with 351 passes and two intentional skips, and one unchanged full browser aggregate with 58/58 passes all succeeded. Normal dist/source/asset evidence was refreshed after update tests. Five new cache tests cover reuse, mutation, engine/trainer separation and warm invalid-state rejection. No new delegate is active; nothing was committed, pushed or deployed. See `docs/audits/Q04_ZBLL_Acceptance.md` for parent closure, original independent FAIL and exact checks. The historical sporadic timeout was not reproduced in isolation, so its host conditions remain unproven. Existing physical-device/Pages-subpath limits remain.
+
+## Historical bounded readiness diagnosis after Q04
+
+Q04 returned FAIL, retained in `docs/audits/Q04_ZBLL_Acceptance.md`. Its independent aggregate passed 57/58, all seven ZBLL flows and the three previously failing F2L/foundation flows. OLL's initial offline setup remained busy validating LL at the unchanged 30-second assertion in `tests/browser/ll.spec.ts:13`. No ZBLL mathematics, immutable record, source-integrity or data-loss defect was confirmed. Root cause is unresolved.
+
+### Objective and scope
+
+Diagnose Q04-01 through the retained logs/trace and actual startup/worker/store path. Use the existing implementation and all original constraints below. Scope is the readiness acceptance failure, including genuinely demonstrated shared initialization or data-read costs. Do not redesign unrelated trainers or weaken proof/asset checks. One sole-writer diagnosis and, only if cause is confirmed, one narrow repair pass.
+
+### Prime context and evidence
+
+Read `docs/audits/Q04_ZBLL_Acceptance.md`, `ZBLL_Trainer_Integration.md`, this complete packet, actual `src/pwa/client.ts`, worker/client/library initialization and Repository startup. Read `.pi/takomi/q04-full-browser.log`, the retained OLL trace under `.pi/takomi/q04-full-browser/`, and original traces copied to `.pi/takomi/q04-retained/` before running browser tools. Full review also passed 310 selected unit tests and three independent cache/immutability probes, not one full-unit aggregate. Parent's 89-test/lint/typecheck result remains separate.
+
+### Definition of done and expected artifacts
+
+Return a supported root cause or BLOCKED with precise evidence. If confirmed, implement the smallest repair preserving complete offline proofs, all canonical library/source bytes, strict history/backup semantics, cold disconnected first use and release-byte verification. Add only proportional regression coverage, update `docs/audits/ZBLL_Trainer_Integration.md` with diagnosis and actual checks, and refresh bundle evidence only after a normal rebuild. Final focused checks and one unchanged complete browser run must actually pass for acceptance. Stop if the cause remains uncertain, or the final aggregate still fails. No timeout/assertion changes, retry loop, new dependencies, external effects, Git or parent task-record writes. Parent owns targeted review of the actual repair, not another broad review round.
+
+## Historical dispatch recovery
+
+Owner explicitly resumed B11 on 2026-10-12. Checkout is clean at `334716f` on `build/foundation`. T3 active-thread discovery found only the parent thread and no active child runs. Resume implementation through the available `takomi` provider with `openai-codex/gpt-6.1-sol` at high effort. The original missing-run history below remains unchanged. This approval does not authorize pushing, deployment or other external changes. Parent will record the new T3 task ID, actual checks and focused Q04 outcome.
+
+At the earlier publication checkpoint B11 was BLOCKED, not delivered. The recorded async run `0c1dfc4a-0e02-42a9-b08e-32e0d3323c90` has no recoverable status file. Native management reports no active async runs, and checkout inspection found no B11 code, feature or integration report. This does not prove why the dispatch failed. Do not infer completion, active work or cancellation. Owner subsequently requested publishing the verified checkpoint, confirming GitHub Pages as target. Pause B11 and leave Q04 pending. A later instruction must resume/recover B11 explicitly; do not automatically redispatch while publishing.
 
 ## Agent setup
 

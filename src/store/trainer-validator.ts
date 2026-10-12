@@ -1,5 +1,6 @@
 import { crossClient } from '../cross/client';
 import { OneClient } from '../cross-one/client';
+import { ZBLLClient } from '../zbll/client';
 import { LLClient } from '../ll/client';
 import { F2LClient } from '../f2l/client';
 import { object } from './validation';
@@ -9,6 +10,7 @@ import type { SemanticValidator } from './records';
 const oneValidation = new OneClient();
 const f2lValidation = new F2LClient();
 const llValidation = new LLClient();
+const zbllValidation = new ZBLLClient();
 let queue = Promise.resolve();
 export const trainerValidator: SemanticValidator = {
   validateAttempt(value) {
@@ -17,6 +19,7 @@ export const trainerValidator: SemanticValidator = {
       if (trainer === 'cross') return crossClient.validator.validateAttempt(value);
       if (trainer === 'cross1') return oneValidation.validateAttempt(value);
       if (trainer === 'f2l') return f2lValidation.validateAttempt(value);
+      if (trainer === 'zbll') return zbllValidation.validateAttempt(value);
       if (trainer === 'oll' || trainer === 'pll') return llValidation.validateAttempt(value);
       throw new Error('This trainer has no compatible attempt validator.');
     });

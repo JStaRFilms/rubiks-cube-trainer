@@ -22,14 +22,25 @@ export function caseProjection(trainer: CaseTrainer, state: CubeStateV1): string
   if (trainer === 'oll') return OLL_STICKER_INDICES.map((i) => state.facelets[i] === 'U' ? '1' : '0').join('');
   return OLL_STICKER_INDICES.map((i) => state.facelets[i]).join('');
 }
+const llIdentities = new WeakMap<CubeEngine, Map<string, string>>();
 export function caseIdentity(engine: CubeEngine, trainer: CaseTrainer, state: CubeStateV1, slot: Slot = 'FR'): string {
+  // Library proofs revisit each LL representative and the solved state.
+  // Keep trainers separate and key actual bytes, never a supplied identity.
+  let cache = llIdentities.get(engine);
+  const key = trainer === 'f2l' ? null : JSON.stringify([trainer, state.format, state.facelets]);
+  if (key !== null) {
+    if (!cache) { cache = new Map(); llIdentities.set(engine, cache); }
+    const cached = cache.get(key); if (cached !== undefined) return cached;
+  }
   const normalized = engine.normalize(state), canonical = trainer === 'f2l' ? engine.slot(normalized, slot, true) : normalized;
   const forms: string[] = [];
   for (const yaw of trainer === 'f2l' ? [0] as const : QUARTERS) {
     const turned = engine.conjugate(canonical, yaw);
     for (const pre of QUARTERS) forms.push(caseProjection(trainer, engine.apply(turned, auf(pre))));
   }
-  return `${IDENTITY_POLICIES[trainer]}:${forms.sort()[0]}`;
+  const identity = `${IDENTITY_POLICIES[trainer]}:${forms.sort()[0]}`;
+  if (key !== null && cache) { if (cache.size >= 512) cache.clear(); cache.set(key, identity); }
+  return identity;
 }
 export function f2lSolved(engine: CubeEngine, state: CubeStateV1): boolean {
   return engine.crossSolved(state) && SLOTS.every((slot) => engine.pairSolved(state, slot));

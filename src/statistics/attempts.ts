@@ -8,13 +8,14 @@ export function comparisonKey(record: AttemptRecord): string {
     : o.trainer === 'cross2' ? [o.K, o.L]
     : o.trainer === 'f2l' ? [o.caseId, o.slot, o.hint, o.mode]
     : [o.caseId, o.preAuf, o.yaw, o.mode];
+  const selection = o.trainer === 'zbll' ? [[...o.selection.caseIds].sort(), o.selection.shuffle, o.selection.preAuf, o.selection.yaw, o.selection.mode] : null;
   const metadata = p.kind === 'combined-bound' ? [p.crossDepth, p.cap, [...p.solvedSlots].sort(), p.witness.length]
     : p.kind === 'case' ? [p.caseId, p.identityKey, p.finalAuf, p.representative] : [];
   return JSON.stringify([1, record.trainer, f.crossColor, [f.colorOfFace.U, f.colorOfFace.R, f.colorOfFace.F, f.colorOfFace.D, f.colorOfFace.L, f.colorOfFace.B], s.inspectionMode, options, metadata,
     [record.challenge.versions.contract, record.challenge.versions.engine, record.challenge.versions.dataset, record.challenge.versions.tables],
-    (o.trainer === 'f2l' || o.trainer === 'oll' || o.trainer === 'pll') && p.kind === 'case' ? [p.setup.map((m) => [m.family, m.amount]), p.solution.map((m) => [m.family, m.amount])] : null,
+    (o.trainer === 'f2l' || o.trainer === 'oll' || o.trainer === 'pll' || o.trainer === 'zbll') && p.kind === 'case' ? [p.setup.map((m) => [m.family, m.amount]), p.solution.map((m) => [m.family, m.amount])] : null,
     // Guidance snapshots are conservative comparison classes, not observed moves.
-    record.review ? [record.review.moves.map((m) => [m.family, m.amount]), record.review.preAuf, record.review.validatedDatasetVersion, record.review.validatedEngineVersion] : null]);
+    record.review ? [record.review.moves.map((m) => [m.family, m.amount]), record.review.preAuf, record.review.validatedDatasetVersion, record.review.validatedEngineVersion] : null, ...(o.trainer === 'zbll' && p.kind === 'case' && p.membership ? [selection, [p.membership.family, p.membership.subset, p.membership.datasetVersion, p.membership.identityPolicyVersion]] : [])]);
 }
 export function configurationLabel(record: AttemptRecord): string {
   const { options: o, proof: p, frame: f } = record.challenge;

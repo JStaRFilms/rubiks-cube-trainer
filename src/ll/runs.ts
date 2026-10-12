@@ -5,10 +5,13 @@ import { auf, QUARTERS, type QuarterTurn } from '../cases/identity';
 import { validateGuidance } from '../cases/validation';
 import { validateOverrideImport } from '../cases/overrides';
 import { F2L_CASES } from '../data/f2l';
+import { OLL_CASES } from '../data/oll';
+import { ZBLL_CASES } from '../data/zbll';
 import type { AttemptRecord, LLRunSnapshot, PersonalAlgorithmRecord, PracticeSetRecord, RunRecord, SemanticValidator, SessionRecord, TimingSettings, TrainingFrame } from '../store/records';
 import { boundedInput, date, integer, text } from '../store/validation';
-import { createLL, LL_CASES, llEntry, llLibrary, LL_VERSIONS, presentLLGuidance, yawGuidance, type LLChallenge, type LLTrainer } from './model';
+import { createLL, llEntry, llLibrary, LL_VERSIONS, presentLLGuidance, yawGuidance, type LLChallenge, type LLTrainer } from './model';
 import { exact, moves, validateLL } from './validation';
+const guidanceLibrary = [...F2L_CASES, ...OLL_CASES, ...ZBLL_CASES];
 function array(value: unknown): unknown[] { if (!Array.isArray(value) || value.length > 100000) throw Error('Expected bounded record list.'); return value; }
 function quarter(value: unknown): QuarterTurn { const angle = QUARTERS.find((angle) => angle === value); if (angle === undefined) throw Error('Invalid last-layer angle.'); return angle; }
 function policy(value: unknown): QuarterTurn | 'random' { return value === 'random' ? 'random' : quarter(value); }
@@ -37,7 +40,7 @@ function randomIndex(length: number): number {
 }
 export function createRun(engine: CubeEngine, set: PracticeSetRecord, session: SessionRecord, options: RunOptions, algorithms: readonly PersonalAlgorithmRecord[], setId: string | null = null): LLRunRecord {
   const selected = validateSet(set); if (session.trainer !== selected.trainer) throw Error('Run session trainer mismatch.');
-  const trainer: LLTrainer = selected.trainer === 'oll' ? 'oll' : 'pll', valid = validateOverrideImport(engine, [...F2L_CASES, ...LL_CASES], algorithms);
+  const trainer: LLTrainer = selected.trainer === 'oll' ? 'oll' : 'pll', valid = validateOverrideImport(engine, guidanceLibrary, algorithms);
   const id = crypto.randomUUID(), createdAt = new Date().toISOString(), order = [...selected.caseIds];
   if (options.shuffle) for (let i = order.length - 1; i > 0; i--) { const j = randomIndex(i + 1), a = order[i], b = order[j]; if (!a || !b) throw Error('Missing run member.'); order[i] = b; order[j] = a; }
   const guidance = selected.caseIds.map((caseId) => {
@@ -125,7 +128,7 @@ export function validateRun(input: unknown, engine: CubeEngine, attempts: readon
 }
 function oKind(input: unknown): unknown { return exact(input, ['kind', 'repIndex'], ['attemptId', 'caseId']).kind; }
 export function validateLLTraining(engine: CubeEngine, data: Parameters<SemanticValidator['validateTrainingData']>[0], attempts: AttemptRecord[], sessions: SessionRecord[]) {
-  const personalAlgorithms = validateOverrideImport(engine, [...F2L_CASES, ...LL_CASES], data.personalAlgorithms), practiceSets = data.practiceSets.map(validateSet), runs = data.runs.map((r) => validateRun(r, engine, attempts, sessions));
+  const personalAlgorithms = validateOverrideImport(engine, guidanceLibrary, data.personalAlgorithms), practiceSets = data.practiceSets.map(validateSet), runs = data.runs.map((r) => validateRun(r, engine, attempts, sessions));
   unique(practiceSets.map((s) => s.id)); unique(runs.map((r) => r.id));
   unique(runs.flatMap((run) => run.snapshot.challenges.map((challenge) => challenge.challengeId)));
   unique(runs.filter((run) => run.status === 'active' || run.status === 'interrupted').map((run) => run.sessionId));

@@ -12,13 +12,14 @@ export type GoalOptions =
   | { trainer: 'cross1'; K: CrossDepth; L: number; pair: { kind: 'any' } | { kind: 'slot'; slot: Slot } }
   | { trainer: 'cross2'; K: CrossDepth; L: number }
   | { trainer: 'f2l'; caseId: string; slot: Slot; hint: boolean; mode: 'execution' | 'recognition' }
-  | { trainer: 'oll' | 'pll' | 'zbll'; caseId: string; preAuf: 0 | 1 | 2 | 3; yaw: 0 | 1 | 2 | 3; mode: 'execution' | 'recognition' };
+  | { trainer: 'oll' | 'pll'; caseId: string; preAuf: 0 | 1 | 2 | 3; yaw: 0 | 1 | 2 | 3; mode: 'execution' | 'recognition' }
+  | { trainer: 'zbll'; caseId: string; preAuf: 0 | 1 | 2 | 3; yaw: 0 | 1 | 2 | 3; mode: 'execution' | 'recognition'; selection: ZBLLPreferences };
 export interface Versions { contract: 1; engine: string; dataset: string | null; tables: string }
 export interface TrainingFrame { colorOfFace: Readonly<Record<Face, Color>>; crossColor: Color }
 export type Proof =
   | { kind: 'cross-optimal'; depth: CrossDepth; solution: Move[] }
   | { kind: 'combined-bound'; crossDepth: number; cap: number; witness: Move[]; solvedSlots: Slot[] }
-  | { kind: 'case'; caseId: string; identityKey: string; setup: Move[]; solution: Move[]; finalAuf: 0 | 1 | 2 | 3; representative: boolean };
+  | { kind: 'case'; caseId: string; identityKey: string; setup: Move[]; solution: Move[]; finalAuf: 0 | 1 | 2 | 3; representative: boolean; membership?: { family: string; subset: string; sourceLabel: string; referenceLabel: string; datasetVersion: string; identityPolicyVersion: string } };
 interface ChallengeCommon {
   challengeId: string; requestId: string; epoch: number; versions: Versions;
   frame: TrainingFrame; scramble: Move[]; start: CubeStateV1;
@@ -35,11 +36,13 @@ export interface LLPreferences {
   caseIds: string[]; setId: string | null; mode: 'execution' | 'recognition'; shuffle: boolean;
   preAuf: 0 | 1 | 2 | 3 | 'random'; yaw: 0 | 1 | 2 | 3 | 'random';
 }
+export type ZBLLPreferences = Omit<LLPreferences, 'setId'>;
 export interface SettingsRecord {
   key: 'preferences'; theme: 'dark' | 'light' | 'system'; defaultTrainer: Trainer; crossColor: Color;
   inspectionMode: 'untimed' | '15s'; audibleWarnings: boolean; reducedMotion: 'system' | 'on';
   lastOptions: Partial<Record<Trainer, GoalOptions>>;
   f2lPractice?: F2LPreferences;
+  zbllPractice?: ZBLLPreferences;
   llPractice?: { oll?: LLPreferences; pll?: LLPreferences };
 }
 export const defaultOneOptions: Extract<GoalOptions, { trainer: 'cross1' }> = { trainer: 'cross1', K: 3, L: 8, pair: { kind: 'any' } };

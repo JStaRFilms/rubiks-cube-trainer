@@ -1,8 +1,12 @@
 # Task Q04: Review ZBLL delivery
 
-## Agent setup
+## Current gate status
 
-Vibe Build, fresh reviewer `openai-codex/gpt-6.1-sol`, high effort, conversation `reviewer-q04`, read-only capabilities. Do not launch before parent B11 integration acceptance. Return a markdown report; parent writes the audit and controls Git/task state. Use unslop. A later confirmed repair reuses coder-b11 and then this review conversation for a focused recheck.
+Complete after parent follow-up on 2026-10-12. The original independent Q04 FAIL is retained in `docs/audits/Q04_ZBLL_Acceptance.md`. Owner requested another fix attempt; parent measured redundant LL identity work, extended the existing cache to OLL/PLL and performed the required focused review. One unchanged complete browser aggregate passed 58/58, including the previously failing OLL readiness/full run, all seven ZBLL flows and earlier F2L/foundation failures. Lint/typecheck and the full unit aggregate passed, with 351 tests and two intentional skips. Normal build and source/asset evidence passed. No new independent reviewer was launched. The exact cause of the earlier sporadic slowdown remains unproven, and physical-device/Pages-subpath limits remain. No later track, commit, push or deployment is authorized by this closure.
+
+## Historical agent setup
+
+Vibe Build, fresh reviewer `openai-codex/gpt-6.1-sol`, high effort, conversation `reviewer-q04`, read-only capabilities. For the resumed 2026-10-12 increment, parent has verified that B11 artifacts exist and independently passed lint, typecheck and 89 focused tests. B11 acceptance remains withheld because the final browser aggregate failed three existing tests. Launch this focused review provisionally to inspect those failures and the completed integration before final acceptance. Do not treat review launch or isolated reruns as acceptance. Return a markdown report; parent writes the audit and controls Git/task state. Use unslop. A later confirmed repair reuses coder-b11 and then this review conversation for a focused recheck.
 
 ## Prime context
 
@@ -50,4 +54,4 @@ Browser/build/update exercises run serially. Retain original assertion budgets a
 
 ## Dependency and handoff
 
-B11 must be accepted by parent first and its actual artifacts must exist. Review does not authorize broader cleanup or another trainer. Return confirmed blockers for same coder-b11 repair, then targeted same-reviewer recheck. Parent stops after this checkpoint before later tracks unless the owner gives another instruction.
+B11 artifacts must exist and parent must verify the handoff first. Final B11 acceptance waits for this provisional review and resolution of confirmed blockers. Review does not authorize broader cleanup or another trainer. Return confirmed blockers for same coder-b11 repair, then targeted same-reviewer recheck. Parent stops after this checkpoint before later tracks unless the owner gives another instruction.

@@ -5,7 +5,7 @@ import { ENGINE_VERSION, ENGINE_SOURCE, ENGINE_INTEGRITY, INITIALIZATION } from 
 import { ONE_VERSIONS } from '../../src/cross-one/model';
 const base = '/rubiks-cube-trainer/';
 function manifest(url = `${base}index.html`) {
-  return { releaseId: 'test', cubeContract: 'cube3-facelets-v1', scope: 'cross-cross1-f2l-oll-pll-practice', engine: ENGINE_VERSION, engineSource: ENGINE_SOURCE, engineIntegrity: ENGINE_INTEGRITY, dataset: 'cfop-libraries-v1', tables: ONE_VERSIONS.tables, initialization: [...INITIALIZATION], assets: [{ url, byteLength: 1, sha256: 'a'.repeat(64) }] };
+  return { releaseId: 'test', cubeContract: 'cube3-facelets-v1', scope: 'cross-cross1-f2l-oll-pll-zbll-practice', zbllDataset: 'zbll-library-v1', engine: ENGINE_VERSION, engineSource: ENGINE_SOURCE, engineIntegrity: ENGINE_INTEGRITY, dataset: 'cfop-libraries-v1', tables: ONE_VERSIONS.tables, initialization: [...INITIALIZATION], assets: [{ url, byteLength: 1, sha256: 'a'.repeat(64) }] };
 }
 it('keeps root default paths and normalizes a configured repository path', () => {
   expect(normalizeBasePath('/')).toBe('/'); expect(normalizeBasePath('/rubiks-cube-trainer')).toBe(base);

@@ -1,7 +1,8 @@
+import { ZBLL_MANIFEST } from '../data/zbll-manifest';
 import { OLL_CASES } from '../data/oll';
 import { PLL_CASES } from '../data/pll';
 import { F2L_CASES } from '../data/f2l';
-import { colors, trainers, type F2LPreferences, type LLPreferences, type GoalOptions, type SemanticValidator, type SessionRecord, type SettingsRecord, type Trainer, type TrainerBackupV1 } from './records';
+import { colors, trainers, type F2LPreferences, type LLPreferences, type ZBLLPreferences, type GoalOptions, type SemanticValidator, type SessionRecord, type SettingsRecord, type Trainer, type TrainerBackupV1 } from './records';
 export const MAX_FILE_BYTES = 20 * 1024 * 1024;
 export class DataError extends Error {}
 export function object(value: unknown): Record<string, unknown> {
@@ -53,8 +54,15 @@ export function decodeGoalOptions(input: unknown): GoalOptions {
     keys(v, ['trainer', 'caseId', 'slot', 'hint', 'mode']);
     return { trainer, caseId, mode, slot: choice(v.slot, slots), hint: bool(v.hint) };
   }
+  const preAuf = integer(v.preAuf, 0, 3) as 0 | 1 | 2 | 3, yaw = integer(v.yaw, 0, 3) as 0 | 1 | 2 | 3;
+  if (trainer === 'zbll') {
+    keys(v, ['trainer', 'caseId', 'preAuf', 'yaw', 'mode', 'selection']);
+    const selection = decodeZBLLPreferences(v.selection);
+    if (!selection.caseIds.includes(caseId) || mode !== selection.mode || (selection.preAuf !== 'random' && selection.preAuf !== preAuf) || (selection.yaw !== 'random' && selection.yaw !== yaw)) throw new DataError('ZBLL case or angle does not match the declared selection.');
+    return { trainer, caseId, mode, preAuf, yaw, selection };
+  }
   keys(v, ['trainer', 'caseId', 'preAuf', 'yaw', 'mode']);
-  return { trainer, caseId, mode, preAuf: integer(v.preAuf, 0, 3) as 0 | 1 | 2 | 3, yaw: integer(v.yaw, 0, 3) as 0 | 1 | 2 | 3 };
+  return { trainer, caseId, mode, preAuf, yaw };
 }
 export function decodeF2LPreferences(input: unknown): F2LPreferences {
   const value = object(input); keys(value, ['caseIds', 'slotMode', 'hint', 'mode', 'preAuf']);
@@ -78,9 +86,18 @@ export function decodeLLPreferences(input: unknown, trainer: 'oll' | 'pll'): LLP
   const preAuf = angle(value.preAuf), yaw = angle(value.yaw); if (preAuf === undefined || yaw === undefined) throw new DataError('Invalid last-layer angle policy.');
   return { caseIds, setId: value.setId === null ? null : text(value.setId), mode: choice(value.mode, ['execution', 'recognition']), shuffle: bool(value.shuffle), preAuf, yaw };
 }
+export function decodeZBLLPreferences(input: unknown): ZBLLPreferences {
+  const value = object(input); keys(value, ['caseIds', 'mode', 'shuffle', 'preAuf', 'yaw']);
+  if (!Array.isArray(value.caseIds) || !value.caseIds.length || value.caseIds.length > 493) throw new DataError('Select at least one of the 493 ZBLL cases.');
+  const caseIds = value.caseIds.map((id: unknown) => { const canonical = ZBLL_MANIFEST.expectedIds.find((caseId) => caseId === id); if (!canonical) throw new DataError('Unknown canonical ZBLL selection ID.'); return canonical; }); unique(caseIds);
+  const angle = (v: unknown) => v === 'random' ? 'random' : ([0, 1, 2, 3] as const).find((q) => q === v);
+  const preAuf = angle(value.preAuf), yaw = angle(value.yaw);
+  if (preAuf === undefined || yaw === undefined) throw new DataError('Invalid ZBLL angle policy.');
+  return { caseIds, mode: choice(value.mode, ['execution', 'recognition']), shuffle: bool(value.shuffle), preAuf, yaw };
+}
 export function decodeSettings(input: unknown): SettingsRecord {
   const v = object(input);
-  keys(v, ['key', 'theme', 'defaultTrainer', 'crossColor', 'inspectionMode', 'audibleWarnings', 'reducedMotion', 'lastOptions'], ['f2lPractice', 'llPractice']);
+  keys(v, ['key', 'theme', 'defaultTrainer', 'crossColor', 'inspectionMode', 'audibleWarnings', 'reducedMotion', 'lastOptions'], ['f2lPractice', 'llPractice', 'zbllPractice']);
   const lastOptions: Partial<Record<Trainer, GoalOptions>> = {};
   for (const [key, value] of Object.entries(object(v.lastOptions))) {
     const trainer = choice(key, trainers), option = decodeGoalOptions(value);
@@ -92,7 +109,7 @@ export function decodeSettings(input: unknown): SettingsRecord {
   return { key: choice(v.key, ['preferences']), theme: choice(v.theme, ['dark', 'light', 'system']),
     defaultTrainer: choice(v.defaultTrainer, trainers), crossColor: choice(v.crossColor, colors),
     inspectionMode: choice(v.inspectionMode, ['untimed', '15s']), audibleWarnings: bool(v.audibleWarnings),
-    reducedMotion: choice(v.reducedMotion, ['system', 'on']), lastOptions, ...('f2lPractice' in v ? { f2lPractice: decodeF2LPreferences(v.f2lPractice) } : {}), ...('llPractice' in v ? { llPractice } : {}) };
+    reducedMotion: choice(v.reducedMotion, ['system', 'on']), lastOptions, ...('f2lPractice' in v ? { f2lPractice: decodeF2LPreferences(v.f2lPractice) } : {}), ...('llPractice' in v ? { llPractice } : {}), ...('zbllPractice' in v ? { zbllPractice: decodeZBLLPreferences(v.zbllPractice) } : {}) };
 }
 export function decodeSession(input: unknown): SessionRecord {
   const v = object(input); keys(v, ['id', 'trainer', 'label', 'createdAt']);

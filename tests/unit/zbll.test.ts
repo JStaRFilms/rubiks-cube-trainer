@@ -131,7 +131,7 @@ it('preserves all identities under every proper ending center regrip', () => {
 it('rejects malformed imports/fields/versions/alias-keyed PLL duplicates and wrong physical goals without mutating input', () => {
   const record = personal(first()), old = [record], before = JSON.stringify(old), pll = PLL_CASES[0]; if (!pll) throw Error('Missing shared PLL.');
   expect(validateOverrideImport(engine, ZBLL_CASES, [record])).toEqual([record]);
-  expect(() => validateLLTraining(engine, { personalAlgorithms: [record], practiceSets: [], runs: [] }, [], [])).toThrow();
+  expect(validateLLTraining(engine, { personalAlgorithms: [record], practiceSets: [], runs: [] }, [], []).personalAlgorithms).toEqual([record]);
   for (const invalid of [[record, record], [{ ...record, caseId: 'unknown' }], [{ ...record, identityKey: 'wrong' }], [{ ...record, identityPolicyVersion: 'future' }], [{ ...record, validatedDatasetVersion: 'future' }], [{ ...record, validatedEngineVersion: 'future' }], [{ ...record, preAuf: 4 }], [{ ...record, slot: 'FR' }], [{ ...record, extra: true }], [{ ...record, moves: [{ family: 'R', amount: 3 }] }], [{ ...record, moves: [{ family: 'R', amount: 1, extra: true }] }], [{ ...personal(pll), caseId: `zbll:pll:${pll.label.toLowerCase()}` }]]) {
     expect(() => validateOverrideImport(engine, ZBLL_CASES, invalid)).toThrow(); expect(JSON.stringify(old)).toBe(before);
   }
